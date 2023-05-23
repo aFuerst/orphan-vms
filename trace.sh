@@ -2,6 +2,7 @@
 # Run with sudo
 
 TIME=1m
+OUTDIR="."
 while [[ $# -gt 0 ]]; do
   case $1 in
     -s|--sleep-time)
@@ -9,7 +10,14 @@ while [[ $# -gt 0 ]]; do
       shift
       shift
       ;;
+    -o|--out-folder)
+      OUTDIR="$2"
+      shift
+      shift
+      ;;
     *)
+      shift
+      ;;
   esac
 done
 
@@ -35,7 +43,7 @@ KVM_EVENTS=(
 # done
 echo 1 > "/sys/kernel/tracing/events/kvm/enable"
 
-outfile="vm_exits.out"
+outfile="$OUTDIR/vm_exits.out"
 > $outfile # empty file
 # background cat pipes events to file as they come in, avoiding loss
 cat /sys/kernel/tracing/trace_pipe >> $outfile &
