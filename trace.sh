@@ -21,6 +21,13 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
+cleanup() {
+  echo 0 > "/sys/kernel/tracing/events/kvm/enable"
+  echo "Trace done"
+  exit 0
+}
+trap cleanup SIGINT
+
 # empty current trace buffer
 > "/sys/kernel/tracing/trace"
 
@@ -52,13 +59,9 @@ cat_pid=$!
 sleep $TIME
 
 # disable KVM VM events
-echo 0 > "/sys/kernel/tracing/events/kvm/enable"
+
 # for EVENT in "${KVM_EVENTS[@]}"; do
 #    echo 0 > "/sys/kernel/tracing/events/kvm/$EVENT/enable"
 # done
-
+cleanup
 kill $cat_pid
-
-# save trace data
-#cp /sys/kernel/tracing/trace vm_exits.out
-#echo $old_cpu_buff_size > /sys/kernel/tracing/buffer_size_kb
