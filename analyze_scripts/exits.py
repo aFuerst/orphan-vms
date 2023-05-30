@@ -5,6 +5,7 @@ mpl.rcParams.update({'font.size': 14})
 mpl.use('Agg')
 import matplotlib.pyplot as plt
 import os
+from ftrace import *
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-t', "--trace", required=True, help="ftrace output file")
@@ -12,27 +13,23 @@ parser.add_argument('-o', "--out", required=False, default="figs", help="output 
 args = parser.parse_args()
 os.makedirs(args.out, exist_ok=True)
 
-def get_part(parts, key):
-    i = parts.index(key)
-    return parts[i+1]
-
 pd_data = []
 with open(args.trace, "r") as f:
     for line in f.readlines():
-        if line.startswith(" qemu-system-x86"):
-            parts = line.split(" ")
-            if parts[5][:-1] == "kvm_exit":
+        if is_line(line):
+            parts = parse_line(line)
+            event = get_event(parts)
+            if event == "kvm_exit":
                 reason = get_part(parts, "reason")
                 cpu = parts[2]
-                timestamp = float(parts[4][:-1])
-                second = float.__floor__(timestamp)
+                timestamp, second = get_timestamp(parts)
                 cpu = parts[2][1:-1]
                 vcpu = get_part(parts, "vcpu")
                 rip = get_part(parts, "rip")
                 info1 = get_part(parts, "info1")
                 info2 = get_part(parts, "info2")
                 intr_info = get_part(parts, "intr_info")
-                error = get_part(parts, "error_code")[:-1]
+                error = get_part(parts, "error_code")
                 pd_data.append((timestamp, second, reason, cpu, vcpu, info1, info2, intr_info, error))
 
 df = pd.DataFrame.from_records(pd_data, columns=["timestamp_raw", "second", "reason", "cpu", "vcpu", "info1", "info2", "intr_info", "error"])

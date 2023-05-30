@@ -18,7 +18,7 @@
 kernel_img="../linux/arch/x86_64/boot/bzImage"
 #kernel_img="../buildroot/output/images/bzImage"
 #qemu-system-x86_64 \
-../qemu/build/x86_64-softmmu/qemu-system-x86_64 \
+../../qemu/build/x86_64-softmmu/qemu-system-x86_64 \
 	--enable-kvm -nographic \
 	-kernel $kernel_img \
 	-cpu host \
