@@ -1,1 +1,2 @@
-*/*.out filter=lfs diff=lfs merge=lfs -text
+nested-results/*/*.out filter=lfs diff=lfs merge=lfs -text
+devrez-results/*/*.out filter=lfs diff=lfs merge=lfs -text
