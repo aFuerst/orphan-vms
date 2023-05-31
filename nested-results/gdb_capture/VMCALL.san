@@ -1,0 +1,709 @@
+59
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff811f4dd5 in generic_exec_single at kernel/smp.c:389
+#3 0xffffffff811f50bd in smp_call_function_single_async at kernel/smp.c:662
+#4 0xffffffff8117b856 in kick_ilb at kernel/sched/fair.c:11310
+#5 0xffffffff811725b0 in scheduler_tick at kernel/sched/core.c:5637
+#6 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#7 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#8 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#9 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#10 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#11 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#12 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#13 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#14 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+14
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff81169741 in __ttwu_queue_wakelist at kernel/sched/core.c:3884
+#3 ttwu_queue_wakelist at kernel/sched/core.c:3959
+#4 ttwu_queue_wakelist at kernel/sched/core.c:3955
+#5 0xffffffff81171e8a in ttwu_queue at kernel/sched/core.c:3980
+#6 try_to_wake_up at kernel/sched/core.c:4307
+#7 0xffffffff81172230 in wake_up_process at kernel/sched/core.c:4441
+#8 0xffffffff81188a2d in swake_up_locked at kernel/sched/swait.c:29
+#9 swake_up_locked at kernel/sched/swait.c:21
+#10 swake_up_one at kernel/sched/swait.c:52
+#11 0xffffffff811c1b9d in rcu_core at kernel/rcu/tree.c:2368
+#12 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#13 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#14 __irq_exit_rcu at kernel/softirq.c:650
+#15 irq_exit_rcu at kernel/softirq.c:662
+#16 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+8
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff81169741 in __ttwu_queue_wakelist at kernel/sched/core.c:3884
+#3 ttwu_queue_wakelist at kernel/sched/core.c:3959
+#4 ttwu_queue_wakelist at kernel/sched/core.c:3955
+#5 0xffffffff81171e8a in ttwu_queue at kernel/sched/core.c:3980
+#6 try_to_wake_up at kernel/sched/core.c:4307
+#7 0xffffffff8117230d in default_wake_function at kernel/sched/core.c:6993
+#8 0xffffffff8137f38d in ep_autoremove_wake_function at fs/eventpoll.c:1806
+#9 0xffffffff8118622b in __wake_up_common at kernel/sched/wait.c:107
+#10 0xffffffff8118637d in __wake_up_common_lock at kernel/sched/wait.c:138
+#11 0xffffffff8118645e in __wake_up at kernel/sched/wait.c:160
+#12 0xffffffff8138049b in ep_poll_callback at fs/eventpoll.c:1242
+#13 0xffffffff8118622b in __wake_up_common at kernel/sched/wait.c:107
+#14 0xffffffff8118637d in __wake_up_common_lock at kernel/sched/wait.c:138
+#15 0xffffffff8118645e in __wake_up at kernel/sched/wait.c:160
+#16 0xffffffff8113f5db in signalfd_notify at ./include/linux/signalfd.h:22
+#17 __send_signal_locked at kernel/signal.c:1172
+#18 0xffffffff81140ff9 in send_signal_locked at kernel/signal.c:1252
+#19 0xffffffff81141098 in do_send_sig_info at kernel/signal.c:1295
+#20 0xffffffff81141834 in group_send_sig_info at kernel/signal.c:1443
+#21 kill_pid_info at kernel/signal.c:1477
+#22 0xffffffff81141b03 in kill_proc_info at kernel/signal.c:1494
+#23 kill_something_info at kernel/signal.c:1591
+#24 0xffffffff81144649 in __do_sys_kill at kernel/signal.c:3795
+#25 __se_sys_kill at kernel/signal.c:3789
+#26 __x64_sys_kill at kernel/signal.c:3789
+#27 0xffffffff81f40b8b in do_syscall_x64 at arch/x86/entry/common.c:50
+#28 do_syscall_64 at arch/x86/entry/common.c:80
+#29 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+
+8
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff81169741 in __ttwu_queue_wakelist at kernel/sched/core.c:3884
+#3 ttwu_queue_wakelist at kernel/sched/core.c:3959
+#4 ttwu_queue_wakelist at kernel/sched/core.c:3955
+#5 0xffffffff81171e8a in ttwu_queue at kernel/sched/core.c:3980
+#6 try_to_wake_up at kernel/sched/core.c:4307
+#7 0xffffffff81172230 in wake_up_process at kernel/sched/core.c:4441
+#8 0xffffffff8114f170 in wake_up_worker at kernel/workqueue.c:863
+#9 insert_work at kernel/workqueue.c:1373
+#10 __queue_work at kernel/workqueue.c:1526
+#11 0xffffffff8114f805 in __queue_delayed_work at kernel/workqueue.c:1674
+#12 0xffffffff8114f863 in queue_delayed_work_on at kernel/workqueue.c:1710
+#13 0xffffffff812ac170 in vmstat_shepherd at mm/vmstat.c:2026
+#14 0xffffffff81151866 in process_one_work at kernel/workqueue.c:2405
+#15 0xffffffff81151e69 in worker_thread at kernel/workqueue.c:2552
+#16 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#17 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+5
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff81169741 in __ttwu_queue_wakelist at kernel/sched/core.c:3884
+#3 ttwu_queue_wakelist at kernel/sched/core.c:3959
+#4 ttwu_queue_wakelist at kernel/sched/core.c:3955
+#5 0xffffffff81171e8a in ttwu_queue at kernel/sched/core.c:3980
+#6 try_to_wake_up at kernel/sched/core.c:4307
+#7 0xffffffff8117230d in default_wake_function at kernel/sched/core.c:6993
+#8 0xffffffff8137f38d in ep_autoremove_wake_function at fs/eventpoll.c:1806
+#9 0xffffffff8118622b in __wake_up_common at kernel/sched/wait.c:107
+#10 0xffffffff8118637d in __wake_up_common_lock at kernel/sched/wait.c:138
+#11 0xffffffff8118645e in __wake_up at kernel/sched/wait.c:160
+#12 0xffffffff8138049b in ep_poll_callback at fs/eventpoll.c:1242
+#13 0xffffffff8118622b in __wake_up_common at kernel/sched/wait.c:107
+#14 0xffffffff8118637d in __wake_up_common_lock at kernel/sched/wait.c:138
+#15 0xffffffff8118691b in __wake_up_sync_key at kernel/sched/wait.c:208
+#16 0xffffffff81bd8e7d in sock_def_readable at net/core/sock.c:3288
+#17 0xffffffff81c677f0 in __netlink_sendskb at net/netlink/af_netlink.c:1286
+#18 0xffffffff81c69714 in netlink_broadcast_deliver at net/netlink/af_netlink.c:1418
+#19 do_one_broadcast at net/netlink/af_netlink.c:1496
+#20 netlink_broadcast at net/netlink/af_netlink.c:1536
+#21 0xffffffff81f1c930 in uevent_net_broadcast_untagged at ./include/linux/skbuff.h:1878
+#22 kobject_uevent_net_broadcast at lib/kobject_uevent.c:409
+#23 kobject_uevent_env at lib/kobject_uevent.c:593
+#24 0xffffffff81e177ba in call_crda at net/wireless/reg.c:583
+#25 reg_query_database at net/wireless/reg.c:1126
+#26 0xffffffff81e1941d in reg_process_hint_core at net/wireless/reg.c:2665
+#27 reg_process_hint at net/wireless/reg.c:3008
+#28 0xffffffff81e19b04 in reg_process_pending_hints at net/wireless/reg.c:3096
+#29 reg_todo at net/wireless/reg.c:3187
+#30 0xffffffff81151866 in process_one_work at kernel/workqueue.c:2405
+#31 0xffffffff81151e69 in worker_thread at kernel/workqueue.c:2552
+#32 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#33 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+5
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff8116c672 in check_preempt_curr at kernel/sched/core.c:2206
+#3 0xffffffff811705bc in wake_up_new_task at kernel/sched/core.c:4835
+#4 0xffffffff8112b7c8 in kernel_clone at kernel/fork.c:2949
+#5 0xffffffff8112bae6 in __do_sys_clone at kernel/fork.c:3061
+#6 0xffffffff81f40b8b in do_syscall_x64 at arch/x86/entry/common.c:50
+#7 do_syscall_64 at arch/x86/entry/common.c:80
+#8 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+#9 0x000055f4851f62a0 in ?? at ()
+
+5
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff81169741 in __ttwu_queue_wakelist at kernel/sched/core.c:3884
+#3 ttwu_queue_wakelist at kernel/sched/core.c:3959
+#4 ttwu_queue_wakelist at kernel/sched/core.c:3955
+#5 0xffffffff81171e8a in ttwu_queue at kernel/sched/core.c:3980
+#6 try_to_wake_up at kernel/sched/core.c:4307
+#7 0xffffffff8117230d in default_wake_function at kernel/sched/core.c:6993
+#8 0xffffffff8137f38d in ep_autoremove_wake_function at fs/eventpoll.c:1806
+#9 0xffffffff8118622b in __wake_up_common at kernel/sched/wait.c:107
+#10 0xffffffff8118637d in __wake_up_common_lock at kernel/sched/wait.c:138
+#11 0xffffffff8118645e in __wake_up at kernel/sched/wait.c:160
+#12 0xffffffff8138049b in ep_poll_callback at fs/eventpoll.c:1242
+#13 0xffffffff8118622b in __wake_up_common at kernel/sched/wait.c:107
+#14 0xffffffff8118637d in __wake_up_common_lock at kernel/sched/wait.c:138
+#15 0xffffffff8118691b in __wake_up_sync_key at kernel/sched/wait.c:208
+#16 0xffffffff81bd8e7d in sock_def_readable at net/core/sock.c:3288
+#17 0xffffffff81d57a0f in unix_dgram_sendmsg at net/unix/af_unix.c:2084
+#18 0xffffffff81bd344d in sock_sendmsg_nosec at net/socket.c:724
+#19 sock_sendmsg at net/socket.c:747
+#20 sock_write_iter at net/socket.c:1140
+#21 0xffffffff81325ccd in call_write_iter at ./include/linux/fs.h:1868
+#22 new_sync_write at fs/read_write.c:491
+#23 vfs_write at fs/read_write.c:584
+#24 0xffffffff81325f86 in ksys_write at fs/read_write.c:637
+#25 0xffffffff81f40b8b in do_syscall_x64 at arch/x86/entry/common.c:50
+#26 do_syscall_64 at arch/x86/entry/common.c:80
+#27 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+#28 0x000055f4851f62a0 in ?? at ()
+
+5
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff81169741 in __ttwu_queue_wakelist at kernel/sched/core.c:3884
+#3 ttwu_queue_wakelist at kernel/sched/core.c:3959
+#4 ttwu_queue_wakelist at kernel/sched/core.c:3955
+#5 0xffffffff81171e8a in ttwu_queue at kernel/sched/core.c:3980
+#6 try_to_wake_up at kernel/sched/core.c:4307
+#7 0xffffffff8117230d in default_wake_function at kernel/sched/core.c:6993
+#8 0xffffffff8137f38d in ep_autoremove_wake_function at fs/eventpoll.c:1806
+#9 0xffffffff8118622b in __wake_up_common at kernel/sched/wait.c:107
+#10 0xffffffff8118637d in __wake_up_common_lock at kernel/sched/wait.c:138
+#11 0xffffffff8118645e in __wake_up at kernel/sched/wait.c:160
+#12 0xffffffff8138049b in ep_poll_callback at fs/eventpoll.c:1242
+#13 0xffffffff8118622b in __wake_up_common at kernel/sched/wait.c:107
+#14 0xffffffff8118637d in __wake_up_common_lock at kernel/sched/wait.c:138
+#15 0xffffffff8118645e in __wake_up at kernel/sched/wait.c:160
+#16 0xffffffff8113f5db in signalfd_notify at ./include/linux/signalfd.h:22
+#17 __send_signal_locked at kernel/signal.c:1172
+#18 0xffffffff81140452 in do_notify_parent at kernel/signal.c:2131
+#19 0xffffffff81132f8a in exit_notify at kernel/exit.c:742
+#20 do_exit at kernel/exit.c:891
+#21 0xffffffff811333ec in do_group_exit at kernel/exit.c:1021
+#22 0xffffffff81133463 in __do_sys_exit_group at kernel/exit.c:1032
+#23 __se_sys_exit_group at kernel/exit.c:1030
+#24 __x64_sys_exit_group at kernel/exit.c:1030
+#25 0xffffffff81f40b8b in do_syscall_x64 at arch/x86/entry/common.c:50
+#26 do_syscall_64 at arch/x86/entry/common.c:80
+#27 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+#28 0x000055f4851f62a0 in ?? at ()
+#29 0x0000000000000001 in fixed_percpu_data at ()
+#30 0x00007ffe70cf0ad8 in ?? at ()
+#31 0x000055f48521da70 in ?? at ()
+
+3
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff811f4a21 in arch_send_call_function_single_ipi at ./arch/x86/include/asm/smp.h:109
+#3 send_call_function_single_ipi at kernel/smp.c:112
+#4 smp_call_function_many_cond at kernel/smp.c:810
+#5 0xffffffff811f4b2f in on_each_cpu_cond_mask at kernel/smp.c:996
+#6 0xffffffff8111cba0 in __flush_tlb_multi at ./arch/x86/include/asm/paravirt.h:87
+#7 flush_tlb_multi at arch/x86/mm/tlb.c:943
+#8 flush_tlb_mm_range at arch/x86/mm/tlb.c:1029
+#9 0xffffffff812d8332 in tlb_flush at ./arch/x86/include/asm/tlb.h:20
+#10 tlb_flush_mmu_tlbonly at ./include/asm-generic/tlb.h:458
+#11 tlb_flush_mmu_tlbonly at ./include/asm-generic/tlb.h:448
+#12 tlb_flush_mmu at mm/mmu_gather.c:298
+#13 tlb_finish_mmu at mm/mmu_gather.c:391
+#14 0xffffffff812d21c8 in unmap_region at mm/mmap.c:2222
+#15 0xffffffff812d48ef in do_vmi_align_munmap at mm/mmap.c:2473
+#16 0xffffffff812d4b3a in do_vmi_munmap at mm/mmap.c:2530
+#17 0xffffffff812d4c2e in __vm_munmap at mm/mmap.c:2805
+#18 0xffffffff812d4da6 in __do_sys_munmap at mm/mmap.c:2830
+#19 __se_sys_munmap at mm/mmap.c:2827
+#20 __x64_sys_munmap at mm/mmap.c:2827
+#21 0xffffffff81f40b8b in do_syscall_x64 at arch/x86/entry/common.c:50
+#22 do_syscall_64 at arch/x86/entry/common.c:80
+#23 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+#24 0x000055f4851f62a0 in ?? at ()
+#25 0x0000000000000001 in fixed_percpu_data at ()
+#26 0x00007ffe70cf0ad8 in ?? at ()
+#27 0x000055f4843a8688 in ?? at ()
+#28 0x000055f485204900 in ?? at ()
+#29 0x000055f4843a8650 in ?? at ()
+#30 0x0000000000000206 in ?? at ()
+#31 0x0000000000000007 in fixed_percpu_data at ()
+#32 0xd00712112ebfed1e in ?? at ()
+#33 0x0000000000000007 in fixed_percpu_data at ()
+#34 0xffffffffffffffda in ?? at ()
+#35 0x00007f9beace31f7 in ?? at ()
+#36 0x000000055f485209 in ?? at ()
+#37 0x0000000000906623 in ?? at ()
+#38 0x00007f9bea305000 in ?? at ()
+#39 0x000000000000000b in fixed_percpu_data at ()
+#40 0x00007f9beace31f7 in ?? at ()
+#41 0x0000000000000033 in ?? at ()
+#42 0x0000000000000206 in ?? at ()
+#43 0x00007ffe70cf0a58 in ?? at ()
+#44 0x000000000000002b in fixed_percpu_data at ()
+
+2
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff81169741 in __ttwu_queue_wakelist at kernel/sched/core.c:3884
+#3 ttwu_queue_wakelist at kernel/sched/core.c:3959
+#4 ttwu_queue_wakelist at kernel/sched/core.c:3955
+#5 0xffffffff81171e8a in ttwu_queue at kernel/sched/core.c:3980
+#6 try_to_wake_up at kernel/sched/core.c:4307
+#7 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#8 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#9 __run_timers at kernel/time/timer.c:2022
+#10 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#11 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#12 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#13 __irq_exit_rcu at kernel/softirq.c:650
+#14 irq_exit_rcu at kernel/softirq.c:662
+#15 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+2
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff81169741 in __ttwu_queue_wakelist at kernel/sched/core.c:3884
+#3 ttwu_queue_wakelist at kernel/sched/core.c:3959
+#4 ttwu_queue_wakelist at kernel/sched/core.c:3955
+#5 0xffffffff81171e8a in ttwu_queue at kernel/sched/core.c:3980
+#6 try_to_wake_up at kernel/sched/core.c:4307
+#7 0xffffffff81172230 in wake_up_process at kernel/sched/core.c:4441
+#8 0xffffffff81188a2d in swake_up_locked at kernel/sched/swait.c:29
+#9 swake_up_locked at kernel/sched/swait.c:21
+#10 swake_up_one at kernel/sched/swait.c:52
+#11 0xffffffff811c21db in rcu_report_qs_rdp at kernel/rcu/tree.c:2005
+#12 rcu_check_quiescent_state at kernel/rcu/tree.c:2046
+#13 rcu_core at kernel/rcu/tree.c:2361
+#14 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#15 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#16 __irq_exit_rcu at kernel/softirq.c:650
+#17 irq_exit_rcu at kernel/softirq.c:662
+#18 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+2
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff81169741 in __ttwu_queue_wakelist at kernel/sched/core.c:3884
+#3 ttwu_queue_wakelist at kernel/sched/core.c:3959
+#4 ttwu_queue_wakelist at kernel/sched/core.c:3955
+#5 0xffffffff81171e8a in ttwu_queue at kernel/sched/core.c:3980
+#6 try_to_wake_up at kernel/sched/core.c:4307
+#7 0xffffffff81172230 in wake_up_process at kernel/sched/core.c:4441
+#8 0xffffffff81188a2d in swake_up_locked at kernel/sched/swait.c:29
+#9 swake_up_locked at kernel/sched/swait.c:21
+#10 swake_up_one at kernel/sched/swait.c:52
+#11 0xffffffff811c1b17 in rcu_check_quiescent_state at kernel/rcu/tree.c:2026
+#12 rcu_core at kernel/rcu/tree.c:2361
+#13 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#14 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#15 __irq_exit_rcu at kernel/softirq.c:650
+#16 irq_exit_rcu at kernel/softirq.c:662
+#17 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff81169741 in __ttwu_queue_wakelist at kernel/sched/core.c:3884
+#3 ttwu_queue_wakelist at kernel/sched/core.c:3959
+#4 ttwu_queue_wakelist at kernel/sched/core.c:3955
+#5 0xffffffff81171e8a in ttwu_queue at kernel/sched/core.c:3980
+#6 try_to_wake_up at kernel/sched/core.c:4307
+#7 0xffffffff8117230d in default_wake_function at kernel/sched/core.c:6993
+#8 0xffffffff8118747d in autoremove_wake_function at kernel/sched/wait.c:419
+#9 0xffffffff8118622b in __wake_up_common at kernel/sched/wait.c:107
+#10 0xffffffff8118637d in __wake_up_common_lock at kernel/sched/wait.c:138
+#11 0xffffffff81261c34 in irq_work_single at kernel/irq_work.c:221
+#12 0xffffffff81261ca6 in irq_work_run_list at kernel/irq_work.c:252
+#13 0xffffffff81261cf9 in irq_work_run at kernel/irq_work.c:263
+#14 0xffffffff810d9a78 in __sysvec_irq_work at arch/x86/kernel/irq_work.c:22
+#15 0xffffffff81f43079 in sysvec_irq_work at arch/x86/kernel/irq_work.c:17
+#16 0xffffffff820015ca in asm_sysvec_irq_work at ./arch/x86/include/asm/idtentry.h:671
+#17 0xffffc900000d0e08 in ?? at ()
+#18 0xffffffff827395f8 in kallsyms_seqs_of_names at ()
+
+1
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff811f4dd5 in generic_exec_single at kernel/smp.c:389
+#3 0xffffffff811f50bd in smp_call_function_single_async at kernel/smp.c:662
+#4 0xffffffff8117b856 in kick_ilb at kernel/sched/fair.c:11310
+#5 0xffffffff811725b0 in scheduler_tick at kernel/sched/core.c:5637
+#6 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#7 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#8 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#9 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#10 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#11 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#12 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#13 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#14 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#15 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#16 0x0000563159fe15a2 in ?? at ()
+#17 0x0000563159fe1520 in ?? at ()
+#18 0x0000563159fd14d1 in ?? at ()
+#19 0x0000563159fe1520 in ?? at ()
+
+1
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff81169741 in __ttwu_queue_wakelist at kernel/sched/core.c:3884
+#3 ttwu_queue_wakelist at kernel/sched/core.c:3959
+#4 ttwu_queue_wakelist at kernel/sched/core.c:3955
+#5 0xffffffff81171e8a in ttwu_queue at kernel/sched/core.c:3980
+#6 try_to_wake_up at kernel/sched/core.c:4307
+#7 0xffffffff8117230d in default_wake_function at kernel/sched/core.c:6993
+#8 0xffffffff8118747d in autoremove_wake_function at kernel/sched/wait.c:419
+#9 0xffffffff8118622b in __wake_up_common at kernel/sched/wait.c:107
+#10 0xffffffff8118637d in __wake_up_common_lock at kernel/sched/wait.c:138
+#11 0xffffffff81261c34 in irq_work_single at kernel/irq_work.c:221
+#12 0xffffffff81261ca6 in irq_work_run_list at kernel/irq_work.c:252
+#13 0xffffffff81261cf9 in irq_work_run at kernel/irq_work.c:263
+#14 0xffffffff810d9a78 in __sysvec_irq_work at arch/x86/kernel/irq_work.c:22
+#15 0xffffffff81f43079 in sysvec_irq_work at arch/x86/kernel/irq_work.c:17
+#16 0xffffffff820015ca in asm_sysvec_irq_work at ./arch/x86/include/asm/idtentry.h:671
+#17 0xffffc900000d0e08 in ?? at ()
+#18 0xffffffff82739670 in kallsyms_seqs_of_names at ()
+
+1
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff81169741 in __ttwu_queue_wakelist at kernel/sched/core.c:3884
+#3 ttwu_queue_wakelist at kernel/sched/core.c:3959
+#4 ttwu_queue_wakelist at kernel/sched/core.c:3955
+#5 0xffffffff81171e8a in ttwu_queue at kernel/sched/core.c:3980
+#6 try_to_wake_up at kernel/sched/core.c:4307
+#7 0xffffffff8117230d in default_wake_function at kernel/sched/core.c:6993
+#8 0xffffffff8118747d in autoremove_wake_function at kernel/sched/wait.c:419
+#9 0xffffffff8118622b in __wake_up_common at kernel/sched/wait.c:107
+#10 0xffffffff8118637d in __wake_up_common_lock at kernel/sched/wait.c:138
+#11 0xffffffff81261c34 in irq_work_single at kernel/irq_work.c:221
+#12 0xffffffff81261ca6 in irq_work_run_list at kernel/irq_work.c:252
+#13 0xffffffff81261cf9 in irq_work_run at kernel/irq_work.c:263
+#14 0xffffffff810d9a78 in __sysvec_irq_work at arch/x86/kernel/irq_work.c:22
+#15 0xffffffff81f43079 in sysvec_irq_work at arch/x86/kernel/irq_work.c:17
+#16 0xffffffff820015ca in asm_sysvec_irq_work at ./arch/x86/include/asm/idtentry.h:671
+#17 0xffffc900000d0e08 in ?? at ()
+#18 0xffffffff827396d0 in kallsyms_seqs_of_names at ()
+
+1
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff81169741 in __ttwu_queue_wakelist at kernel/sched/core.c:3884
+#3 ttwu_queue_wakelist at kernel/sched/core.c:3959
+#4 ttwu_queue_wakelist at kernel/sched/core.c:3955
+#5 0xffffffff81171e8a in ttwu_queue at kernel/sched/core.c:3980
+#6 try_to_wake_up at kernel/sched/core.c:4307
+#7 0xffffffff8117230d in default_wake_function at kernel/sched/core.c:6993
+#8 0xffffffff8118747d in autoremove_wake_function at kernel/sched/wait.c:419
+#9 0xffffffff8118622b in __wake_up_common at kernel/sched/wait.c:107
+#10 0xffffffff8118637d in __wake_up_common_lock at kernel/sched/wait.c:138
+#11 0xffffffff81261c34 in irq_work_single at kernel/irq_work.c:221
+#12 0xffffffff81261ca6 in irq_work_run_list at kernel/irq_work.c:252
+#13 0xffffffff81261cf9 in irq_work_run at kernel/irq_work.c:263
+#14 0xffffffff810d9a78 in __sysvec_irq_work at arch/x86/kernel/irq_work.c:22
+#15 0xffffffff81f43079 in sysvec_irq_work at arch/x86/kernel/irq_work.c:17
+#16 0xffffffff820015ca in asm_sysvec_irq_work at ./arch/x86/include/asm/idtentry.h:671
+#17 0xffffc900000d0e00 in ?? at ()
+#18 0xffffffff82739730 in kallsyms_seqs_of_names at ()
+
+1
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff81169741 in __ttwu_queue_wakelist at kernel/sched/core.c:3884
+#3 ttwu_queue_wakelist at kernel/sched/core.c:3959
+#4 ttwu_queue_wakelist at kernel/sched/core.c:3955
+#5 0xffffffff81171e8a in ttwu_queue at kernel/sched/core.c:3980
+#6 try_to_wake_up at kernel/sched/core.c:4307
+#7 0xffffffff8117230d in default_wake_function at kernel/sched/core.c:6993
+#8 0xffffffff8118747d in autoremove_wake_function at kernel/sched/wait.c:419
+#9 0xffffffff8118622b in __wake_up_common at kernel/sched/wait.c:107
+#10 0xffffffff8118637d in __wake_up_common_lock at kernel/sched/wait.c:138
+#11 0xffffffff81261c34 in irq_work_single at kernel/irq_work.c:221
+#12 0xffffffff81261ca6 in irq_work_run_list at kernel/irq_work.c:252
+#13 0xffffffff81261cf9 in irq_work_run at kernel/irq_work.c:263
+#14 0xffffffff810d9a78 in __sysvec_irq_work at arch/x86/kernel/irq_work.c:22
+#15 0xffffffff81f43079 in sysvec_irq_work at arch/x86/kernel/irq_work.c:17
+#16 0xffffffff820015ca in asm_sysvec_irq_work at ./arch/x86/include/asm/idtentry.h:671
+#17 0xffffc900000d0e08 in ?? at ()
+#18 0xffffffff82739800 in kallsyms_seqs_of_names at ()
+
+1
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff81169741 in __ttwu_queue_wakelist at kernel/sched/core.c:3884
+#3 ttwu_queue_wakelist at kernel/sched/core.c:3959
+#4 ttwu_queue_wakelist at kernel/sched/core.c:3955
+#5 0xffffffff81171e8a in ttwu_queue at kernel/sched/core.c:3980
+#6 try_to_wake_up at kernel/sched/core.c:4307
+#7 0xffffffff8117230d in default_wake_function at kernel/sched/core.c:6993
+#8 0xffffffff8118747d in autoremove_wake_function at kernel/sched/wait.c:419
+#9 0xffffffff8118622b in __wake_up_common at kernel/sched/wait.c:107
+#10 0xffffffff8118637d in __wake_up_common_lock at kernel/sched/wait.c:138
+#11 0xffffffff81261c34 in irq_work_single at kernel/irq_work.c:221
+#12 0xffffffff81261ca6 in irq_work_run_list at kernel/irq_work.c:252
+#13 0xffffffff81261cf9 in irq_work_run at kernel/irq_work.c:263
+#14 0xffffffff810d9a78 in __sysvec_irq_work at arch/x86/kernel/irq_work.c:22
+#15 0xffffffff81f43079 in sysvec_irq_work at arch/x86/kernel/irq_work.c:17
+#16 0xffffffff820015ca in asm_sysvec_irq_work at ./arch/x86/include/asm/idtentry.h:671
+#17 0xffffc900000d0e00 in ?? at ()
+#18 0xffffffff82727728 in kallsyms_seqs_of_names at ()
+
+1
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff811d7151 in internal_add_timer at kernel/time/timer.c:634
+#3 add_timer_on at kernel/time/timer.c:1294
+#4 0xffffffff811df418 in clocksource_watchdog at kernel/time/clocksource.c:554
+#5 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#6 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#7 __run_timers at kernel/time/timer.c:2022
+#8 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#9 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#10 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#11 __irq_exit_rcu at kernel/softirq.c:650
+#12 irq_exit_rcu at kernel/softirq.c:662
+#13 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff8116c672 in check_preempt_curr at kernel/sched/core.c:2206
+#3 0xffffffff811705bc in wake_up_new_task at kernel/sched/core.c:4835
+#4 0xffffffff8112b7c8 in kernel_clone at kernel/fork.c:2949
+#5 0xffffffff8112bcba in kernel_thread at kernel/fork.c:2980
+#6 0xffffffff811599e3 in create_kthread at kernel/kthread.c:402
+#7 kthreadd at kernel/kthread.c:737
+#8 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+1
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff81169741 in __ttwu_queue_wakelist at kernel/sched/core.c:3884
+#3 ttwu_queue_wakelist at kernel/sched/core.c:3959
+#4 ttwu_queue_wakelist at kernel/sched/core.c:3955
+#5 0xffffffff81171e8a in ttwu_queue at kernel/sched/core.c:3980
+#6 try_to_wake_up at kernel/sched/core.c:4307
+#7 0xffffffff81151866 in process_one_work at kernel/workqueue.c:2405
+#8 0xffffffff81151e69 in worker_thread at kernel/workqueue.c:2552
+#9 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#10 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+1
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff81173332 in check_preempt_wakeup at kernel/sched/fair.c:7935
+#3 0xffffffff8116c699 in check_preempt_curr at kernel/sched/core.c:2204
+#4 0xffffffff81171b83 in ttwu_do_activate at kernel/sched/core.c:3736
+#5 0xffffffff81171eca in ttwu_queue at kernel/sched/core.c:3985
+#6 try_to_wake_up at kernel/sched/core.c:4307
+#7 0xffffffff8117230d in default_wake_function at kernel/sched/core.c:6993
+#8 0xffffffff8137f38d in ep_autoremove_wake_function at fs/eventpoll.c:1806
+#9 0xffffffff8118622b in __wake_up_common at kernel/sched/wait.c:107
+#10 0xffffffff8118637d in __wake_up_common_lock at kernel/sched/wait.c:138
+#11 0xffffffff8118645e in __wake_up at kernel/sched/wait.c:160
+#12 0xffffffff8138049b in ep_poll_callback at fs/eventpoll.c:1242
+#13 0xffffffff8118622b in __wake_up_common at kernel/sched/wait.c:107
+#14 0xffffffff8118637d in __wake_up_common_lock at kernel/sched/wait.c:138
+#15 0xffffffff8118645e in __wake_up at kernel/sched/wait.c:160
+#16 0xffffffff8113f5db in signalfd_notify at ./include/linux/signalfd.h:22
+#17 __send_signal_locked at kernel/signal.c:1172
+#18 0xffffffff81140ff9 in send_signal_locked at kernel/signal.c:1252
+#19 0xffffffff81141098 in do_send_sig_info at kernel/signal.c:1295
+#20 0xffffffff81141834 in group_send_sig_info at kernel/signal.c:1443
+#21 kill_pid_info at kernel/signal.c:1477
+#22 0xffffffff81141b03 in kill_proc_info at kernel/signal.c:1494
+#23 kill_something_info at kernel/signal.c:1591
+#24 0xffffffff81144649 in __do_sys_kill at kernel/signal.c:3795
+#25 __se_sys_kill at kernel/signal.c:3789
+#26 __x64_sys_kill at kernel/signal.c:3789
+#27 0xffffffff81f40b8b in do_syscall_x64 at arch/x86/entry/common.c:50
+#28 do_syscall_64 at arch/x86/entry/common.c:80
+#29 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+
+1
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff81169741 in __ttwu_queue_wakelist at kernel/sched/core.c:3884
+#3 ttwu_queue_wakelist at kernel/sched/core.c:3959
+#4 ttwu_queue_wakelist at kernel/sched/core.c:3955
+#5 0xffffffff81171e8a in ttwu_queue at kernel/sched/core.c:3980
+#6 try_to_wake_up at kernel/sched/core.c:4307
+#7 0xffffffff8117230d in default_wake_function at kernel/sched/core.c:6993
+#8 0xffffffff8137f38d in ep_autoremove_wake_function at fs/eventpoll.c:1806
+#9 0xffffffff8118622b in __wake_up_common at kernel/sched/wait.c:107
+#10 0xffffffff8118637d in __wake_up_common_lock at kernel/sched/wait.c:138
+#11 0xffffffff8118645e in __wake_up at kernel/sched/wait.c:160
+#12 0xffffffff8138049b in ep_poll_callback at fs/eventpoll.c:1242
+#13 0xffffffff8118622b in __wake_up_common at kernel/sched/wait.c:107
+#14 0xffffffff8118637d in __wake_up_common_lock at kernel/sched/wait.c:138
+#15 0xffffffff8118645e in __wake_up at kernel/sched/wait.c:160
+#16 0xffffffff8113f5db in signalfd_notify at ./include/linux/signalfd.h:22
+#17 __send_signal_locked at kernel/signal.c:1172
+#18 0xffffffff81140452 in do_notify_parent at kernel/signal.c:2131
+#19 0xffffffff81132f8a in exit_notify at kernel/exit.c:742
+#20 do_exit at kernel/exit.c:891
+#21 0xffffffff811333ec in do_group_exit at kernel/exit.c:1021
+#22 0xffffffff81133463 in __do_sys_exit_group at kernel/exit.c:1032
+#23 __se_sys_exit_group at kernel/exit.c:1030
+#24 __x64_sys_exit_group at kernel/exit.c:1030
+#25 0xffffffff81f40b8b in do_syscall_x64 at arch/x86/entry/common.c:50
+#26 do_syscall_64 at arch/x86/entry/common.c:80
+#27 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+#28 0x000055f4851f62a0 in ?? at ()
+#29 0x0000000000000001 in fixed_percpu_data at ()
+#30 0x00007ffe70cf0ad8 in ?? at ()
+#31 0x000055f485241be0 in ?? at ()
+
+1
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff81169741 in __ttwu_queue_wakelist at kernel/sched/core.c:3884
+#3 ttwu_queue_wakelist at kernel/sched/core.c:3959
+#4 ttwu_queue_wakelist at kernel/sched/core.c:3955
+#5 0xffffffff81171e8a in ttwu_queue at kernel/sched/core.c:3980
+#6 try_to_wake_up at kernel/sched/core.c:4307
+#7 0xffffffff81172230 in wake_up_process at kernel/sched/core.c:4441
+#8 0xffffffff81188a2d in swake_up_locked at kernel/sched/swait.c:29
+#9 swake_up_locked at kernel/sched/swait.c:21
+#10 swake_up_one at kernel/sched/swait.c:52
+#11 0xffffffff811c1b9d in rcu_core at kernel/rcu/tree.c:2368
+#12 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#13 0xffffffff8113492d in run_ksoftirqd at kernel/softirq.c:939
+#14 run_ksoftirqd at kernel/softirq.c:931
+#15 0xffffffff811624c4 in smpboot_thread_fn at kernel/smpboot.c:164
+#16 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#17 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+1
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff81169741 in __ttwu_queue_wakelist at kernel/sched/core.c:3884
+#3 ttwu_queue_wakelist at kernel/sched/core.c:3959
+#4 ttwu_queue_wakelist at kernel/sched/core.c:3955
+#5 0xffffffff81171e8a in ttwu_queue at kernel/sched/core.c:3980
+#6 try_to_wake_up at kernel/sched/core.c:4307
+#7 0xffffffff81172230 in wake_up_process at kernel/sched/core.c:4441
+#8 0xffffffff8114f170 in wake_up_worker at kernel/workqueue.c:863
+#9 insert_work at kernel/workqueue.c:1373
+#10 __queue_work at kernel/workqueue.c:1526
+#11 0xffffffff8114f373 in queue_work_on at kernel/workqueue.c:1554
+#12 0xffffffff81931e66 in queue_work at ./include/linux/workqueue.h:505
+#13 0xffffffff81931ea2 in driver_deferred_probe_trigger at drivers/base/dd.c:177
+#14 deferred_probe_timeout_work_func at drivers/base/dd.c:311
+#15 0xffffffff81151866 in process_one_work at kernel/workqueue.c:2405
+#16 0xffffffff81151e69 in worker_thread at kernel/workqueue.c:2552
+#17 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#18 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+1
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff811f4dd5 in generic_exec_single at kernel/smp.c:389
+#3 0xffffffff811f50bd in smp_call_function_single_async at kernel/smp.c:662
+#4 0xffffffff8117b856 in kick_ilb at kernel/sched/fair.c:11310
+#5 0xffffffff811725b0 in scheduler_tick at kernel/sched/core.c:5637
+#6 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#7 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#8 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#9 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#10 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#11 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#12 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#13 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#14 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#15 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#16 0xffff88813bc00000 in ?? at ()
+#17 0xffff8881001fca24 in ?? at ()
+#18 0x0000000000000287 in ?? at ()
+#19 0x0000000000000020 in fixed_percpu_data at ()
+#20 0x000000000002b480 in ?? at ()
+#21 0xffff8881001fc200 in ?? at ()
+
+1
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff811f4dd5 in generic_exec_single at kernel/smp.c:389
+#3 0xffffffff811f50bd in smp_call_function_single_async at kernel/smp.c:662
+#4 0xffffffff8117b856 in kick_ilb at kernel/sched/fair.c:11310
+#5 0xffffffff811725b0 in scheduler_tick at kernel/sched/core.c:5637
+#6 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#7 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#8 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#9 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#10 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#11 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#12 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#13 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#14 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#15 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#16 0x000000000000001d in fixed_percpu_data at ()
+#17 0x00007f9bead99b00 in ?? at ()
+#18 0x000000000000001b in fixed_percpu_data at ()
+#19 0x00007f9bead99aa0 in ?? at ()
+#20 0x00000000000001d0 in ?? at ()
+#21 0x000000000000001d in fixed_percpu_data at ()
+#22 0x000000000000002b in fixed_percpu_data at ()
+#23 0x00007ffe70d46080 in ?? at ()
+
+1
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff81169741 in __ttwu_queue_wakelist at kernel/sched/core.c:3884
+#3 ttwu_queue_wakelist at kernel/sched/core.c:3959
+#4 ttwu_queue_wakelist at kernel/sched/core.c:3955
+#5 0xffffffff81171e8a in ttwu_queue at kernel/sched/core.c:3980
+#6 try_to_wake_up at kernel/sched/core.c:4307
+#7 0xffffffff8117230d in default_wake_function at kernel/sched/core.c:6993
+#8 0xffffffff8118747d in autoremove_wake_function at kernel/sched/wait.c:419
+#9 0xffffffff8118622b in __wake_up_common at kernel/sched/wait.c:107
+#10 0xffffffff8118637d in __wake_up_common_lock at kernel/sched/wait.c:138
+#11 0xffffffff8118691b in __wake_up_sync_key at kernel/sched/wait.c:208
+#12 0xffffffff81bd8e7d in sock_def_readable at net/core/sock.c:3288
+#13 0xffffffff81d57a0f in unix_dgram_sendmsg at net/unix/af_unix.c:2084
+#14 0xffffffff81bd2f5e in sock_sendmsg_nosec at net/socket.c:724
+#15 sock_sendmsg at net/socket.c:747
+#16 0xffffffff81bd4eab in __sys_sendto at net/socket.c:2144
+#17 0xffffffff81bd4f2f in __do_sys_sendto at net/socket.c:2156
+#18 __se_sys_sendto at net/socket.c:2152
+#19 __x64_sys_sendto at net/socket.c:2152
+#20 0xffffffff81f40b8b in do_syscall_x64 at arch/x86/entry/common.c:50
+#21 do_syscall_64 at arch/x86/entry/common.c:80
+#22 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+#23 0x00007ffe14df5de0 in ?? at ()
+#24 0x00007ffe14df6228 in ?? at ()
+#25 0x000000000000004c in ?? at ()
+#26 0x0000000000000004 in fixed_percpu_data at ()
+#27 0x00007ffe14df6210 in ?? at ()
+#28 0x00007ffe14df5de0 in ?? at ()
+#29 0x0000000000000246 in ?? at ()
+
+1
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff81173332 in check_preempt_wakeup at kernel/sched/fair.c:7935
+#3 0xffffffff8116c699 in check_preempt_curr at kernel/sched/core.c:2204
+#4 0xffffffff81171b83 in ttwu_do_activate at kernel/sched/core.c:3736
+#5 0xffffffff81171eca in ttwu_queue at kernel/sched/core.c:3985
+#6 try_to_wake_up at kernel/sched/core.c:4307
+#7 0xffffffff81172230 in wake_up_process at kernel/sched/core.c:4441
+#8 0xffffffff8114f170 in wake_up_worker at kernel/workqueue.c:863
+#9 insert_work at kernel/workqueue.c:1373
+#10 __queue_work at kernel/workqueue.c:1526
+#11 0xffffffff8114f805 in __queue_delayed_work at kernel/workqueue.c:1674
+#12 0xffffffff8114f863 in queue_delayed_work_on at kernel/workqueue.c:1710
+#13 0xffffffff812ac170 in vmstat_shepherd at mm/vmstat.c:2026
+#14 0xffffffff81151866 in process_one_work at kernel/workqueue.c:2405
+#15 0xffffffff81151e69 in worker_thread at kernel/workqueue.c:2552
+#16 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#17 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+1
+#0 0xffffffff811125da in kvm_hypercall4 at ./arch/x86/include/asm/kvm_para.h:101
+#1 __send_ipi_mask at arch/x86/kernel/kvm.c:547
+#2 0xffffffff81169741 in __ttwu_queue_wakelist at p=0xffff8881001fc200Quit
+

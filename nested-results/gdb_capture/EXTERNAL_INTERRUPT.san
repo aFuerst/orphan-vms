@@ -1,0 +1,265 @@
+555
+#0 0xffffffff81f454e1 in rdtsc_ordered at ./arch/x86/include/asm/msr.h:215
+#1 __pvclock_clocksource_read at arch/x86/kernel/pvclock.c:77
+#2 pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:120
+#3 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#4 0xffffffff811db257 in tk_clock_read at kernel/time/timekeeping.c:195
+#5 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#6 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#7 ktime_get at kernel/time/timekeeping.c:848
+#8 0xffffffff811ed97b in tick_nohz_irq_enter at kernel/time/tick-sched.c:1428
+#9 tick_irq_enter at kernel/time/tick-sched.c:1456
+#10 0xffffffff81f44fd5 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+554
+#0 0xffffffff81f454f9 in pvclock_scale_delta at ./arch/x86/include/asm/pvclock.h:52
+#1 __pvclock_read_cycles at ./arch/x86/include/asm/pvclock.h:86
+#2 __pvclock_clocksource_read at arch/x86/kernel/pvclock.c:77
+#3 pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:120
+#4 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#5 0xffffffff811db257 in tk_clock_read at kernel/time/timekeeping.c:195
+#6 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#7 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#8 ktime_get at kernel/time/timekeeping.c:848
+#9 0xffffffff811ed97b in tick_nohz_irq_enter at kernel/time/tick-sched.c:1428
+#10 tick_irq_enter at kernel/time/tick-sched.c:1456
+#11 0xffffffff81f44fd5 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+4
+#0 sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#1 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+4
+#0 irqentry_enter at ./include/linux/sched.h:1927
+#1 0xffffffff81f44f7e in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#2 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+4
+#0 0xffffffff81f4584a in irqentry_enter at ./include/linux/sched.h:1927
+#1 0xffffffff81f44f7e in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#2 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+4
+#0 preempt_count at ./arch/x86/include/asm/preempt.h:27
+#1 irq_enter_rcu at kernel/softirq.c:612
+#2 irq_enter_rcu at kernel/softirq.c:607
+#3 0xffffffff81f44fd5 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+4
+#0 tick_check_oneshot_broadcast_this_cpu at kernel/time/tick-broadcast.c:671
+#1 0xffffffff811ed962 in tick_irq_enter at kernel/time/tick-sched.c:1455
+#2 0xffffffff81f44fd5 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+4
+#0 tick_check_oneshot_broadcast_this_cpu at ./arch/x86/include/asm/bitops.h:233
+#1 0xffffffff811ed962 in tick_irq_enter at kernel/time/tick-sched.c:1455
+#2 0xffffffff81f44fd5 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+4
+#0 0xffffffff811db22a in ktime_get at kernel/time/timekeeping.c:837
+#1 0xffffffff811ed97b in tick_nohz_irq_enter at kernel/time/tick-sched.c:1428
+#2 tick_irq_enter at kernel/time/tick-sched.c:1456
+#3 0xffffffff81f44fd5 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+4
+#0 0xffffffff811db255 in tk_clock_read at kernel/time/timekeeping.c:195
+#1 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#2 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#3 ktime_get at kernel/time/timekeeping.c:848
+#4 0xffffffff811ed97b in tick_nohz_irq_enter at kernel/time/tick-sched.c:1428
+#5 tick_irq_enter at kernel/time/tick-sched.c:1456
+#6 0xffffffff81f44fd5 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+4
+#0 kvm_clock_get_cycles at arch/x86/kernel/kvmclock.c:85
+#1 0xffffffff811db257 in tk_clock_read at kernel/time/timekeeping.c:195
+#2 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#3 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#4 ktime_get at kernel/time/timekeeping.c:848
+#5 0xffffffff811ed97b in tick_nohz_irq_enter at kernel/time/tick-sched.c:1428
+#6 tick_irq_enter at kernel/time/tick-sched.c:1456
+#7 0xffffffff81f44fd5 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+4
+#0 kvm_clock_get_cycles at arch/x86/kernel/kvmclock.c:86
+#1 0xffffffff811db257 in tk_clock_read at kernel/time/timekeeping.c:195
+#2 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#3 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#4 ktime_get at kernel/time/timekeeping.c:848
+#5 0xffffffff811ed97b in tick_nohz_irq_enter at kernel/time/tick-sched.c:1428
+#6 tick_irq_enter at kernel/time/tick-sched.c:1456
+#7 0xffffffff81f44fd5 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+4
+#0 kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#1 0xffffffff811db257 in tk_clock_read at kernel/time/timekeeping.c:195
+#2 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#3 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#4 ktime_get at kernel/time/timekeeping.c:848
+#5 0xffffffff811ed97b in tick_nohz_irq_enter at kernel/time/tick-sched.c:1428
+#6 tick_irq_enter at kernel/time/tick-sched.c:1456
+#7 0xffffffff81f44fd5 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+4
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811db257 in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#4 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#5 ktime_get at kernel/time/timekeeping.c:848
+#6 0xffffffff811ed97b in tick_nohz_irq_enter at kernel/time/tick-sched.c:1428
+#7 tick_irq_enter at kernel/time/tick-sched.c:1456
+#8 0xffffffff81f44fd5 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+3
+#0 ct_kernel_exit_state at kernel/context_tracking.c:93
+#1 0xffffffff81f45f5b in ct_nmi_enter at kernel/context_tracking.c:280
+#2 0xffffffff81f45fa9 in ct_irq_enter at kernel/context_tracking.c:368
+#3 0xffffffff81f45858 in irqentry_enter at kernel/entry/common.c:356
+#4 0xffffffff81f44f7e in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#5 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+1
+#0 ct_idle_exit at kernel/context_tracking.c:334
+#1 0xffffffff81f46c11 in ct_cpuidle_exit at ./include/linux/cpuidle.h:144
+#2 default_idle_call at kernel/sched/idle.c:98
+#3 0xffffffff81180349 in cpuidle_idle_call at kernel/sched/idle.c:170
+#4 do_idle at kernel/sched/idle.c:282
+#5 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#6 0xffffffff81f472a0 in rest_init at init/main.c:735
+#7 0xffffffff832508b9 in arch_call_rest_init at init/main.c:834
+#8 0xffffffff83250d79 in start_kernel at init/main.c:1088
+#9 0xffffffff8325c0d8 in x86_64_start_reservations at arch/x86/kernel/head64.c:556
+#10 0xffffffff8325c215 in x86_64_start_kernel at arch/x86/kernel/head64.c:537
+#11 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+1
+#0 asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#1 0xffffffff81f4693f in native_safe_halt at ./arch/x86/include/asm/irqflags.h:48
+#2 arch_safe_halt at ./arch/x86/include/asm/irqflags.h:86
+#3 default_idle at arch/x86/kernel/process.c:710
+#4 0x0000000000000010 in fixed_percpu_data at ()
+#5 0x0000000000000242 in ?? at ()
+#6 0xffffc90000093ee8 in ?? at ()
+#7 0x0000000000000018 in fixed_percpu_data at ()
+#8 0x0000000000000002 in fixed_percpu_data at ()
+#9 0xffffffff81f46c0c in default_idle_call at kernel/sched/idle.c:97
+#10 0xffffffff81180349 in cpuidle_idle_call at kernel/sched/idle.c:170
+#11 do_idle at kernel/sched/idle.c:282
+#12 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#13 0xffffffff81101d8c in start_secondary at arch/x86/kernel/smpboot.c:269
+#14 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+1
+#0 0xffffffff82001474 in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#1 0xffffffff81f4693f in native_safe_halt at ./arch/x86/include/asm/irqflags.h:48
+#2 arch_safe_halt at ./arch/x86/include/asm/irqflags.h:86
+#3 default_idle at arch/x86/kernel/process.c:710
+#4 0x0000000000000010 in fixed_percpu_data at ()
+#5 0x0000000000000242 in ?? at ()
+#6 0xffffc90000093ee8 in ?? at ()
+#7 0x0000000000000018 in fixed_percpu_data at ()
+#8 0x0000000000000002 in fixed_percpu_data at ()
+#9 0xffffffff81f46c0c in default_idle_call at kernel/sched/idle.c:97
+#10 0xffffffff81180349 in cpuidle_idle_call at kernel/sched/idle.c:170
+#11 do_idle at kernel/sched/idle.c:282
+#12 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#13 0xffffffff81101d8c in start_secondary at arch/x86/kernel/smpboot.c:269
+#14 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+1
+#0 asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#1 0xffffffff81f4693f in native_safe_halt at ./arch/x86/include/asm/irqflags.h:48
+#2 arch_safe_halt at ./arch/x86/include/asm/irqflags.h:86
+#3 default_idle at arch/x86/kernel/process.c:710
+#4 0x0000000000000010 in fixed_percpu_data at ()
+#5 0x0000000000000252 in ?? at ()
+#6 0xffffc9000009bee8 in ?? at ()
+#7 0x0000000000000018 in fixed_percpu_data at ()
+#8 0x0000000000000003 in fixed_percpu_data at ()
+#9 0xffffffff81f46c0c in default_idle_call at kernel/sched/idle.c:97
+#10 0xffffffff81180349 in cpuidle_idle_call at kernel/sched/idle.c:170
+#11 do_idle at kernel/sched/idle.c:282
+#12 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#13 0xffffffff81101d8c in start_secondary at arch/x86/kernel/smpboot.c:269
+#14 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+1
+#0 0xffffffff82001474 in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#1 0xffffffff81f4693f in native_safe_halt at ./arch/x86/include/asm/irqflags.h:48
+#2 arch_safe_halt at ./arch/x86/include/asm/irqflags.h:86
+#3 default_idle at arch/x86/kernel/process.c:710
+#4 0x0000000000000010 in fixed_percpu_data at ()
+#5 0x0000000000000252 in ?? at ()
+#6 0xffffc9000009bee8 in ?? at ()
+#7 0x0000000000000018 in fixed_percpu_data at ()
+#8 0x0000000000000003 in fixed_percpu_data at ()
+#9 0xffffffff81f46c0c in default_idle_call at kernel/sched/idle.c:97
+#10 0xffffffff81180349 in cpuidle_idle_call at kernel/sched/idle.c:170
+#11 do_idle at kernel/sched/idle.c:282
+#12 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#13 0xffffffff81101d8c in start_secondary at arch/x86/kernel/smpboot.c:269
+#14 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+1
+#0 ct_kernel_exit_state at kernel/context_tracking.c:93
+#1 0xffffffff81f45b67 in ct_kernel_enter at kernel/context_tracking.c:178
+#2 0xffffffff81f45c1d in ct_idle_exit at kernel/context_tracking.c:338
+#3 0xffffffff81f46c11 in ct_cpuidle_exit at ./include/linux/cpuidle.h:144
+#4 default_idle_call at kernel/sched/idle.c:98
+#5 0xffffffff81180349 in cpuidle_idle_call at kernel/sched/idle.c:170
+#6 do_idle at kernel/sched/idle.c:282
+#7 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#8 0xffffffff81f472a0 in rest_init at init/main.c:735
+#9 0xffffffff832508b9 in arch_call_rest_init at init/main.c:834
+#10 0xffffffff83250d79 in start_kernel at init/main.c:1088
+#11 0xffffffff8325c0d8 in x86_64_start_reservations at arch/x86/kernel/head64.c:556
+#12 0xffffffff8325c215 in x86_64_start_kernel at arch/x86/kernel/head64.c:537
+#13 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+1
+#0 asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#1 0xffffffff81180349 in cpuidle_idle_call at kernel/sched/idle.c:170
+#2 do_idle at kernel/sched/idle.c:282
+#3 0x0000000000000054 in ?? at ()
+
+1
+#0 0xffffffff82001474 in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#1 0xffffffff81180349 in cpuidle_idle_call at kernel/sched/idle.c:170
+#2 do_idle at kernel/sched/idle.c:282
+#3 0x0000000000000054 in ?? at ()
+
+1
+#0 asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#1 0xffffffff81f4693f in native_safe_halt at ./arch/x86/include/asm/irqflags.h:48
+#2 arch_safe_halt at ./arch/x86/include/asm/irqflags.h:86
+#3 default_idle at arch/x86/kernel/process.c:710
+#4 0x0000000000000010 in fixed_percpu_data at ()
+#5 0x0000000000000242 in ?? at ()
+#6 0xffffc9000008bee8 in ?? at ()
+#7 0x0000000000000018 in fixed_percpu_data at ()
+#8 0x0000000000000001 in fixed_percpu_data at ()
+#9 0xffffffff81f46c0c in default_idle_call at kernel/sched/idle.c:97
+#10 0xffffffff81180349 in cpuidle_idle_call at kernel/sched/idle.c:170
+#11 do_idle at kernel/sched/idle.c:282
+#12 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#13 0xffffffff81101d8c in start_secondary at arch/x86/kernel/smpboot.c:269
+#14 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+1
+#0 0xffffffff82001474 in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#1 0xffffffff81f4693f in native_safe_halt at ./arch/x86/include/asm/irqflags.h:48
+#2 arch_safe_halt at ./arch/x86/include/asm/irqflags.h:86
+#3 default_idle at arch/x86/kernel/process.c:710
+#4 0x0000000000000010 in fixed_percpu_data at ()
+#5 0x0000000000000242 in ?? at ()
+#6 0xffffc9000008bee8 in ?? at ()
+#7 0x0000000000000018 in fixed_percpu_data at ()
+#8 0x0000000000000001 in fixed_percpu_data at ()
+#9 0xffffffff81f46c0c in default_idle_call at kernel/sched/idle.c:97
+#10 0xffffffff81180349 in cpuidle_idle_call at kernel/sched/idle.c:170
+#11 do_idle at kernel/sched/idle.c:282
+#12 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#13 0xffffffff81101d8c in start_secondary at arch/x86/kernel/smpboot.c:269
+#14 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+

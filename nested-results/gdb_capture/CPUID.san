@@ -1,0 +1,18 @@
+16
+#0 0xffffffff810f5ac9 in native_cpuid at ./arch/x86/include/asm/cpuid.h:34
+#1 cpuid at ./arch/x86/include/asm/cpuid.h:78
+#2 cpuid_eax at ./arch/x86/include/asm/cpuid.h:98
+#3 mce_setup at arch/x86/kernel/cpu/mce/core.c:125
+#4 0xffffffff81f43e6d in mce_gather_info at arch/x86/kernel/cpu/mce/core.c:411
+#5 0xffffffff810f5bac in machine_check_poll at arch/x86/kernel/cpu/mce/core.c:667
+#6 0xffffffff810f5f95 in mce_timer_fn at arch/x86/kernel/cpu/mce/core.c:1621
+#7 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#8 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#9 __run_timers at kernel/time/timer.c:2022
+#10 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#11 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#12 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#13 __irq_exit_rcu at kernel/softirq.c:650
+#14 irq_exit_rcu at kernel/softirq.c:662
+#15 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+

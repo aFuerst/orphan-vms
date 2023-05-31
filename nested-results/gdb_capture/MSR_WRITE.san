@@ -1,0 +1,112 @@
+1204
+#0 0xffffffff811043b3 in __wrmsr at ./arch/x86/include/asm/msr.h:94
+#1 native_write_msr at ./arch/x86/include/asm/msr.h:145
+#2 wrmsrl at ./arch/x86/include/asm/msr.h:262
+#3 lapic_next_deadline at arch/x86/kernel/apic/apic.c:491
+#4 0xffffffff811ea6f1 in clockevents_program_event at kernel/time/clockevents.c:334
+#5 0xffffffff811ec861 in tick_program_event at kernel/time/tick-oneshot.c:44
+#6 0xffffffff811d950c in hrtimer_interrupt at kernel/time/hrtimer.c:1824
+#7 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#8 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#9 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#10 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+18
+#0 0xffffffff811043b3 in __wrmsr at ./arch/x86/include/asm/msr.h:94
+#1 native_write_msr at ./arch/x86/include/asm/msr.h:145
+#2 wrmsrl at ./arch/x86/include/asm/msr.h:262
+#3 lapic_next_deadline at arch/x86/kernel/apic/apic.c:491
+#4 0xffffffff811ea6f1 in clockevents_program_event at kernel/time/clockevents.c:334
+#5 0xffffffff811ec861 in tick_program_event at kernel/time/tick-oneshot.c:44
+#6 0xffffffff811d950c in hrtimer_interrupt at kernel/time/hrtimer.c:1824
+#7 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#8 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#9 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+2
+#0 0xffffffff811043b3 in __wrmsr at ./arch/x86/include/asm/msr.h:94
+#1 native_write_msr at ./arch/x86/include/asm/msr.h:145
+#2 wrmsrl at ./arch/x86/include/asm/msr.h:262
+#3 lapic_next_deadline at arch/x86/kernel/apic/apic.c:491
+#4 0xffffffff811e9c91 in clockevents_program_min_delta at kernel/time/clockevents.c:248
+#5 0xffffffff811d8eb6 in hrtimer_start_range_ns at kernel/time/hrtimer.c:1299
+#6 0xffffffff811ed142 in hrtimer_start_expires at ./include/linux/hrtimer.h:432
+#7 tick_nohz_restart at kernel/time/tick-sched.c:772
+#8 0xffffffff811ed8de in tick_nohz_restart_sched_tick at kernel/time/tick-sched.c:981
+#9 tick_nohz_idle_update_tick at kernel/time/tick-sched.c:1316
+#10 tick_nohz_idle_exit at kernel/time/tick-sched.c:1350
+#11 0xffffffff811802ae in do_idle at kernel/sched/idle.c:295
+#12 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#13 0xffffffff81101d8c in start_secondary at arch/x86/kernel/smpboot.c:269
+#14 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+1
+#0 0xffffffff811043b3 in __wrmsr at ./arch/x86/include/asm/msr.h:94
+#1 native_write_msr at ./arch/x86/include/asm/msr.h:145
+#2 wrmsrl at ./arch/x86/include/asm/msr.h:262
+#3 lapic_next_deadline at arch/x86/kernel/apic/apic.c:491
+#4 0xffffffff811ea6f1 in clockevents_program_event at kernel/time/clockevents.c:334
+#5 0xffffffff811ec861 in tick_program_event at kernel/time/tick-oneshot.c:44
+#6 0xffffffff811d82be in __hrtimer_reprogram at kernel/time/hrtimer.c:681
+#7 0xffffffff811d8eb6 in hrtimer_start_range_ns at kernel/time/hrtimer.c:1299
+#8 0xffffffff811ed142 in hrtimer_start_expires at ./include/linux/hrtimer.h:432
+#9 tick_nohz_restart at kernel/time/tick-sched.c:772
+#10 0xffffffff811ed8de in tick_nohz_restart_sched_tick at kernel/time/tick-sched.c:981
+#11 tick_nohz_idle_update_tick at kernel/time/tick-sched.c:1316
+#12 tick_nohz_idle_exit at kernel/time/tick-sched.c:1350
+#13 0xffffffff811802ae in do_idle at kernel/sched/idle.c:295
+#14 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#15 0xffffffff81101d8c in start_secondary at arch/x86/kernel/smpboot.c:269
+#16 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+1
+#0 0xffffffff811043b3 in __wrmsr at ./arch/x86/include/asm/msr.h:94
+#1 native_write_msr at ./arch/x86/include/asm/msr.h:145
+#2 wrmsrl at ./arch/x86/include/asm/msr.h:262
+#3 lapic_next_deadline at arch/x86/kernel/apic/apic.c:491
+#4 0xffffffff811ea6f1 in clockevents_program_event at kernel/time/clockevents.c:334
+#5 0xffffffff811d895c in remove_hrtimer at kernel/time/hrtimer.c:1165
+#6 hrtimer_try_to_cancel at kernel/time/hrtimer.c:1334
+#7 0xffffffff811d89d0 in hrtimer_cancel at kernel/time/hrtimer.c:1443
+#8 0xffffffff811ed0e6 in tick_nohz_restart at kernel/time/tick-sched.c:765
+#9 0xffffffff811ed8de in tick_nohz_restart_sched_tick at kernel/time/tick-sched.c:981
+#10 tick_nohz_idle_update_tick at kernel/time/tick-sched.c:1316
+#11 tick_nohz_idle_exit at kernel/time/tick-sched.c:1350
+#12 0xffffffff811802ae in do_idle at kernel/sched/idle.c:295
+#13 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#14 0xffffffff81101d8c in start_secondary at arch/x86/kernel/smpboot.c:269
+#15 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+1
+#0 0xffffffff811043b3 in __wrmsr at ./arch/x86/include/asm/msr.h:94
+#1 native_write_msr at ./arch/x86/include/asm/msr.h:145
+#2 wrmsrl at ./arch/x86/include/asm/msr.h:262
+#3 lapic_next_deadline at arch/x86/kernel/apic/apic.c:491
+#4 0xffffffff811e9c91 in clockevents_program_min_delta at kernel/time/clockevents.c:248
+#5 0xffffffff811d8eb6 in hrtimer_start_range_ns at kernel/time/hrtimer.c:1299
+#6 0xffffffff811ed142 in hrtimer_start_expires at ./include/linux/hrtimer.h:432
+#7 tick_nohz_restart at kernel/time/tick-sched.c:772
+#8 0xffffffff811ed8de in tick_nohz_restart_sched_tick at kernel/time/tick-sched.c:981
+#9 tick_nohz_idle_update_tick at kernel/time/tick-sched.c:1316
+#10 tick_nohz_idle_exit at kernel/time/tick-sched.c:1350
+#11 0xffffffff811802ae in do_idle at kernel/sched/idle.c:295
+#12 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#13 0xffffffff81f472a0 in rest_init at init/main.c:735
+#14 0xffffffff832508b9 in arch_call_rest_init at init/main.c:834
+#15 0xffffffff83250d79 in start_kernel at init/main.c:1088
+#16 0xffffffff8325c0d8 in x86_64_start_reservations at arch/x86/kernel/head64.c:556
+#17 0xffffffff8325c215 in x86_64_start_kernel at arch/x86/kernel/head64.c:537
+#18 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+1
+#0 0xffffffff811043b3 in __wrmsr at ./arch/x86/include/asm/msr.h:94
+#1 native_write_msr at ./arch/x86/include/asm/msr.h:145
+#2 wrmsrl at ./arch/x86/include/asm/msr.h:262
+#3 lapic_next_deadline at arch/x86/kernel/apic/apic.c:491
+#4 0xffffffff811ea6f1 in clockevents_program_event at kernel/time/clockevents.c:334
+#5 0xffffffff811ec861 in tick_program_event at kernel/time/tick-oneshot.c:44
+#6 0xffffffff811d950c in hrtimer_interrupt at kernel/time/hrtimer.c:1824
+#7 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#8 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#9 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at (regs=0xffffc900000d0ee8Quit
+

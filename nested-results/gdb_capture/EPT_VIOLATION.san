@@ -1,0 +1,1889 @@
+500
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d84ec in __run_hrtimer at kernel/time/hrtimer.c:1689
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+38
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d84ec in __run_hrtimer at kernel/time/hrtimer.c:1689
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+9
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d84ec in __run_hrtimer at kernel/time/hrtimer.c:1689
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#13 0xffff88813bd9df80 in ?? at ()
+#14 0xffffc90000128f10 in ?? at ()
+#15 0xffffffff85a21f20 in ?? at ()
+#16 0xffffffff81ccbae0 in __pfx_tcp_orphan_update at net/ipv4/tcp.c:2834
+#17 0xdead000000000122 in ?? at ()
+#18 0x00000000fffb9528 in ?? at ()
+#19 0x0000000000736db5 in ?? at ()
+#20 0x0000000000000005 in fixed_percpu_data at ()
+#21 0xffff88813bd9dfa8 in ?? at ()
+#22 0x0000000000000098 in ?? at ()
+
+9
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff81151ed3 in worker_thread at kernel/workqueue.c:2502
+#7 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#8 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+9
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff81151892 in process_one_work at kernel/workqueue.c:2433
+#7 0xffffffff81151e69 in worker_thread at kernel/workqueue.c:2552
+#8 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#9 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+8
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d6c8a in __run_timers at kernel/time/timer.c:2004
+#7 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#8 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#9 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#10 __irq_exit_rcu at kernel/softirq.c:650
+#11 irq_exit_rcu at kernel/softirq.c:662
+#12 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+7
+#0 0xffffffff81316acd in set_freepointer at mm/slub.c:439
+#1 slab_free_freelist_hook at mm/slub.c:1809
+#2 slab_free at mm/slub.c:3786
+#3 kmem_cache_free at mm/slub.c:3808
+#4 0xffffffff81be3c47 in skb_release_data at net/core/skbuff.c:948
+#5 0xffffffff81be5b64 in skb_release_all at net/core/skbuff.c:1014
+#6 __kfree_skb at net/core/skbuff.c:1028
+#7 consume_skb at net/core/skbuff.c:1244
+#8 consume_skb at net/core/skbuff.c:1238
+#9 0xffffffff81beb26c in skb_free_datagram at net/core/datagram.c:322
+#10 0xffffffff81d588c7 in __unix_dgram_recvmsg at net/unix/af_unix.c:2532
+#11 0xffffffff81bd2b07 in sock_recvmsg_nosec at net/socket.c:1019
+#12 sock_recvmsg at net/socket.c:1040
+#13 0xffffffff81bd2bb1 in sock_read_iter at net/socket.c:1118
+#14 0xffffffff8132547f in call_read_iter at ./include/linux/fs.h:1862
+#15 new_sync_read at fs/read_write.c:389
+#16 vfs_read at fs/read_write.c:470
+#17 0xffffffff81325e26 in ksys_read at fs/read_write.c:613
+#18 0xffffffff81f40b8b in do_syscall_x64 at arch/x86/entry/common.c:50
+#19 do_syscall_64 at arch/x86/entry/common.c:80
+#20 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+#21 0x00007f3c2f378ac0 in ?? at ()
+
+7
+#0 0xffffffff81316acd in set_freepointer at mm/slub.c:439
+#1 slab_free_freelist_hook at mm/slub.c:1809
+#2 slab_free at mm/slub.c:3786
+#3 kmem_cache_free at mm/slub.c:3808
+#4 0xffffffff81be5b6d in __kfree_skb at net/core/skbuff.c:1029
+#5 0xffffffff81beb26c in skb_free_datagram at net/core/datagram.c:322
+#6 0xffffffff81d588c7 in __unix_dgram_recvmsg at net/unix/af_unix.c:2532
+#7 0xffffffff81bd2b07 in sock_recvmsg_nosec at net/socket.c:1019
+#8 sock_recvmsg at net/socket.c:1040
+#9 0xffffffff81bd2bb1 in sock_read_iter at net/socket.c:1118
+#10 0xffffffff8132547f in call_read_iter at ./include/linux/fs.h:1862
+#11 new_sync_read at fs/read_write.c:389
+#12 vfs_read at fs/read_write.c:470
+#13 0xffffffff81325e26 in ksys_read at fs/read_write.c:613
+#14 0xffffffff81f40b8b in do_syscall_x64 at arch/x86/entry/common.c:50
+#15 do_syscall_64 at arch/x86/entry/common.c:80
+#16 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+#17 0x00007f3c2f378ac0 in ?? at ()
+
+6
+#0 native_apic_mem_write at ./arch/x86/include/asm/apic.h:105
+#1 0xffffffff81103d83 in apic_write at ./arch/x86/include/asm/apic.h:393
+#2 __setup_APIC_LVTT at arch/x86/kernel/apic/apic.c:359
+#3 0xffffffff81103e7f in lapic_timer_set_periodic_oneshot at arch/x86/kernel/apic/apic.c:517
+#4 lapic_timer_set_periodic_oneshot at arch/x86/kernel/apic/apic.c:511
+#5 lapic_timer_set_oneshot at arch/x86/kernel/apic/apic.c:528
+#6 0xffffffff811ea565 in __clockevents_switch_state at kernel/time/clockevents.c:120
+#7 clockevents_switch_state at kernel/time/clockevents.c:151
+#8 0xffffffff811ec892 in tick_program_event at kernel/time/tick-oneshot.c:41
+#9 0xffffffff811d82be in __hrtimer_reprogram at kernel/time/hrtimer.c:681
+#10 0xffffffff811d8eb6 in hrtimer_start_range_ns at kernel/time/hrtimer.c:1299
+#11 0xffffffff811ed142 in hrtimer_start_expires at ./include/linux/hrtimer.h:432
+#12 tick_nohz_restart at kernel/time/tick-sched.c:772
+#13 0xffffffff811ed8de in tick_nohz_restart_sched_tick at kernel/time/tick-sched.c:981
+#14 tick_nohz_idle_update_tick at kernel/time/tick-sched.c:1316
+#15 tick_nohz_idle_exit at kernel/time/tick-sched.c:1350
+#16 0xffffffff811802ae in do_idle at kernel/sched/idle.c:295
+#17 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#18 0xffffffff81f472a0 in rest_init at init/main.c:735
+#19 0xffffffff832508b9 in arch_call_rest_init at init/main.c:834
+#20 0xffffffff83250d79 in start_kernel at init/main.c:1088
+#21 0xffffffff8325c0d8 in x86_64_start_reservations at arch/x86/kernel/head64.c:556
+#22 0xffffffff8325c215 in x86_64_start_kernel at arch/x86/kernel/head64.c:537
+#23 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+6
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d6e5a in expire_timers at kernel/time/timer.c:1752
+#7 __run_timers at kernel/time/timer.c:2022
+#8 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#9 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#10 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#11 __irq_exit_rcu at kernel/softirq.c:650
+#12 irq_exit_rcu at kernel/softirq.c:662
+#13 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+6
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d84ec in __run_hrtimer at kernel/time/hrtimer.c:1689
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#13 0xffff88813bd9df80 in ?? at ()
+#14 0xffffc90000128f10 in ?? at ()
+#15 0xffffffff85a21f20 in ?? at ()
+#16 0xffffffff81ccbae0 in __pfx_tcp_orphan_update at net/ipv4/tcp.c:2834
+#17 0xdead000000000122 in ?? at ()
+#18 0x00000000fffb9bc0 in ?? at ()
+#19 0xffff88813bdab530 in ?? at ()
+#20 0x0000000000000002 in fixed_percpu_data at ()
+#21 0xffff88813bd9dfa8 in ?? at ()
+#22 0x0000000000000100 in ?? at ()
+
+5
+#0 native_apic_mem_write at ./arch/x86/include/asm/apic.h:105
+#1 0xffffffff81103d83 in apic_write at ./arch/x86/include/asm/apic.h:393
+#2 __setup_APIC_LVTT at arch/x86/kernel/apic/apic.c:359
+#3 0xffffffff81103e7f in lapic_timer_set_periodic_oneshot at arch/x86/kernel/apic/apic.c:517
+#4 lapic_timer_set_periodic_oneshot at arch/x86/kernel/apic/apic.c:511
+#5 lapic_timer_set_oneshot at arch/x86/kernel/apic/apic.c:528
+#6 0xffffffff811ea565 in __clockevents_switch_state at kernel/time/clockevents.c:120
+#7 clockevents_switch_state at kernel/time/clockevents.c:151
+#8 0xffffffff811ec892 in tick_program_event at kernel/time/tick-oneshot.c:41
+#9 0xffffffff811d82be in __hrtimer_reprogram at kernel/time/hrtimer.c:681
+#10 0xffffffff811d8eb6 in hrtimer_start_range_ns at kernel/time/hrtimer.c:1299
+#11 0xffffffff811ed142 in hrtimer_start_expires at ./include/linux/hrtimer.h:432
+#12 tick_nohz_restart at kernel/time/tick-sched.c:772
+#13 0xffffffff811ed8de in tick_nohz_restart_sched_tick at kernel/time/tick-sched.c:981
+#14 tick_nohz_idle_update_tick at kernel/time/tick-sched.c:1316
+#15 tick_nohz_idle_exit at kernel/time/tick-sched.c:1350
+#16 0xffffffff811802ae in do_idle at kernel/sched/idle.c:295
+#17 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#18 0xffffffff81101d8c in start_secondary at arch/x86/kernel/smpboot.c:269
+#19 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+4
+#0 0xffffffff8110b4f6 in native_apic_mem_read at ./arch/x86/include/asm/apic.h:112
+#1 0xffffffff81103de2 in apic_read at ./arch/x86/include/asm/apic.h:388
+#2 lapic_timer_shutdown at arch/x86/kernel/apic/apic.c:503
+#3 0xffffffff81103e3f in lapic_timer_shutdown at arch/x86/kernel/apic/apic.c:500
+#4 0xffffffff811ea4f7 in __clockevents_switch_state at kernel/time/clockevents.c:131
+#5 clockevents_switch_state at kernel/time/clockevents.c:151
+#6 0xffffffff811ec86f in tick_program_event at kernel/time/tick-oneshot.c:31
+#7 0xffffffff811d950c in hrtimer_interrupt at kernel/time/hrtimer.c:1824
+#8 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#9 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#10 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+4
+#0 native_apic_mem_write at ./arch/x86/include/asm/apic.h:105
+#1 0xffffffff81103dfe in apic_write at ./arch/x86/include/asm/apic.h:393
+#2 lapic_timer_shutdown at arch/x86/kernel/apic/apic.c:505
+#3 0xffffffff81103e3f in lapic_timer_shutdown at arch/x86/kernel/apic/apic.c:500
+#4 0xffffffff811ea4f7 in __clockevents_switch_state at kernel/time/clockevents.c:131
+#5 clockevents_switch_state at kernel/time/clockevents.c:151
+#6 0xffffffff811ec86f in tick_program_event at kernel/time/tick-oneshot.c:31
+#7 0xffffffff811d950c in hrtimer_interrupt at kernel/time/hrtimer.c:1824
+#8 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#9 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#10 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+4
+#0 native_apic_mem_write at ./arch/x86/include/asm/apic.h:105
+#1 0xffffffff81103e3f in lapic_timer_shutdown at arch/x86/kernel/apic/apic.c:500
+#2 0xffffffff811ea4f7 in __clockevents_switch_state at kernel/time/clockevents.c:131
+#3 clockevents_switch_state at kernel/time/clockevents.c:151
+#4 0xffffffff811ec86f in tick_program_event at kernel/time/tick-oneshot.c:31
+#5 0xffffffff811d950c in hrtimer_interrupt at kernel/time/hrtimer.c:1824
+#6 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#7 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#8 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+4
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d6c8a in __run_timers at kernel/time/timer.c:2004
+#7 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#8 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#9 __irq_exit_rcu at kernel/softirq.c:650
+#10 irq_exit_rcu at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+4
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d6e5a in expire_timers at kernel/time/timer.c:1752
+#7 __run_timers at kernel/time/timer.c:2022
+#8 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#9 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#10 __irq_exit_rcu at kernel/softirq.c:650
+#11 irq_exit_rcu at kernel/softirq.c:662
+#12 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+3
+#0 0xffffffff8110b4f6 in native_apic_mem_read at ./arch/x86/include/asm/apic.h:112
+#1 0xffffffff81103de2 in apic_read at ./arch/x86/include/asm/apic.h:388
+#2 lapic_timer_shutdown at arch/x86/kernel/apic/apic.c:503
+#3 0xffffffff81103e3f in lapic_timer_shutdown at arch/x86/kernel/apic/apic.c:500
+#4 0xffffffff811ea4f7 in __clockevents_switch_state at kernel/time/clockevents.c:131
+#5 clockevents_switch_state at kernel/time/clockevents.c:151
+#6 0xffffffff811ec86f in tick_program_event at kernel/time/tick-oneshot.c:31
+#7 0xffffffff811d895c in remove_hrtimer at kernel/time/hrtimer.c:1165
+#8 hrtimer_try_to_cancel at kernel/time/hrtimer.c:1334
+#9 0xffffffff811d89d0 in hrtimer_cancel at kernel/time/hrtimer.c:1443
+#10 0xffffffff811ed0e6 in tick_nohz_restart at kernel/time/tick-sched.c:765
+#11 0xffffffff811ed8de in tick_nohz_restart_sched_tick at kernel/time/tick-sched.c:981
+#12 tick_nohz_idle_update_tick at kernel/time/tick-sched.c:1316
+#13 tick_nohz_idle_exit at kernel/time/tick-sched.c:1350
+#14 0xffffffff811802ae in do_idle at kernel/sched/idle.c:295
+#15 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#16 0xffffffff81f472a0 in rest_init at init/main.c:735
+#17 0xffffffff832508b9 in arch_call_rest_init at init/main.c:834
+#18 0xffffffff83250d79 in start_kernel at init/main.c:1088
+#19 0xffffffff8325c0d8 in x86_64_start_reservations at arch/x86/kernel/head64.c:556
+#20 0xffffffff8325c215 in x86_64_start_kernel at arch/x86/kernel/head64.c:537
+#21 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+3
+#0 native_apic_mem_write at ./arch/x86/include/asm/apic.h:105
+#1 0xffffffff81103dfe in apic_write at ./arch/x86/include/asm/apic.h:393
+#2 lapic_timer_shutdown at arch/x86/kernel/apic/apic.c:505
+#3 0xffffffff81103e3f in lapic_timer_shutdown at arch/x86/kernel/apic/apic.c:500
+#4 0xffffffff811ea4f7 in __clockevents_switch_state at kernel/time/clockevents.c:131
+#5 clockevents_switch_state at kernel/time/clockevents.c:151
+#6 0xffffffff811ec86f in tick_program_event at kernel/time/tick-oneshot.c:31
+#7 0xffffffff811d895c in remove_hrtimer at kernel/time/hrtimer.c:1165
+#8 hrtimer_try_to_cancel at kernel/time/hrtimer.c:1334
+#9 0xffffffff811d89d0 in hrtimer_cancel at kernel/time/hrtimer.c:1443
+#10 0xffffffff811ed0e6 in tick_nohz_restart at kernel/time/tick-sched.c:765
+#11 0xffffffff811ed8de in tick_nohz_restart_sched_tick at kernel/time/tick-sched.c:981
+#12 tick_nohz_idle_update_tick at kernel/time/tick-sched.c:1316
+#13 tick_nohz_idle_exit at kernel/time/tick-sched.c:1350
+#14 0xffffffff811802ae in do_idle at kernel/sched/idle.c:295
+#15 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#16 0xffffffff81f472a0 in rest_init at init/main.c:735
+#17 0xffffffff832508b9 in arch_call_rest_init at init/main.c:834
+#18 0xffffffff83250d79 in start_kernel at init/main.c:1088
+#19 0xffffffff8325c0d8 in x86_64_start_reservations at arch/x86/kernel/head64.c:556
+#20 0xffffffff8325c215 in x86_64_start_kernel at arch/x86/kernel/head64.c:537
+#21 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+3
+#0 native_apic_mem_write at ./arch/x86/include/asm/apic.h:105
+#1 0xffffffff81103e3f in lapic_timer_shutdown at arch/x86/kernel/apic/apic.c:500
+#2 0xffffffff811ea4f7 in __clockevents_switch_state at kernel/time/clockevents.c:131
+#3 clockevents_switch_state at kernel/time/clockevents.c:151
+#4 0xffffffff811ec86f in tick_program_event at kernel/time/tick-oneshot.c:31
+#5 0xffffffff811d895c in remove_hrtimer at kernel/time/hrtimer.c:1165
+#6 hrtimer_try_to_cancel at kernel/time/hrtimer.c:1334
+#7 0xffffffff811d89d0 in hrtimer_cancel at kernel/time/hrtimer.c:1443
+#8 0xffffffff811ed0e6 in tick_nohz_restart at kernel/time/tick-sched.c:765
+#9 0xffffffff811ed8de in tick_nohz_restart_sched_tick at kernel/time/tick-sched.c:981
+#10 tick_nohz_idle_update_tick at kernel/time/tick-sched.c:1316
+#11 tick_nohz_idle_exit at kernel/time/tick-sched.c:1350
+#12 0xffffffff811802ae in do_idle at kernel/sched/idle.c:295
+#13 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#14 0xffffffff81f472a0 in rest_init at init/main.c:735
+#15 0xffffffff832508b9 in arch_call_rest_init at init/main.c:834
+#16 0xffffffff83250d79 in start_kernel at init/main.c:1088
+#17 0xffffffff8325c0d8 in x86_64_start_reservations at arch/x86/kernel/head64.c:556
+#18 0xffffffff8325c215 in x86_64_start_kernel at arch/x86/kernel/head64.c:537
+#19 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+3
+#0 0xffffffff8110b4f6 in native_apic_mem_read at ./arch/x86/include/asm/apic.h:112
+#1 0xffffffff81103de2 in apic_read at ./arch/x86/include/asm/apic.h:388
+#2 lapic_timer_shutdown at arch/x86/kernel/apic/apic.c:503
+#3 0xffffffff81103e3f in lapic_timer_shutdown at arch/x86/kernel/apic/apic.c:500
+#4 0xffffffff811ea4f7 in __clockevents_switch_state at kernel/time/clockevents.c:131
+#5 clockevents_switch_state at kernel/time/clockevents.c:151
+#6 0xffffffff811ec86f in tick_program_event at kernel/time/tick-oneshot.c:31
+#7 0xffffffff811d895c in remove_hrtimer at kernel/time/hrtimer.c:1165
+#8 hrtimer_try_to_cancel at kernel/time/hrtimer.c:1334
+#9 0xffffffff811d89d0 in hrtimer_cancel at kernel/time/hrtimer.c:1443
+#10 0xffffffff811ed0e6 in tick_nohz_restart at kernel/time/tick-sched.c:765
+#11 0xffffffff811ed8de in tick_nohz_restart_sched_tick at kernel/time/tick-sched.c:981
+#12 tick_nohz_idle_update_tick at kernel/time/tick-sched.c:1316
+#13 tick_nohz_idle_exit at kernel/time/tick-sched.c:1350
+#14 0xffffffff811802ae in do_idle at kernel/sched/idle.c:295
+#15 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#16 0xffffffff81101d8c in start_secondary at arch/x86/kernel/smpboot.c:269
+#17 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+3
+#0 native_apic_mem_write at ./arch/x86/include/asm/apic.h:105
+#1 0xffffffff81103dfe in apic_write at ./arch/x86/include/asm/apic.h:393
+#2 lapic_timer_shutdown at arch/x86/kernel/apic/apic.c:505
+#3 0xffffffff81103e3f in lapic_timer_shutdown at arch/x86/kernel/apic/apic.c:500
+#4 0xffffffff811ea4f7 in __clockevents_switch_state at kernel/time/clockevents.c:131
+#5 clockevents_switch_state at kernel/time/clockevents.c:151
+#6 0xffffffff811ec86f in tick_program_event at kernel/time/tick-oneshot.c:31
+#7 0xffffffff811d895c in remove_hrtimer at kernel/time/hrtimer.c:1165
+#8 hrtimer_try_to_cancel at kernel/time/hrtimer.c:1334
+#9 0xffffffff811d89d0 in hrtimer_cancel at kernel/time/hrtimer.c:1443
+#10 0xffffffff811ed0e6 in tick_nohz_restart at kernel/time/tick-sched.c:765
+#11 0xffffffff811ed8de in tick_nohz_restart_sched_tick at kernel/time/tick-sched.c:981
+#12 tick_nohz_idle_update_tick at kernel/time/tick-sched.c:1316
+#13 tick_nohz_idle_exit at kernel/time/tick-sched.c:1350
+#14 0xffffffff811802ae in do_idle at kernel/sched/idle.c:295
+#15 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#16 0xffffffff81101d8c in start_secondary at arch/x86/kernel/smpboot.c:269
+#17 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+3
+#0 native_apic_mem_write at ./arch/x86/include/asm/apic.h:105
+#1 0xffffffff81103e3f in lapic_timer_shutdown at arch/x86/kernel/apic/apic.c:500
+#2 0xffffffff811ea4f7 in __clockevents_switch_state at kernel/time/clockevents.c:131
+#3 clockevents_switch_state at kernel/time/clockevents.c:151
+#4 0xffffffff811ec86f in tick_program_event at kernel/time/tick-oneshot.c:31
+#5 0xffffffff811d895c in remove_hrtimer at kernel/time/hrtimer.c:1165
+#6 hrtimer_try_to_cancel at kernel/time/hrtimer.c:1334
+#7 0xffffffff811d89d0 in hrtimer_cancel at kernel/time/hrtimer.c:1443
+#8 0xffffffff811ed0e6 in tick_nohz_restart at kernel/time/tick-sched.c:765
+#9 0xffffffff811ed8de in tick_nohz_restart_sched_tick at kernel/time/tick-sched.c:981
+#10 tick_nohz_idle_update_tick at kernel/time/tick-sched.c:1316
+#11 tick_nohz_idle_exit at kernel/time/tick-sched.c:1350
+#12 0xffffffff811802ae in do_idle at kernel/sched/idle.c:295
+#13 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#14 0xffffffff81101d8c in start_secondary at arch/x86/kernel/smpboot.c:269
+#15 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+3
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811562e1 in task_work_run at kernel/task_work.c:174
+#7 0xffffffff811c955f in resume_user_mode_work at ./include/linux/resume_user_mode.h:49
+#8 exit_to_user_mode_loop at kernel/entry/common.c:171
+#9 exit_to_user_mode_prepare at kernel/entry/common.c:204
+#10 0xffffffff81f459d1 in __syscall_exit_to_user_mode_work at kernel/entry/common.c:286
+#11 syscall_exit_to_user_mode at kernel/entry/common.c:297
+#12 0xffffffff81f40b9a in do_syscall_64 at arch/x86/entry/common.c:86
+#13 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+#14 0x00007f3c2f378ac0 in ?? at ()
+
+3
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d84ec in __run_hrtimer at kernel/time/hrtimer.c:1689
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#13 0xffff88813bd9df80 in ?? at ()
+#14 0xffffc90000128f10 in ?? at ()
+#15 0xffffffff82c31d10 in arp_tbl at ()
+#16 0xffffffff8114f750 in __pfx_delayed_work_timer_fn at ./arch/x86/include/asm/bitops.h:255
+#17 0xdead000000000122 in ?? at ()
+#18 0x00000000fffb9800 in ?? at ()
+
+3
+#0 native_apic_mem_write at ./arch/x86/include/asm/apic.h:105
+#1 0xffffffff81104419 in apic_eoi at ./arch/x86/include/asm/apic.h:398
+#2 ack_APIC_irq at ./arch/x86/include/asm/apic.h:444
+#3 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1110
+#4 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+3
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d84ec in __run_hrtimer at kernel/time/hrtimer.c:1689
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#13 0x000055bf4bcf23f0 in ?? at ()
+#14 0x0000000000000004 in fixed_percpu_data at ()
+#15 0x00007f3c2f1ad6c8 in ?? at ()
+#16 0x00000000000000b3 in ?? at ()
+#17 0x000055bf4bcf25e0 in ?? at ()
+#18 0x0000000000000003 in fixed_percpu_data at ()
+#19 0x0000000000000202 in ?? at ()
+#20 0x000055bf4a2b9650 in ?? at ()
+
+3
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d6c8a in __run_timers at kernel/time/timer.c:2004
+#7 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#8 0xffffffff8113492d in run_ksoftirqd at kernel/softirq.c:939
+#9 run_ksoftirqd at kernel/softirq.c:931
+#10 0xffffffff811624c4 in smpboot_thread_fn at kernel/smpboot.c:164
+#11 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#12 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+3
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d84ec in __run_hrtimer at kernel/time/hrtimer.c:1689
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#13 0xffff88813bd9df80 in ?? at ()
+#14 0xffffc90000128f10 in ?? at ()
+#15 0xffffffff85a21f20 in ?? at ()
+#16 0xffffffff81ccbae0 in __pfx_tcp_orphan_update at net/ipv4/tcp.c:2834
+#17 0xdead000000000122 in ?? at ()
+#18 0x00000000fffb9a40 in ?? at ()
+#19 0x00000000000a1790 in ?? at ()
+#20 0x0000000000000002 in fixed_percpu_data at ()
+#21 0xffff88813bd9dfa8 in ?? at ()
+#22 0x0000000000000100 in ?? at ()
+
+3
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d84ec in __run_hrtimer at kernel/time/hrtimer.c:1689
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#13 0xffff88813bd9df80 in ?? at ()
+#14 0xffffc90000128f10 in ?? at ()
+#15 0xffffffff85a21f20 in ?? at ()
+#16 0xffffffff81ccbae0 in __pfx_tcp_orphan_update at net/ipv4/tcp.c:2834
+#17 0xdead000000000122 in ?? at ()
+#18 0x00000000fffb9a40 in ?? at ()
+#19 0x00000000000a1790 in ?? at ()
+#20 0x0000000000000002 in fixed_percpu_data at ()
+#21 0xffff88813bd9dfa8 in ?? at ()
+#22 0x0000000000000001 in fixed_percpu_data at ()
+#23 0x00000000fffb9ac0 in ?? at ()
+#24 0x00000000ffffffff in ?? at ()
+#25 0x00000000fffb9a54 in ?? at ()
+#26 0x0000000000000206 in ?? at ()
+#27 0xffff88813bd9df80 in ?? at ()
+#28 0xffffffffffffffff in ?? at ()
+#29 0xffffffff81f512af in __preempt_count_dec_and_test at ./arch/x86/include/asm/preempt.h:95
+#30 __raw_spin_unlock_irq at ./include/linux/spinlock_api_smp.h:160
+#31 _raw_spin_unlock_irq at kernel/locking/spinlock.c:202
+#32 0x0000000000000010 in fixed_percpu_data at ()
+#33 0x0000000000000283 in ?? at ()
+#34 0xffffc90000128ee0 in ?? at ()
+#35 0x0000000000000018 in fixed_percpu_data at ()
+#36 0xffffffff811d6d75 in __run_timers at kernel/time/timer.c:2024
+#37 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#38 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#39 __irq_exit_rcu at kernel/softirq.c:650
+#40 irq_exit_rcu at kernel/softirq.c:662
+#41 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+3
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d84ec in __run_hrtimer at kernel/time/hrtimer.c:1689
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#13 0xffff88813bd1cd00 in ?? at ()
+#14 0xffffc900000fcf08 in ?? at ()
+#15 0xffffc9000015fe60 in ?? at ()
+#16 0xffffffff811d62c0 in __pfx_process_timeout at ./include/trace/events/timer.h:402
+#17 0xdead000000000122 in ?? at ()
+#18 0x00000000fffb9ab0 in ?? at ()
+#19 0x0000000000499fe2 in ?? at ()
+
+3
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d84ec in __run_hrtimer at kernel/time/hrtimer.c:1689
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#13 0xffff88813bd1cd00 in ?? at ()
+#14 0xffffc900000fcf08 in ?? at ()
+#15 0xffffc9000015fe60 in ?? at ()
+#16 0xffffffff811d62c0 in __pfx_process_timeout at ./include/trace/events/timer.h:402
+#17 0xdead000000000122 in ?? at ()
+#18 0x00000000fffb9ab0 in ?? at ()
+#19 0xffff88813bd2b530 in ?? at ()
+#20 0xffff8881003f4290 in ?? at ()
+#21 0x0000000000000001 in fixed_percpu_data at ()
+#22 0x0000000000000800 in ?? at ()
+#23 0x00000000fffb9cc0 in ?? at ()
+#24 0x00000000ffffffff in ?? at ()
+#25 0x00000000fffb9ac5 in ?? at ()
+#26 0x0000000000000287 in ?? at ()
+#27 0xffff88813bd1cd00 in ?? at ()
+#28 0xffffffffffffffff in ?? at ()
+#29 0xffffffff81f512af in __preempt_count_dec_and_test at ./arch/x86/include/asm/preempt.h:95
+#30 __raw_spin_unlock_irq at ./include/linux/spinlock_api_smp.h:160
+#31 _raw_spin_unlock_irq at kernel/locking/spinlock.c:202
+#32 0x0000000000000010 in fixed_percpu_data at ()
+#33 0x0000000000000207 in ?? at ()
+#34 0xffffc900000fced8 in ?? at ()
+#35 0x0000000000000018 in fixed_percpu_data at ()
+#36 0xffffffff811d62c0 in __pfx_process_timeout at ./include/trace/events/timer.h:402
+#37 0xffffffff811d6d75 in __run_timers at kernel/time/timer.c:2024
+#38 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#39 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#40 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#41 __irq_exit_rcu at kernel/softirq.c:650
+#42 irq_exit_rcu at kernel/softirq.c:662
+#43 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+3
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d84ec in __run_hrtimer at kernel/time/hrtimer.c:1689
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#13 0xffff88813bd9df80 in ?? at ()
+#14 0xffffc90000128f10 in ?? at ()
+#15 0xffffffff85a21f20 in ?? at ()
+#16 0xffffffff81ccbae0 in __pfx_tcp_orphan_update at net/ipv4/tcp.c:2834
+#17 0xdead000000000122 in ?? at ()
+#18 0x00000000fffb9ac0 in ?? at ()
+#19 0x000000000021d988 in ?? at ()
+#20 0x0000000000000002 in fixed_percpu_data at ()
+#21 0xffff88813bd9dfa8 in ?? at ()
+#22 0x0000000000000100 in ?? at ()
+
+3
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d84ec in __run_hrtimer at kernel/time/hrtimer.c:1689
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#13 0xffff88813bd9df80 in ?? at ()
+#14 0xffffc90000128f10 in ?? at ()
+#15 0xffffffff85a21f20 in ?? at ()
+#16 0xffffffff81ccbae0 in __pfx_tcp_orphan_update at net/ipv4/tcp.c:2834
+#17 0xdead000000000122 in ?? at ()
+#18 0x00000000fffb9ac0 in ?? at ()
+#19 0x000000000021d988 in ?? at ()
+#20 0x0000000000000002 in fixed_percpu_data at ()
+#21 0xffff88813bd9dfa8 in ?? at ()
+#22 0x0000000000000001 in fixed_percpu_data at ()
+#23 0x00000000fffb9b40 in ?? at ()
+#24 0x00000000ffffffff in ?? at ()
+#25 0x00000000fffb9adb in ?? at ()
+#26 0x0000000000000206 in ?? at ()
+#27 0xffff88813bd9df80 in ?? at ()
+#28 0xffffffffffffffff in ?? at ()
+#29 0xffffffff81f512af in __preempt_count_dec_and_test at ./arch/x86/include/asm/preempt.h:95
+#30 __raw_spin_unlock_irq at ./include/linux/spinlock_api_smp.h:160
+#31 _raw_spin_unlock_irq at kernel/locking/spinlock.c:202
+#32 0x0000000000000010 in fixed_percpu_data at ()
+#33 0x0000000000000287 in ?? at ()
+#34 0xffffc90000128ee0 in ?? at ()
+#35 0x0000000000000018 in fixed_percpu_data at ()
+#36 0xffffffff811d6d75 in __run_timers at kernel/time/timer.c:2024
+#37 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#38 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#39 __irq_exit_rcu at kernel/softirq.c:650
+#40 irq_exit_rcu at kernel/softirq.c:662
+#41 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+3
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d84ec in __run_hrtimer at kernel/time/hrtimer.c:1689
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#13 0xffffffff82a06108 in softirq_vec at ()
+#14 0xffff88813bd2c1f8 in ?? at ()
+#15 0x0000000000000009 in fixed_percpu_data at ()
+#16 0x0000000000000246 in ?? at ()
+#17 0xffffffff82b51b80 in ?? at ()
+
+3
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d84ec in __run_hrtimer at kernel/time/hrtimer.c:1689
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#13 0xffff88813bd9cd00 in ?? at ()
+#14 0xffffc90000128f08 in ?? at ()
+#15 0xffffffff859df800 in ?? at ()
+#16 0xffffffff811defa0 in __pfx_clocksource_watchdog at kernel/time/clocksource.c:1330
+#17 0xdead000000000122 in ?? at ()
+#18 0x00000000fffb9b08 in ?? at ()
+#19 0x000000000009ffc4 in ?? at ()
+
+3
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d84ec in __run_hrtimer at kernel/time/hrtimer.c:1689
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#13 0xffff88813bd9cd00 in ?? at ()
+#14 0xffffc90000128f08 in ?? at ()
+#15 0xffffffff859df800 in ?? at ()
+#16 0xffffffff811defa0 in __pfx_clocksource_watchdog at kernel/time/clocksource.c:1330
+#17 0xdead000000000122 in ?? at ()
+#18 0x00000000fffb9b08 in ?? at ()
+
+3
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d84ec in __run_hrtimer at kernel/time/hrtimer.c:1689
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#13 0x000055bf4bcf23f0 in ?? at ()
+#14 0x0000000000000004 in fixed_percpu_data at ()
+#15 0x0000000064778a78 in ?? at ()
+#16 0x000055bf4bcf25e0 in ?? at ()
+#17 0x00007ffd8e48ce60 in ?? at ()
+#18 0x000055bf4bcf22a0 in ?? at ()
+#19 0x0000000000000202 in ?? at ()
+#20 0x000055bf4a2b9650 in ?? at ()
+
+3
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d84ec in __run_hrtimer at kernel/time/hrtimer.c:1689
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#13 0xffffffff82a06108 in softirq_vec at ()
+#14 0x0000000000000009 in fixed_percpu_data at ()
+#15 0x0000000000000009 in fixed_percpu_data at ()
+#16 0x0000000000000200 in ?? at ()
+#17 0xffff88813bc2c180 in ?? at ()
+#18 0x000000000000000a in fixed_percpu_data at ()
+#19 0x0000000000228f8e in ?? at ()
+#20 0xffffffff82a060c0 in ?? at ()
+#21 0x7fffffffffffffff in ?? at ()
+#22 0x0000000000000001 in fixed_percpu_data at ()
+
+3
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d84ec in __run_hrtimer at kernel/time/hrtimer.c:1689
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#13 0xffff88813bd9cd00 in ?? at ()
+#14 0xffffc90000128f08 in ?? at ()
+#15 0xffffc9000007be30 in ?? at ()
+#16 0xffffffff811d62c0 in __pfx_process_timeout at ./include/trace/events/timer.h:402
+#17 0xdead000000000122 in ?? at ()
+#18 0x00000000fffb9b94 in ?? at ()
+#19 0xffff88813bdab530 in ?? at ()
+#20 0xffff8881001fc290 in ?? at ()
+#21 0x0000000000000001 in fixed_percpu_data at ()
+#22 0x0000000000000001 in fixed_percpu_data at ()
+#23 0x0000000100008000 in ?? at ()
+#24 0x00000000ffffffff in ?? at ()
+#25 0x00000000fffb9bbd in ?? at ()
+#26 0x0000000000000287 in ?? at ()
+#27 0xffff88813bd9cd00 in ?? at ()
+#28 0xffffffffffffffff in ?? at ()
+#29 0xffffffff81f512af in __preempt_count_dec_and_test at ./arch/x86/include/asm/preempt.h:95
+#30 __raw_spin_unlock_irq at ./include/linux/spinlock_api_smp.h:160
+#31 _raw_spin_unlock_irq at kernel/locking/spinlock.c:202
+#32 0x0000000000000010 in fixed_percpu_data at ()
+#33 0x0000000000000203 in ?? at ()
+#34 0xffffc90000128ed8 in ?? at ()
+#35 0x0000000000000018 in fixed_percpu_data at ()
+#36 0xffffffff811d62c0 in __pfx_process_timeout at ./include/trace/events/timer.h:402
+#37 0xffffffff811d6d75 in __run_timers at kernel/time/timer.c:2024
+#38 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#39 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#40 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#41 __irq_exit_rcu at kernel/softirq.c:650
+#42 irq_exit_rcu at kernel/softirq.c:662
+#43 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+3
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d84ec in __run_hrtimer at kernel/time/hrtimer.c:1689
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#13 0xffff88813bc9cd00 in ?? at ()
+#14 0xffffc900000d0f08 in ?? at ()
+#15 0xffffffff82bed7a0 in deferred_probe_timeout_work at ()
+#16 0xffffffff8114f750 in __pfx_delayed_work_timer_fn at ./arch/x86/include/asm/bitops.h:255
+#17 0xdead000000000122 in ?? at ()
+#18 0x00000000fffb9c00 in ?? at ()
+#19 0xffff88813bcab530 in ?? at ()
+#20 0xffff888100809690 in ?? at ()
+#21 0x0000000000000001 in fixed_percpu_data at ()
+#22 0x0000000000000400 in ?? at ()
+#23 0x00000000fffba700 in ?? at ()
+#24 0x00000000ffffffff in ?? at ()
+#25 0x00000000fffb9c0d in ?? at ()
+#26 0x0000000000000006 in fixed_percpu_data at ()
+#27 0xffff88813bc9cd00 in ?? at ()
+#28 0xffffffffffffffff in ?? at ()
+#29 0xffffffff81f512af in __preempt_count_dec_and_test at ./arch/x86/include/asm/preempt.h:95
+#30 __raw_spin_unlock_irq at ./include/linux/spinlock_api_smp.h:160
+#31 _raw_spin_unlock_irq at kernel/locking/spinlock.c:202
+#32 0x0000000000000010 in fixed_percpu_data at ()
+#33 0x0000000000000207 in ?? at ()
+#34 0xffffc900000d0ed8 in ?? at ()
+#35 0x0000000000000018 in fixed_percpu_data at ()
+#36 0xffffffff8114f750 in __pfx_delayed_work_timer_fn at ./arch/x86/include/asm/bitops.h:255
+#37 0xffffffff811d6d75 in __run_timers at kernel/time/timer.c:2024
+#38 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#39 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#40 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#41 __irq_exit_rcu at kernel/softirq.c:650
+#42 irq_exit_rcu at kernel/softirq.c:662
+#43 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+3
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d84ec in __run_hrtimer at kernel/time/hrtimer.c:1689
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#13 0x00007f3c2f1fc148 in ?? at ()
+#14 0x000055bf4bcf2870 in ?? at ()
+#15 0x0000000000000040 in ?? at ()
+#16 0x00007ffd8e48cc88 in ?? at ()
+#17 0x00007ffd8e48cc38 in ?? at ()
+#18 0x00000000ffffff73 in ?? at ()
+#19 0xffffffffffffffff in ?? at ()
+#20 0x000055bf4a2b9650 in ?? at ()
+
+2
+#0 0xffffffff8110b4f6 in native_apic_mem_read at ./arch/x86/include/asm/apic.h:112
+#1 0xffffffff81103de2 in apic_read at ./arch/x86/include/asm/apic.h:388
+#2 lapic_timer_shutdown at arch/x86/kernel/apic/apic.c:503
+#3 0xffffffff81103e3f in lapic_timer_shutdown at arch/x86/kernel/apic/apic.c:500
+#4 0xffffffff811ea4f7 in __clockevents_switch_state at kernel/time/clockevents.c:131
+#5 clockevents_switch_state at kernel/time/clockevents.c:151
+#6 0xffffffff811ec86f in tick_program_event at kernel/time/tick-oneshot.c:31
+#7 0xffffffff811d950c in hrtimer_interrupt at kernel/time/hrtimer.c:1824
+#8 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#9 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#10 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#11 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+2
+#0 native_apic_mem_write at ./arch/x86/include/asm/apic.h:105
+#1 0xffffffff81103dfe in apic_write at ./arch/x86/include/asm/apic.h:393
+#2 lapic_timer_shutdown at arch/x86/kernel/apic/apic.c:505
+#3 0xffffffff81103e3f in lapic_timer_shutdown at arch/x86/kernel/apic/apic.c:500
+#4 0xffffffff811ea4f7 in __clockevents_switch_state at kernel/time/clockevents.c:131
+#5 clockevents_switch_state at kernel/time/clockevents.c:151
+#6 0xffffffff811ec86f in tick_program_event at kernel/time/tick-oneshot.c:31
+#7 0xffffffff811d950c in hrtimer_interrupt at kernel/time/hrtimer.c:1824
+#8 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#9 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#10 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#11 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+2
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811bf174 in rcu_gp_init at kernel/rcu/tree.c:1395
+#7 0xffffffff811bfcae in rcu_gp_kthread at kernel/rcu/tree.c:1798
+#8 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#9 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+2
+#0 native_apic_mem_write at ./arch/x86/include/asm/apic.h:105
+#1 0xffffffff81103e3f in lapic_timer_shutdown at arch/x86/kernel/apic/apic.c:500
+#2 0xffffffff811ea4f7 in __clockevents_switch_state at kernel/time/clockevents.c:131
+#3 clockevents_switch_state at kernel/time/clockevents.c:151
+#4 0xffffffff811ec86f in tick_program_event at kernel/time/tick-oneshot.c:31
+#5 0xffffffff811d950c in hrtimer_interrupt at kernel/time/hrtimer.c:1824
+#6 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#7 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#8 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#9 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+2
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d6c8a in __run_timers at kernel/time/timer.c:2004
+#7 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#8 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#9 0xffffffff8113492d in run_ksoftirqd at kernel/softirq.c:939
+#10 run_ksoftirqd at kernel/softirq.c:931
+#11 0xffffffff811624c4 in smpboot_thread_fn at kernel/smpboot.c:164
+#12 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#13 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+2
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d6e5a in expire_timers at kernel/time/timer.c:1752
+#7 __run_timers at kernel/time/timer.c:2022
+#8 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#9 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#10 0xffffffff8113492d in run_ksoftirqd at kernel/softirq.c:939
+#11 run_ksoftirqd at kernel/softirq.c:931
+#12 0xffffffff811624c4 in smpboot_thread_fn at kernel/smpboot.c:164
+#13 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#14 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+2
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811bf794 in rcu_gp_cleanup at kernel/rcu/tree.c:1676
+#7 0xffffffff811bfdc8 in rcu_gp_kthread at kernel/rcu/tree.c:1812
+#8 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#9 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+2
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811562e1 in task_work_run at kernel/task_work.c:174
+#7 0xffffffff811c955f in resume_user_mode_work at ./include/linux/resume_user_mode.h:49
+#8 exit_to_user_mode_loop at kernel/entry/common.c:171
+#9 exit_to_user_mode_prepare at kernel/entry/common.c:204
+#10 0xffffffff81f459d1 in __syscall_exit_to_user_mode_work at kernel/entry/common.c:286
+#11 syscall_exit_to_user_mode at kernel/entry/common.c:297
+#12 0xffffffff81f40b9a in do_syscall_64 at arch/x86/entry/common.c:86
+#13 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+#14 0x000055bf4bcf23f0 in ?? at ()
+#15 0x0000000000000004 in fixed_percpu_data at ()
+#16 0x0000000064778a78 in ?? at ()
+#17 0x000055bf4bcf25e0 in ?? at ()
+#18 0x00007ffd8e48ce60 in ?? at ()
+#19 0x000055bf4bcf22a0 in ?? at ()
+#20 0x0000000000000202 in ?? at ()
+#21 0x000055bf4a2b9650 in ?? at ()
+
+2
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811bf8e2 in rcu_gp_cleanup at kernel/rcu/tree.c:1705
+#7 0xffffffff811bfdc8 in rcu_gp_kthread at kernel/rcu/tree.c:1812
+#8 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#9 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+2
+#0 0xffffffff81316acd in set_freepointer at mm/slub.c:439
+#1 slab_free_freelist_hook at mm/slub.c:1809
+#2 slab_free at mm/slub.c:3786
+#3 kmem_cache_free at mm/slub.c:3808
+#4 0xffffffff811c1d35 in rcu_do_batch at kernel/rcu/tree.c:2115
+#5 rcu_core at kernel/rcu/tree.c:2377
+#6 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#7 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#8 __irq_exit_rcu at kernel/softirq.c:650
+#9 irq_exit_rcu at kernel/softirq.c:662
+#10 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+2
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811bf96f in rcu_gp_cleanup at kernel/rcu/tree.c:1731
+#7 0xffffffff811bfdc8 in rcu_gp_kthread at kernel/rcu/tree.c:1812
+#8 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#9 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+1
+#0 0xffffffff8110b4f6 in native_apic_mem_read at ./arch/x86/include/asm/apic.h:112
+#1 0xffffffff81104f2a in apic_read at ./arch/x86/include/asm/apic.h:388
+#2 native_apic_wait_icr_idle at arch/x86/kernel/apic/apic.c:253
+#3 0xffffffff81261aaf in irq_work_queue at kernel/irq_work.c:124
+#4 irq_work_queue at kernel/irq_work.c:116
+#5 0xffffffff8119c627 in __wake_up_klogd at kernel/printk/printk.c:3796
+#6 0xffffffff8119f2a2 in __wake_up_klogd at kernel/printk/printk.c:3801
+#7 wake_up_klogd at kernel/printk/printk.c:3803
+#8 wake_up_klogd at kernel/printk/printk.c:3801
+#9 vprintk_emit at kernel/printk/printk.c:2311
+#10 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#11 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#12 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#13 0xffffffff811df43e in clocksource_watchdog at kernel/time/clocksource.c:480
+#14 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#15 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#16 __run_timers at kernel/time/timer.c:2022
+#17 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#18 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#19 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#20 __irq_exit_rcu at kernel/softirq.c:650
+#21 irq_exit_rcu at kernel/softirq.c:662
+#22 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff81316acd in set_freepointer at mm/slub.c:439
+#1 slab_free_freelist_hook at mm/slub.c:1809
+#2 slab_free at mm/slub.c:3786
+#3 kmem_cache_free at mm/slub.c:3808
+#4 0xffffffff81127c99 in __mmdrop at kernel/fork.c:933
+#5 0xffffffff81169bda in mmdrop at ./include/linux/sched/mm.h:54
+#6 mmdrop_sched at ./include/linux/sched/mm.h:82
+#7 mmdrop_lazy_tlb_sched at ./include/linux/sched/mm.h:109
+#8 finish_task_switch at kernel/sched/core.c:5240
+#9 0xffffffff81f495ae in context_switch at kernel/sched/core.c:5346
+#10 __schedule at kernel/sched/core.c:6669
+#11 0xffffffff81f49ba6 in schedule at kernel/sched/core.c:6745
+#12 0xffffffff81f5046c in schedule_timeout at kernel/time/timer.c:2143
+#13 0xffffffff81beb7ae in __skb_wait_for_more_packets at net/core/datagram.c:120
+#14 0xffffffff81d58701 in __unix_dgram_recvmsg at net/unix/af_unix.c:2465
+#15 0xffffffff81bd2b07 in sock_recvmsg_nosec at net/socket.c:1019
+#16 sock_recvmsg at net/socket.c:1040
+#17 0xffffffff81bd2bb1 in sock_read_iter at net/socket.c:1118
+#18 0xffffffff8132547f in call_read_iter at ./include/linux/fs.h:1862
+#19 new_sync_read at fs/read_write.c:389
+#20 vfs_read at fs/read_write.c:470
+#21 0xffffffff81325e26 in ksys_read at fs/read_write.c:613
+#22 0xffffffff81f40b8b in do_syscall_x64 at arch/x86/entry/common.c:50
+#23 do_syscall_64 at arch/x86/entry/common.c:80
+#24 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+#25 0x00007f3c2f378ac0 in ?? at ()
+
+1
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811562e1 in task_work_run at kernel/task_work.c:174
+#7 0xffffffff811c955f in resume_user_mode_work at ./include/linux/resume_user_mode.h:49
+#8 exit_to_user_mode_loop at kernel/entry/common.c:171
+#9 exit_to_user_mode_prepare at kernel/entry/common.c:204
+#10 0xffffffff81f459d1 in __syscall_exit_to_user_mode_work at kernel/entry/common.c:286
+#11 syscall_exit_to_user_mode at kernel/entry/common.c:297
+#12 0xffffffff81f40b9a in do_syscall_64 at arch/x86/entry/common.c:86
+#13 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+#14 0x000055bf4bcf23f0 in ?? at ()
+#15 0x0000000000000004 in fixed_percpu_data at ()
+#16 0x0000000064778a77 in ?? at ()
+#17 0x000055bf4bcf25e0 in ?? at ()
+#18 0x00007ffd8e48ce60 in ?? at ()
+#19 0x000055bf4bcf22a0 in ?? at ()
+#20 0x0000000000000202 in ?? at ()
+#21 0x000055bf4a2b9650 in ?? at ()
+
+1
+#0 0xffffffff81316acd in set_freepointer at mm/slub.c:439
+#1 slab_free_freelist_hook at mm/slub.c:1809
+#2 slab_free at mm/slub.c:3786
+#3 kmem_cache_free at mm/slub.c:3808
+#4 0xffffffff8150703e in security_file_free at security/security.c:2589
+#5 0xffffffff813280f1 in file_free at fs/file_table.c:57
+#6 __fput at fs/file_table.c:334
+#7 0xffffffff811562f5 in task_work_run at kernel/task_work.c:179
+#8 0xffffffff811c955f in resume_user_mode_work at ./include/linux/resume_user_mode.h:49
+#9 exit_to_user_mode_loop at kernel/entry/common.c:171
+#10 exit_to_user_mode_prepare at kernel/entry/common.c:204
+#11 0xffffffff81f459d1 in __syscall_exit_to_user_mode_work at kernel/entry/common.c:286
+#12 syscall_exit_to_user_mode at kernel/entry/common.c:297
+#13 0xffffffff81f40b9a in do_syscall_64 at arch/x86/entry/common.c:86
+#14 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+#15 0x000055bf4bcf23f0 in ?? at ()
+#16 0x0000000000000004 in fixed_percpu_data at ()
+#17 0x0000000064778a77 in ?? at ()
+#18 0x000055bf4bcf25e0 in ?? at ()
+#19 0x00007ffd8e48ce60 in ?? at ()
+#20 0x000055bf4bcf22a0 in ?? at ()
+#21 0x0000000000000202 in ?? at ()
+#22 0x000055bf4a2b9650 in ?? at ()
+
+1
+#0 0xffffffff81316acd in set_freepointer at mm/slub.c:439
+#1 slab_free_freelist_hook at mm/slub.c:1809
+#2 slab_free at mm/slub.c:3786
+#3 kmem_cache_free at mm/slub.c:3808
+#4 0xffffffff813225a6 in do_sys_openat2 at fs/open.c:1365
+#5 0xffffffff81322b29 in do_sys_open at fs/open.c:1372
+#6 __do_sys_openat at fs/open.c:1388
+#7 __se_sys_openat at fs/open.c:1383
+#8 __x64_sys_openat at fs/open.c:1383
+#9 0xffffffff81f40b8b in do_syscall_x64 at arch/x86/entry/common.c:50
+#10 do_syscall_64 at arch/x86/entry/common.c:80
+#11 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+#12 0x000055bf4bcf23f0 in ?? at ()
+#13 0x0000000000000004 in fixed_percpu_data at ()
+#14 0x0000000064778a77 in ?? at ()
+#15 0x0000000000000d41 in ?? at ()
+#16 0x000055bf4a2b96f0 in ?? at ()
+#17 0x000055bf4bcf22a0 in ?? at ()
+#18 0x0000000000000202 in ?? at ()
+#19 0x00000000000001b6 in ?? at ()
+
+1
+#0 0xffffffff81316acd in set_freepointer at mm/slub.c:439
+#1 slab_free_freelist_hook at mm/slub.c:1809
+#2 slab_free at mm/slub.c:3786
+#3 kmem_cache_free at mm/slub.c:3808
+#4 0xffffffff8132d2ba in vfs_fstatat at fs/stat.c:277
+#5 0xffffffff8132d67f in __do_sys_newfstatat at fs/stat.c:446
+#6 0xffffffff81f40b8b in do_syscall_x64 at arch/x86/entry/common.c:50
+#7 do_syscall_64 at arch/x86/entry/common.c:80
+#8 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+#9 0x000055bf4bcf23f0 in ?? at ()
+#10 0x0000000000000004 in fixed_percpu_data at ()
+#11 0x0000000064778a77 in ?? at ()
+#12 0x000055bf4bcf25e0 in ?? at ()
+#13 0x00007ffd8e48ce60 in ?? at ()
+#14 0x000055bf4bcf22a0 in ?? at ()
+#15 0x0000000000000206 in ?? at ()
+#16 0x0000000000001000 in ?? at ()
+
+1
+#0 0xffffffff8110b4f6 in native_apic_mem_read at ./arch/x86/include/asm/apic.h:112
+#1 0xffffffff81104f2a in apic_read at ./arch/x86/include/asm/apic.h:388
+#2 native_apic_wait_icr_idle at arch/x86/kernel/apic/apic.c:253
+#3 0xffffffff81261aaf in irq_work_queue at kernel/irq_work.c:124
+#4 irq_work_queue at kernel/irq_work.c:116
+#5 0xffffffff8119c627 in __wake_up_klogd at kernel/printk/printk.c:3796
+#6 0xffffffff8119f2a2 in __wake_up_klogd at kernel/printk/printk.c:3801
+#7 wake_up_klogd at kernel/printk/printk.c:3803
+#8 wake_up_klogd at kernel/printk/printk.c:3801
+#9 vprintk_emit at kernel/printk/printk.c:2311
+#10 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#11 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#12 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#13 0xffffffff811df484 in clocksource_watchdog at kernel/time/clocksource.c:484
+#14 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#15 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#16 __run_timers at kernel/time/timer.c:2022
+#17 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#18 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#19 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#20 __irq_exit_rcu at kernel/softirq.c:650
+#21 irq_exit_rcu at kernel/softirq.c:662
+#22 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff81316acd in set_freepointer at mm/slub.c:439
+#1 slab_free_freelist_hook at mm/slub.c:1809
+#2 slab_free at mm/slub.c:3786
+#3 kmem_cache_free at mm/slub.c:3808
+#4 0xffffffff81127c99 in __mmdrop at kernel/fork.c:933
+#5 0xffffffff81169bda in mmdrop at ./include/linux/sched/mm.h:54
+#6 mmdrop_sched at ./include/linux/sched/mm.h:82
+#7 mmdrop_lazy_tlb_sched at ./include/linux/sched/mm.h:109
+#8 finish_task_switch at kernel/sched/core.c:5240
+#9 0xffffffff81f495ae in context_switch at kernel/sched/core.c:5346
+#10 __schedule at kernel/sched/core.c:6669
+#11 0xffffffff81f49ba6 in schedule at kernel/sched/core.c:6745
+#12 0xffffffff8119bc55 in syslog_print at kernel/printk/printk.c:1579
+#13 0xffffffff8119e95c in do_syslog at kernel/printk/printk.c:1732
+#14 0xffffffff8119eb65 in __do_sys_syslog at kernel/printk/printk.c:1824
+#15 __se_sys_syslog at kernel/printk/printk.c:1822
+#16 __x64_sys_syslog at kernel/printk/printk.c:1822
+#17 0xffffffff81f40b8b in do_syscall_x64 at arch/x86/entry/common.c:50
+#18 do_syscall_64 at arch/x86/entry/common.c:80
+#19 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+#20 0x00005611aac406f1 in ?? at ()
+#21 0x00005611aac406f1 in ?? at ()
+#22 0x00005611aac304d1 in ?? at ()
+#23 0x00005611aac40520 in ?? at ()
+
+1
+#0 native_apic_mem_write at ./arch/x86/include/asm/apic.h:105
+#1 0xffffffff81103d83 in apic_write at ./arch/x86/include/asm/apic.h:393
+#2 __setup_APIC_LVTT at arch/x86/kernel/apic/apic.c:359
+#3 0xffffffff81103e7f in lapic_timer_set_periodic_oneshot at arch/x86/kernel/apic/apic.c:517
+#4 lapic_timer_set_periodic_oneshot at arch/x86/kernel/apic/apic.c:511
+#5 lapic_timer_set_oneshot at arch/x86/kernel/apic/apic.c:528
+#6 0xffffffff811ea565 in __clockevents_switch_state at kernel/time/clockevents.c:120
+#7 clockevents_switch_state at kernel/time/clockevents.c:151
+#8 0xffffffff811ec892 in tick_program_event at kernel/time/tick-oneshot.c:41
+#9 0xffffffff811d82be in __hrtimer_reprogram at kernel/time/hrtimer.c:681
+#10 0xffffffff811d8eb6 in hrtimer_start_range_ns at kernel/time/hrtimer.c:1299
+#11 0xffffffff811ed4d3 in hrtimer_start at ./include/linux/hrtimer.h:418
+#12 tick_nohz_stop_tick at kernel/time/tick-sched.c:941
+#13 tick_nohz_idle_stop_tick at kernel/time/tick-sched.c:1119
+#14 0xffffffff81180344 in cpuidle_idle_call at kernel/sched/idle.c:168
+#15 do_idle at kernel/sched/idle.c:282
+#16 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#17 0xffffffff81f472a0 in rest_init at init/main.c:735
+#18 0xffffffff832508b9 in arch_call_rest_init at init/main.c:834
+#19 0xffffffff83250d79 in start_kernel at init/main.c:1088
+#20 0xffffffff8325c0d8 in x86_64_start_reservations at arch/x86/kernel/head64.c:556
+#21 0xffffffff8325c215 in x86_64_start_kernel at arch/x86/kernel/head64.c:537
+#22 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+1
+#0 native_apic_mem_write at ./arch/x86/include/asm/apic.h:105
+#1 0xffffffff81100e27 in apic_eoi at ./arch/x86/include/asm/apic.h:398
+#2 ack_APIC_irq at ./arch/x86/include/asm/apic.h:444
+#3 __sysvec_call_function_single at arch/x86/kernel/smp.c:245
+#4 0xffffffff81f44f3d in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+
+1
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d6c8a in __run_timers at kernel/time/timer.c:2004
+#7 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#8 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#9 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#10 __irq_exit_rcu at kernel/softirq.c:650
+#11 irq_exit_rcu at kernel/softirq.c:662
+#12 0xffffffff81f44fae in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#13 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#14 0x000055bf4bcf23f0 in ?? at ()
+#15 0x0000000000000004 in fixed_percpu_data at ()
+#16 0x00007f3c2f1ad6c8 in ?? at ()
+#17 0x00000000000000b3 in ?? at ()
+#18 0x000055bf4bcf25e0 in ?? at ()
+#19 0x0000000000000003 in fixed_percpu_data at ()
+#20 0x0000000000000202 in ?? at ()
+#21 0x000055bf4a2b9650 in ?? at ()
+
+1
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811562e1 in task_work_run at kernel/task_work.c:174
+#7 0xffffffff811c955f in resume_user_mode_work at ./include/linux/resume_user_mode.h:49
+#8 exit_to_user_mode_loop at kernel/entry/common.c:171
+#9 exit_to_user_mode_prepare at kernel/entry/common.c:204
+#10 0xffffffff81f459d1 in __syscall_exit_to_user_mode_work at kernel/entry/common.c:286
+#11 syscall_exit_to_user_mode at kernel/entry/common.c:297
+#12 0xffffffff81f40b9a in do_syscall_64 at arch/x86/entry/common.c:86
+#13 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+#14 0x00005611aac406f1 in ?? at ()
+#15 0x00005611aac406f1 in ?? at ()
+#16 0x00005611aac304d1 in ?? at ()
+#17 0x00005611aac40520 in ?? at ()
+
+1
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d6c8a in __run_timers at kernel/time/timer.c:2004
+#7 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#8 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#9 __irq_exit_rcu at kernel/softirq.c:650
+#10 irq_exit_rcu at kernel/softirq.c:662
+#11 0xffffffff81f44fae in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#13 0x000055bf4bcf23f0 in ?? at ()
+#14 0x0000000000000004 in fixed_percpu_data at ()
+#15 0x00007f3c2f1ad6c8 in ?? at ()
+#16 0x00000000000000b3 in ?? at ()
+#17 0x000055bf4bcf25e0 in ?? at ()
+#18 0x0000000000000003 in fixed_percpu_data at ()
+#19 0x0000000000000202 in ?? at ()
+#20 0x000055bf4a2b9650 in ?? at ()
+
+1
+#0 0xffffffff81316acd in set_freepointer at mm/slub.c:439
+#1 slab_free_freelist_hook at mm/slub.c:1809
+#2 slab_free at mm/slub.c:3786
+#3 kmem_cache_free at mm/slub.c:3808
+#4 0xffffffff81be5b6d in __kfree_skb at net/core/skbuff.c:1029
+#5 0xffffffff81f1c997 in uevent_net_broadcast_untagged at lib/kobject_uevent.c:337
+#6 kobject_uevent_net_broadcast at lib/kobject_uevent.c:409
+#7 kobject_uevent_env at lib/kobject_uevent.c:593
+#8 0xffffffff81e177ba in call_crda at net/wireless/reg.c:583
+#9 reg_query_database at net/wireless/reg.c:1126
+#10 0xffffffff81e1941d in reg_process_hint_core at net/wireless/reg.c:2665
+#11 reg_process_hint at net/wireless/reg.c:3008
+#12 0xffffffff81e19b04 in reg_process_pending_hints at net/wireless/reg.c:3096
+#13 reg_todo at net/wireless/reg.c:3187
+#14 0xffffffff81151866 in process_one_work at kernel/workqueue.c:2405
+#15 0xffffffff81151e69 in worker_thread at kernel/workqueue.c:2552
+#16 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#17 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+1
+#0 0xffffffff8110b4f6 in native_apic_mem_read at ./arch/x86/include/asm/apic.h:112
+#1 0xffffffff81104f2a in apic_read at ./arch/x86/include/asm/apic.h:388
+#2 native_apic_wait_icr_idle at arch/x86/kernel/apic/apic.c:253
+#3 0xffffffff81261aaf in irq_work_queue at kernel/irq_work.c:124
+#4 irq_work_queue at kernel/irq_work.c:116
+#5 0xffffffff8119c627 in __wake_up_klogd at kernel/printk/printk.c:3796
+#6 0xffffffff8119f2a2 in __wake_up_klogd at kernel/printk/printk.c:3801
+#7 wake_up_klogd at kernel/printk/printk.c:3803
+#8 wake_up_klogd at kernel/printk/printk.c:3801
+#9 vprintk_emit at kernel/printk/printk.c:2311
+#10 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#11 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#12 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#13 0xffffffff811de33b in __clocksource_unstable at kernel/time/clocksource.c:184
+#14 0xffffffff811df4fb in clocksource_watchdog at kernel/time/clocksource.c:496
+#15 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#16 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#17 __run_timers at kernel/time/timer.c:2022
+#18 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#19 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#20 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#21 __irq_exit_rcu at kernel/softirq.c:650
+#22 irq_exit_rcu at kernel/softirq.c:662
+#23 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811bd64b in rcu_gp_fqs at kernel/rcu/tree.c:1568
+#7 rcu_gp_fqs_loop at kernel/rcu/tree.c:1631
+#8 0xffffffff811bfdb7 in rcu_gp_kthread at kernel/rcu/tree.c:1808
+#9 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#10 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+1
+#0 0xffffffff81316acd in set_freepointer at mm/slub.c:439
+#1 slab_free_freelist_hook at mm/slub.c:1809
+#2 slab_free at mm/slub.c:3786
+#3 kmem_cache_free at mm/slub.c:3808
+#4 0xffffffff8132d2ba in vfs_fstatat at fs/stat.c:277
+#5 0xffffffff8132d67f in __do_sys_newfstatat at fs/stat.c:446
+#6 0xffffffff81f40b8b in do_syscall_x64 at arch/x86/entry/common.c:50
+#7 do_syscall_64 at arch/x86/entry/common.c:80
+#8 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+#9 0x00005654c558154a in ?? at ()
+
+1
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff81f4b117 in __wait_for_common at kernel/sched/completion.c:105
+#7 wait_for_common at kernel/sched/completion.c:117
+#8 wait_for_completion_killable at kernel/sched/completion.c:244
+#9 0xffffffff81158088 in __kthread_create_on_node at kernel/kthread.c:451
+#10 0xffffffff81158160 in kthread_create_on_node at kernel/kthread.c:503
+#11 0xffffffff811de0de in clocksource_watchdog_work at kernel/time/clocksource.c:166
+#12 0xffffffff81151866 in process_one_work at kernel/workqueue.c:2405
+#13 0xffffffff81151e69 in worker_thread at kernel/workqueue.c:2552
+#14 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#15 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+1
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff81129cb9 in spin_lock_irq at ./include/linux/spinlock.h:375
+#7 copy_process at kernel/fork.c:2323
+#8 0xffffffff8112b76e in kernel_clone at kernel/fork.c:2918
+#9 0xffffffff8112bcba in kernel_thread at kernel/fork.c:2980
+#10 0xffffffff811599e3 in create_kthread at kernel/kthread.c:402
+#11 kthreadd at kernel/kthread.c:737
+#12 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+1
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff81153088 in wq_worker_sleeping at kernel/workqueue.c:919
+#7 0xffffffff81f49b79 in sched_submit_work at kernel/sched/core.c:6709
+#8 schedule at kernel/sched/core.c:6742
+#9 0xffffffff81f5046c in schedule_timeout at kernel/time/timer.c:2143
+#10 0xffffffff81f4b212 in do_wait_for_common at kernel/sched/completion.c:85
+#11 __wait_for_common at kernel/sched/completion.c:106
+#12 wait_for_common at kernel/sched/completion.c:117
+#13 wait_for_completion_killable at kernel/sched/completion.c:244
+#14 0xffffffff81158088 in __kthread_create_on_node at kernel/kthread.c:451
+#15 0xffffffff81158160 in kthread_create_on_node at kernel/kthread.c:503
+#16 0xffffffff811de0de in clocksource_watchdog_work at kernel/time/clocksource.c:166
+#17 0xffffffff81151866 in process_one_work at kernel/workqueue.c:2405
+#18 0xffffffff81151e69 in worker_thread at kernel/workqueue.c:2552
+#19 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#20 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+1
+#0 0xffffffff81316acd in set_freepointer at mm/slub.c:439
+#1 slab_free_freelist_hook at mm/slub.c:1809
+#2 slab_free at mm/slub.c:3786
+#3 kmem_cache_free at mm/slub.c:3808
+#4 0xffffffff8150703e in security_file_free at security/security.c:2589
+#5 0xffffffff813280f1 in file_free at fs/file_table.c:57
+#6 __fput at fs/file_table.c:334
+#7 0xffffffff811562f5 in task_work_run at kernel/task_work.c:179
+#8 0xffffffff811c955f in resume_user_mode_work at ./include/linux/resume_user_mode.h:49
+#9 exit_to_user_mode_loop at kernel/entry/common.c:171
+#10 exit_to_user_mode_prepare at kernel/entry/common.c:204
+#11 0xffffffff81f459d1 in __syscall_exit_to_user_mode_work at kernel/entry/common.c:286
+#12 syscall_exit_to_user_mode at kernel/entry/common.c:297
+#13 0xffffffff81f40b9a in do_syscall_64 at arch/x86/entry/common.c:86
+#14 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+#15 0x000055bf4bcf23f0 in ?? at ()
+#16 0x0000000000000004 in fixed_percpu_data at ()
+#17 0x0000000064778a78 in ?? at ()
+#18 0x000055bf4bcf25e0 in ?? at ()
+#19 0x00007ffd8e48ce60 in ?? at ()
+#20 0x000055bf4bcf22a0 in ?? at ()
+#21 0x0000000000000202 in ?? at ()
+#22 0x000055bf4a2b9650 in ?? at ()
+
+1
+#0 native_apic_mem_write at ./arch/x86/include/asm/apic.h:105
+#1 0xffffffff81f44d46 in apic_eoi at ./arch/x86/include/asm/apic.h:398
+#2 ack_APIC_irq at ./arch/x86/include/asm/apic.h:444
+#3 __sysvec_reschedule_ipi at arch/x86/kernel/smp.c:227
+#4 sysvec_reschedule_ipi at arch/x86/kernel/smp.c:225
+#5 0xffffffff820014ca in asm_sysvec_reschedule_ipi at ./arch/x86/include/asm/idtentry.h:650
+#6 0x0000000000000102 in ?? at ()
+#7 0xffff88810081aac0 in ?? at ()
+#8 0xffff888100808000 in ?? at ()
+#9 0xffff88813bd2b480 in ?? at ()
+#10 0xffffc90001837e80 in ?? at ()
+
+1
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d6e5a in expire_timers at kernel/time/timer.c:1752
+#7 __run_timers at kernel/time/timer.c:2022
+#8 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#9 0xffffffff8113492d in run_ksoftirqd at kernel/softirq.c:939
+#10 run_ksoftirqd at kernel/softirq.c:931
+#11 0xffffffff811624c4 in smpboot_thread_fn at kernel/smpboot.c:164
+#12 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#13 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+1
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff8112a706 in spin_lock_irq at ./include/linux/spinlock.h:375
+#7 copy_sighand at kernel/fork.c:1819
+#8 copy_process at kernel/fork.c:2501
+#9 0xffffffff8112b76e in kernel_clone at kernel/fork.c:2918
+#10 0xffffffff8112bcba in kernel_thread at kernel/fork.c:2980
+#11 0xffffffff811599e3 in create_kthread at kernel/kthread.c:402
+#12 kthreadd at kernel/kthread.c:737
+#13 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+1
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811562e1 in task_work_run at kernel/task_work.c:174
+#7 0xffffffff811c955f in resume_user_mode_work at ./include/linux/resume_user_mode.h:49
+#8 exit_to_user_mode_loop at kernel/entry/common.c:171
+#9 exit_to_user_mode_prepare at kernel/entry/common.c:204
+#10 0xffffffff81f459d1 in __syscall_exit_to_user_mode_work at kernel/entry/common.c:286
+#11 syscall_exit_to_user_mode at kernel/entry/common.c:297
+#12 0xffffffff81f40b9a in do_syscall_64 at arch/x86/entry/common.c:86
+#13 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+#14 0x00005654c558154a in ?? at ()
+
+1
+#0 native_apic_mem_write at ./arch/x86/include/asm/apic.h:105
+#1 0xffffffff81f44d46 in apic_eoi at ./arch/x86/include/asm/apic.h:398
+#2 ack_APIC_irq at ./arch/x86/include/asm/apic.h:444
+#3 __sysvec_reschedule_ipi at arch/x86/kernel/smp.c:227
+#4 sysvec_reschedule_ipi at arch/x86/kernel/smp.c:225
+#5 0xffffffff820014ca in asm_sysvec_reschedule_ipi at ./arch/x86/include/asm/idtentry.h:650
+#6 0x0000000000800700 in ?? at ()
+
+1
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811554b5 in spin_lock_irq at ./include/linux/spinlock.h:375
+#7 alloc_pid at kernel/pid.c:209
+#8 0xffffffff8112abfc in copy_process at kernel/fork.c:2526
+#9 0xffffffff8112b76e in kernel_clone at kernel/fork.c:2918
+#10 0xffffffff8112bcba in kernel_thread at kernel/fork.c:2980
+#11 0xffffffff811599e3 in create_kthread at kernel/kthread.c:402
+#12 kthreadd at kernel/kthread.c:737
+#13 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+1
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff81155635 in spin_lock_irq at ./include/linux/spinlock.h:375
+#7 alloc_pid at kernel/pid.c:269
+#8 0xffffffff8112abfc in copy_process at kernel/fork.c:2526
+#9 0xffffffff8112b76e in kernel_clone at kernel/fork.c:2918
+#10 0xffffffff8112bcba in kernel_thread at kernel/fork.c:2980
+#11 0xffffffff811599e3 in create_kthread at kernel/kthread.c:402
+#12 kthreadd at kernel/kthread.c:737
+#13 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+1
+#0 0xffffffff81316acd in set_freepointer at mm/slub.c:439
+#1 slab_free_freelist_hook at mm/slub.c:1809
+#2 slab_free at mm/slub.c:3786
+#3 kmem_cache_free at mm/slub.c:3808
+#4 0xffffffff813225a6 in do_sys_openat2 at fs/open.c:1365
+#5 0xffffffff81322b29 in do_sys_open at fs/open.c:1372
+#6 __do_sys_openat at fs/open.c:1388
+#7 __se_sys_openat at fs/open.c:1383
+#8 __x64_sys_openat at fs/open.c:1383
+#9 0xffffffff81f40b8b in do_syscall_x64 at arch/x86/entry/common.c:50
+#10 do_syscall_64 at arch/x86/entry/common.c:80
+#11 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+#12 0x000055bf4bcf23f0 in ?? at ()
+#13 0x0000000000000004 in fixed_percpu_data at ()
+#14 0x0000000064778a78 in ?? at ()
+#15 0x0000000000000d41 in ?? at ()
+#16 0x000055bf4a2b96f0 in ?? at ()
+#17 0x000055bf4bcf22a0 in ?? at ()
+#18 0x0000000000000202 in ?? at ()
+#19 0x00000000000001b6 in ?? at ()
+
+1
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff81205a40 in spin_lock_irq at ./include/linux/spinlock.h:375
+#7 cgroup_css_set_fork at kernel/cgroup/cgroup.c:6397
+#8 cgroup_can_fork at kernel/cgroup/cgroup.c:6525
+#9 0xffffffff8112adbc in copy_process at kernel/fork.c:2605
+#10 0xffffffff8112b76e in kernel_clone at kernel/fork.c:2918
+#11 0xffffffff8112bcba in kernel_thread at kernel/fork.c:2980
+#12 0xffffffff811599e3 in create_kthread at kernel/kthread.c:402
+#13 kthreadd at kernel/kthread.c:737
+#14 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+1
+#0 0xffffffff81316acd in set_freepointer at mm/slub.c:439
+#1 slab_free_freelist_hook at mm/slub.c:1809
+#2 slab_free at mm/slub.c:3786
+#3 kmem_cache_free at mm/slub.c:3808
+#4 0xffffffff8132d2ba in vfs_fstatat at fs/stat.c:277
+#5 0xffffffff8132d67f in __do_sys_newfstatat at fs/stat.c:446
+#6 0xffffffff81f40b8b in do_syscall_x64 at arch/x86/entry/common.c:50
+#7 do_syscall_64 at arch/x86/entry/common.c:80
+#8 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+#9 0x00005654c558154a in ?? at ()
+#10 0x0005fbf961df35c0 in ?? at ()
+#11 0x0000000000000001 in fixed_percpu_data at ()
+
+1
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff81205380 in spin_lock_irq at ./include/linux/spinlock.h:375
+#7 cgroup_post_fork at kernel/cgroup/cgroup.c:6593
+#8 0xffffffff8112b21f in copy_process at kernel/fork.c:2735
+#9 0xffffffff8112b76e in kernel_clone at kernel/fork.c:2918
+#10 0xffffffff8112bcba in kernel_thread at kernel/fork.c:2980
+#11 0xffffffff811599e3 in create_kthread at kernel/kthread.c:402
+#12 kthreadd at kernel/kthread.c:737
+#13 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+1
+#0 0xffffffff81316acd in set_freepointer at mm/slub.c:439
+#1 slab_free_freelist_hook at mm/slub.c:1809
+#2 slab_free at mm/slub.c:3786
+#3 kmem_cache_free at mm/slub.c:3808
+#4 0xffffffff8132d2ba in vfs_fstatat at fs/stat.c:277
+#5 0xffffffff8132d67f in __do_sys_newfstatat at fs/stat.c:446
+#6 0xffffffff81f40b8b in do_syscall_x64 at arch/x86/entry/common.c:50
+#7 do_syscall_64 at arch/x86/entry/common.c:80
+#8 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+#9 0x000055bf4bcf23f0 in ?? at ()
+#10 0x0000000000000004 in fixed_percpu_data at ()
+#11 0x0000000064778a78 in ?? at ()
+#12 0x000055bf4bcf25e0 in ?? at ()
+#13 0x00007ffd8e48ce60 in ?? at ()
+#14 0x000055bf4bcf22a0 in ?? at ()
+#15 0x0000000000000206 in ?? at ()
+#16 0x0000000000001000 in ?? at ()
+
+1
+#0 0xffffffff81316acd in set_freepointer at mm/slub.c:439
+#1 slab_free_freelist_hook at mm/slub.c:1809
+#2 slab_free at mm/slub.c:3786
+#3 kmem_cache_free at mm/slub.c:3808
+#4 0xffffffff8132d2ba in vfs_fstatat at fs/stat.c:277
+#5 0xffffffff8132d67f in __do_sys_newfstatat at fs/stat.c:446
+#6 0xffffffff81f40b8b in do_syscall_x64 at arch/x86/entry/common.c:50
+#7 do_syscall_64 at arch/x86/entry/common.c:80
+#8 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+#9 0x00005654c558154a in ?? at ()
+#10 0x0005fc5fe1ec3680 in ?? at ()
+#11 0x0000000000000001 in fixed_percpu_data at ()
+
+1
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811562e1 in task_work_run at kernel/task_work.c:174
+#7 0xffffffff811c955f in resume_user_mode_work at ./include/linux/resume_user_mode.h:49
+#8 exit_to_user_mode_loop at kernel/entry/common.c:171
+#9 exit_to_user_mode_prepare at kernel/entry/common.c:204
+#10 0xffffffff81f459d1 in __syscall_exit_to_user_mode_work at kernel/entry/common.c:286
+#11 syscall_exit_to_user_mode at kernel/entry/common.c:297
+#12 0xffffffff81f40b9a in do_syscall_64 at arch/x86/entry/common.c:86
+#13 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+#14 0x00005654c558154a in ?? at ()
+#15 0x0005fc5fe1ec3680 in ?? at ()
+#16 0x0000000000000001 in fixed_percpu_data at ()
+
+1
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811562e1 in task_work_run at kernel/task_work.c:174
+#7 0xffffffff811c955f in resume_user_mode_work at ./include/linux/resume_user_mode.h:49
+#8 exit_to_user_mode_loop at kernel/entry/common.c:171
+#9 exit_to_user_mode_prepare at kernel/entry/common.c:204
+#10 0xffffffff81f459d1 in __syscall_exit_to_user_mode_work at kernel/entry/common.c:286
+#11 syscall_exit_to_user_mode at kernel/entry/common.c:297
+#12 0xffffffff81f40b9a in do_syscall_64 at arch/x86/entry/common.c:86
+#13 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+#14 0x000055bf4bcf23f0 in ?? at ()
+#15 0x0000000000000004 in fixed_percpu_data at ()
+#16 0x0000000064778a78 in ?? at ()
+#17 0x000055bf4bcf25e0 in ?? at ()
+#18 0x00007ffd8e48ce60 in ?? at ()
+#19 0x000055bf4bcf22a0 in ?? at ()
+#20 0x0000000000000206 in ?? at ()
+#21 0x0000000000001000 in ?? at ()
+
+1
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff8113f87a in spin_lock_irq at ./include/linux/spinlock.h:375
+#7 calculate_sigpending at kernel/signal.c:195
+#8 0xffffffff81002a32 in ret_from_fork at arch/x86/entry/entry_64.S:293
+
+1
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811507c6 in start_flush_work at kernel/workqueue.c:3135
+#7 __flush_work at kernel/workqueue.c:3188
+#8 0xffffffff81151599 in flush_work at kernel/workqueue.c:3210
+#9 0xffffffff81931eae in deferred_probe_timeout_work_func at drivers/base/dd.c:312
+#10 0xffffffff81151866 in process_one_work at kernel/workqueue.c:2405
+#11 0xffffffff81151e69 in worker_thread at kernel/workqueue.c:2552
+#12 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#13 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+1
+#0 0xffffffff81316acd in set_freepointer at mm/slub.c:439
+#1 slab_free_freelist_hook at mm/slub.c:1809
+#2 slab_free at mm/slub.c:3786
+#3 kmem_cache_free at mm/slub.c:3808
+#4 0xffffffff8132d2ba in vfs_fstatat at fs/stat.c:277
+#5 0xffffffff8132d67f in __do_sys_newfstatat at fs/stat.c:446
+#6 0xffffffff81f40b8b in do_syscall_x64 at arch/x86/entry/common.c:50
+#7 do_syscall_64 at arch/x86/entry/common.c:80
+#8 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+#9 0x00005654c558154a in ?? at ()
+#10 0x0005fd010c259ee0 in ?? at ()
+#11 0x0000000000000001 in fixed_percpu_data at ()
+
+1
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff81f4b21d in do_wait_for_common at kernel/sched/completion.c:86
+#7 __wait_for_common at kernel/sched/completion.c:106
+#8 wait_for_common at kernel/sched/completion.c:117
+#9 wait_for_completion_killable at kernel/sched/completion.c:244
+#10 0xffffffff81158088 in __kthread_create_on_node at kernel/kthread.c:451
+#11 0xffffffff81158160 in kthread_create_on_node at kernel/kthread.c:503
+#12 0xffffffff811de0de in clocksource_watchdog_work at kernel/time/clocksource.c:166
+#13 0xffffffff81151866 in process_one_work at kernel/workqueue.c:2405
+#14 0xffffffff81151e69 in worker_thread at kernel/workqueue.c:2552
+#15 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#16 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+1
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811562e1 in task_work_run at kernel/task_work.c:174
+#7 0xffffffff811c955f in resume_user_mode_work at ./include/linux/resume_user_mode.h:49
+#8 exit_to_user_mode_loop at kernel/entry/common.c:171
+#9 exit_to_user_mode_prepare at kernel/entry/common.c:204
+#10 0xffffffff81f459d1 in __syscall_exit_to_user_mode_work at kernel/entry/common.c:286
+#11 syscall_exit_to_user_mode at kernel/entry/common.c:297
+#12 0xffffffff81f40b9a in do_syscall_64 at arch/x86/entry/common.c:86
+#13 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+#14 0x00005654c558154a in ?? at ()
+#15 0x0005fd010c259ee0 in ?? at ()
+#16 0x0000000000000001 in fixed_percpu_data at ()
+
+1
+#0 0xffffffff81316acd in set_freepointer at mm/slub.c:439
+#1 slab_free_freelist_hook at mm/slub.c:1809
+#2 slab_free at mm/slub.c:3786
+#3 kmem_cache_free at mm/slub.c:3808
+#4 0xffffffff8132d2ba in vfs_fstatat at fs/stat.c:277
+#5 0xffffffff8132d67f in __do_sys_newfstatat at fs/stat.c:446
+#6 0xffffffff81f40b8b in do_syscall_x64 at arch/x86/entry/common.c:50
+#7 do_syscall_64 at arch/x86/entry/common.c:80
+#8 0xffffffff820000ae in entry_SYSCALL_64 at arch/x86/entry/entry_64.S:120
+
+1
+#0 native_apic_mem_write at ./arch/x86/include/asm/apic.h:105
+#1 0xffffffff81f44d46 in apic_eoi at ./arch/x86/include/asm/apic.h:398
+#2 ack_APIC_irq at ./arch/x86/include/asm/apic.h:444
+#3 __sysvec_reschedule_ipi at arch/x86/kernel/smp.c:227
+#4 sysvec_reschedule_ipi at arch/x86/kernel/smp.c:225
+#5 0xffffffff820014ca in asm_sysvec_reschedule_ipi at ./arch/x86/include/asm/idtentry.h:650
+#6 0xffff888100055207 in ?? at ()
+
+1
+#0 0xffffffff81f515b3 in arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at (lock=0xffff88813bd9df80Quit
+

@@ -1,0 +1,1819 @@
+155
+#0 0xffffffff816dcd65 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_out at drivers/tty/serial/8250/8250_port.c:475
+#2 0xffffffff816e1b4e in serial_out at drivers/tty/serial/8250/8250.h:123
+#3 serial8250_console_fifo_write at drivers/tty/serial/8250/8250_port.c:3387
+#4 serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3458
+#5 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#6 console_flush_all at kernel/printk/printk.c:2933
+#7 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#8 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#9 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#10 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#11 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#12 0xffffffff811df4cd in clocksource_watchdog at kernel/time/clocksource.c:488
+#13 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#14 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#15 __run_timers at kernel/time/timer.c:2022
+#16 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#17 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#18 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#19 __irq_exit_rcu at kernel/softirq.c:650
+#20 irq_exit_rcu at kernel/softirq.c:662
+#21 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+141
+#0 0xffffffff816dcd65 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_out at drivers/tty/serial/8250/8250_port.c:475
+#2 0xffffffff816e1b4e in serial_out at drivers/tty/serial/8250/8250.h:123
+#3 serial8250_console_fifo_write at drivers/tty/serial/8250/8250_port.c:3387
+#4 serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3458
+#5 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#6 console_flush_all at kernel/printk/printk.c:2933
+#7 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#8 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#9 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#10 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#11 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#12 0xffffffff811df464 in clocksource_watchdog at kernel/time/clocksource.c:482
+#13 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#14 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#15 __run_timers at kernel/time/timer.c:2022
+#16 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#17 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#18 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#19 __irq_exit_rcu at kernel/softirq.c:650
+#20 irq_exit_rcu at kernel/softirq.c:662
+#21 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+135
+#0 0xffffffff816dcd65 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_out at drivers/tty/serial/8250/8250_port.c:475
+#2 0xffffffff816e1b4e in serial_out at drivers/tty/serial/8250/8250.h:123
+#3 serial8250_console_fifo_write at drivers/tty/serial/8250/8250_port.c:3387
+#4 serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3458
+#5 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#6 console_flush_all at kernel/printk/printk.c:2933
+#7 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#8 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#9 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#10 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#11 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#12 0xffffffff811df484 in clocksource_watchdog at kernel/time/clocksource.c:484
+#13 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#14 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#15 __run_timers at kernel/time/timer.c:2022
+#16 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#17 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#18 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#19 __irq_exit_rcu at kernel/softirq.c:650
+#20 irq_exit_rcu at kernel/softirq.c:662
+#21 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+127
+#0 0xffffffff816dcd65 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_out at drivers/tty/serial/8250/8250_port.c:475
+#2 0xffffffff816e1b4e in serial_out at drivers/tty/serial/8250/8250.h:123
+#3 serial8250_console_fifo_write at drivers/tty/serial/8250/8250_port.c:3387
+#4 serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3458
+#5 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#6 console_flush_all at kernel/printk/printk.c:2933
+#7 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#8 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#9 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#10 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#11 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#12 0xffffffff811df43e in clocksource_watchdog at kernel/time/clocksource.c:480
+#13 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#14 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#15 __run_timers at kernel/time/timer.c:2022
+#16 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#17 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#18 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#19 __irq_exit_rcu at kernel/softirq.c:650
+#20 irq_exit_rcu at kernel/softirq.c:662
+#21 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+98
+#0 0xffffffff816dcd65 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_out at drivers/tty/serial/8250/8250_port.c:475
+#2 0xffffffff816e1b4e in serial_out at drivers/tty/serial/8250/8250.h:123
+#3 serial8250_console_fifo_write at drivers/tty/serial/8250/8250_port.c:3387
+#4 serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3458
+#5 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#6 console_flush_all at kernel/printk/printk.c:2933
+#7 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#8 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#9 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#10 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#11 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#12 0xffffffff811df4f3 in clocksource_watchdog at kernel/time/clocksource.c:493
+#13 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#14 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#15 __run_timers at kernel/time/timer.c:2022
+#16 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#17 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#18 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#19 __irq_exit_rcu at kernel/softirq.c:650
+#20 irq_exit_rcu at kernel/softirq.c:662
+#21 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+73
+#0 0xffffffff816dcd33 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_in at drivers/tty/serial/8250/8250_port.c:469
+#2 0xffffffff816dc200 in serial_in at drivers/tty/serial/8250/8250.h:118
+#3 serial8250_backup_timeout at drivers/tty/serial/8250/8250_core.c:269
+#4 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#5 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#6 __run_timers at kernel/time/timer.c:2022
+#7 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#8 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#9 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#10 __irq_exit_rcu at kernel/softirq.c:650
+#11 irq_exit_rcu at kernel/softirq.c:662
+#12 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+73
+#0 0xffffffff816dcd65 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_out at drivers/tty/serial/8250/8250_port.c:475
+#2 0xffffffff816dc219 in serial_out at drivers/tty/serial/8250/8250.h:123
+#3 serial8250_backup_timeout at drivers/tty/serial/8250/8250_core.c:270
+#4 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#5 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#6 __run_timers at kernel/time/timer.c:2022
+#7 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#8 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#9 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#10 __irq_exit_rcu at kernel/softirq.c:650
+#11 irq_exit_rcu at kernel/softirq.c:662
+#12 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+73
+#0 0xffffffff816dcd33 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_in at drivers/tty/serial/8250/8250_port.c:469
+#2 0xffffffff816dc22d in serial_in at drivers/tty/serial/8250/8250.h:118
+#3 serial8250_backup_timeout at drivers/tty/serial/8250/8250_core.c:273
+#4 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#5 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#6 __run_timers at kernel/time/timer.c:2022
+#7 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#8 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#9 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#10 __irq_exit_rcu at kernel/softirq.c:650
+#11 irq_exit_rcu at kernel/softirq.c:662
+#12 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+73
+#0 0xffffffff816dcd33 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_in at drivers/tty/serial/8250/8250_port.c:469
+#2 0xffffffff816dc249 in serial_in at drivers/tty/serial/8250/8250.h:118
+#3 serial_lsr_in at drivers/tty/serial/8250/8250.h:140
+#4 serial8250_backup_timeout at drivers/tty/serial/8250/8250_core.c:281
+#5 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#6 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#7 __run_timers at kernel/time/timer.c:2022
+#8 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#9 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#10 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#11 __irq_exit_rcu at kernel/softirq.c:650
+#12 irq_exit_rcu at kernel/softirq.c:662
+#13 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+73
+#0 0xffffffff816dcd65 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_out at drivers/tty/serial/8250/8250_port.c:475
+#2 0xffffffff816dc289 in serial_out at drivers/tty/serial/8250/8250.h:123
+#3 serial8250_backup_timeout at drivers/tty/serial/8250/8250_core.c:293
+#4 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#5 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#6 __run_timers at kernel/time/timer.c:2022
+#7 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#8 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#9 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#10 __irq_exit_rcu at kernel/softirq.c:650
+#11 irq_exit_rcu at kernel/softirq.c:662
+#12 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+69
+#0 0xffffffff816dcd65 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_out at drivers/tty/serial/8250/8250_port.c:475
+#2 0xffffffff816e1b4e in serial_out at drivers/tty/serial/8250/8250.h:123
+#3 serial8250_console_fifo_write at drivers/tty/serial/8250/8250_port.c:3387
+#4 serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3458
+#5 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#6 console_flush_all at kernel/printk/printk.c:2933
+#7 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#8 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#9 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#10 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#11 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#12 0xffffffff811de33b in __clocksource_unstable at kernel/time/clocksource.c:184
+#13 0xffffffff811df4fb in clocksource_watchdog at kernel/time/clocksource.c:496
+#14 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#15 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#16 __run_timers at kernel/time/timer.c:2022
+#17 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#18 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#19 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#20 __irq_exit_rcu at kernel/softirq.c:650
+#21 irq_exit_rcu at kernel/softirq.c:662
+#22 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+16
+#0 0xffffffff815bdebf in insl at ./arch/x86/include/asm/io.h:298
+#1 ioread32_rep at lib/iomap.c:374
+#2 0xffffffff819aa94a in ata_sff_data_xfer32 at drivers/ata/libata-sff.c:545
+#3 0xffffffff819ad167 in __atapi_pio_bytes at drivers/ata/libata-sff.c:766
+#4 atapi_pio_bytes at drivers/ata/libata-sff.c:830
+#5 ata_sff_hsm_move at drivers/ata/libata-sff.c:1040
+#6 0xffffffff819ad757 in __ata_sff_port_intr at drivers/ata/libata-sff.c:1446
+#7 0xffffffff819ad873 in ata_bmdma_port_intr at drivers/ata/libata-sff.c:2747
+#8 0xffffffff819adabe in __ata_sff_interrupt at drivers/ata/libata-sff.c:1491
+#9 ata_bmdma_interrupt at drivers/ata/libata-sff.c:2772
+#10 0xffffffff811a2502 in __handle_irq_event_percpu at kernel/irq/handle.c:158
+#11 0xffffffff811a26e3 in handle_irq_event_percpu at kernel/irq/handle.c:193
+#12 handle_irq_event at kernel/irq/handle.c:210
+#13 0xffffffff811a7306 in handle_edge_irq at kernel/irq/chip.c:819
+#14 0xffffffff810d549b in generic_handle_irq_desc at ./include/linux/irqdesc.h:158
+#15 handle_irq at arch/x86/kernel/irq.c:231
+#16 __common_interrupt at arch/x86/kernel/irq.c:250
+#17 0xffffffff81f42941 in common_interrupt at arch/x86/kernel/irq.c:240
+
+15
+#0 0xffffffff815bd498 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 ioread8 at lib/iomap.c:81
+#2 0xffffffff819ad7a4 in ata_sff_altstatus at drivers/ata/libata-sff.c:93
+#3 ata_sff_irq_status at drivers/ata/libata-sff.c:121
+#4 __ata_sff_port_intr at drivers/ata/libata-sff.c:1432
+#5 0xffffffff819ad873 in ata_bmdma_port_intr at drivers/ata/libata-sff.c:2747
+#6 0xffffffff819adabe in __ata_sff_interrupt at drivers/ata/libata-sff.c:1491
+#7 ata_bmdma_interrupt at drivers/ata/libata-sff.c:2772
+#8 0xffffffff811a2502 in __handle_irq_event_percpu at kernel/irq/handle.c:158
+#9 0xffffffff811a26e3 in handle_irq_event_percpu at kernel/irq/handle.c:193
+#10 handle_irq_event at kernel/irq/handle.c:210
+#11 0xffffffff811a7306 in handle_edge_irq at kernel/irq/chip.c:819
+#12 0xffffffff810d549b in generic_handle_irq_desc at ./include/linux/irqdesc.h:158
+#13 handle_irq at arch/x86/kernel/irq.c:231
+#14 __common_interrupt at arch/x86/kernel/irq.c:250
+#15 0xffffffff81f42941 in common_interrupt at arch/x86/kernel/irq.c:240
+
+15
+#0 0xffffffff815bd498 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 ioread8 at lib/iomap.c:81
+#2 0xffffffff819aa52d in ata_sff_check_status at drivers/ata/libata-sff.c:66
+#3 0xffffffff819ad725 in ata_sff_irq_status at drivers/ata/libata-sff.c:124
+#4 __ata_sff_port_intr at drivers/ata/libata-sff.c:1432
+#5 0xffffffff819ad873 in ata_bmdma_port_intr at drivers/ata/libata-sff.c:2747
+#6 0xffffffff819adabe in __ata_sff_interrupt at drivers/ata/libata-sff.c:1491
+#7 ata_bmdma_interrupt at drivers/ata/libata-sff.c:2772
+#8 0xffffffff811a2502 in __handle_irq_event_percpu at kernel/irq/handle.c:158
+#9 0xffffffff811a26e3 in handle_irq_event_percpu at kernel/irq/handle.c:193
+#10 handle_irq_event at kernel/irq/handle.c:210
+#11 0xffffffff811a7306 in handle_edge_irq at kernel/irq/chip.c:819
+#12 0xffffffff810d549b in generic_handle_irq_desc at ./include/linux/irqdesc.h:158
+#13 handle_irq at arch/x86/kernel/irq.c:231
+#14 __common_interrupt at arch/x86/kernel/irq.c:250
+#15 0xffffffff81f42941 in common_interrupt at arch/x86/kernel/irq.c:240
+
+15
+#0 0xffffffff815bd498 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 ioread8 at lib/iomap.c:81
+#2 0xffffffff819aa66d in ata_bmdma_irq_clear at drivers/ata/libata-sff.c:2876
+#3 0xffffffff819ad743 in __ata_sff_port_intr at drivers/ata/libata-sff.c:1444
+#4 0xffffffff819ad873 in ata_bmdma_port_intr at drivers/ata/libata-sff.c:2747
+#5 0xffffffff819adabe in __ata_sff_interrupt at drivers/ata/libata-sff.c:1491
+#6 ata_bmdma_interrupt at drivers/ata/libata-sff.c:2772
+#7 0xffffffff811a2502 in __handle_irq_event_percpu at kernel/irq/handle.c:158
+#8 0xffffffff811a26e3 in handle_irq_event_percpu at kernel/irq/handle.c:193
+#9 handle_irq_event at kernel/irq/handle.c:210
+#10 0xffffffff811a7306 in handle_edge_irq at kernel/irq/chip.c:819
+#11 0xffffffff810d549b in generic_handle_irq_desc at ./include/linux/irqdesc.h:158
+#12 handle_irq at arch/x86/kernel/irq.c:231
+#13 __common_interrupt at arch/x86/kernel/irq.c:250
+#14 0xffffffff81f42941 in common_interrupt at arch/x86/kernel/irq.c:240
+
+15
+#0 0xffffffff815bd862 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 iowrite8 at lib/iomap.c:207
+#2 0xffffffff819ad743 in __ata_sff_port_intr at drivers/ata/libata-sff.c:1444
+#3 0xffffffff819ad873 in ata_bmdma_port_intr at drivers/ata/libata-sff.c:2747
+#4 0xffffffff819adabe in __ata_sff_interrupt at drivers/ata/libata-sff.c:1491
+#5 ata_bmdma_interrupt at drivers/ata/libata-sff.c:2772
+#6 0xffffffff811a2502 in __handle_irq_event_percpu at kernel/irq/handle.c:158
+#7 0xffffffff811a26e3 in handle_irq_event_percpu at kernel/irq/handle.c:193
+#8 handle_irq_event at kernel/irq/handle.c:210
+#9 0xffffffff811a7306 in handle_edge_irq at kernel/irq/chip.c:819
+#10 0xffffffff810d549b in generic_handle_irq_desc at ./include/linux/irqdesc.h:158
+#11 handle_irq at arch/x86/kernel/irq.c:231
+#12 __common_interrupt at arch/x86/kernel/irq.c:250
+#13 0xffffffff81f42941 in common_interrupt at arch/x86/kernel/irq.c:240
+
+10
+#0 0xffffffff816dcd33 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_in at drivers/tty/serial/8250/8250_port.c:469
+#2 0xffffffff816e1b16 in serial_in at drivers/tty/serial/8250/8250.h:118
+#3 serial_lsr_in at drivers/tty/serial/8250/8250.h:140
+#4 wait_for_lsr at drivers/tty/serial/8250/8250_port.c:2109
+#5 serial8250_console_fifo_write at drivers/tty/serial/8250/8250_port.c:3380
+#6 serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3458
+#7 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#8 console_flush_all at kernel/printk/printk.c:2933
+#9 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#10 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#11 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#12 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#13 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#14 0xffffffff811df4cd in clocksource_watchdog at kernel/time/clocksource.c:488
+#15 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#16 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#17 __run_timers at kernel/time/timer.c:2022
+#18 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#19 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#20 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#21 __irq_exit_rcu at kernel/softirq.c:650
+#22 irq_exit_rcu at kernel/softirq.c:662
+#23 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+9
+#0 0xffffffff816dcd33 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_in at drivers/tty/serial/8250/8250_port.c:469
+#2 0xffffffff816e1b16 in serial_in at drivers/tty/serial/8250/8250.h:118
+#3 serial_lsr_in at drivers/tty/serial/8250/8250.h:140
+#4 wait_for_lsr at drivers/tty/serial/8250/8250_port.c:2109
+#5 serial8250_console_fifo_write at drivers/tty/serial/8250/8250_port.c:3380
+#6 serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3458
+#7 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#8 console_flush_all at kernel/printk/printk.c:2933
+#9 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#10 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#11 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#12 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#13 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#14 0xffffffff811df464 in clocksource_watchdog at kernel/time/clocksource.c:482
+#15 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#16 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#17 __run_timers at kernel/time/timer.c:2022
+#18 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#19 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#20 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#21 __irq_exit_rcu at kernel/softirq.c:650
+#22 irq_exit_rcu at kernel/softirq.c:662
+#23 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+9
+#0 0xffffffff816dcd33 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_in at drivers/tty/serial/8250/8250_port.c:469
+#2 0xffffffff816e1b16 in serial_in at drivers/tty/serial/8250/8250.h:118
+#3 serial_lsr_in at drivers/tty/serial/8250/8250.h:140
+#4 wait_for_lsr at drivers/tty/serial/8250/8250_port.c:2109
+#5 serial8250_console_fifo_write at drivers/tty/serial/8250/8250_port.c:3380
+#6 serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3458
+#7 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#8 console_flush_all at kernel/printk/printk.c:2933
+#9 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#10 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#11 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#12 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#13 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#14 0xffffffff811df484 in clocksource_watchdog at kernel/time/clocksource.c:484
+#15 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#16 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#17 __run_timers at kernel/time/timer.c:2022
+#18 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#19 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#20 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#21 __irq_exit_rcu at kernel/softirq.c:650
+#22 irq_exit_rcu at kernel/softirq.c:662
+#23 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+8
+#0 0xffffffff816dcd33 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_in at drivers/tty/serial/8250/8250_port.c:469
+#2 0xffffffff816e1b16 in serial_in at drivers/tty/serial/8250/8250.h:118
+#3 serial_lsr_in at drivers/tty/serial/8250/8250.h:140
+#4 wait_for_lsr at drivers/tty/serial/8250/8250_port.c:2109
+#5 serial8250_console_fifo_write at drivers/tty/serial/8250/8250_port.c:3380
+#6 serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3458
+#7 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#8 console_flush_all at kernel/printk/printk.c:2933
+#9 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#10 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#11 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#12 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#13 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#14 0xffffffff811df43e in clocksource_watchdog at kernel/time/clocksource.c:480
+#15 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#16 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#17 __run_timers at kernel/time/timer.c:2022
+#18 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#19 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#20 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#21 __irq_exit_rcu at kernel/softirq.c:650
+#22 irq_exit_rcu at kernel/softirq.c:662
+#23 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+8
+#0 0xffffffff815bd498 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 ioread8 at lib/iomap.c:81
+#2 0xffffffff819aa52d in ata_sff_check_status at drivers/ata/libata-sff.c:66
+#3 0xffffffff819ae107 in ata_sff_busy_wait at ./include/linux/libata.h:2047
+#4 ata_wait_idle at ./include/linux/libata.h:2066
+#5 ata_dev_select at drivers/ata/libata-sff.c:291
+#6 ata_sff_qc_issue at drivers/ata/libata-sff.c:1303
+#7 0xffffffff81995848 in ata_qc_issue at drivers/ata/libata-core.c:4898
+#8 0xffffffff8199f9cb in ata_scsi_translate at drivers/ata/libata-scsi.c:1750
+#9 __ata_scsi_queuecmd at drivers/ata/libata-scsi.c:4003
+#10 0xffffffff8199fcff in ata_scsi_queuecmd at drivers/ata/libata-scsi.c:4048
+#11 0xffffffff81973026 in scsi_dispatch_cmd at drivers/scsi/scsi_lib.c:1516
+#12 scsi_queue_rq at drivers/scsi/scsi_lib.c:1757
+#13 0xffffffff8156667b in blk_mq_dispatch_rq_list at block/blk-mq.c:2035
+#14 0xffffffff8156c946 in __blk_mq_sched_dispatch_requests at block/blk-mq-sched.c:301
+#15 0xffffffff8156cebf in blk_mq_sched_dispatch_requests at block/blk-mq-sched.c:333
+#16 0xffffffff81562c99 in blk_mq_run_hw_queue at block/blk-mq.c:2249
+#17 0xffffffff81569942 in blk_execute_rq at block/blk-mq.c:1373
+#18 0xffffffff819710a7 in scsi_execute_cmd at drivers/scsi/scsi_lib.c:239
+#19 0xffffffff8198898e in sr_get_events at drivers/scsi/sr.c:178
+#20 sr_check_events at drivers/scsi/sr.c:218
+#21 0xffffffff81a65e96 in cdrom_update_events at drivers/cdrom/cdrom.c:1485
+#22 cdrom_check_events at drivers/cdrom/cdrom.c:1495
+#23 0xffffffff81574ea2 in disk_check_events at block/disk-events.c:193
+#24 0xffffffff81151866 in process_one_work at kernel/workqueue.c:2405
+#25 0xffffffff81151e69 in worker_thread at kernel/workqueue.c:2552
+#26 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#27 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+8
+#0 0xffffffff815bd862 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 iowrite8 at lib/iomap.c:207
+#2 0xffffffff819ac7ff in ata_sff_dev_select at drivers/ata/libata-sff.c:264
+#3 0xffffffff819ae127 in ata_dev_select at drivers/ata/libata-sff.c:293
+#4 ata_sff_qc_issue at drivers/ata/libata-sff.c:1303
+#5 0xffffffff81995848 in ata_qc_issue at drivers/ata/libata-core.c:4898
+#6 0xffffffff8199f9cb in ata_scsi_translate at drivers/ata/libata-scsi.c:1750
+#7 __ata_scsi_queuecmd at drivers/ata/libata-scsi.c:4003
+#8 0xffffffff8199fcff in ata_scsi_queuecmd at drivers/ata/libata-scsi.c:4048
+#9 0xffffffff81973026 in scsi_dispatch_cmd at drivers/scsi/scsi_lib.c:1516
+#10 scsi_queue_rq at drivers/scsi/scsi_lib.c:1757
+#11 0xffffffff8156667b in blk_mq_dispatch_rq_list at block/blk-mq.c:2035
+#12 0xffffffff8156c946 in __blk_mq_sched_dispatch_requests at block/blk-mq-sched.c:301
+#13 0xffffffff8156cebf in blk_mq_sched_dispatch_requests at block/blk-mq-sched.c:333
+#14 0xffffffff81562c99 in blk_mq_run_hw_queue at block/blk-mq.c:2249
+#15 0xffffffff81569942 in blk_execute_rq at block/blk-mq.c:1373
+#16 0xffffffff819710a7 in scsi_execute_cmd at drivers/scsi/scsi_lib.c:239
+#17 0xffffffff8198898e in sr_get_events at drivers/scsi/sr.c:178
+#18 sr_check_events at drivers/scsi/sr.c:218
+#19 0xffffffff81a65e96 in cdrom_update_events at drivers/cdrom/cdrom.c:1485
+#20 cdrom_check_events at drivers/cdrom/cdrom.c:1495
+#21 0xffffffff81574ea2 in disk_check_events at block/disk-events.c:193
+#22 0xffffffff81151866 in process_one_work at kernel/workqueue.c:2405
+#23 0xffffffff81151e69 in worker_thread at kernel/workqueue.c:2552
+#24 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#25 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+8
+#0 0xffffffff815bd498 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 ioread8 at lib/iomap.c:81
+#2 0xffffffff819ac833 in ata_sff_altstatus at drivers/ata/libata-sff.c:93
+#3 ata_sff_sync at drivers/ata/libata-sff.c:142
+#4 ata_sff_pause at drivers/ata/libata-sff.c:159
+#5 ata_sff_dev_select at drivers/ata/libata-sff.c:265
+#6 0xffffffff819ae127 in ata_dev_select at drivers/ata/libata-sff.c:293
+#7 ata_sff_qc_issue at drivers/ata/libata-sff.c:1303
+#8 0xffffffff81995848 in ata_qc_issue at drivers/ata/libata-core.c:4898
+#9 0xffffffff8199f9cb in ata_scsi_translate at drivers/ata/libata-scsi.c:1750
+#10 __ata_scsi_queuecmd at drivers/ata/libata-scsi.c:4003
+#11 0xffffffff8199fcff in ata_scsi_queuecmd at drivers/ata/libata-scsi.c:4048
+#12 0xffffffff81973026 in scsi_dispatch_cmd at drivers/scsi/scsi_lib.c:1516
+#13 scsi_queue_rq at drivers/scsi/scsi_lib.c:1757
+#14 0xffffffff8156667b in blk_mq_dispatch_rq_list at block/blk-mq.c:2035
+#15 0xffffffff8156c946 in __blk_mq_sched_dispatch_requests at block/blk-mq-sched.c:301
+#16 0xffffffff8156cebf in blk_mq_sched_dispatch_requests at block/blk-mq-sched.c:333
+#17 0xffffffff81562c99 in blk_mq_run_hw_queue at block/blk-mq.c:2249
+#18 0xffffffff81569942 in blk_execute_rq at block/blk-mq.c:1373
+#19 0xffffffff819710a7 in scsi_execute_cmd at drivers/scsi/scsi_lib.c:239
+#20 0xffffffff8198898e in sr_get_events at drivers/scsi/sr.c:178
+#21 sr_check_events at drivers/scsi/sr.c:218
+#22 0xffffffff81a65e96 in cdrom_update_events at drivers/cdrom/cdrom.c:1485
+#23 cdrom_check_events at drivers/cdrom/cdrom.c:1495
+#24 0xffffffff81574ea2 in disk_check_events at block/disk-events.c:193
+#25 0xffffffff81151866 in process_one_work at kernel/workqueue.c:2405
+#26 0xffffffff81151e69 in worker_thread at kernel/workqueue.c:2552
+#27 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#28 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+8
+#0 0xffffffff815bd498 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 ioread8 at lib/iomap.c:81
+#2 0xffffffff819aa52d in ata_sff_check_status at drivers/ata/libata-sff.c:66
+#3 0xffffffff819ae153 in ata_sff_busy_wait at ./include/linux/libata.h:2047
+#4 ata_wait_idle at ./include/linux/libata.h:2066
+#5 ata_dev_select at drivers/ata/libata-sff.c:298
+#6 ata_dev_select at drivers/ata/libata-sff.c:287
+#7 ata_sff_qc_issue at drivers/ata/libata-sff.c:1303
+#8 0xffffffff81995848 in ata_qc_issue at drivers/ata/libata-core.c:4898
+#9 0xffffffff8199f9cb in ata_scsi_translate at drivers/ata/libata-scsi.c:1750
+#10 __ata_scsi_queuecmd at drivers/ata/libata-scsi.c:4003
+#11 0xffffffff8199fcff in ata_scsi_queuecmd at drivers/ata/libata-scsi.c:4048
+#12 0xffffffff81973026 in scsi_dispatch_cmd at drivers/scsi/scsi_lib.c:1516
+#13 scsi_queue_rq at drivers/scsi/scsi_lib.c:1757
+#14 0xffffffff8156667b in blk_mq_dispatch_rq_list at block/blk-mq.c:2035
+#15 0xffffffff8156c946 in __blk_mq_sched_dispatch_requests at block/blk-mq-sched.c:301
+#16 0xffffffff8156cebf in blk_mq_sched_dispatch_requests at block/blk-mq-sched.c:333
+#17 0xffffffff81562c99 in blk_mq_run_hw_queue at block/blk-mq.c:2249
+#18 0xffffffff81569942 in blk_execute_rq at block/blk-mq.c:1373
+#19 0xffffffff819710a7 in scsi_execute_cmd at drivers/scsi/scsi_lib.c:239
+#20 0xffffffff8198898e in sr_get_events at drivers/scsi/sr.c:178
+#21 sr_check_events at drivers/scsi/sr.c:218
+#22 0xffffffff81a65e96 in cdrom_update_events at drivers/cdrom/cdrom.c:1485
+#23 cdrom_check_events at drivers/cdrom/cdrom.c:1495
+#24 0xffffffff81574ea2 in disk_check_events at block/disk-events.c:193
+#25 0xffffffff81151866 in process_one_work at kernel/workqueue.c:2405
+#26 0xffffffff81151e69 in worker_thread at kernel/workqueue.c:2552
+#27 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#28 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+8
+#0 0xffffffff815bd862 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 iowrite8 at lib/iomap.c:207
+#2 0xffffffff819ac098 in ata_sff_tf_load at drivers/ata/libata-sff.c:365
+#3 0xffffffff819ac632 in ata_tf_to_host at drivers/ata/libata-sff.c:456
+#4 0xffffffff819ae191 in ata_sff_qc_issue at drivers/ata/libata-sff.c:1353
+#5 0xffffffff81995848 in ata_qc_issue at drivers/ata/libata-core.c:4898
+#6 0xffffffff8199f9cb in ata_scsi_translate at drivers/ata/libata-scsi.c:1750
+#7 __ata_scsi_queuecmd at drivers/ata/libata-scsi.c:4003
+#8 0xffffffff8199fcff in ata_scsi_queuecmd at drivers/ata/libata-scsi.c:4048
+#9 0xffffffff81973026 in scsi_dispatch_cmd at drivers/scsi/scsi_lib.c:1516
+#10 scsi_queue_rq at drivers/scsi/scsi_lib.c:1757
+#11 0xffffffff8156667b in blk_mq_dispatch_rq_list at block/blk-mq.c:2035
+#12 0xffffffff8156c946 in __blk_mq_sched_dispatch_requests at block/blk-mq-sched.c:301
+#13 0xffffffff8156cebf in blk_mq_sched_dispatch_requests at block/blk-mq-sched.c:333
+#14 0xffffffff81562c99 in blk_mq_run_hw_queue at block/blk-mq.c:2249
+#15 0xffffffff81569942 in blk_execute_rq at block/blk-mq.c:1373
+#16 0xffffffff819710a7 in scsi_execute_cmd at drivers/scsi/scsi_lib.c:239
+#17 0xffffffff8198898e in sr_get_events at drivers/scsi/sr.c:178
+#18 sr_check_events at drivers/scsi/sr.c:218
+#19 0xffffffff81a65e96 in cdrom_update_events at drivers/cdrom/cdrom.c:1485
+#20 cdrom_check_events at drivers/cdrom/cdrom.c:1495
+#21 0xffffffff81574ea2 in disk_check_events at block/disk-events.c:193
+#22 0xffffffff81151866 in process_one_work at kernel/workqueue.c:2405
+#23 0xffffffff81151e69 in worker_thread at kernel/workqueue.c:2552
+#24 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#25 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+8
+#0 0xffffffff815bd862 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 iowrite8 at lib/iomap.c:207
+#2 0xffffffff819ac0a7 in ata_sff_tf_load at drivers/ata/libata-sff.c:366
+#3 0xffffffff819ac632 in ata_tf_to_host at drivers/ata/libata-sff.c:456
+#4 0xffffffff819ae191 in ata_sff_qc_issue at drivers/ata/libata-sff.c:1353
+#5 0xffffffff81995848 in ata_qc_issue at drivers/ata/libata-core.c:4898
+#6 0xffffffff8199f9cb in ata_scsi_translate at drivers/ata/libata-scsi.c:1750
+#7 __ata_scsi_queuecmd at drivers/ata/libata-scsi.c:4003
+#8 0xffffffff8199fcff in ata_scsi_queuecmd at drivers/ata/libata-scsi.c:4048
+#9 0xffffffff81973026 in scsi_dispatch_cmd at drivers/scsi/scsi_lib.c:1516
+#10 scsi_queue_rq at drivers/scsi/scsi_lib.c:1757
+#11 0xffffffff8156667b in blk_mq_dispatch_rq_list at block/blk-mq.c:2035
+#12 0xffffffff8156c946 in __blk_mq_sched_dispatch_requests at block/blk-mq-sched.c:301
+#13 0xffffffff8156cebf in blk_mq_sched_dispatch_requests at block/blk-mq-sched.c:333
+#14 0xffffffff81562c99 in blk_mq_run_hw_queue at block/blk-mq.c:2249
+#15 0xffffffff81569942 in blk_execute_rq at block/blk-mq.c:1373
+#16 0xffffffff819710a7 in scsi_execute_cmd at drivers/scsi/scsi_lib.c:239
+#17 0xffffffff8198898e in sr_get_events at drivers/scsi/sr.c:178
+#18 sr_check_events at drivers/scsi/sr.c:218
+#19 0xffffffff81a65e96 in cdrom_update_events at drivers/cdrom/cdrom.c:1485
+#20 cdrom_check_events at drivers/cdrom/cdrom.c:1495
+#21 0xffffffff81574ea2 in disk_check_events at block/disk-events.c:193
+#22 0xffffffff81151866 in process_one_work at kernel/workqueue.c:2405
+#23 0xffffffff81151e69 in worker_thread at kernel/workqueue.c:2552
+#24 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#25 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+8
+#0 0xffffffff815bd862 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 iowrite8 at lib/iomap.c:207
+#2 0xffffffff819ac0b6 in ata_sff_tf_load at drivers/ata/libata-sff.c:367
+#3 0xffffffff819ac632 in ata_tf_to_host at drivers/ata/libata-sff.c:456
+#4 0xffffffff819ae191 in ata_sff_qc_issue at drivers/ata/libata-sff.c:1353
+#5 0xffffffff81995848 in ata_qc_issue at drivers/ata/libata-core.c:4898
+#6 0xffffffff8199f9cb in ata_scsi_translate at drivers/ata/libata-scsi.c:1750
+#7 __ata_scsi_queuecmd at drivers/ata/libata-scsi.c:4003
+#8 0xffffffff8199fcff in ata_scsi_queuecmd at drivers/ata/libata-scsi.c:4048
+#9 0xffffffff81973026 in scsi_dispatch_cmd at drivers/scsi/scsi_lib.c:1516
+#10 scsi_queue_rq at drivers/scsi/scsi_lib.c:1757
+#11 0xffffffff8156667b in blk_mq_dispatch_rq_list at block/blk-mq.c:2035
+#12 0xffffffff8156c946 in __blk_mq_sched_dispatch_requests at block/blk-mq-sched.c:301
+#13 0xffffffff8156cebf in blk_mq_sched_dispatch_requests at block/blk-mq-sched.c:333
+#14 0xffffffff81562c99 in blk_mq_run_hw_queue at block/blk-mq.c:2249
+#15 0xffffffff81569942 in blk_execute_rq at block/blk-mq.c:1373
+#16 0xffffffff819710a7 in scsi_execute_cmd at drivers/scsi/scsi_lib.c:239
+#17 0xffffffff8198898e in sr_get_events at drivers/scsi/sr.c:178
+#18 sr_check_events at drivers/scsi/sr.c:218
+#19 0xffffffff81a65e96 in cdrom_update_events at drivers/cdrom/cdrom.c:1485
+#20 cdrom_check_events at drivers/cdrom/cdrom.c:1495
+#21 0xffffffff81574ea2 in disk_check_events at block/disk-events.c:193
+#22 0xffffffff81151866 in process_one_work at kernel/workqueue.c:2405
+#23 0xffffffff81151e69 in worker_thread at kernel/workqueue.c:2552
+#24 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#25 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+8
+#0 0xffffffff815bd862 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 iowrite8 at lib/iomap.c:207
+#2 0xffffffff819ac0c5 in ata_sff_tf_load at drivers/ata/libata-sff.c:368
+#3 0xffffffff819ac632 in ata_tf_to_host at drivers/ata/libata-sff.c:456
+#4 0xffffffff819ae191 in ata_sff_qc_issue at drivers/ata/libata-sff.c:1353
+#5 0xffffffff81995848 in ata_qc_issue at drivers/ata/libata-core.c:4898
+#6 0xffffffff8199f9cb in ata_scsi_translate at drivers/ata/libata-scsi.c:1750
+#7 __ata_scsi_queuecmd at drivers/ata/libata-scsi.c:4003
+#8 0xffffffff8199fcff in ata_scsi_queuecmd at drivers/ata/libata-scsi.c:4048
+#9 0xffffffff81973026 in scsi_dispatch_cmd at drivers/scsi/scsi_lib.c:1516
+#10 scsi_queue_rq at drivers/scsi/scsi_lib.c:1757
+#11 0xffffffff8156667b in blk_mq_dispatch_rq_list at block/blk-mq.c:2035
+#12 0xffffffff8156c946 in __blk_mq_sched_dispatch_requests at block/blk-mq-sched.c:301
+#13 0xffffffff8156cebf in blk_mq_sched_dispatch_requests at block/blk-mq-sched.c:333
+#14 0xffffffff81562c99 in blk_mq_run_hw_queue at block/blk-mq.c:2249
+#15 0xffffffff81569942 in blk_execute_rq at block/blk-mq.c:1373
+#16 0xffffffff819710a7 in scsi_execute_cmd at drivers/scsi/scsi_lib.c:239
+#17 0xffffffff8198898e in sr_get_events at drivers/scsi/sr.c:178
+#18 sr_check_events at drivers/scsi/sr.c:218
+#19 0xffffffff81a65e96 in cdrom_update_events at drivers/cdrom/cdrom.c:1485
+#20 cdrom_check_events at drivers/cdrom/cdrom.c:1495
+#21 0xffffffff81574ea2 in disk_check_events at block/disk-events.c:193
+#22 0xffffffff81151866 in process_one_work at kernel/workqueue.c:2405
+#23 0xffffffff81151e69 in worker_thread at kernel/workqueue.c:2552
+#24 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#25 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+8
+#0 0xffffffff815bd862 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 iowrite8 at lib/iomap.c:207
+#2 0xffffffff819ac0d4 in ata_sff_tf_load at drivers/ata/libata-sff.c:369
+#3 0xffffffff819ac632 in ata_tf_to_host at drivers/ata/libata-sff.c:456
+#4 0xffffffff819ae191 in ata_sff_qc_issue at drivers/ata/libata-sff.c:1353
+#5 0xffffffff81995848 in ata_qc_issue at drivers/ata/libata-core.c:4898
+#6 0xffffffff8199f9cb in ata_scsi_translate at drivers/ata/libata-scsi.c:1750
+#7 __ata_scsi_queuecmd at drivers/ata/libata-scsi.c:4003
+#8 0xffffffff8199fcff in ata_scsi_queuecmd at drivers/ata/libata-scsi.c:4048
+#9 0xffffffff81973026 in scsi_dispatch_cmd at drivers/scsi/scsi_lib.c:1516
+#10 scsi_queue_rq at drivers/scsi/scsi_lib.c:1757
+#11 0xffffffff8156667b in blk_mq_dispatch_rq_list at block/blk-mq.c:2035
+#12 0xffffffff8156c946 in __blk_mq_sched_dispatch_requests at block/blk-mq-sched.c:301
+#13 0xffffffff8156cebf in blk_mq_sched_dispatch_requests at block/blk-mq-sched.c:333
+#14 0xffffffff81562c99 in blk_mq_run_hw_queue at block/blk-mq.c:2249
+#15 0xffffffff81569942 in blk_execute_rq at block/blk-mq.c:1373
+#16 0xffffffff819710a7 in scsi_execute_cmd at drivers/scsi/scsi_lib.c:239
+#17 0xffffffff8198898e in sr_get_events at drivers/scsi/sr.c:178
+#18 sr_check_events at drivers/scsi/sr.c:218
+#19 0xffffffff81a65e96 in cdrom_update_events at drivers/cdrom/cdrom.c:1485
+#20 cdrom_check_events at drivers/cdrom/cdrom.c:1495
+#21 0xffffffff81574ea2 in disk_check_events at block/disk-events.c:193
+#22 0xffffffff81151866 in process_one_work at kernel/workqueue.c:2405
+#23 0xffffffff81151e69 in worker_thread at kernel/workqueue.c:2552
+#24 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#25 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+8
+#0 0xffffffff815bd862 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 iowrite8 at lib/iomap.c:207
+#2 0xffffffff819ac187 in ata_sff_tf_load at drivers/ata/libata-sff.c:373
+#3 0xffffffff819ac632 in ata_tf_to_host at drivers/ata/libata-sff.c:456
+#4 0xffffffff819ae191 in ata_sff_qc_issue at drivers/ata/libata-sff.c:1353
+#5 0xffffffff81995848 in ata_qc_issue at drivers/ata/libata-core.c:4898
+#6 0xffffffff8199f9cb in ata_scsi_translate at drivers/ata/libata-scsi.c:1750
+#7 __ata_scsi_queuecmd at drivers/ata/libata-scsi.c:4003
+#8 0xffffffff8199fcff in ata_scsi_queuecmd at drivers/ata/libata-scsi.c:4048
+#9 0xffffffff81973026 in scsi_dispatch_cmd at drivers/scsi/scsi_lib.c:1516
+#10 scsi_queue_rq at drivers/scsi/scsi_lib.c:1757
+#11 0xffffffff8156667b in blk_mq_dispatch_rq_list at block/blk-mq.c:2035
+#12 0xffffffff8156c946 in __blk_mq_sched_dispatch_requests at block/blk-mq-sched.c:301
+#13 0xffffffff8156cebf in blk_mq_sched_dispatch_requests at block/blk-mq-sched.c:333
+#14 0xffffffff81562c99 in blk_mq_run_hw_queue at block/blk-mq.c:2249
+#15 0xffffffff81569942 in blk_execute_rq at block/blk-mq.c:1373
+#16 0xffffffff819710a7 in scsi_execute_cmd at drivers/scsi/scsi_lib.c:239
+#17 0xffffffff8198898e in sr_get_events at drivers/scsi/sr.c:178
+#18 sr_check_events at drivers/scsi/sr.c:218
+#19 0xffffffff81a65e96 in cdrom_update_events at drivers/cdrom/cdrom.c:1485
+#20 cdrom_check_events at drivers/cdrom/cdrom.c:1495
+#21 0xffffffff81574ea2 in disk_check_events at block/disk-events.c:193
+#22 0xffffffff81151866 in process_one_work at kernel/workqueue.c:2405
+#23 0xffffffff81151e69 in worker_thread at kernel/workqueue.c:2552
+#24 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#25 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+8
+#0 0xffffffff815bd498 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 ioread8 at lib/iomap.c:81
+#2 0xffffffff819aa52d in ata_sff_check_status at drivers/ata/libata-sff.c:66
+#3 0xffffffff819ac10c in ata_sff_busy_wait at ./include/linux/libata.h:2047
+#4 ata_wait_idle at ./include/linux/libata.h:2066
+#5 ata_sff_tf_load at drivers/ata/libata-sff.c:375
+#6 0xffffffff819ac632 in ata_tf_to_host at drivers/ata/libata-sff.c:456
+#7 0xffffffff819ae191 in ata_sff_qc_issue at drivers/ata/libata-sff.c:1353
+#8 0xffffffff81995848 in ata_qc_issue at drivers/ata/libata-core.c:4898
+#9 0xffffffff8199f9cb in ata_scsi_translate at drivers/ata/libata-scsi.c:1750
+#10 __ata_scsi_queuecmd at drivers/ata/libata-scsi.c:4003
+#11 0xffffffff8199fcff in ata_scsi_queuecmd at drivers/ata/libata-scsi.c:4048
+#12 0xffffffff81973026 in scsi_dispatch_cmd at drivers/scsi/scsi_lib.c:1516
+#13 scsi_queue_rq at drivers/scsi/scsi_lib.c:1757
+#14 0xffffffff8156667b in blk_mq_dispatch_rq_list at block/blk-mq.c:2035
+#15 0xffffffff8156c946 in __blk_mq_sched_dispatch_requests at block/blk-mq-sched.c:301
+#16 0xffffffff8156cebf in blk_mq_sched_dispatch_requests at block/blk-mq-sched.c:333
+#17 0xffffffff81562c99 in blk_mq_run_hw_queue at block/blk-mq.c:2249
+#18 0xffffffff81569942 in blk_execute_rq at block/blk-mq.c:1373
+#19 0xffffffff819710a7 in scsi_execute_cmd at drivers/scsi/scsi_lib.c:239
+#20 0xffffffff8198898e in sr_get_events at drivers/scsi/sr.c:178
+#21 sr_check_events at drivers/scsi/sr.c:218
+#22 0xffffffff81a65e96 in cdrom_update_events at drivers/cdrom/cdrom.c:1485
+#23 cdrom_check_events at drivers/cdrom/cdrom.c:1495
+#24 0xffffffff81574ea2 in disk_check_events at block/disk-events.c:193
+#25 0xffffffff81151866 in process_one_work at kernel/workqueue.c:2405
+#26 0xffffffff81151e69 in worker_thread at kernel/workqueue.c:2552
+#27 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#28 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+8
+#0 0xffffffff815bd862 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 iowrite8 at lib/iomap.c:207
+#2 0xffffffff819ac718 in ata_sff_exec_command at drivers/ata/libata-sff.c:433
+#3 0xffffffff819ae191 in ata_sff_qc_issue at drivers/ata/libata-sff.c:1353
+#4 0xffffffff81995848 in ata_qc_issue at drivers/ata/libata-core.c:4898
+#5 0xffffffff8199f9cb in ata_scsi_translate at drivers/ata/libata-scsi.c:1750
+#6 __ata_scsi_queuecmd at drivers/ata/libata-scsi.c:4003
+#7 0xffffffff8199fcff in ata_scsi_queuecmd at drivers/ata/libata-scsi.c:4048
+#8 0xffffffff81973026 in scsi_dispatch_cmd at drivers/scsi/scsi_lib.c:1516
+#9 scsi_queue_rq at drivers/scsi/scsi_lib.c:1757
+#10 0xffffffff8156667b in blk_mq_dispatch_rq_list at block/blk-mq.c:2035
+#11 0xffffffff8156c946 in __blk_mq_sched_dispatch_requests at block/blk-mq-sched.c:301
+#12 0xffffffff8156cebf in blk_mq_sched_dispatch_requests at block/blk-mq-sched.c:333
+#13 0xffffffff81562c99 in blk_mq_run_hw_queue at block/blk-mq.c:2249
+#14 0xffffffff81569942 in blk_execute_rq at block/blk-mq.c:1373
+#15 0xffffffff819710a7 in scsi_execute_cmd at drivers/scsi/scsi_lib.c:239
+#16 0xffffffff8198898e in sr_get_events at drivers/scsi/sr.c:178
+#17 sr_check_events at drivers/scsi/sr.c:218
+#18 0xffffffff81a65e96 in cdrom_update_events at drivers/cdrom/cdrom.c:1485
+#19 cdrom_check_events at drivers/cdrom/cdrom.c:1495
+#20 0xffffffff81574ea2 in disk_check_events at block/disk-events.c:193
+#21 0xffffffff81151866 in process_one_work at kernel/workqueue.c:2405
+#22 0xffffffff81151e69 in worker_thread at kernel/workqueue.c:2552
+#23 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#24 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+8
+#0 0xffffffff815bd498 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 ioread8 at lib/iomap.c:81
+#2 0xffffffff819ac74c in ata_sff_altstatus at drivers/ata/libata-sff.c:93
+#3 ata_sff_sync at drivers/ata/libata-sff.c:142
+#4 ata_sff_pause at drivers/ata/libata-sff.c:159
+#5 ata_sff_exec_command at drivers/ata/libata-sff.c:434
+#6 0xffffffff819ae191 in ata_sff_qc_issue at drivers/ata/libata-sff.c:1353
+#7 0xffffffff81995848 in ata_qc_issue at drivers/ata/libata-core.c:4898
+#8 0xffffffff8199f9cb in ata_scsi_translate at drivers/ata/libata-scsi.c:1750
+#9 __ata_scsi_queuecmd at drivers/ata/libata-scsi.c:4003
+#10 0xffffffff8199fcff in ata_scsi_queuecmd at drivers/ata/libata-scsi.c:4048
+#11 0xffffffff81973026 in scsi_dispatch_cmd at drivers/scsi/scsi_lib.c:1516
+#12 scsi_queue_rq at drivers/scsi/scsi_lib.c:1757
+#13 0xffffffff8156667b in blk_mq_dispatch_rq_list at block/blk-mq.c:2035
+#14 0xffffffff8156c946 in __blk_mq_sched_dispatch_requests at block/blk-mq-sched.c:301
+#15 0xffffffff8156cebf in blk_mq_sched_dispatch_requests at block/blk-mq-sched.c:333
+#16 0xffffffff81562c99 in blk_mq_run_hw_queue at block/blk-mq.c:2249
+#17 0xffffffff81569942 in blk_execute_rq at block/blk-mq.c:1373
+#18 0xffffffff819710a7 in scsi_execute_cmd at drivers/scsi/scsi_lib.c:239
+#19 0xffffffff8198898e in sr_get_events at drivers/scsi/sr.c:178
+#20 sr_check_events at drivers/scsi/sr.c:218
+#21 0xffffffff81a65e96 in cdrom_update_events at drivers/cdrom/cdrom.c:1485
+#22 cdrom_check_events at drivers/cdrom/cdrom.c:1495
+#23 0xffffffff81574ea2 in disk_check_events at block/disk-events.c:193
+#24 0xffffffff81151866 in process_one_work at kernel/workqueue.c:2405
+#25 0xffffffff81151e69 in worker_thread at kernel/workqueue.c:2552
+#26 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#27 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+8
+#0 0xffffffff815bd498 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 ioread8 at lib/iomap.c:81
+#2 0xffffffff819aa52d in ata_sff_check_status at drivers/ata/libata-sff.c:66
+#3 0xffffffff819adfd1 in ata_sff_busy_wait at ./include/linux/libata.h:2047
+#4 ata_sff_pio_task at drivers/ata/libata-sff.c:1248
+#5 0xffffffff81151866 in process_one_work at kernel/workqueue.c:2405
+#6 0xffffffff81151e69 in worker_thread at kernel/workqueue.c:2552
+#7 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#8 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+8
+#0 0xffffffff815bdfd9 in outsl at ./arch/x86/include/asm/io.h:298
+#1 iowrite32_rep at lib/iomap.c:398
+#2 0xffffffff819aa911 in ata_sff_data_xfer32 at drivers/ata/libata-sff.c:547
+#3 0xffffffff819acef8 in atapi_send_cdb at drivers/ata/libata-sff.c:694
+#4 ata_sff_hsm_move at drivers/ata/libata-sff.c:1006
+#5 0xffffffff819adf8a in ata_sff_pio_task at drivers/ata/libata-sff.c:1267
+#6 0xffffffff81151866 in process_one_work at kernel/workqueue.c:2405
+#7 0xffffffff81151e69 in worker_thread at kernel/workqueue.c:2552
+#8 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#9 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+8
+#0 0xffffffff815bd498 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 ioread8 at lib/iomap.c:81
+#2 0xffffffff819ad284 in ata_sff_altstatus at drivers/ata/libata-sff.c:93
+#3 ata_sff_sync at drivers/ata/libata-sff.c:142
+#4 atapi_send_cdb at drivers/ata/libata-sff.c:695
+#5 ata_sff_hsm_move at drivers/ata/libata-sff.c:1006
+#6 0xffffffff819adf8a in ata_sff_pio_task at drivers/ata/libata-sff.c:1267
+#7 0xffffffff81151866 in process_one_work at kernel/workqueue.c:2405
+#8 0xffffffff81151e69 in worker_thread at kernel/workqueue.c:2552
+#9 0xffffffff81159710 in kthread at kernel/kthread.c:379
+#10 0xffffffff81002a49 in ret_from_fork at arch/x86/entry/entry_64.S:308
+
+8
+#0 0xffffffff815bd498 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 ioread8 at lib/iomap.c:81
+#2 0xffffffff819aa6e5 in ata_sff_check_status at drivers/ata/libata-sff.c:66
+#3 ata_sff_tf_read at drivers/ata/libata-sff.c:396
+#4 0xffffffff819ad02b in atapi_pio_bytes at drivers/ata/libata-sff.c:812
+#5 ata_sff_hsm_move at drivers/ata/libata-sff.c:1040
+#6 0xffffffff819ad757 in __ata_sff_port_intr at drivers/ata/libata-sff.c:1446
+#7 0xffffffff819ad873 in ata_bmdma_port_intr at drivers/ata/libata-sff.c:2747
+#8 0xffffffff819adabe in __ata_sff_interrupt at drivers/ata/libata-sff.c:1491
+#9 ata_bmdma_interrupt at drivers/ata/libata-sff.c:2772
+#10 0xffffffff811a2502 in __handle_irq_event_percpu at kernel/irq/handle.c:158
+#11 0xffffffff811a26e3 in handle_irq_event_percpu at kernel/irq/handle.c:193
+#12 handle_irq_event at kernel/irq/handle.c:210
+#13 0xffffffff811a7306 in handle_edge_irq at kernel/irq/chip.c:819
+#14 0xffffffff810d549b in generic_handle_irq_desc at ./include/linux/irqdesc.h:158
+#15 handle_irq at arch/x86/kernel/irq.c:231
+#16 __common_interrupt at arch/x86/kernel/irq.c:250
+#17 0xffffffff81f42941 in common_interrupt at arch/x86/kernel/irq.c:240
+
+8
+#0 0xffffffff815bd498 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 ioread8 at lib/iomap.c:81
+#2 0xffffffff819aa6f1 in ata_sff_tf_read at drivers/ata/libata-sff.c:397
+#3 0xffffffff819ad02b in atapi_pio_bytes at drivers/ata/libata-sff.c:812
+#4 ata_sff_hsm_move at drivers/ata/libata-sff.c:1040
+#5 0xffffffff819ad757 in __ata_sff_port_intr at drivers/ata/libata-sff.c:1446
+#6 0xffffffff819ad873 in ata_bmdma_port_intr at drivers/ata/libata-sff.c:2747
+#7 0xffffffff819adabe in __ata_sff_interrupt at drivers/ata/libata-sff.c:1491
+#8 ata_bmdma_interrupt at drivers/ata/libata-sff.c:2772
+#9 0xffffffff811a2502 in __handle_irq_event_percpu at kernel/irq/handle.c:158
+#10 0xffffffff811a26e3 in handle_irq_event_percpu at kernel/irq/handle.c:193
+#11 handle_irq_event at kernel/irq/handle.c:210
+#12 0xffffffff811a7306 in handle_edge_irq at kernel/irq/chip.c:819
+#13 0xffffffff810d549b in generic_handle_irq_desc at ./include/linux/irqdesc.h:158
+#14 handle_irq at arch/x86/kernel/irq.c:231
+#15 __common_interrupt at arch/x86/kernel/irq.c:250
+#16 0xffffffff81f42941 in common_interrupt at arch/x86/kernel/irq.c:240
+
+8
+#0 0xffffffff815bd498 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 ioread8 at lib/iomap.c:81
+#2 0xffffffff819aa6fd in ata_sff_tf_read at drivers/ata/libata-sff.c:398
+#3 0xffffffff819ad02b in atapi_pio_bytes at drivers/ata/libata-sff.c:812
+#4 ata_sff_hsm_move at drivers/ata/libata-sff.c:1040
+#5 0xffffffff819ad757 in __ata_sff_port_intr at drivers/ata/libata-sff.c:1446
+#6 0xffffffff819ad873 in ata_bmdma_port_intr at drivers/ata/libata-sff.c:2747
+#7 0xffffffff819adabe in __ata_sff_interrupt at drivers/ata/libata-sff.c:1491
+#8 ata_bmdma_interrupt at drivers/ata/libata-sff.c:2772
+#9 0xffffffff811a2502 in __handle_irq_event_percpu at kernel/irq/handle.c:158
+#10 0xffffffff811a26e3 in handle_irq_event_percpu at kernel/irq/handle.c:193
+#11 handle_irq_event at kernel/irq/handle.c:210
+#12 0xffffffff811a7306 in handle_edge_irq at kernel/irq/chip.c:819
+#13 0xffffffff810d549b in generic_handle_irq_desc at ./include/linux/irqdesc.h:158
+#14 handle_irq at arch/x86/kernel/irq.c:231
+#15 __common_interrupt at arch/x86/kernel/irq.c:250
+#16 0xffffffff81f42941 in common_interrupt at arch/x86/kernel/irq.c:240
+
+8
+#0 0xffffffff815bd498 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 ioread8 at lib/iomap.c:81
+#2 0xffffffff819aa709 in ata_sff_tf_read at drivers/ata/libata-sff.c:399
+#3 0xffffffff819ad02b in atapi_pio_bytes at drivers/ata/libata-sff.c:812
+#4 ata_sff_hsm_move at drivers/ata/libata-sff.c:1040
+#5 0xffffffff819ad757 in __ata_sff_port_intr at drivers/ata/libata-sff.c:1446
+#6 0xffffffff819ad873 in ata_bmdma_port_intr at drivers/ata/libata-sff.c:2747
+#7 0xffffffff819adabe in __ata_sff_interrupt at drivers/ata/libata-sff.c:1491
+#8 ata_bmdma_interrupt at drivers/ata/libata-sff.c:2772
+#9 0xffffffff811a2502 in __handle_irq_event_percpu at kernel/irq/handle.c:158
+#10 0xffffffff811a26e3 in handle_irq_event_percpu at kernel/irq/handle.c:193
+#11 handle_irq_event at kernel/irq/handle.c:210
+#12 0xffffffff811a7306 in handle_edge_irq at kernel/irq/chip.c:819
+#13 0xffffffff810d549b in generic_handle_irq_desc at ./include/linux/irqdesc.h:158
+#14 handle_irq at arch/x86/kernel/irq.c:231
+#15 __common_interrupt at arch/x86/kernel/irq.c:250
+#16 0xffffffff81f42941 in common_interrupt at arch/x86/kernel/irq.c:240
+
+8
+#0 0xffffffff815bd498 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 ioread8 at lib/iomap.c:81
+#2 0xffffffff819aa715 in ata_sff_tf_read at drivers/ata/libata-sff.c:400
+#3 0xffffffff819ad02b in atapi_pio_bytes at drivers/ata/libata-sff.c:812
+#4 ata_sff_hsm_move at drivers/ata/libata-sff.c:1040
+#5 0xffffffff819ad757 in __ata_sff_port_intr at drivers/ata/libata-sff.c:1446
+#6 0xffffffff819ad873 in ata_bmdma_port_intr at drivers/ata/libata-sff.c:2747
+#7 0xffffffff819adabe in __ata_sff_interrupt at drivers/ata/libata-sff.c:1491
+#8 ata_bmdma_interrupt at drivers/ata/libata-sff.c:2772
+#9 0xffffffff811a2502 in __handle_irq_event_percpu at kernel/irq/handle.c:158
+#10 0xffffffff811a26e3 in handle_irq_event_percpu at kernel/irq/handle.c:193
+#11 handle_irq_event at kernel/irq/handle.c:210
+#12 0xffffffff811a7306 in handle_edge_irq at kernel/irq/chip.c:819
+#13 0xffffffff810d549b in generic_handle_irq_desc at ./include/linux/irqdesc.h:158
+#14 handle_irq at arch/x86/kernel/irq.c:231
+#15 __common_interrupt at arch/x86/kernel/irq.c:250
+#16 0xffffffff81f42941 in common_interrupt at arch/x86/kernel/irq.c:240
+
+8
+#0 0xffffffff815bd498 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 ioread8 at lib/iomap.c:81
+#2 0xffffffff819aa721 in ata_sff_tf_read at drivers/ata/libata-sff.c:401
+#3 0xffffffff819ad02b in atapi_pio_bytes at drivers/ata/libata-sff.c:812
+#4 ata_sff_hsm_move at drivers/ata/libata-sff.c:1040
+#5 0xffffffff819ad757 in __ata_sff_port_intr at drivers/ata/libata-sff.c:1446
+#6 0xffffffff819ad873 in ata_bmdma_port_intr at drivers/ata/libata-sff.c:2747
+#7 0xffffffff819adabe in __ata_sff_interrupt at drivers/ata/libata-sff.c:1491
+#8 ata_bmdma_interrupt at drivers/ata/libata-sff.c:2772
+#9 0xffffffff811a2502 in __handle_irq_event_percpu at kernel/irq/handle.c:158
+#10 0xffffffff811a26e3 in handle_irq_event_percpu at kernel/irq/handle.c:193
+#11 handle_irq_event at kernel/irq/handle.c:210
+#12 0xffffffff811a7306 in handle_edge_irq at kernel/irq/chip.c:819
+#13 0xffffffff810d549b in generic_handle_irq_desc at ./include/linux/irqdesc.h:158
+#14 handle_irq at arch/x86/kernel/irq.c:231
+#15 __common_interrupt at arch/x86/kernel/irq.c:250
+#16 0xffffffff81f42941 in common_interrupt at arch/x86/kernel/irq.c:240
+
+8
+#0 0xffffffff815bd498 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 ioread8 at lib/iomap.c:81
+#2 0xffffffff819aa72d in ata_sff_tf_read at drivers/ata/libata-sff.c:402
+#3 0xffffffff819ad02b in atapi_pio_bytes at drivers/ata/libata-sff.c:812
+#4 ata_sff_hsm_move at drivers/ata/libata-sff.c:1040
+#5 0xffffffff819ad757 in __ata_sff_port_intr at drivers/ata/libata-sff.c:1446
+#6 0xffffffff819ad873 in ata_bmdma_port_intr at drivers/ata/libata-sff.c:2747
+#7 0xffffffff819adabe in __ata_sff_interrupt at drivers/ata/libata-sff.c:1491
+#8 ata_bmdma_interrupt at drivers/ata/libata-sff.c:2772
+#9 0xffffffff811a2502 in __handle_irq_event_percpu at kernel/irq/handle.c:158
+#10 0xffffffff811a26e3 in handle_irq_event_percpu at kernel/irq/handle.c:193
+#11 handle_irq_event at kernel/irq/handle.c:210
+#12 0xffffffff811a7306 in handle_edge_irq at kernel/irq/chip.c:819
+#13 0xffffffff810d549b in generic_handle_irq_desc at ./include/linux/irqdesc.h:158
+#14 handle_irq at arch/x86/kernel/irq.c:231
+#15 __common_interrupt at arch/x86/kernel/irq.c:250
+#16 0xffffffff81f42941 in common_interrupt at arch/x86/kernel/irq.c:240
+
+8
+#0 0xffffffff815bd498 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 ioread8 at lib/iomap.c:81
+#2 0xffffffff819ad546 in ata_sff_altstatus at drivers/ata/libata-sff.c:93
+#3 ata_sff_sync at drivers/ata/libata-sff.c:142
+#4 atapi_pio_bytes at drivers/ata/libata-sff.c:832
+#5 ata_sff_hsm_move at drivers/ata/libata-sff.c:1040
+#6 0xffffffff819ad757 in __ata_sff_port_intr at drivers/ata/libata-sff.c:1446
+#7 0xffffffff819ad873 in ata_bmdma_port_intr at drivers/ata/libata-sff.c:2747
+#8 0xffffffff819adabe in __ata_sff_interrupt at drivers/ata/libata-sff.c:1491
+#9 ata_bmdma_interrupt at drivers/ata/libata-sff.c:2772
+#10 0xffffffff811a2502 in __handle_irq_event_percpu at kernel/irq/handle.c:158
+#11 0xffffffff811a26e3 in handle_irq_event_percpu at kernel/irq/handle.c:193
+#12 handle_irq_event at kernel/irq/handle.c:210
+#13 0xffffffff811a7306 in handle_edge_irq at kernel/irq/chip.c:819
+#14 0xffffffff810d549b in generic_handle_irq_desc at ./include/linux/irqdesc.h:158
+#15 handle_irq at arch/x86/kernel/irq.c:231
+#16 __common_interrupt at arch/x86/kernel/irq.c:250
+#17 0xffffffff81f42941 in common_interrupt at arch/x86/kernel/irq.c:240
+
+7
+#0 0xffffffff816dcd33 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_in at drivers/tty/serial/8250/8250_port.c:469
+#2 0xffffffff816e1b16 in serial_in at drivers/tty/serial/8250/8250.h:118
+#3 serial_lsr_in at drivers/tty/serial/8250/8250.h:140
+#4 wait_for_lsr at drivers/tty/serial/8250/8250_port.c:2109
+#5 serial8250_console_fifo_write at drivers/tty/serial/8250/8250_port.c:3380
+#6 serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3458
+#7 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#8 console_flush_all at kernel/printk/printk.c:2933
+#9 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#10 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#11 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#12 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#13 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#14 0xffffffff811df4f3 in clocksource_watchdog at kernel/time/clocksource.c:493
+#15 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#16 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#17 __run_timers at kernel/time/timer.c:2022
+#18 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#19 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#20 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#21 __irq_exit_rcu at kernel/softirq.c:650
+#22 irq_exit_rcu at kernel/softirq.c:662
+#23 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+5
+#0 0xffffffff816dcd33 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_in at drivers/tty/serial/8250/8250_port.c:469
+#2 0xffffffff816e1b16 in serial_in at drivers/tty/serial/8250/8250.h:118
+#3 serial_lsr_in at drivers/tty/serial/8250/8250.h:140
+#4 wait_for_lsr at drivers/tty/serial/8250/8250_port.c:2109
+#5 serial8250_console_fifo_write at drivers/tty/serial/8250/8250_port.c:3380
+#6 serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3458
+#7 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#8 console_flush_all at kernel/printk/printk.c:2933
+#9 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#10 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#11 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#12 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#13 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#14 0xffffffff811de33b in __clocksource_unstable at kernel/time/clocksource.c:184
+#15 0xffffffff811df4fb in clocksource_watchdog at kernel/time/clocksource.c:496
+#16 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#17 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#18 __run_timers at kernel/time/timer.c:2022
+#19 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#20 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#21 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#22 __irq_exit_rcu at kernel/softirq.c:650
+#23 irq_exit_rcu at kernel/softirq.c:662
+#24 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff816dcd33 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_in at drivers/tty/serial/8250/8250_port.c:469
+#2 0xffffffff816e17e6 in serial_port_in at ./include/linux/serial_core.h:589
+#3 serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3422
+#4 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#5 console_flush_all at kernel/printk/printk.c:2933
+#6 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#7 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#8 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#9 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#10 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#11 0xffffffff811df43e in clocksource_watchdog at kernel/time/clocksource.c:480
+#12 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#13 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#14 __run_timers at kernel/time/timer.c:2022
+#15 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#16 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#17 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#18 __irq_exit_rcu at kernel/softirq.c:650
+#19 irq_exit_rcu at kernel/softirq.c:662
+#20 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff816dcd65 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_out at drivers/tty/serial/8250/8250_port.c:475
+#2 0xffffffff816e17f5 in serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3423
+#3 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#4 console_flush_all at kernel/printk/printk.c:2933
+#5 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#6 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#7 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#8 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#9 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#10 0xffffffff811df43e in clocksource_watchdog at kernel/time/clocksource.c:480
+#11 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#12 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#13 __run_timers at kernel/time/timer.c:2022
+#14 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#15 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#16 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#17 __irq_exit_rcu at kernel/softirq.c:650
+#18 irq_exit_rcu at kernel/softirq.c:662
+#19 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff816dcd65 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_out at drivers/tty/serial/8250/8250_port.c:475
+#2 0xffffffff816e1b85 in serial_out at drivers/tty/serial/8250/8250.h:123
+#3 serial8250_console_fifo_write at drivers/tty/serial/8250/8250_port.c:3384
+#4 serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3458
+#5 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#6 console_flush_all at kernel/printk/printk.c:2933
+#7 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#8 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#9 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#10 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#11 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#12 0xffffffff811df43e in clocksource_watchdog at kernel/time/clocksource.c:480
+#13 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#14 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#15 __run_timers at kernel/time/timer.c:2022
+#16 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#17 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#18 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#19 __irq_exit_rcu at kernel/softirq.c:650
+#20 irq_exit_rcu at kernel/softirq.c:662
+#21 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff816dcd33 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_in at drivers/tty/serial/8250/8250_port.c:469
+#2 0xffffffff816ddc48 in serial_in at drivers/tty/serial/8250/8250.h:118
+#3 serial_lsr_in at drivers/tty/serial/8250/8250.h:140
+#4 wait_for_lsr at drivers/tty/serial/8250/8250_port.c:2109
+#5 wait_for_xmitr at drivers/tty/serial/8250/8250_port.c:2127
+#6 0xffffffff816e1889 in serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3466
+#7 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#8 console_flush_all at kernel/printk/printk.c:2933
+#9 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#10 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#11 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#12 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#13 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#14 0xffffffff811df43e in clocksource_watchdog at kernel/time/clocksource.c:480
+#15 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#16 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#17 __run_timers at kernel/time/timer.c:2022
+#18 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#19 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#20 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#21 __irq_exit_rcu at kernel/softirq.c:650
+#22 irq_exit_rcu at kernel/softirq.c:662
+#23 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff816dcd65 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_out at drivers/tty/serial/8250/8250_port.c:475
+#2 0xffffffff816e18cd in serial_port_out at ./include/linux/serial_core.h:594
+#3 serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3474
+#4 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#5 console_flush_all at kernel/printk/printk.c:2933
+#6 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#7 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#8 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#9 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#10 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#11 0xffffffff811df43e in clocksource_watchdog at kernel/time/clocksource.c:480
+#12 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#13 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#14 __run_timers at kernel/time/timer.c:2022
+#15 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#16 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#17 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#18 __irq_exit_rcu at kernel/softirq.c:650
+#19 irq_exit_rcu at kernel/softirq.c:662
+#20 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff816dcd33 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_in at drivers/tty/serial/8250/8250_port.c:469
+#2 0xffffffff816e17e6 in serial_port_in at ./include/linux/serial_core.h:589
+#3 serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3422
+#4 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#5 console_flush_all at kernel/printk/printk.c:2933
+#6 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#7 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#8 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#9 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#10 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#11 0xffffffff811df464 in clocksource_watchdog at kernel/time/clocksource.c:482
+#12 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#13 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#14 __run_timers at kernel/time/timer.c:2022
+#15 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#16 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#17 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#18 __irq_exit_rcu at kernel/softirq.c:650
+#19 irq_exit_rcu at kernel/softirq.c:662
+#20 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff816dcd65 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_out at drivers/tty/serial/8250/8250_port.c:475
+#2 0xffffffff816e17f5 in serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3423
+#3 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#4 console_flush_all at kernel/printk/printk.c:2933
+#5 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#6 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#7 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#8 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#9 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#10 0xffffffff811df464 in clocksource_watchdog at kernel/time/clocksource.c:482
+#11 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#12 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#13 __run_timers at kernel/time/timer.c:2022
+#14 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#15 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#16 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#17 __irq_exit_rcu at kernel/softirq.c:650
+#18 irq_exit_rcu at kernel/softirq.c:662
+#19 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff816dcd65 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_out at drivers/tty/serial/8250/8250_port.c:475
+#2 0xffffffff816e1b85 in serial_out at drivers/tty/serial/8250/8250.h:123
+#3 serial8250_console_fifo_write at drivers/tty/serial/8250/8250_port.c:3384
+#4 serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3458
+#5 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#6 console_flush_all at kernel/printk/printk.c:2933
+#7 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#8 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#9 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#10 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#11 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#12 0xffffffff811df464 in clocksource_watchdog at kernel/time/clocksource.c:482
+#13 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#14 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#15 __run_timers at kernel/time/timer.c:2022
+#16 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#17 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#18 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#19 __irq_exit_rcu at kernel/softirq.c:650
+#20 irq_exit_rcu at kernel/softirq.c:662
+#21 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff816dcd33 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_in at drivers/tty/serial/8250/8250_port.c:469
+#2 0xffffffff816ddc48 in serial_in at drivers/tty/serial/8250/8250.h:118
+#3 serial_lsr_in at drivers/tty/serial/8250/8250.h:140
+#4 wait_for_lsr at drivers/tty/serial/8250/8250_port.c:2109
+#5 wait_for_xmitr at drivers/tty/serial/8250/8250_port.c:2127
+#6 0xffffffff816e1889 in serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3466
+#7 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#8 console_flush_all at kernel/printk/printk.c:2933
+#9 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#10 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#11 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#12 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#13 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#14 0xffffffff811df464 in clocksource_watchdog at kernel/time/clocksource.c:482
+#15 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#16 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#17 __run_timers at kernel/time/timer.c:2022
+#18 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#19 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#20 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#21 __irq_exit_rcu at kernel/softirq.c:650
+#22 irq_exit_rcu at kernel/softirq.c:662
+#23 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff816dcd65 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_out at drivers/tty/serial/8250/8250_port.c:475
+#2 0xffffffff816e18cd in serial_port_out at ./include/linux/serial_core.h:594
+#3 serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3474
+#4 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#5 console_flush_all at kernel/printk/printk.c:2933
+#6 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#7 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#8 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#9 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#10 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#11 0xffffffff811df464 in clocksource_watchdog at kernel/time/clocksource.c:482
+#12 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#13 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#14 __run_timers at kernel/time/timer.c:2022
+#15 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#16 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#17 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#18 __irq_exit_rcu at kernel/softirq.c:650
+#19 irq_exit_rcu at kernel/softirq.c:662
+#20 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff816dcd33 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_in at drivers/tty/serial/8250/8250_port.c:469
+#2 0xffffffff816e17e6 in serial_port_in at ./include/linux/serial_core.h:589
+#3 serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3422
+#4 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#5 console_flush_all at kernel/printk/printk.c:2933
+#6 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#7 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#8 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#9 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#10 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#11 0xffffffff811df484 in clocksource_watchdog at kernel/time/clocksource.c:484
+#12 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#13 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#14 __run_timers at kernel/time/timer.c:2022
+#15 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#16 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#17 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#18 __irq_exit_rcu at kernel/softirq.c:650
+#19 irq_exit_rcu at kernel/softirq.c:662
+#20 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff816dcd65 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_out at drivers/tty/serial/8250/8250_port.c:475
+#2 0xffffffff816e17f5 in serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3423
+#3 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#4 console_flush_all at kernel/printk/printk.c:2933
+#5 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#6 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#7 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#8 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#9 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#10 0xffffffff811df484 in clocksource_watchdog at kernel/time/clocksource.c:484
+#11 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#12 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#13 __run_timers at kernel/time/timer.c:2022
+#14 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#15 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#16 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#17 __irq_exit_rcu at kernel/softirq.c:650
+#18 irq_exit_rcu at kernel/softirq.c:662
+#19 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff816dcd65 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_out at drivers/tty/serial/8250/8250_port.c:475
+#2 0xffffffff816e1b85 in serial_out at drivers/tty/serial/8250/8250.h:123
+#3 serial8250_console_fifo_write at drivers/tty/serial/8250/8250_port.c:3384
+#4 serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3458
+#5 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#6 console_flush_all at kernel/printk/printk.c:2933
+#7 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#8 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#9 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#10 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#11 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#12 0xffffffff811df484 in clocksource_watchdog at kernel/time/clocksource.c:484
+#13 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#14 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#15 __run_timers at kernel/time/timer.c:2022
+#16 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#17 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#18 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#19 __irq_exit_rcu at kernel/softirq.c:650
+#20 irq_exit_rcu at kernel/softirq.c:662
+#21 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff816dcd33 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_in at drivers/tty/serial/8250/8250_port.c:469
+#2 0xffffffff816ddc48 in serial_in at drivers/tty/serial/8250/8250.h:118
+#3 serial_lsr_in at drivers/tty/serial/8250/8250.h:140
+#4 wait_for_lsr at drivers/tty/serial/8250/8250_port.c:2109
+#5 wait_for_xmitr at drivers/tty/serial/8250/8250_port.c:2127
+#6 0xffffffff816e1889 in serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3466
+#7 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#8 console_flush_all at kernel/printk/printk.c:2933
+#9 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#10 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#11 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#12 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#13 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#14 0xffffffff811df484 in clocksource_watchdog at kernel/time/clocksource.c:484
+#15 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#16 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#17 __run_timers at kernel/time/timer.c:2022
+#18 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#19 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#20 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#21 __irq_exit_rcu at kernel/softirq.c:650
+#22 irq_exit_rcu at kernel/softirq.c:662
+#23 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff816dcd65 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_out at drivers/tty/serial/8250/8250_port.c:475
+#2 0xffffffff816e18cd in serial_port_out at ./include/linux/serial_core.h:594
+#3 serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3474
+#4 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#5 console_flush_all at kernel/printk/printk.c:2933
+#6 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#7 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#8 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#9 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#10 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#11 0xffffffff811df484 in clocksource_watchdog at kernel/time/clocksource.c:484
+#12 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#13 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#14 __run_timers at kernel/time/timer.c:2022
+#15 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#16 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#17 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#18 __irq_exit_rcu at kernel/softirq.c:650
+#19 irq_exit_rcu at kernel/softirq.c:662
+#20 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff816dcd33 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_in at drivers/tty/serial/8250/8250_port.c:469
+#2 0xffffffff816e17e6 in serial_port_in at ./include/linux/serial_core.h:589
+#3 serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3422
+#4 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#5 console_flush_all at kernel/printk/printk.c:2933
+#6 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#7 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#8 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#9 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#10 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#11 0xffffffff811df4cd in clocksource_watchdog at kernel/time/clocksource.c:488
+#12 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#13 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#14 __run_timers at kernel/time/timer.c:2022
+#15 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#16 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#17 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#18 __irq_exit_rcu at kernel/softirq.c:650
+#19 irq_exit_rcu at kernel/softirq.c:662
+#20 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff816dcd65 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_out at drivers/tty/serial/8250/8250_port.c:475
+#2 0xffffffff816e17f5 in serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3423
+#3 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#4 console_flush_all at kernel/printk/printk.c:2933
+#5 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#6 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#7 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#8 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#9 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#10 0xffffffff811df4cd in clocksource_watchdog at kernel/time/clocksource.c:488
+#11 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#12 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#13 __run_timers at kernel/time/timer.c:2022
+#14 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#15 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#16 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#17 __irq_exit_rcu at kernel/softirq.c:650
+#18 irq_exit_rcu at kernel/softirq.c:662
+#19 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff816dcd65 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_out at drivers/tty/serial/8250/8250_port.c:475
+#2 0xffffffff816e1b85 in serial_out at drivers/tty/serial/8250/8250.h:123
+#3 serial8250_console_fifo_write at drivers/tty/serial/8250/8250_port.c:3384
+#4 serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3458
+#5 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#6 console_flush_all at kernel/printk/printk.c:2933
+#7 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#8 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#9 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#10 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#11 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#12 0xffffffff811df4cd in clocksource_watchdog at kernel/time/clocksource.c:488
+#13 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#14 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#15 __run_timers at kernel/time/timer.c:2022
+#16 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#17 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#18 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#19 __irq_exit_rcu at kernel/softirq.c:650
+#20 irq_exit_rcu at kernel/softirq.c:662
+#21 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff816dcd33 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_in at drivers/tty/serial/8250/8250_port.c:469
+#2 0xffffffff816ddc48 in serial_in at drivers/tty/serial/8250/8250.h:118
+#3 serial_lsr_in at drivers/tty/serial/8250/8250.h:140
+#4 wait_for_lsr at drivers/tty/serial/8250/8250_port.c:2109
+#5 wait_for_xmitr at drivers/tty/serial/8250/8250_port.c:2127
+#6 0xffffffff816e1889 in serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3466
+#7 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#8 console_flush_all at kernel/printk/printk.c:2933
+#9 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#10 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#11 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#12 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#13 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#14 0xffffffff811df4cd in clocksource_watchdog at kernel/time/clocksource.c:488
+#15 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#16 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#17 __run_timers at kernel/time/timer.c:2022
+#18 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#19 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#20 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#21 __irq_exit_rcu at kernel/softirq.c:650
+#22 irq_exit_rcu at kernel/softirq.c:662
+#23 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff816dcd65 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_out at drivers/tty/serial/8250/8250_port.c:475
+#2 0xffffffff816e18cd in serial_port_out at ./include/linux/serial_core.h:594
+#3 serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3474
+#4 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#5 console_flush_all at kernel/printk/printk.c:2933
+#6 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#7 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#8 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#9 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#10 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#11 0xffffffff811df4cd in clocksource_watchdog at kernel/time/clocksource.c:488
+#12 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#13 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#14 __run_timers at kernel/time/timer.c:2022
+#15 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#16 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#17 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#18 __irq_exit_rcu at kernel/softirq.c:650
+#19 irq_exit_rcu at kernel/softirq.c:662
+#20 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff816dcd33 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_in at drivers/tty/serial/8250/8250_port.c:469
+#2 0xffffffff816e17e6 in serial_port_in at ./include/linux/serial_core.h:589
+#3 serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3422
+#4 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#5 console_flush_all at kernel/printk/printk.c:2933
+#6 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#7 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#8 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#9 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#10 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#11 0xffffffff811df4f3 in clocksource_watchdog at kernel/time/clocksource.c:493
+#12 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#13 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#14 __run_timers at kernel/time/timer.c:2022
+#15 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#16 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#17 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#18 __irq_exit_rcu at kernel/softirq.c:650
+#19 irq_exit_rcu at kernel/softirq.c:662
+#20 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff816dcd65 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_out at drivers/tty/serial/8250/8250_port.c:475
+#2 0xffffffff816e17f5 in serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3423
+#3 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#4 console_flush_all at kernel/printk/printk.c:2933
+#5 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#6 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#7 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#8 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#9 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#10 0xffffffff811df4f3 in clocksource_watchdog at kernel/time/clocksource.c:493
+#11 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#12 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#13 __run_timers at kernel/time/timer.c:2022
+#14 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#15 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#16 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#17 __irq_exit_rcu at kernel/softirq.c:650
+#18 irq_exit_rcu at kernel/softirq.c:662
+#19 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff816dcd65 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_out at drivers/tty/serial/8250/8250_port.c:475
+#2 0xffffffff816e1b85 in serial_out at drivers/tty/serial/8250/8250.h:123
+#3 serial8250_console_fifo_write at drivers/tty/serial/8250/8250_port.c:3384
+#4 serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3458
+#5 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#6 console_flush_all at kernel/printk/printk.c:2933
+#7 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#8 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#9 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#10 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#11 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#12 0xffffffff811df4f3 in clocksource_watchdog at kernel/time/clocksource.c:493
+#13 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#14 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#15 __run_timers at kernel/time/timer.c:2022
+#16 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#17 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#18 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#19 __irq_exit_rcu at kernel/softirq.c:650
+#20 irq_exit_rcu at kernel/softirq.c:662
+#21 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff816dcd33 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_in at drivers/tty/serial/8250/8250_port.c:469
+#2 0xffffffff816ddc48 in serial_in at drivers/tty/serial/8250/8250.h:118
+#3 serial_lsr_in at drivers/tty/serial/8250/8250.h:140
+#4 wait_for_lsr at drivers/tty/serial/8250/8250_port.c:2109
+#5 wait_for_xmitr at drivers/tty/serial/8250/8250_port.c:2127
+#6 0xffffffff816e1889 in serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3466
+#7 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#8 console_flush_all at kernel/printk/printk.c:2933
+#9 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#10 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#11 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#12 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#13 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#14 0xffffffff811df4f3 in clocksource_watchdog at kernel/time/clocksource.c:493
+#15 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#16 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#17 __run_timers at kernel/time/timer.c:2022
+#18 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#19 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#20 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#21 __irq_exit_rcu at kernel/softirq.c:650
+#22 irq_exit_rcu at kernel/softirq.c:662
+#23 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff816dcd65 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_out at drivers/tty/serial/8250/8250_port.c:475
+#2 0xffffffff816e18cd in serial_port_out at ./include/linux/serial_core.h:594
+#3 serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3474
+#4 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#5 console_flush_all at kernel/printk/printk.c:2933
+#6 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#7 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#8 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#9 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#10 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#11 0xffffffff811df4f3 in clocksource_watchdog at kernel/time/clocksource.c:493
+#12 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#13 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#14 __run_timers at kernel/time/timer.c:2022
+#15 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#16 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#17 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#18 __irq_exit_rcu at kernel/softirq.c:650
+#19 irq_exit_rcu at kernel/softirq.c:662
+#20 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff816dcd33 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_in at drivers/tty/serial/8250/8250_port.c:469
+#2 0xffffffff816e17e6 in serial_port_in at ./include/linux/serial_core.h:589
+#3 serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3422
+#4 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#5 console_flush_all at kernel/printk/printk.c:2933
+#6 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#7 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#8 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#9 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#10 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#11 0xffffffff811de33b in __clocksource_unstable at kernel/time/clocksource.c:184
+#12 0xffffffff811df4fb in clocksource_watchdog at kernel/time/clocksource.c:496
+#13 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#14 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#15 __run_timers at kernel/time/timer.c:2022
+#16 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#17 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#18 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#19 __irq_exit_rcu at kernel/softirq.c:650
+#20 irq_exit_rcu at kernel/softirq.c:662
+#21 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff816dcd65 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_out at drivers/tty/serial/8250/8250_port.c:475
+#2 0xffffffff816e17f5 in serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3423
+#3 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#4 console_flush_all at kernel/printk/printk.c:2933
+#5 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#6 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#7 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#8 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#9 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#10 0xffffffff811de33b in __clocksource_unstable at kernel/time/clocksource.c:184
+#11 0xffffffff811df4fb in clocksource_watchdog at kernel/time/clocksource.c:496
+#12 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#13 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#14 __run_timers at kernel/time/timer.c:2022
+#15 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#16 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#17 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#18 __irq_exit_rcu at kernel/softirq.c:650
+#19 irq_exit_rcu at kernel/softirq.c:662
+#20 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff816dcd65 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_out at drivers/tty/serial/8250/8250_port.c:475
+#2 0xffffffff816e1b85 in serial_out at drivers/tty/serial/8250/8250.h:123
+#3 serial8250_console_fifo_write at drivers/tty/serial/8250/8250_port.c:3384
+#4 serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3458
+#5 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#6 console_flush_all at kernel/printk/printk.c:2933
+#7 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#8 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#9 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#10 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#11 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#12 0xffffffff811de33b in __clocksource_unstable at kernel/time/clocksource.c:184
+#13 0xffffffff811df4fb in clocksource_watchdog at kernel/time/clocksource.c:496
+#14 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#15 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#16 __run_timers at kernel/time/timer.c:2022
+#17 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#18 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#19 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#20 __irq_exit_rcu at kernel/softirq.c:650
+#21 irq_exit_rcu at kernel/softirq.c:662
+#22 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff816dcd33 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_in at drivers/tty/serial/8250/8250_port.c:469
+#2 0xffffffff816ddc48 in serial_in at drivers/tty/serial/8250/8250.h:118
+#3 serial_lsr_in at drivers/tty/serial/8250/8250.h:140
+#4 wait_for_lsr at drivers/tty/serial/8250/8250_port.c:2109
+#5 wait_for_xmitr at drivers/tty/serial/8250/8250_port.c:2127
+#6 0xffffffff816e1889 in serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3466
+#7 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#8 console_flush_all at kernel/printk/printk.c:2933
+#9 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#10 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#11 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#12 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#13 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#14 0xffffffff811de33b in __clocksource_unstable at kernel/time/clocksource.c:184
+#15 0xffffffff811df4fb in clocksource_watchdog at kernel/time/clocksource.c:496
+#16 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#17 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#18 __run_timers at kernel/time/timer.c:2022
+#19 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#20 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#21 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#22 __irq_exit_rcu at kernel/softirq.c:650
+#23 irq_exit_rcu at kernel/softirq.c:662
+#24 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff816dcd65 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 io_serial_out at drivers/tty/serial/8250/8250_port.c:475
+#2 0xffffffff816e18cd in serial_port_out at ./include/linux/serial_core.h:594
+#3 serial8250_console_write at drivers/tty/serial/8250/8250_port.c:3474
+#4 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#5 console_flush_all at kernel/printk/printk.c:2933
+#6 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#7 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#8 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#9 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#10 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#11 0xffffffff811de33b in __clocksource_unstable at kernel/time/clocksource.c:184
+#12 0xffffffff811df4fb in clocksource_watchdog at kernel/time/clocksource.c:496
+#13 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#14 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#15 __run_timers at kernel/time/timer.c:2022
+#16 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#17 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#18 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#19 __irq_exit_rcu at kernel/softirq.c:650
+#20 irq_exit_rcu at kernel/softirq.c:662
+#21 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff815bd498 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 ioread8 at lib/iomap.c:81
+#2 0xffffffff819ad7a4 in ata_sff_altstatus at drivers/ata/libata-sff.c:93
+#3 ata_sff_irq_status at drivers/ata/libata-sff.c:121
+#4 __ata_sff_port_intr at drivers/ata/libata-sff.c:1432
+#5 0xffffffff819ad873 in ata_bmdma_port_intr at drivers/ata/libata-sff.c:2747
+#6 0xffffffff819adabe in __ata_sff_interrupt at drivers/ata/libata-sff.c:1491
+#7 ata_bmdma_interrupt at drivers/ata/libata-sff.c:2772
+#8 0xffffffff811a2502 in __handle_irq_event_percpu at kernel/irq/handle.c:158
+#9 0xffffffff811a26e3 in handle_irq_event_percpu at kernel/irq/handle.c:193
+#10 handle_irq_event at kernel/irq/handle.c:210
+#11 0xffffffff811a7306 in handle_edge_irq at kernel/irq/chip.c:819
+#12 0xffffffff810d549b in generic_handle_irq_desc at ./include/linux/irqdesc.h:158
+#13 handle_irq at arch/x86/kernel/irq.c:231
+#14 __common_interrupt at arch/x86/kernel/irq.c:250
+#15 0xffffffff81f42903 in common_interrupt at arch/x86/kernel/irq.c:240
+#16 0xffffffff820013e6 in asm_common_interrupt at ./arch/x86/include/asm/idtentry.h:636
+
+1
+#0 0xffffffff815bd498 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 ioread8 at lib/iomap.c:81
+#2 0xffffffff819aa52d in ata_sff_check_status at drivers/ata/libata-sff.c:66
+#3 0xffffffff819ad725 in ata_sff_irq_status at drivers/ata/libata-sff.c:124
+#4 __ata_sff_port_intr at drivers/ata/libata-sff.c:1432
+#5 0xffffffff819ad873 in ata_bmdma_port_intr at drivers/ata/libata-sff.c:2747
+#6 0xffffffff819adabe in __ata_sff_interrupt at drivers/ata/libata-sff.c:1491
+#7 ata_bmdma_interrupt at drivers/ata/libata-sff.c:2772
+#8 0xffffffff811a2502 in __handle_irq_event_percpu at kernel/irq/handle.c:158
+#9 0xffffffff811a26e3 in handle_irq_event_percpu at kernel/irq/handle.c:193
+#10 handle_irq_event at kernel/irq/handle.c:210
+#11 0xffffffff811a7306 in handle_edge_irq at kernel/irq/chip.c:819
+#12 0xffffffff810d549b in generic_handle_irq_desc at ./include/linux/irqdesc.h:158
+#13 handle_irq at arch/x86/kernel/irq.c:231
+#14 __common_interrupt at arch/x86/kernel/irq.c:250
+#15 0xffffffff81f42903 in common_interrupt at arch/x86/kernel/irq.c:240
+#16 0xffffffff820013e6 in asm_common_interrupt at ./arch/x86/include/asm/idtentry.h:636
+
+1
+#0 0xffffffff815bd498 in __inb at ./arch/x86/include/asm/shared/io.h:22
+#1 ioread8 at lib/iomap.c:81
+#2 0xffffffff819aa66d in ata_bmdma_irq_clear at drivers/ata/libata-sff.c:2876
+#3 0xffffffff819ad743 in __ata_sff_port_intr at drivers/ata/libata-sff.c:1444
+#4 0xffffffff819ad873 in ata_bmdma_port_intr at drivers/ata/libata-sff.c:2747
+#5 0xffffffff819adabe in __ata_sff_interrupt at drivers/ata/libata-sff.c:1491
+#6 ata_bmdma_interrupt at drivers/ata/libata-sff.c:2772
+#7 0xffffffff811a2502 in __handle_irq_event_percpu at kernel/irq/handle.c:158
+#8 0xffffffff811a26e3 in handle_irq_event_percpu at kernel/irq/handle.c:193
+#9 handle_irq_event at kernel/irq/handle.c:210
+#10 0xffffffff811a7306 in handle_edge_irq at kernel/irq/chip.c:819
+#11 0xffffffff810d549b in generic_handle_irq_desc at ./include/linux/irqdesc.h:158
+#12 handle_irq at arch/x86/kernel/irq.c:231
+#13 __common_interrupt at arch/x86/kernel/irq.c:250
+#14 0xffffffff81f42903 in common_interrupt at arch/x86/kernel/irq.c:240
+#15 0xffffffff820013e6 in asm_common_interrupt at ./arch/x86/include/asm/idtentry.h:636
+
+1
+#0 0xffffffff815bd862 in __outb at ./arch/x86/include/asm/shared/io.h:22
+#1 iowrite8 at lib/iomap.c:207
+#2 0xffffffff819ad743 in __ata_sff_port_intr at drivers/ata/libata-sff.c:1444
+#3 0xffffffff819ad873 in ata_bmdma_port_intr at drivers/ata/libata-sff.c:2747
+#4 0xffffffff819adabe in __ata_sff_interrupt at drivers/ata/libata-sff.c:1491
+#5 ata_bmdma_interrupt at drivers/ata/libata-sff.c:2772
+#6 0xffffffff811a2502 in __handle_irq_event_percpu at kernel/irq/handle.c:158
+#7 0xffffffff811a26e3 in handle_irq_event_percpu at kernel/irq/handle.c:193
+#8 handle_irq_event at kernel/irq/handle.c:210
+#9 0xffffffff811a7306 in handle_edge_irq at kernel/irq/chip.c:819
+#10 0xffffffff810d549b in generic_handle_irq_desc at ./include/linux/irqdesc.h:158
+#11 handle_irq at arch/x86/kernel/irq.c:231
+#12 __common_interrupt at arch/x86/kernel/irq.c:250
+#13 0xffffffff81f42903 in common_interrupt at arch/x86/kernel/irq.c:240
+#14 0xffffffff820013e6 in asm_common_interrupt at ./arch/x86/include/asm/idtentry.h:636
+

@@ -1,0 +1,2900 @@
+12
+#0 __hrtimer_next_event_base at kernel/time/hrtimer.c:545
+#1 0xffffffff811d87b2 in __hrtimer_get_next_event at kernel/time/hrtimer.c:578
+#2 hrtimer_update_next_event at kernel/time/hrtimer.c:604
+#3 0xffffffff811d94eb in hrtimer_interrupt at kernel/time/hrtimer.c:1814
+#4 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#5 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#6 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+12
+#0 __hrtimer_next_event_base at kernel/time/hrtimer.c:545
+#1 0xffffffff811d87d4 in __hrtimer_get_next_event at kernel/time/hrtimer.c:587
+#2 hrtimer_update_next_event at kernel/time/hrtimer.c:612
+#3 0xffffffff811d94eb in hrtimer_interrupt at kernel/time/hrtimer.c:1814
+#4 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#5 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#6 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+12
+#0 __raw_spin_unlock_irqrestore at ./arch/x86/include/asm/preempt.h:95
+#1 _raw_spin_unlock_irqrestore at kernel/locking/spinlock.c:194
+#2 0xffffffff811d9502 in hrtimer_interrupt at kernel/time/hrtimer.c:1821
+#3 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#4 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#5 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+10
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811db257 in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#4 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#5 ktime_get at kernel/time/timekeeping.c:848
+#6 0xffffffff811ea6b3 in clockevents_program_event at kernel/time/clockevents.c:326
+#7 0xffffffff811ec861 in tick_program_event at kernel/time/tick-oneshot.c:44
+#8 0xffffffff811d950c in hrtimer_interrupt at kernel/time/hrtimer.c:1824
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+10
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811db257 in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#4 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#5 ktime_get at kernel/time/timekeeping.c:848
+#6 0xffffffff811ecfbe in tick_sched_timer at kernel/time/tick-sched.c:1472
+#7 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#8 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#9 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#10 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#11 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#12 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+10
+#0 _find_next_bit at lib/find_bit.c:132
+#1 0xffffffff811d6416 in find_next_bit at ./include/linux/find.h:67
+#2 next_pending_bucket at kernel/time/timer.c:1795
+#3 __next_timer_interrupt at kernel/time/timer.c:1815
+#4 0xffffffff811d6da8 in __run_timers at kernel/time/timer.c:2019
+#5 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#6 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#7 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#8 __irq_exit_rcu at kernel/softirq.c:650
+#9 irq_exit_rcu at kernel/softirq.c:662
+#10 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+9
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811dccc4 in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#4 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#5 ktime_get_update_offsets_now at kernel/time/timekeeping.c:2320
+#6 0xffffffff811d9471 in hrtimer_update_base at kernel/time/hrtimer.c:631
+#7 hrtimer_interrupt at kernel/time/hrtimer.c:1793
+#8 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#9 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#10 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+9
+#0 __raw_spin_unlock_irqrestore at ./arch/x86/include/asm/preempt.h:95
+#1 _raw_spin_unlock_irqrestore at kernel/locking/spinlock.c:194
+#2 0xffffffff811d84d0 in __run_hrtimer at kernel/time/hrtimer.c:1681
+#3 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#4 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#5 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#6 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#7 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+9
+#0 arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock at ./include/linux/spinlock_api_smp.h:134
+#5 _raw_spin_lock at kernel/locking/spinlock.c:154
+#6 0xffffffff8117252b in raw_spin_rq_lock_nested at kernel/sched/core.c:558
+#7 raw_spin_rq_lock at kernel/sched/sched.h:1366
+#8 rq_lock at kernel/sched/sched.h:1653
+#9 scheduler_tick at kernel/sched/core.c:5616
+#10 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#11 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#12 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#13 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#14 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#15 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#16 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#17 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#18 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+9
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff81f45489 in kvm_sched_clock_read at arch/x86/kernel/kvmclock.c:91
+#3 0xffffffff8118959f in sched_clock_cpu at kernel/sched/clock.c:387
+#4 0xffffffff81168bff in update_rq_clock at kernel/sched/core.c:765
+#5 0xffffffff81172543 in update_rq_clock at kernel/sched/core.c:756
+#6 scheduler_tick at kernel/sched/core.c:5618
+#7 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#8 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#9 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#10 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#11 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#12 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#13 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#14 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#15 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+9
+#0 0xffffffff81168c12 in is_idle_task at ./include/linux/sched.h:1927
+#1 update_rq_clock_pelt at kernel/sched/pelt.h:97
+#2 update_rq_clock_task at kernel/sched/core.c:747
+#3 update_rq_clock at kernel/sched/core.c:769
+#4 0xffffffff81172543 in update_rq_clock at kernel/sched/core.c:756
+#5 scheduler_tick at kernel/sched/core.c:5618
+#6 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#7 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#8 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#9 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#10 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#11 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#12 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#13 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#14 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+9
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:417
+#1 0xffffffff81273cd3 in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 0xffffffff8117257f in scheduler_tick at kernel/sched/core.c:5633
+#3 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#4 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#5 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#6 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+9
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:385
+#1 0xffffffff81273cd3 in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 0xffffffff8117257f in scheduler_tick at kernel/sched/core.c:5633
+#3 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#4 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#5 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#6 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+8
+#0 __preempt_count_add at ./arch/x86/include/asm/preempt.h:80
+#1 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:118
+#2 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#3 0xffffffff811d84ec in __run_hrtimer at kernel/time/hrtimer.c:1689
+#4 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#5 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#6 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#7 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#8 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+8
+#0 arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d84ec in __run_hrtimer at kernel/time/hrtimer.c:1689
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+8
+#0 update_sg_lb_stats at kernel/sched/fair.c:9459
+#1 update_sd_lb_stats at kernel/sched/fair.c:10112
+#2 0xffffffff811795ec in find_busiest_group at kernel/sched/fair.c:10372
+#3 0xffffffff81179b5c in load_balance at kernel/sched/fair.c:10765
+#4 0xffffffff8117a830 in rebalance_domains at kernel/sched/fair.c:11203
+#5 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#6 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#7 __irq_exit_rcu at kernel/softirq.c:650
+#8 irq_exit_rcu at kernel/softirq.c:662
+#9 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+8
+#0 0xffffffff81178de0 in update_sg_lb_stats at kernel/sched/fair.c:9465
+#1 update_sd_lb_stats at kernel/sched/fair.c:10112
+#2 0xffffffff811795ec in find_busiest_group at kernel/sched/fair.c:10372
+#3 0xffffffff81179b5c in load_balance at kernel/sched/fair.c:10765
+#4 0xffffffff8117a830 in rebalance_domains at kernel/sched/fair.c:11203
+#5 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#6 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#7 __irq_exit_rcu at kernel/softirq.c:650
+#8 irq_exit_rcu at kernel/softirq.c:662
+#9 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+8
+#0 0xffffffff81178e01 in cpu_util_cfs at kernel/sched/sched.h:2987
+#1 update_sg_lb_stats at kernel/sched/fair.c:9466
+#2 update_sd_lb_stats at kernel/sched/fair.c:10112
+#3 0xffffffff811795ec in find_busiest_group at kernel/sched/fair.c:10372
+#4 0xffffffff81179b5c in load_balance at kernel/sched/fair.c:10765
+#5 0xffffffff8117a830 in rebalance_domains at kernel/sched/fair.c:11203
+#6 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#7 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#8 __irq_exit_rcu at kernel/softirq.c:650
+#9 irq_exit_rcu at kernel/softirq.c:662
+#10 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+8
+#0 0xffffffff81178e3a in update_sg_lb_stats at kernel/sched/fair.c:9474
+#1 update_sd_lb_stats at kernel/sched/fair.c:10112
+#2 0xffffffff811795ec in find_busiest_group at kernel/sched/fair.c:10372
+#3 0xffffffff81179b5c in load_balance at kernel/sched/fair.c:10765
+#4 0xffffffff8117a830 in rebalance_domains at kernel/sched/fair.c:11203
+#5 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#6 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#7 __irq_exit_rcu at kernel/softirq.c:650
+#8 irq_exit_rcu at kernel/softirq.c:662
+#9 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+8
+#0 0xffffffff81178eef in find_next_and_bit at ./include/linux/find.h:93
+#1 update_sg_lb_stats at kernel/sched/fair.c:9461
+#2 update_sd_lb_stats at kernel/sched/fair.c:10112
+#3 0xffffffff811795ec in find_busiest_group at kernel/sched/fair.c:10372
+#4 0xffffffff81179b5c in load_balance at kernel/sched/fair.c:10765
+#5 0xffffffff8117a830 in rebalance_domains at kernel/sched/fair.c:11203
+#6 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#7 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#8 __irq_exit_rcu at kernel/softirq.c:650
+#9 irq_exit_rcu at kernel/softirq.c:662
+#10 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+8
+#0 0xffffffff81178f31 in update_sg_lb_stats at kernel/sched/fair.c:9509
+#1 update_sd_lb_stats at kernel/sched/fair.c:10112
+#2 0xffffffff811795ec in find_busiest_group at kernel/sched/fair.c:10372
+#3 0xffffffff81179b5c in load_balance at kernel/sched/fair.c:10765
+#4 0xffffffff8117a830 in rebalance_domains at kernel/sched/fair.c:11203
+#5 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#6 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#7 __irq_exit_rcu at kernel/softirq.c:650
+#8 irq_exit_rcu at kernel/softirq.c:662
+#9 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+8
+#0 update_sd_lb_stats at kernel/sched/fair.c:10114
+#1 0xffffffff811795ec in find_busiest_group at kernel/sched/fair.c:10372
+#2 0xffffffff81179b5c in load_balance at kernel/sched/fair.c:10765
+#3 0xffffffff8117a830 in rebalance_domains at kernel/sched/fair.c:11203
+#4 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#5 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#6 __irq_exit_rcu at kernel/softirq.c:650
+#7 irq_exit_rcu at kernel/softirq.c:662
+#8 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+8
+#0 update_sg_lb_stats at kernel/sched/fair.c:9459
+#1 update_sd_lb_stats at kernel/sched/fair.c:10112
+#2 0xffffffff811795ec in find_busiest_group at kernel/sched/fair.c:10372
+#3 0xffffffff81179b5c in load_balance at kernel/sched/fair.c:10765
+#4 0xffffffff8117a830 in rebalance_domains at kernel/sched/fair.c:11203
+#5 0xffffffff8117abe5 in _nohz_idle_balance at kernel/sched/fair.c:11633
+#6 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#7 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#8 __irq_exit_rcu at kernel/softirq.c:650
+#9 irq_exit_rcu at kernel/softirq.c:662
+#10 0xffffffff81f44f42 in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+
+8
+#0 0xffffffff81178de0 in update_sg_lb_stats at kernel/sched/fair.c:9465
+#1 update_sd_lb_stats at kernel/sched/fair.c:10112
+#2 0xffffffff811795ec in find_busiest_group at kernel/sched/fair.c:10372
+#3 0xffffffff81179b5c in load_balance at kernel/sched/fair.c:10765
+#4 0xffffffff8117a830 in rebalance_domains at kernel/sched/fair.c:11203
+#5 0xffffffff8117abe5 in _nohz_idle_balance at kernel/sched/fair.c:11633
+#6 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#7 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#8 __irq_exit_rcu at kernel/softirq.c:650
+#9 irq_exit_rcu at kernel/softirq.c:662
+#10 0xffffffff81f44f42 in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+
+8
+#0 0xffffffff81178e01 in cpu_util_cfs at kernel/sched/sched.h:2987
+#1 update_sg_lb_stats at kernel/sched/fair.c:9466
+#2 update_sd_lb_stats at kernel/sched/fair.c:10112
+#3 0xffffffff811795ec in find_busiest_group at kernel/sched/fair.c:10372
+#4 0xffffffff81179b5c in load_balance at kernel/sched/fair.c:10765
+#5 0xffffffff8117a830 in rebalance_domains at kernel/sched/fair.c:11203
+#6 0xffffffff8117abe5 in _nohz_idle_balance at kernel/sched/fair.c:11633
+#7 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#8 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#9 __irq_exit_rcu at kernel/softirq.c:650
+#10 irq_exit_rcu at kernel/softirq.c:662
+#11 0xffffffff81f44f42 in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+
+8
+#0 0xffffffff81178e3a in update_sg_lb_stats at kernel/sched/fair.c:9474
+#1 update_sd_lb_stats at kernel/sched/fair.c:10112
+#2 0xffffffff811795ec in find_busiest_group at kernel/sched/fair.c:10372
+#3 0xffffffff81179b5c in load_balance at kernel/sched/fair.c:10765
+#4 0xffffffff8117a830 in rebalance_domains at kernel/sched/fair.c:11203
+#5 0xffffffff8117abe5 in _nohz_idle_balance at kernel/sched/fair.c:11633
+#6 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#7 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#8 __irq_exit_rcu at kernel/softirq.c:650
+#9 irq_exit_rcu at kernel/softirq.c:662
+#10 0xffffffff81f44f42 in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+
+8
+#0 0xffffffff81178eef in find_next_and_bit at ./include/linux/find.h:93
+#1 update_sg_lb_stats at kernel/sched/fair.c:9461
+#2 update_sd_lb_stats at kernel/sched/fair.c:10112
+#3 0xffffffff811795ec in find_busiest_group at kernel/sched/fair.c:10372
+#4 0xffffffff81179b5c in load_balance at kernel/sched/fair.c:10765
+#5 0xffffffff8117a830 in rebalance_domains at kernel/sched/fair.c:11203
+#6 0xffffffff8117abe5 in _nohz_idle_balance at kernel/sched/fair.c:11633
+#7 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#8 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#9 __irq_exit_rcu at kernel/softirq.c:650
+#10 irq_exit_rcu at kernel/softirq.c:662
+#11 0xffffffff81f44f42 in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+
+8
+#0 0xffffffff81178f31 in update_sg_lb_stats at kernel/sched/fair.c:9509
+#1 update_sd_lb_stats at kernel/sched/fair.c:10112
+#2 0xffffffff811795ec in find_busiest_group at kernel/sched/fair.c:10372
+#3 0xffffffff81179b5c in load_balance at kernel/sched/fair.c:10765
+#4 0xffffffff8117a830 in rebalance_domains at kernel/sched/fair.c:11203
+#5 0xffffffff8117abe5 in _nohz_idle_balance at kernel/sched/fair.c:11633
+#6 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#7 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#8 __irq_exit_rcu at kernel/softirq.c:650
+#9 irq_exit_rcu at kernel/softirq.c:662
+#10 0xffffffff81f44f42 in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+
+8
+#0 update_sd_lb_stats at kernel/sched/fair.c:10114
+#1 0xffffffff811795ec in find_busiest_group at kernel/sched/fair.c:10372
+#2 0xffffffff81179b5c in load_balance at kernel/sched/fair.c:10765
+#3 0xffffffff8117a830 in rebalance_domains at kernel/sched/fair.c:11203
+#4 0xffffffff8117abe5 in _nohz_idle_balance at kernel/sched/fair.c:11633
+#5 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#6 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#7 __irq_exit_rcu at kernel/softirq.c:650
+#8 irq_exit_rcu at kernel/softirq.c:662
+#9 0xffffffff81f44f42 in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+
+7
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811dccc4 in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#4 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#5 ktime_get_update_offsets_now at kernel/time/timekeeping.c:2320
+#6 0xffffffff811d9535 in hrtimer_update_base at kernel/time/hrtimer.c:631
+#7 hrtimer_interrupt at kernel/time/hrtimer.c:1843
+#8 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#9 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#10 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+7
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811db257 in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#4 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#5 ktime_get at kernel/time/timekeeping.c:848
+#6 0xffffffff811ed618 in tick_nohz_start_idle at kernel/time/tick-sched.c:675
+#7 tick_nohz_irq_exit at kernel/time/tick-sched.c:1179
+#8 0xffffffff81135184 in tick_irq_exit at kernel/softirq.c:635
+#9 0xffffffff81f44f0e in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+#10 0xffffffff8200152a in asm_sysvec_call_function_single at ./arch/x86/include/asm/idtentry.h:653
+#11 0xffffc90000003df8 in ?? at ()
+
+6
+#0 _find_next_bit at lib/find_bit.c:132
+#1 0xffffffff811d6437 in find_next_bit at ./include/linux/find.h:67
+#2 next_pending_bucket at kernel/time/timer.c:1799
+#3 __next_timer_interrupt at kernel/time/timer.c:1815
+#4 0xffffffff811d6da8 in __run_timers at kernel/time/timer.c:2019
+#5 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#6 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#7 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#8 __irq_exit_rcu at kernel/softirq.c:650
+#9 irq_exit_rcu at kernel/softirq.c:662
+#10 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+6
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff81f45489 in kvm_sched_clock_read at arch/x86/kernel/kvmclock.c:91
+#3 0xffffffff8118959f in sched_clock_cpu at kernel/sched/clock.c:387
+#4 0xffffffff81189740 in sched_clock_idle_sleep_event at kernel/sched/clock.c:444
+#5 0xffffffff811ed629 in tick_nohz_start_idle at kernel/time/tick-sched.c:679
+#6 0xffffffff81135184 in tick_irq_exit at kernel/softirq.c:635
+#7 0xffffffff81f44f0e in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+#8 0xffffffff8200152a in asm_sysvec_call_function_single at ./arch/x86/include/asm/idtentry.h:653
+#9 0xffffc90000003df8 in ?? at ()
+
+5
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811db257 in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#4 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#5 ktime_get at kernel/time/timekeeping.c:848
+#6 0xffffffff811ed97b in tick_nohz_irq_enter at kernel/time/tick-sched.c:1428
+#7 tick_irq_enter at kernel/time/tick-sched.c:1456
+#8 0xffffffff81f44fd5 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+5
+#0 arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock at ./include/linux/spinlock_api_smp.h:134
+#5 _raw_spin_lock at kernel/locking/spinlock.c:154
+#6 0xffffffff811ece50 in tick_do_update_jiffies64 at kernel/time/tick-sched.c:91
+#7 0xffffffff811ed99c in tick_nohz_update_jiffies at kernel/time/tick-sched.c:644
+#8 tick_nohz_irq_enter at kernel/time/tick-sched.c:1439
+#9 tick_irq_enter at kernel/time/tick-sched.c:1456
+#10 0xffffffff81f44fd5 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+5
+#0 0xffffffff81178eaf in update_sg_lb_stats at kernel/sched/fair.c:9492
+#1 update_sd_lb_stats at kernel/sched/fair.c:10112
+#2 0xffffffff811795ec in find_busiest_group at kernel/sched/fair.c:10372
+#3 0xffffffff81179b5c in load_balance at kernel/sched/fair.c:10765
+#4 0xffffffff8117a830 in rebalance_domains at kernel/sched/fair.c:11203
+#5 0xffffffff8117abe5 in _nohz_idle_balance at kernel/sched/fair.c:11633
+#6 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#7 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#8 __irq_exit_rcu at kernel/softirq.c:650
+#9 irq_exit_rcu at kernel/softirq.c:662
+#10 0xffffffff81f44f42 in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+
+5
+#0 __raw_spin_unlock_irqrestore at ./arch/x86/include/asm/preempt.h:95
+#1 _raw_spin_unlock_irqrestore at kernel/locking/spinlock.c:194
+#2 0xffffffff811d84d0 in __run_hrtimer at kernel/time/hrtimer.c:1681
+#3 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#4 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#5 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#6 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#7 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#8 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#9 0x0000000000000008 in fixed_percpu_data at ()
+#10 0xffff88813bcabd80 in ?? at ()
+#11 0xffff88813bcab480 in ?? at ()
+
+5
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811db257 in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#4 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#5 ktime_get at kernel/time/timekeeping.c:848
+#6 0xffffffff811ecfbe in tick_sched_timer at kernel/time/tick-sched.c:1472
+#7 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#8 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#9 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#10 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#11 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#12 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#13 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#14 0x0000000000000008 in fixed_percpu_data at ()
+#15 0xffff88813bcabd80 in ?? at ()
+#16 0xffff88813bcab480 in ?? at ()
+
+5
+#0 arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock at ./include/linux/spinlock_api_smp.h:134
+#5 _raw_spin_lock at kernel/locking/spinlock.c:154
+#6 0xffffffff811ece50 in tick_do_update_jiffies64 at kernel/time/tick-sched.c:91
+#7 0xffffffff811ecf86 in tick_sched_do_timer at kernel/time/tick-sched.c:199
+#8 0xffffffff811ecfcc in tick_sched_timer at kernel/time/tick-sched.c:1474
+#9 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#10 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#11 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#12 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#13 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#14 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#15 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#16 0x0000000000000008 in fixed_percpu_data at ()
+#17 0xffff88813bcabd80 in ?? at ()
+#18 0xffff88813bcab480 in ?? at ()
+
+5
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811dbd2d in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_advance at kernel/time/timekeeping.c:2165
+#4 0xffffffff811dcc3b in update_wall_time at kernel/time/timekeeping.c:2231
+#5 0xffffffff811ecf86 in tick_sched_do_timer at kernel/time/tick-sched.c:199
+#6 0xffffffff811ecfcc in tick_sched_timer at kernel/time/tick-sched.c:1474
+#7 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#8 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#9 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#10 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#11 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#12 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#13 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#14 0x0000000000000008 in fixed_percpu_data at ()
+#15 0xffff88813bcabd80 in ?? at ()
+#16 0xffff88813bcab480 in ?? at ()
+
+5
+#0 __raw_spin_unlock_irqrestore at ./arch/x86/include/asm/preempt.h:95
+#1 _raw_spin_unlock_irqrestore at kernel/locking/spinlock.c:194
+#2 0xffffffff811dc042 in timekeeping_advance at kernel/time/timekeeping.c:2220
+#3 0xffffffff811dcc3b in update_wall_time at kernel/time/timekeeping.c:2231
+#4 0xffffffff811ecf86 in tick_sched_do_timer at kernel/time/tick-sched.c:199
+#5 0xffffffff811ecfcc in tick_sched_timer at kernel/time/tick-sched.c:1474
+#6 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#13 0x0000000000000008 in fixed_percpu_data at ()
+#14 0xffff88813bcabd80 in ?? at ()
+#15 0xffff88813bcab480 in ?? at ()
+
+5
+#0 arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock at ./include/linux/spinlock_api_smp.h:134
+#5 _raw_spin_lock at kernel/locking/spinlock.c:154
+#6 0xffffffff8117252b in raw_spin_rq_lock_nested at kernel/sched/core.c:558
+#7 raw_spin_rq_lock at kernel/sched/sched.h:1366
+#8 rq_lock at kernel/sched/sched.h:1653
+#9 scheduler_tick at kernel/sched/core.c:5616
+#10 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#11 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#12 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#13 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#14 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#15 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#16 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#17 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#18 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#19 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#20 0x0000000000000008 in fixed_percpu_data at ()
+#21 0xffff88813bcabd80 in ?? at ()
+#22 0xffff88813bcab480 in ?? at ()
+
+5
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff81f45489 in kvm_sched_clock_read at arch/x86/kernel/kvmclock.c:91
+#3 0xffffffff8118959f in sched_clock_cpu at kernel/sched/clock.c:387
+#4 0xffffffff81168bff in update_rq_clock at kernel/sched/core.c:765
+#5 0xffffffff81172543 in update_rq_clock at kernel/sched/core.c:756
+#6 scheduler_tick at kernel/sched/core.c:5618
+#7 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#8 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#9 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#10 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#11 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#12 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#13 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#14 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#15 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#16 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#17 0x0000000000000008 in fixed_percpu_data at ()
+#18 0xffff88813bcabd80 in ?? at ()
+#19 0xffff88813bcab480 in ?? at ()
+
+5
+#0 0xffffffff81168c12 in is_idle_task at ./include/linux/sched.h:1927
+#1 update_rq_clock_pelt at kernel/sched/pelt.h:97
+#2 update_rq_clock_task at kernel/sched/core.c:747
+#3 update_rq_clock at kernel/sched/core.c:769
+#4 0xffffffff81172543 in update_rq_clock at kernel/sched/core.c:756
+#5 scheduler_tick at kernel/sched/core.c:5618
+#6 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#7 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#8 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#9 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#10 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#11 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#12 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#13 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#14 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#15 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#16 0x0000000000000008 in fixed_percpu_data at ()
+#17 0xffff88813bcabd80 in ?? at ()
+#18 0xffff88813bcab480 in ?? at ()
+
+5
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:417
+#1 0xffffffff81273cd3 in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 0xffffffff8117257f in scheduler_tick at kernel/sched/core.c:5633
+#3 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#4 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#5 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#6 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#13 0x0000000000000008 in fixed_percpu_data at ()
+#14 0xffff88813bcabd80 in ?? at ()
+#15 0xffff88813bcab480 in ?? at ()
+
+5
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:385
+#1 0xffffffff81273cd3 in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 0xffffffff8117257f in scheduler_tick at kernel/sched/core.c:5633
+#3 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#4 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#5 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#6 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#13 0x0000000000000008 in fixed_percpu_data at ()
+#14 0xffff88813bcabd80 in ?? at ()
+#15 0xffff88813bcab480 in ?? at ()
+
+4
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811dbd2d in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_advance at kernel/time/timekeeping.c:2165
+#4 0xffffffff811dcc3b in update_wall_time at kernel/time/timekeeping.c:2231
+#5 0xffffffff811ed99c in tick_nohz_update_jiffies at kernel/time/tick-sched.c:644
+#6 tick_nohz_irq_enter at kernel/time/tick-sched.c:1439
+#7 tick_irq_enter at kernel/time/tick-sched.c:1456
+#8 0xffffffff81f44fd5 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+4
+#0 __raw_spin_unlock_irqrestore at ./arch/x86/include/asm/preempt.h:95
+#1 _raw_spin_unlock_irqrestore at kernel/locking/spinlock.c:194
+#2 0xffffffff811dc042 in timekeeping_advance at kernel/time/timekeeping.c:2220
+#3 0xffffffff811dcc3b in update_wall_time at kernel/time/timekeeping.c:2231
+#4 0xffffffff811ed99c in tick_nohz_update_jiffies at kernel/time/tick-sched.c:644
+#5 tick_nohz_irq_enter at kernel/time/tick-sched.c:1439
+#6 tick_irq_enter at kernel/time/tick-sched.c:1456
+#7 0xffffffff81f44fd5 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+4
+#0 arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock at ./include/linux/spinlock_api_smp.h:134
+#5 _raw_spin_lock at kernel/locking/spinlock.c:154
+#6 0xffffffff811ece50 in tick_do_update_jiffies64 at kernel/time/tick-sched.c:91
+#7 0xffffffff811ecf86 in tick_sched_do_timer at kernel/time/tick-sched.c:199
+#8 0xffffffff811ecfcc in tick_sched_timer at kernel/time/tick-sched.c:1474
+#9 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#10 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#11 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#12 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#13 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#14 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+4
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811dbd2d in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_advance at kernel/time/timekeeping.c:2165
+#4 0xffffffff811dcc3b in update_wall_time at kernel/time/timekeeping.c:2231
+#5 0xffffffff811ecf86 in tick_sched_do_timer at kernel/time/tick-sched.c:199
+#6 0xffffffff811ecfcc in tick_sched_timer at kernel/time/tick-sched.c:1474
+#7 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#8 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#9 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#10 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#11 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#12 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+4
+#0 __raw_spin_unlock_irqrestore at ./arch/x86/include/asm/preempt.h:95
+#1 _raw_spin_unlock_irqrestore at kernel/locking/spinlock.c:194
+#2 0xffffffff811dc042 in timekeeping_advance at kernel/time/timekeeping.c:2220
+#3 0xffffffff811dcc3b in update_wall_time at kernel/time/timekeeping.c:2231
+#4 0xffffffff811ecf86 in tick_sched_do_timer at kernel/time/tick-sched.c:199
+#5 0xffffffff811ecfcc in tick_sched_timer at kernel/time/tick-sched.c:1474
+#6 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+4
+#0 0xffffffff81178eaf in update_sg_lb_stats at kernel/sched/fair.c:9492
+#1 update_sd_lb_stats at kernel/sched/fair.c:10112
+#2 0xffffffff811795ec in find_busiest_group at kernel/sched/fair.c:10372
+#3 0xffffffff81179b5c in load_balance at kernel/sched/fair.c:10765
+#4 0xffffffff8117a830 in rebalance_domains at kernel/sched/fair.c:11203
+#5 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#6 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#7 __irq_exit_rcu at kernel/softirq.c:650
+#8 irq_exit_rcu at kernel/softirq.c:662
+#9 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+4
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811db257 in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#4 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#5 ktime_get at kernel/time/timekeeping.c:848
+#6 0xffffffff811ea6b3 in clockevents_program_event at kernel/time/clockevents.c:326
+#7 0xffffffff811ec861 in tick_program_event at kernel/time/tick-oneshot.c:44
+#8 0xffffffff811d82be in __hrtimer_reprogram at kernel/time/hrtimer.c:681
+#9 0xffffffff811d8eb6 in hrtimer_start_range_ns at kernel/time/hrtimer.c:1299
+#10 0xffffffff811ed142 in hrtimer_start_expires at ./include/linux/hrtimer.h:432
+#11 tick_nohz_restart at kernel/time/tick-sched.c:772
+#12 0xffffffff811ed8de in tick_nohz_restart_sched_tick at kernel/time/tick-sched.c:981
+#13 tick_nohz_idle_update_tick at kernel/time/tick-sched.c:1316
+#14 tick_nohz_idle_exit at kernel/time/tick-sched.c:1350
+#15 0xffffffff811802ae in do_idle at kernel/sched/idle.c:295
+#16 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#17 0xffffffff81101d8c in start_secondary at arch/x86/kernel/smpboot.c:269
+#18 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+4
+#0 __send_ipi_mask at arch/x86/kernel/kvm.c:549
+#1 0xffffffff811f4dd5 in generic_exec_single at kernel/smp.c:389
+#2 0xffffffff811f50bd in smp_call_function_single_async at kernel/smp.c:662
+#3 0xffffffff8117b856 in kick_ilb at kernel/sched/fair.c:11310
+#4 0xffffffff811725b0 in scheduler_tick at kernel/sched/core.c:5637
+#5 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#6 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#7 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#8 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#9 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#10 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#11 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#12 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#13 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+4
+#0 arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock at ./include/linux/spinlock_api_smp.h:134
+#5 _raw_spin_lock at kernel/locking/spinlock.c:154
+#6 0xffffffff8116a670 in raw_spin_rq_lock_nested at kernel/sched/core.c:558
+#7 0xffffffff8117ab63 in raw_spin_rq_lock at kernel/sched/sched.h:1366
+#8 _raw_spin_rq_lock_irqsave at kernel/sched/sched.h:1385
+#9 rq_lock_irqsave at kernel/sched/sched.h:1637
+#10 _nohz_idle_balance at kernel/sched/fair.c:11628
+#11 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#12 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#13 __irq_exit_rcu at kernel/softirq.c:650
+#14 irq_exit_rcu at kernel/softirq.c:662
+#15 0xffffffff81f44f42 in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+
+4
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff81f45489 in kvm_sched_clock_read at arch/x86/kernel/kvmclock.c:91
+#3 0xffffffff8118959f in sched_clock_cpu at kernel/sched/clock.c:387
+#4 0xffffffff81168bff in update_rq_clock at kernel/sched/core.c:765
+#5 0xffffffff8116bdb7 in update_rq_clock at kernel/sched/core.c:770
+#6 0xffffffff8117ab6b in _nohz_idle_balance at kernel/sched/fair.c:11629
+#7 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#8 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#9 __irq_exit_rcu at kernel/softirq.c:650
+#10 irq_exit_rcu at kernel/softirq.c:662
+#11 0xffffffff81f44f42 in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+
+4
+#0 0xffffffff81168c12 in is_idle_task at ./include/linux/sched.h:1927
+#1 update_rq_clock_pelt at kernel/sched/pelt.h:97
+#2 update_rq_clock_task at kernel/sched/core.c:747
+#3 update_rq_clock at kernel/sched/core.c:769
+#4 0xffffffff8116bdb7 in update_rq_clock at kernel/sched/core.c:770
+#5 0xffffffff8117ab6b in _nohz_idle_balance at kernel/sched/fair.c:11629
+#6 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#7 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#8 __irq_exit_rcu at kernel/softirq.c:650
+#9 irq_exit_rcu at kernel/softirq.c:662
+#10 0xffffffff81f44f42 in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+
+4
+#0 __preempt_count_add at ./arch/x86/include/asm/preempt.h:80
+#1 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:118
+#2 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#3 0xffffffff811d84ec in __run_hrtimer at kernel/time/hrtimer.c:1689
+#4 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#5 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#6 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#7 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#8 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#9 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#10 0x0000000000000008 in fixed_percpu_data at ()
+#11 0xffff88813bcabd80 in ?? at ()
+#12 0xffff88813bcab480 in ?? at ()
+
+4
+#0 arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d84ec in __run_hrtimer at kernel/time/hrtimer.c:1689
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#13 0x0000000000000008 in fixed_percpu_data at ()
+#14 0xffff88813bcabd80 in ?? at ()
+#15 0xffff88813bcab480 in ?? at ()
+
+4
+#0 __hrtimer_next_event_base at kernel/time/hrtimer.c:545
+#1 0xffffffff811d87b2 in __hrtimer_get_next_event at kernel/time/hrtimer.c:578
+#2 hrtimer_update_next_event at kernel/time/hrtimer.c:604
+#3 0xffffffff811d94eb in hrtimer_interrupt at kernel/time/hrtimer.c:1814
+#4 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#5 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#6 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#7 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#8 0x0000000000000008 in fixed_percpu_data at ()
+#9 0xffff88813bcabd80 in ?? at ()
+#10 0xffff88813bcab480 in ?? at ()
+
+4
+#0 __hrtimer_next_event_base at kernel/time/hrtimer.c:545
+#1 0xffffffff811d87d4 in __hrtimer_get_next_event at kernel/time/hrtimer.c:587
+#2 hrtimer_update_next_event at kernel/time/hrtimer.c:612
+#3 0xffffffff811d94eb in hrtimer_interrupt at kernel/time/hrtimer.c:1814
+#4 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#5 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#6 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#7 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#8 0x0000000000000008 in fixed_percpu_data at ()
+#9 0xffff88813bcabd80 in ?? at ()
+#10 0xffff88813bcab480 in ?? at ()
+
+4
+#0 __raw_spin_unlock_irqrestore at ./arch/x86/include/asm/preempt.h:95
+#1 _raw_spin_unlock_irqrestore at kernel/locking/spinlock.c:194
+#2 0xffffffff811d9502 in hrtimer_interrupt at kernel/time/hrtimer.c:1821
+#3 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#4 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#5 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#6 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#7 0x0000000000000008 in fixed_percpu_data at ()
+#8 0xffff88813bcabd80 in ?? at ()
+#9 0xffff88813bcab480 in ?? at ()
+
+4
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811db257 in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#4 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#5 ktime_get at kernel/time/timekeeping.c:848
+#6 0xffffffff811ea6b3 in clockevents_program_event at kernel/time/clockevents.c:326
+#7 0xffffffff811ec861 in tick_program_event at kernel/time/tick-oneshot.c:44
+#8 0xffffffff811d950c in hrtimer_interrupt at kernel/time/hrtimer.c:1824
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#13 0x0000000000000008 in fixed_percpu_data at ()
+#14 0xffff88813bcabd80 in ?? at ()
+#15 0xffff88813bcab480 in ?? at ()
+
+4
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811dccc4 in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#4 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#5 ktime_get_update_offsets_now at kernel/time/timekeeping.c:2320
+#6 0xffffffff811d9535 in hrtimer_update_base at kernel/time/hrtimer.c:631
+#7 hrtimer_interrupt at kernel/time/hrtimer.c:1843
+#8 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#9 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#10 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#11 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#12 0x0000000000000008 in fixed_percpu_data at ()
+#13 0xffff88813bcabd80 in ?? at ()
+#14 0xffff88813bcab480 in ?? at ()
+
+3
+#0 lapic_next_deadline at arch/x86/kernel/apic/apic.c:484
+#1 0xffffffff811ea6f1 in clockevents_program_event at kernel/time/clockevents.c:334
+#2 0xffffffff811ec861 in tick_program_event at kernel/time/tick-oneshot.c:44
+#3 0xffffffff811d950c in hrtimer_interrupt at kernel/time/hrtimer.c:1824
+#4 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#5 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#6 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+3
+#0 arch_static_branch at ./arch/x86/include/asm/jump_label.h:27
+#1 static_key_false at ./include/linux/jump_label.h:207
+#2 native_write_msr at ./arch/x86/include/asm/msr.h:147
+#3 wrmsrl at ./arch/x86/include/asm/msr.h:262
+#4 lapic_next_deadline at arch/x86/kernel/apic/apic.c:491
+#5 0xffffffff811ea6f1 in clockevents_program_event at kernel/time/clockevents.c:334
+#6 0xffffffff811ec861 in tick_program_event at kernel/time/tick-oneshot.c:44
+#7 0xffffffff811d950c in hrtimer_interrupt at kernel/time/hrtimer.c:1824
+#8 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#9 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#10 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+3
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811db257 in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#4 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#5 ktime_get at kernel/time/timekeeping.c:848
+#6 0xffffffff811ed618 in tick_nohz_start_idle at kernel/time/tick-sched.c:675
+#7 tick_nohz_irq_exit at kernel/time/tick-sched.c:1179
+#8 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+3
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff81f45489 in kvm_sched_clock_read at arch/x86/kernel/kvmclock.c:91
+#3 0xffffffff8118959f in sched_clock_cpu at kernel/sched/clock.c:387
+#4 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+3
+#0 arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock at ./include/linux/spinlock_api_smp.h:134
+#5 _raw_spin_lock at kernel/locking/spinlock.c:154
+#6 0xffffffff8116a670 in raw_spin_rq_lock_nested at kernel/sched/core.c:558
+#7 0xffffffff811757e3 in raw_spin_rq_lock at kernel/sched/sched.h:1366
+#8 _raw_spin_rq_lock_irqsave at kernel/sched/sched.h:1385
+#9 rq_lock_irqsave at kernel/sched/sched.h:1637
+#10 update_blocked_averages at kernel/sched/fair.c:9021
+#11 0xffffffff8117acd4 in run_rebalance_domains at kernel/sched/fair.c:11890
+#12 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#13 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#14 __irq_exit_rcu at kernel/softirq.c:650
+#15 irq_exit_rcu at kernel/softirq.c:662
+#16 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+3
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff81f45489 in kvm_sched_clock_read at arch/x86/kernel/kvmclock.c:91
+#3 0xffffffff8118959f in sched_clock_cpu at kernel/sched/clock.c:387
+#4 0xffffffff81168bff in update_rq_clock at kernel/sched/core.c:765
+#5 0xffffffff8116bdb7 in update_rq_clock at kernel/sched/core.c:770
+#6 0xffffffff811757f6 in update_blocked_averages at kernel/sched/fair.c:9023
+#7 0xffffffff8117acd4 in run_rebalance_domains at kernel/sched/fair.c:11890
+#8 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#9 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#10 __irq_exit_rcu at kernel/softirq.c:650
+#11 irq_exit_rcu at kernel/softirq.c:662
+#12 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+3
+#0 0xffffffff81168c12 in is_idle_task at ./include/linux/sched.h:1927
+#1 update_rq_clock_pelt at kernel/sched/pelt.h:97
+#2 update_rq_clock_task at kernel/sched/core.c:747
+#3 update_rq_clock at kernel/sched/core.c:769
+#4 0xffffffff8116bdb7 in update_rq_clock at kernel/sched/core.c:770
+#5 0xffffffff811757f6 in update_blocked_averages at kernel/sched/fair.c:9023
+#6 0xffffffff8117acd4 in run_rebalance_domains at kernel/sched/fair.c:11890
+#7 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#8 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#9 __irq_exit_rcu at kernel/softirq.c:650
+#10 irq_exit_rcu at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+3
+#0 update_dl_rq_load_avg at kernel/sched/pelt.c:148
+#1 0xffffffff81175842 in __update_blocked_others at kernel/sched/fair.c:8895
+#2 update_blocked_averages at kernel/sched/fair.c:9025
+#3 0xffffffff8117acd4 in run_rebalance_domains at kernel/sched/fair.c:11890
+#4 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#5 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#6 __irq_exit_rcu at kernel/softirq.c:650
+#7 irq_exit_rcu at kernel/softirq.c:662
+#8 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+3
+#0 0xffffffff81175872 in __update_blocked_fair at kernel/sched/fair.c:8917
+#1 update_blocked_averages at kernel/sched/fair.c:9026
+#2 0xffffffff8117acd4 in run_rebalance_domains at kernel/sched/fair.c:11890
+#3 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#4 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#5 __irq_exit_rcu at kernel/softirq.c:650
+#6 irq_exit_rcu at kernel/softirq.c:662
+#7 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+3
+#0 0xffffffff81182c37 in accumulate_sum at kernel/sched/pelt.c:139
+#1 ___update_load_sum at kernel/sched/pelt.c:226
+#2 __update_load_avg_cfs_rq at kernel/sched/pelt.c:322
+#3 0xffffffff8117590d in update_cfs_rq_load_avg at kernel/sched/fair.c:4141
+#4 __update_blocked_fair at kernel/sched/fair.c:8920
+#5 update_blocked_averages at kernel/sched/fair.c:9026
+#6 0xffffffff8117acd4 in run_rebalance_domains at kernel/sched/fair.c:11890
+#7 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#8 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#9 __irq_exit_rcu at kernel/softirq.c:650
+#10 irq_exit_rcu at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+3
+#0 0xffffffff81175923 in __update_blocked_fair at kernel/sched/fair.c:8931
+#1 update_blocked_averages at kernel/sched/fair.c:9026
+#2 0xffffffff8117acd4 in run_rebalance_domains at kernel/sched/fair.c:11890
+#3 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#4 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#5 __irq_exit_rcu at kernel/softirq.c:650
+#6 irq_exit_rcu at kernel/softirq.c:662
+#7 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+3
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811db257 in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#4 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#5 ktime_get at kernel/time/timekeeping.c:848
+#6 0xffffffff811ed8b5 in tick_nohz_idle_exit at kernel/time/tick-sched.c:1344
+#7 0xffffffff811802ae in do_idle at kernel/sched/idle.c:295
+#8 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#9 0xffffffff81101d8c in start_secondary at arch/x86/kernel/smpboot.c:269
+#10 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+3
+#0 arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock at ./include/linux/spinlock_api_smp.h:134
+#5 _raw_spin_lock at kernel/locking/spinlock.c:154
+#6 0xffffffff811ece50 in tick_do_update_jiffies64 at kernel/time/tick-sched.c:91
+#7 0xffffffff811ed8c5 in tick_nohz_restart_sched_tick at kernel/time/tick-sched.c:967
+#8 tick_nohz_idle_update_tick at kernel/time/tick-sched.c:1316
+#9 tick_nohz_idle_exit at kernel/time/tick-sched.c:1350
+#10 0xffffffff811802ae in do_idle at kernel/sched/idle.c:295
+#11 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#12 0xffffffff81101d8c in start_secondary at arch/x86/kernel/smpboot.c:269
+#13 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+3
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811dbd2d in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_advance at kernel/time/timekeeping.c:2165
+#4 0xffffffff811dcc3b in update_wall_time at kernel/time/timekeeping.c:2231
+#5 0xffffffff811ed8c5 in tick_nohz_restart_sched_tick at kernel/time/tick-sched.c:967
+#6 tick_nohz_idle_update_tick at kernel/time/tick-sched.c:1316
+#7 tick_nohz_idle_exit at kernel/time/tick-sched.c:1350
+#8 0xffffffff811802ae in do_idle at kernel/sched/idle.c:295
+#9 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#10 0xffffffff81101d8c in start_secondary at arch/x86/kernel/smpboot.c:269
+#11 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+3
+#0 __raw_spin_unlock_irqrestore at ./arch/x86/include/asm/preempt.h:95
+#1 _raw_spin_unlock_irqrestore at kernel/locking/spinlock.c:194
+#2 0xffffffff811dc042 in timekeeping_advance at kernel/time/timekeeping.c:2220
+#3 0xffffffff811dcc3b in update_wall_time at kernel/time/timekeeping.c:2231
+#4 0xffffffff811ed8c5 in tick_nohz_restart_sched_tick at kernel/time/tick-sched.c:967
+#5 tick_nohz_idle_update_tick at kernel/time/tick-sched.c:1316
+#6 tick_nohz_idle_exit at kernel/time/tick-sched.c:1350
+#7 0xffffffff811802ae in do_idle at kernel/sched/idle.c:295
+#8 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#9 0xffffffff81101d8c in start_secondary at arch/x86/kernel/smpboot.c:269
+#10 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+3
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811db257 in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#4 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#5 ktime_get at kernel/time/timekeeping.c:848
+#6 0xffffffff811e9c65 in clockevents_program_min_delta at kernel/time/clockevents.c:241
+#7 0xffffffff811d8eb6 in hrtimer_start_range_ns at kernel/time/hrtimer.c:1299
+#8 0xffffffff811ed142 in hrtimer_start_expires at ./include/linux/hrtimer.h:432
+#9 tick_nohz_restart at kernel/time/tick-sched.c:772
+#10 0xffffffff811ed8de in tick_nohz_restart_sched_tick at kernel/time/tick-sched.c:981
+#11 tick_nohz_idle_update_tick at kernel/time/tick-sched.c:1316
+#12 tick_nohz_idle_exit at kernel/time/tick-sched.c:1350
+#13 0xffffffff811802ae in do_idle at kernel/sched/idle.c:295
+#14 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#15 0xffffffff81101d8c in start_secondary at arch/x86/kernel/smpboot.c:269
+#16 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+3
+#0 lapic_next_deadline at arch/x86/kernel/apic/apic.c:484
+#1 0xffffffff811e9c91 in clockevents_program_min_delta at kernel/time/clockevents.c:248
+#2 0xffffffff811d8eb6 in hrtimer_start_range_ns at kernel/time/hrtimer.c:1299
+#3 0xffffffff811ed142 in hrtimer_start_expires at ./include/linux/hrtimer.h:432
+#4 tick_nohz_restart at kernel/time/tick-sched.c:772
+#5 0xffffffff811ed8de in tick_nohz_restart_sched_tick at kernel/time/tick-sched.c:981
+#6 tick_nohz_idle_update_tick at kernel/time/tick-sched.c:1316
+#7 tick_nohz_idle_exit at kernel/time/tick-sched.c:1350
+#8 0xffffffff811802ae in do_idle at kernel/sched/idle.c:295
+#9 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#10 0xffffffff81101d8c in start_secondary at arch/x86/kernel/smpboot.c:269
+#11 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+3
+#0 arch_static_branch at ./arch/x86/include/asm/jump_label.h:27
+#1 static_key_false at ./include/linux/jump_label.h:207
+#2 native_write_msr at ./arch/x86/include/asm/msr.h:147
+#3 wrmsrl at ./arch/x86/include/asm/msr.h:262
+#4 lapic_next_deadline at arch/x86/kernel/apic/apic.c:491
+#5 0xffffffff811e9c91 in clockevents_program_min_delta at kernel/time/clockevents.c:248
+#6 0xffffffff811d8eb6 in hrtimer_start_range_ns at kernel/time/hrtimer.c:1299
+#7 0xffffffff811ed142 in hrtimer_start_expires at ./include/linux/hrtimer.h:432
+#8 tick_nohz_restart at kernel/time/tick-sched.c:772
+#9 0xffffffff811ed8de in tick_nohz_restart_sched_tick at kernel/time/tick-sched.c:981
+#10 tick_nohz_idle_update_tick at kernel/time/tick-sched.c:1316
+#11 tick_nohz_idle_exit at kernel/time/tick-sched.c:1350
+#12 0xffffffff811802ae in do_idle at kernel/sched/idle.c:295
+#13 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#14 0xffffffff81101d8c in start_secondary at arch/x86/kernel/smpboot.c:269
+#15 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+3
+#0 __raw_spin_unlock_irqrestore at ./arch/x86/include/asm/preempt.h:95
+#1 _raw_spin_unlock_irqrestore at kernel/locking/spinlock.c:194
+#2 0xffffffff811d8d9c in unlock_hrtimer_base at kernel/time/hrtimer.c:1017
+#3 0xffffffff811ed142 in hrtimer_start_expires at ./include/linux/hrtimer.h:432
+#4 tick_nohz_restart at kernel/time/tick-sched.c:772
+#5 0xffffffff811ed8de in tick_nohz_restart_sched_tick at kernel/time/tick-sched.c:981
+#6 tick_nohz_idle_update_tick at kernel/time/tick-sched.c:1316
+#7 tick_nohz_idle_exit at kernel/time/tick-sched.c:1350
+#8 0xffffffff811802ae in do_idle at kernel/sched/idle.c:295
+#9 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#10 0xffffffff81101d8c in start_secondary at arch/x86/kernel/smpboot.c:269
+#11 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+3
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:417
+#1 0xffffffff81173110 in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 0xffffffff8117b6d2 in nohz_balance_exit_idle at kernel/sched/fair.c:11907
+#3 nohz_balancer_kick at kernel/sched/fair.c:11332
+#4 trigger_load_balance at kernel/sched/fair.c:11909
+#5 0xffffffff811725b0 in scheduler_tick at kernel/sched/core.c:5637
+#6 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#7 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#8 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#9 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#10 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#11 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#12 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#13 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#14 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+3
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811db257 in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#4 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#5 ktime_get at kernel/time/timekeeping.c:848
+#6 0xffffffff811ed97b in tick_nohz_irq_enter at kernel/time/tick-sched.c:1428
+#7 tick_irq_enter at kernel/time/tick-sched.c:1456
+#8 0xffffffff81f44f35 in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+
+3
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:417
+#1 0xffffffff8117b9ba in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 nohz_balancer_kick at kernel/sched/fair.c:11422
+#3 trigger_load_balance at kernel/sched/fair.c:11909
+#4 0xffffffff811725b0 in scheduler_tick at kernel/sched/core.c:5637
+#5 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#6 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#7 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#8 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#9 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#10 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#11 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#12 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#13 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+3
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:385
+#1 0xffffffff8117b9ba in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 nohz_balancer_kick at kernel/sched/fair.c:11422
+#3 trigger_load_balance at kernel/sched/fair.c:11909
+#4 0xffffffff811725b0 in scheduler_tick at kernel/sched/core.c:5637
+#5 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#6 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#7 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#8 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#9 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#10 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#11 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#12 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#13 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+3
+#0 _find_next_bit at lib/find_bit.c:132
+#1 0xffffffff8117aae9 in find_next_bit at ./include/linux/find.h:67
+#2 __for_each_wrap at ./include/linux/find.h:459
+#3 _nohz_idle_balance at kernel/sched/fair.c:11599
+#4 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#5 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#6 __irq_exit_rcu at kernel/softirq.c:650
+#7 irq_exit_rcu at kernel/softirq.c:662
+#8 0xffffffff81f44f42 in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+
+3
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811db257 in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#4 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#5 ktime_get at kernel/time/timekeeping.c:848
+#6 0xffffffff811ea6b3 in clockevents_program_event at kernel/time/clockevents.c:326
+#7 0xffffffff811ec861 in tick_program_event at kernel/time/tick-oneshot.c:44
+#8 0xffffffff811d95b8 in hrtimer_interrupt at kernel/time/hrtimer.c:1868
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+3
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:417
+#1 0xffffffff8117b9ba in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 nohz_balancer_kick at kernel/sched/fair.c:11422
+#3 trigger_load_balance at kernel/sched/fair.c:11909
+#4 0xffffffff811725b0 in scheduler_tick at kernel/sched/core.c:5637
+#5 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#6 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#7 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#8 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#9 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#10 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#11 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#12 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#13 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#14 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#15 0x0000000000000008 in fixed_percpu_data at ()
+#16 0xffff88813bcabd80 in ?? at ()
+#17 0xffff88813bcab480 in ?? at ()
+
+3
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:385
+#1 0xffffffff8117b9ba in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 nohz_balancer_kick at kernel/sched/fair.c:11422
+#3 trigger_load_balance at kernel/sched/fair.c:11909
+#4 0xffffffff811725b0 in scheduler_tick at kernel/sched/core.c:5637
+#5 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#6 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#7 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#8 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#9 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#10 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#11 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#12 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#13 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#14 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#15 0x0000000000000008 in fixed_percpu_data at ()
+#16 0xffff88813bcabd80 in ?? at ()
+#17 0xffff88813bcab480 in ?? at ()
+
+3
+#0 __send_ipi_mask at arch/x86/kernel/kvm.c:549
+#1 0xffffffff811f4dd5 in generic_exec_single at kernel/smp.c:389
+#2 0xffffffff811f50bd in smp_call_function_single_async at kernel/smp.c:662
+#3 0xffffffff8117b856 in kick_ilb at kernel/sched/fair.c:11310
+#4 0xffffffff811725b0 in scheduler_tick at kernel/sched/core.c:5637
+#5 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#6 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#7 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#8 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#9 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#10 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#11 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#12 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#13 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#14 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#15 0x0000000000000008 in fixed_percpu_data at ()
+#16 0xffff88813bcabd80 in ?? at ()
+#17 0xffff88813bcab480 in ?? at ()
+
+3
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811db257 in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#4 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#5 ktime_get at kernel/time/timekeeping.c:848
+#6 0xffffffff811ecfbe in tick_sched_timer at kernel/time/tick-sched.c:1472
+#7 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#8 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#9 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#10 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#11 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#12 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#13 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+2
+#0 0xffffffff81f5160f in cpu_relax at ./arch/x86/include/asm/vdso/processor.h:19
+#1 virt_spin_lock at ./arch/x86/include/asm/qspinlock.h:101
+#2 queued_spin_lock_slowpath at kernel/locking/qspinlock.c:327
+#3 0xffffffff81f51544 in queued_spin_lock at ./include/asm-generic/qspinlock.h:114
+#4 0xffffffff811ece50 in tick_do_update_jiffies64 at kernel/time/tick-sched.c:91
+#5 0xffffffff811ed99c in tick_nohz_update_jiffies at kernel/time/tick-sched.c:644
+#6 tick_nohz_irq_enter at kernel/time/tick-sched.c:1439
+#7 tick_irq_enter at kernel/time/tick-sched.c:1456
+#8 0xffffffff81f44fd5 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+2
+#0 __preempt_count_add at ./arch/x86/include/asm/preempt.h:80
+#1 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:118
+#2 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#3 0xffffffff811d6c8a in __run_timers at kernel/time/timer.c:2004
+#4 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#5 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#6 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#7 __irq_exit_rcu at kernel/softirq.c:650
+#8 irq_exit_rcu at kernel/softirq.c:662
+#9 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+2
+#0 arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d6c8a in __run_timers at kernel/time/timer.c:2004
+#7 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#8 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#9 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#10 __irq_exit_rcu at kernel/softirq.c:650
+#11 irq_exit_rcu at kernel/softirq.c:662
+#12 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+2
+#0 __preempt_count_add at ./arch/x86/include/asm/preempt.h:80
+#1 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:118
+#2 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#3 0xffffffff811d6e5a in expire_timers at kernel/time/timer.c:1752
+#4 __run_timers at kernel/time/timer.c:2022
+#5 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#6 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#7 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#8 __irq_exit_rcu at kernel/softirq.c:650
+#9 irq_exit_rcu at kernel/softirq.c:662
+#10 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+2
+#0 arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d6e5a in expire_timers at kernel/time/timer.c:1752
+#7 __run_timers at kernel/time/timer.c:2022
+#8 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#9 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#10 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#11 __irq_exit_rcu at kernel/softirq.c:650
+#12 irq_exit_rcu at kernel/softirq.c:662
+#13 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+2
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:417
+#1 0xffffffff8117a692 in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 rebalance_domains at kernel/sched/fair.c:11231
+#3 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#4 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#5 __irq_exit_rcu at kernel/softirq.c:650
+#6 irq_exit_rcu at kernel/softirq.c:662
+#7 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+2
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:385
+#1 0xffffffff8117a692 in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 rebalance_domains at kernel/sched/fair.c:11231
+#3 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#4 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#5 __irq_exit_rcu at kernel/softirq.c:650
+#6 irq_exit_rcu at kernel/softirq.c:662
+#7 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+2
+#0 0xffffffff81f5160f in cpu_relax at ./arch/x86/include/asm/vdso/processor.h:19
+#1 virt_spin_lock at ./arch/x86/include/asm/qspinlock.h:101
+#2 queued_spin_lock_slowpath at kernel/locking/qspinlock.c:327
+#3 0xffffffff81f5111c in queued_spin_lock at ./include/asm-generic/qspinlock.h:114
+#4 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#5 __raw_spin_lock_irqsave at ./include/linux/spinlock_api_smp.h:111
+#6 _raw_spin_lock_irqsave at kernel/locking/spinlock.c:162
+#7 0xffffffff811dbd00 in timekeeping_advance at kernel/time/timekeeping.c:2159
+#8 0xffffffff811dcc3b in update_wall_time at kernel/time/timekeeping.c:2231
+#9 0xffffffff811ed8c5 in tick_nohz_restart_sched_tick at kernel/time/tick-sched.c:967
+#10 tick_nohz_idle_update_tick at kernel/time/tick-sched.c:1316
+#11 tick_nohz_idle_exit at kernel/time/tick-sched.c:1350
+#12 0xffffffff811802ae in do_idle at kernel/sched/idle.c:295
+#13 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#14 0xffffffff81101d8c in start_secondary at arch/x86/kernel/smpboot.c:269
+#15 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+2
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:385
+#1 0xffffffff81173110 in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 0xffffffff8117b6d2 in nohz_balance_exit_idle at kernel/sched/fair.c:11907
+#3 nohz_balancer_kick at kernel/sched/fair.c:11332
+#4 trigger_load_balance at kernel/sched/fair.c:11909
+#5 0xffffffff811725b0 in scheduler_tick at kernel/sched/core.c:5637
+#6 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#7 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#8 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#9 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#10 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#11 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#12 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#13 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#14 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+2
+#0 arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock at ./include/linux/spinlock_api_smp.h:134
+#5 _raw_spin_lock at kernel/locking/spinlock.c:154
+#6 0xffffffff811ece50 in tick_do_update_jiffies64 at kernel/time/tick-sched.c:91
+#7 0xffffffff811ed99c in tick_nohz_update_jiffies at kernel/time/tick-sched.c:644
+#8 tick_nohz_irq_enter at kernel/time/tick-sched.c:1439
+#9 tick_irq_enter at kernel/time/tick-sched.c:1456
+#10 0xffffffff81f44f35 in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+
+2
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811dbd2d in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_advance at kernel/time/timekeeping.c:2165
+#4 0xffffffff811dcc3b in update_wall_time at kernel/time/timekeeping.c:2231
+#5 0xffffffff811ed99c in tick_nohz_update_jiffies at kernel/time/tick-sched.c:644
+#6 tick_nohz_irq_enter at kernel/time/tick-sched.c:1439
+#7 tick_irq_enter at kernel/time/tick-sched.c:1456
+#8 0xffffffff81f44f35 in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+
+2
+#0 __raw_spin_unlock_irqrestore at ./arch/x86/include/asm/preempt.h:95
+#1 _raw_spin_unlock_irqrestore at kernel/locking/spinlock.c:194
+#2 0xffffffff811dc042 in timekeeping_advance at kernel/time/timekeeping.c:2220
+#3 0xffffffff811dcc3b in update_wall_time at kernel/time/timekeeping.c:2231
+#4 0xffffffff811ed99c in tick_nohz_update_jiffies at kernel/time/tick-sched.c:644
+#5 tick_nohz_irq_enter at kernel/time/tick-sched.c:1439
+#6 tick_irq_enter at kernel/time/tick-sched.c:1456
+#7 0xffffffff81f44f35 in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+
+2
+#0 _nohz_idle_balance at kernel/sched/fair.c:11564
+#1 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#2 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#3 __irq_exit_rcu at kernel/softirq.c:650
+#4 irq_exit_rcu at kernel/softirq.c:662
+#5 0xffffffff81f44f42 in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+
+2
+#0 __raw_spin_unlock_irqrestore at ./arch/x86/include/asm/preempt.h:95
+#1 _raw_spin_unlock_irqrestore at kernel/locking/spinlock.c:194
+#2 0xffffffff811d958a in hrtimer_interrupt at kernel/time/hrtimer.c:1855
+#3 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#4 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#5 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+2
+#0 lapic_next_deadline at arch/x86/kernel/apic/apic.c:484
+#1 0xffffffff811ea6f1 in clockevents_program_event at kernel/time/clockevents.c:334
+#2 0xffffffff811ec861 in tick_program_event at kernel/time/tick-oneshot.c:44
+#3 0xffffffff811d95b8 in hrtimer_interrupt at kernel/time/hrtimer.c:1868
+#4 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#5 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#6 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+2
+#0 arch_static_branch at ./arch/x86/include/asm/jump_label.h:27
+#1 static_key_false at ./include/linux/jump_label.h:207
+#2 native_write_msr at ./arch/x86/include/asm/msr.h:147
+#3 wrmsrl at ./arch/x86/include/asm/msr.h:262
+#4 lapic_next_deadline at arch/x86/kernel/apic/apic.c:491
+#5 0xffffffff811ea6f1 in clockevents_program_event at kernel/time/clockevents.c:334
+#6 0xffffffff811ec861 in tick_program_event at kernel/time/tick-oneshot.c:44
+#7 0xffffffff811d95b8 in hrtimer_interrupt at kernel/time/hrtimer.c:1868
+#8 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#9 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#10 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+2
+#0 arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock at ./include/linux/spinlock_api_smp.h:134
+#5 _raw_spin_lock at kernel/locking/spinlock.c:154
+#6 0xffffffff8119d6a4 in console_lock_spinning_enable at kernel/printk/printk.c:1853
+#7 console_emit_next_record at kernel/printk/printk.c:2871
+#8 console_flush_all at kernel/printk/printk.c:2933
+#9 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#10 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#11 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#12 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#13 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#14 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#15 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#16 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+2
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811dccc4 in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#4 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#5 ktime_get_update_offsets_now at kernel/time/timekeeping.c:2320
+#6 0xffffffff811d9471 in hrtimer_update_base at kernel/time/hrtimer.c:631
+#7 hrtimer_interrupt at kernel/time/hrtimer.c:1793
+#8 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#9 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#10 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#11 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#12 0x0000000000000008 in fixed_percpu_data at ()
+#13 0xffff88813bcabd80 in ?? at ()
+#14 0xffff88813bcab480 in ?? at ()
+
+2
+#0 arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock at ./include/linux/spinlock_api_smp.h:134
+#5 _raw_spin_lock at kernel/locking/spinlock.c:154
+#6 0xffffffff8119d6ec in console_lock_spinning_disable_and_check at kernel/printk/printk.c:1881
+#7 console_emit_next_record at kernel/printk/printk.c:2883
+#8 console_flush_all at kernel/printk/printk.c:2933
+#9 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#10 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#11 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#12 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#13 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#14 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#15 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#16 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+2
+#0 __raw_spin_unlock_irqrestore at ./arch/x86/include/asm/preempt.h:95
+#1 _raw_spin_unlock_irqrestore at kernel/locking/spinlock.c:194
+#2 0xffffffff811d84d0 in __run_hrtimer at kernel/time/hrtimer.c:1681
+#3 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#4 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#5 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#6 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#7 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#8 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+2
+#0 arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock at ./include/linux/spinlock_api_smp.h:134
+#5 _raw_spin_lock at kernel/locking/spinlock.c:154
+#6 0xffffffff8117252b in raw_spin_rq_lock_nested at kernel/sched/core.c:558
+#7 raw_spin_rq_lock at kernel/sched/sched.h:1366
+#8 rq_lock at kernel/sched/sched.h:1653
+#9 scheduler_tick at kernel/sched/core.c:5616
+#10 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#11 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#12 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#13 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#14 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#15 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#16 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#17 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#18 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#19 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+2
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff81f45489 in kvm_sched_clock_read at arch/x86/kernel/kvmclock.c:91
+#3 0xffffffff8118959f in sched_clock_cpu at kernel/sched/clock.c:387
+#4 0xffffffff81168bff in update_rq_clock at kernel/sched/core.c:765
+#5 0xffffffff81172543 in update_rq_clock at kernel/sched/core.c:756
+#6 scheduler_tick at kernel/sched/core.c:5618
+#7 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#8 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#9 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#10 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#11 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#12 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#13 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#14 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#15 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#16 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+2
+#0 0xffffffff81168c12 in is_idle_task at ./include/linux/sched.h:1927
+#1 update_rq_clock_pelt at kernel/sched/pelt.h:97
+#2 update_rq_clock_task at kernel/sched/core.c:747
+#3 update_rq_clock at kernel/sched/core.c:769
+#4 0xffffffff81172543 in update_rq_clock at kernel/sched/core.c:756
+#5 scheduler_tick at kernel/sched/core.c:5618
+#6 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#7 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#8 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#9 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#10 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#11 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#12 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#13 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#14 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#15 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+2
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:417
+#1 0xffffffff81273cd3 in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 0xffffffff8117257f in scheduler_tick at kernel/sched/core.c:5633
+#3 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#4 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#5 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#6 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+2
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:385
+#1 0xffffffff81273cd3 in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 0xffffffff8117257f in scheduler_tick at kernel/sched/core.c:5633
+#3 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#4 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#5 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#6 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+2
+#0 __preempt_count_add at ./arch/x86/include/asm/preempt.h:80
+#1 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:118
+#2 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#3 0xffffffff811d84ec in __run_hrtimer at kernel/time/hrtimer.c:1689
+#4 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#5 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#6 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#7 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#8 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#9 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+2
+#0 arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock_irq at ./include/linux/spinlock_api_smp.h:120
+#5 _raw_spin_lock_irq at kernel/locking/spinlock.c:170
+#6 0xffffffff811d84ec in __run_hrtimer at kernel/time/hrtimer.c:1689
+#7 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#8 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+2
+#0 __hrtimer_next_event_base at kernel/time/hrtimer.c:545
+#1 0xffffffff811d87b2 in __hrtimer_get_next_event at kernel/time/hrtimer.c:578
+#2 hrtimer_update_next_event at kernel/time/hrtimer.c:604
+#3 0xffffffff811d94eb in hrtimer_interrupt at kernel/time/hrtimer.c:1814
+#4 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#5 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#6 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#7 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+2
+#0 __hrtimer_next_event_base at kernel/time/hrtimer.c:545
+#1 0xffffffff811d87d4 in __hrtimer_get_next_event at kernel/time/hrtimer.c:587
+#2 hrtimer_update_next_event at kernel/time/hrtimer.c:612
+#3 0xffffffff811d94eb in hrtimer_interrupt at kernel/time/hrtimer.c:1814
+#4 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#5 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#6 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#7 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+2
+#0 __raw_spin_unlock_irqrestore at ./arch/x86/include/asm/preempt.h:95
+#1 _raw_spin_unlock_irqrestore at kernel/locking/spinlock.c:194
+#2 0xffffffff811d9502 in hrtimer_interrupt at kernel/time/hrtimer.c:1821
+#3 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#4 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#5 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#6 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+2
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811db257 in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#4 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#5 ktime_get at kernel/time/timekeeping.c:848
+#6 0xffffffff811ea6b3 in clockevents_program_event at kernel/time/clockevents.c:326
+#7 0xffffffff811ec861 in tick_program_event at kernel/time/tick-oneshot.c:44
+#8 0xffffffff811d950c in hrtimer_interrupt at kernel/time/hrtimer.c:1824
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+1
+#0 0xffffffff81f5160f in cpu_relax at ./arch/x86/include/asm/vdso/processor.h:19
+#1 virt_spin_lock at ./arch/x86/include/asm/qspinlock.h:101
+#2 queued_spin_lock_slowpath at kernel/locking/qspinlock.c:327
+#3 0xffffffff81f5111c in queued_spin_lock at ./include/asm-generic/qspinlock.h:114
+#4 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#5 __raw_spin_lock_irqsave at ./include/linux/spinlock_api_smp.h:111
+#6 _raw_spin_lock_irqsave at kernel/locking/spinlock.c:162
+#7 0xffffffff811dbd00 in timekeeping_advance at kernel/time/timekeeping.c:2159
+#8 0xffffffff811dcc3b in update_wall_time at kernel/time/timekeeping.c:2231
+#9 0xffffffff811ed99c in tick_nohz_update_jiffies at kernel/time/tick-sched.c:644
+#10 tick_nohz_irq_enter at kernel/time/tick-sched.c:1439
+#11 tick_irq_enter at kernel/time/tick-sched.c:1456
+#12 0xffffffff81f44fd5 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 select_task_rq_fair at kernel/sched/fair.c:7680
+#1 0xffffffff81171dd6 in select_task_rq at kernel/sched/core.c:3579
+#2 try_to_wake_up at kernel/sched/core.c:4292
+#3 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#4 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#5 __run_timers at kernel/time/timer.c:2022
+#6 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#7 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#8 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#9 __irq_exit_rcu at kernel/softirq.c:650
+#10 irq_exit_rcu at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:417
+#1 0xffffffff811776fb in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 select_task_rq_fair at kernel/sched/fair.c:7712
+#3 0xffffffff81171dd6 in select_task_rq at kernel/sched/core.c:3579
+#4 try_to_wake_up at kernel/sched/core.c:4292
+#5 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#6 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#7 __run_timers at kernel/time/timer.c:2022
+#8 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#9 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#10 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#11 __irq_exit_rcu at kernel/softirq.c:650
+#12 irq_exit_rcu at kernel/softirq.c:662
+#13 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:385
+#1 0xffffffff811776fb in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 select_task_rq_fair at kernel/sched/fair.c:7712
+#3 0xffffffff81171dd6 in select_task_rq at kernel/sched/core.c:3579
+#4 try_to_wake_up at kernel/sched/core.c:4292
+#5 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#6 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#7 __run_timers at kernel/time/timer.c:2022
+#8 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#9 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#10 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#11 __irq_exit_rcu at kernel/softirq.c:650
+#12 irq_exit_rcu at kernel/softirq.c:662
+#13 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock at ./include/linux/spinlock_api_smp.h:134
+#5 _raw_spin_lock at kernel/locking/spinlock.c:154
+#6 0xffffffff81171ea4 in raw_spin_rq_lock_nested at kernel/sched/core.c:558
+#7 raw_spin_rq_lock at kernel/sched/sched.h:1366
+#8 rq_lock at kernel/sched/sched.h:1653
+#9 ttwu_queue at kernel/sched/core.c:3983
+#10 try_to_wake_up at kernel/sched/core.c:4307
+#11 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#12 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#13 __run_timers at kernel/time/timer.c:2022
+#14 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#15 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#16 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#17 __irq_exit_rcu at kernel/softirq.c:650
+#18 irq_exit_rcu at kernel/softirq.c:662
+#19 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock at ./include/linux/spinlock_api_smp.h:134
+#5 _raw_spin_lock at kernel/locking/spinlock.c:154
+#6 0xffffffff8114eff5 in __queue_work at kernel/workqueue.c:1483
+#7 0xffffffff8114f373 in queue_work_on at kernel/workqueue.c:1554
+#8 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#9 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#10 __run_timers at kernel/time/timer.c:2022
+#11 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#12 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#13 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#14 __irq_exit_rcu at kernel/softirq.c:650
+#15 irq_exit_rcu at kernel/softirq.c:662
+#16 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff81f45489 in kvm_sched_clock_read at arch/x86/kernel/kvmclock.c:91
+#3 0xffffffff8118959f in sched_clock_cpu at kernel/sched/clock.c:387
+#4 0xffffffff81168bff in update_rq_clock at kernel/sched/core.c:765
+#5 0xffffffff81171ebc in update_rq_clock at kernel/sched/core.c:756
+#6 ttwu_queue at kernel/sched/core.c:3984
+#7 try_to_wake_up at kernel/sched/core.c:4307
+#8 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#9 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#10 __run_timers at kernel/time/timer.c:2022
+#11 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#12 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#13 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#14 __irq_exit_rcu at kernel/softirq.c:650
+#15 irq_exit_rcu at kernel/softirq.c:662
+#16 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff8114f021 in work_color_to_flags at kernel/workqueue.c:605
+#1 __queue_work at kernel/workqueue.c:1512
+#2 0xffffffff8114f373 in queue_work_on at kernel/workqueue.c:1554
+#3 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#4 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#5 __run_timers at kernel/time/timer.c:2022
+#6 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#7 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#8 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#9 __irq_exit_rcu at kernel/softirq.c:650
+#10 irq_exit_rcu at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff81168c12 in is_idle_task at ./include/linux/sched.h:1927
+#1 update_rq_clock_pelt at kernel/sched/pelt.h:97
+#2 update_rq_clock_task at kernel/sched/core.c:747
+#3 update_rq_clock at kernel/sched/core.c:769
+#4 0xffffffff81171ebc in update_rq_clock at kernel/sched/core.c:756
+#5 ttwu_queue at kernel/sched/core.c:3984
+#6 try_to_wake_up at kernel/sched/core.c:4307
+#7 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#8 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#9 __run_timers at kernel/time/timer.c:2022
+#10 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#11 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#12 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#13 __irq_exit_rcu at kernel/softirq.c:650
+#14 irq_exit_rcu at kernel/softirq.c:662
+#15 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 update_curr at kernel/sched/fair.c:899
+#1 0xffffffff81176ad4 in enqueue_entity at kernel/sched/fair.c:4836
+#2 enqueue_task_fair at kernel/sched/fair.c:6318
+#3 0xffffffff811701c6 in enqueue_task at kernel/sched/core.c:2082
+#4 activate_task at kernel/sched/core.c:2112
+#5 0xffffffff81171b75 in ttwu_do_activate at kernel/sched/core.c:3735
+#6 0xffffffff81171eca in ttwu_queue at kernel/sched/core.c:3985
+#7 try_to_wake_up at kernel/sched/core.c:4307
+#8 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#9 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#10 __run_timers at kernel/time/timer.c:2022
+#11 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#12 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#13 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#14 __irq_exit_rcu at kernel/softirq.c:650
+#15 irq_exit_rcu at kernel/softirq.c:662
+#16 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock at ./include/linux/spinlock_api_smp.h:134
+#5 _raw_spin_lock at kernel/locking/spinlock.c:154
+#6 0xffffffff81171ea4 in raw_spin_rq_lock_nested at kernel/sched/core.c:558
+#7 raw_spin_rq_lock at kernel/sched/sched.h:1366
+#8 rq_lock at kernel/sched/sched.h:1653
+#9 ttwu_queue at kernel/sched/core.c:3983
+#10 try_to_wake_up at kernel/sched/core.c:4307
+#11 0xffffffff81172230 in wake_up_process at kernel/sched/core.c:4441
+#12 0xffffffff8114f170 in wake_up_worker at kernel/workqueue.c:863
+#13 insert_work at kernel/workqueue.c:1373
+#14 __queue_work at kernel/workqueue.c:1526
+#15 0xffffffff8114f373 in queue_work_on at kernel/workqueue.c:1554
+#16 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#17 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#18 __run_timers at kernel/time/timer.c:2022
+#19 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#20 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#21 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#22 __irq_exit_rcu at kernel/softirq.c:650
+#23 irq_exit_rcu at kernel/softirq.c:662
+#24 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff81174e44 in update_load_avg at kernel/sched/fair.c:4282
+#1 0xffffffff811768cb in enqueue_entity at kernel/sched/fair.c:4856
+#2 enqueue_task_fair at kernel/sched/fair.c:6318
+#3 0xffffffff811701c6 in enqueue_task at kernel/sched/core.c:2082
+#4 activate_task at kernel/sched/core.c:2112
+#5 0xffffffff81171b75 in ttwu_do_activate at kernel/sched/core.c:3735
+#6 0xffffffff81171eca in ttwu_queue at kernel/sched/core.c:3985
+#7 try_to_wake_up at kernel/sched/core.c:4307
+#8 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#9 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#10 __run_timers at kernel/time/timer.c:2022
+#11 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#12 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#13 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#14 __irq_exit_rcu at kernel/softirq.c:650
+#15 irq_exit_rcu at kernel/softirq.c:662
+#16 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 __raw_spin_unlock_irqrestore at ./arch/x86/include/asm/preempt.h:95
+#1 _raw_spin_unlock_irqrestore at kernel/locking/spinlock.c:194
+#2 0xffffffff81171edd in try_to_wake_up at kernel/sched/core.c:4309
+#3 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#4 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#5 __run_timers at kernel/time/timer.c:2022
+#6 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#7 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#8 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#9 __irq_exit_rcu at kernel/softirq.c:650
+#10 irq_exit_rcu at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff81f45489 in kvm_sched_clock_read at arch/x86/kernel/kvmclock.c:91
+#3 0xffffffff8118959f in sched_clock_cpu at kernel/sched/clock.c:387
+#4 0xffffffff81168bff in update_rq_clock at kernel/sched/core.c:765
+#5 0xffffffff81171ebc in update_rq_clock at kernel/sched/core.c:756
+#6 ttwu_queue at kernel/sched/core.c:3984
+#7 try_to_wake_up at kernel/sched/core.c:4307
+#8 0xffffffff81172230 in wake_up_process at kernel/sched/core.c:4441
+#9 0xffffffff8114f170 in wake_up_worker at kernel/workqueue.c:863
+#10 insert_work at kernel/workqueue.c:1373
+#11 __queue_work at kernel/workqueue.c:1526
+#12 0xffffffff8114f373 in queue_work_on at kernel/workqueue.c:1554
+#13 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#14 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#15 __run_timers at kernel/time/timer.c:2022
+#16 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#17 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#18 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#19 __irq_exit_rcu at kernel/softirq.c:650
+#20 irq_exit_rcu at kernel/softirq.c:662
+#21 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff81168c12 in is_idle_task at ./include/linux/sched.h:1927
+#1 update_rq_clock_pelt at kernel/sched/pelt.h:97
+#2 update_rq_clock_task at kernel/sched/core.c:747
+#3 update_rq_clock at kernel/sched/core.c:769
+#4 0xffffffff81171ebc in update_rq_clock at kernel/sched/core.c:756
+#5 ttwu_queue at kernel/sched/core.c:3984
+#6 try_to_wake_up at kernel/sched/core.c:4307
+#7 0xffffffff81172230 in wake_up_process at kernel/sched/core.c:4441
+#8 0xffffffff8114f170 in wake_up_worker at kernel/workqueue.c:863
+#9 insert_work at kernel/workqueue.c:1373
+#10 __queue_work at kernel/workqueue.c:1526
+#11 0xffffffff8114f373 in queue_work_on at kernel/workqueue.c:1554
+#12 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#13 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#14 __run_timers at kernel/time/timer.c:2022
+#15 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#16 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#17 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#18 __irq_exit_rcu at kernel/softirq.c:650
+#19 irq_exit_rcu at kernel/softirq.c:662
+#20 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 update_curr at kernel/sched/fair.c:899
+#1 0xffffffff81176ad4 in enqueue_entity at kernel/sched/fair.c:4836
+#2 enqueue_task_fair at kernel/sched/fair.c:6318
+#3 0xffffffff811701c6 in enqueue_task at kernel/sched/core.c:2082
+#4 activate_task at kernel/sched/core.c:2112
+#5 0xffffffff81171b75 in ttwu_do_activate at kernel/sched/core.c:3735
+#6 0xffffffff81171eca in ttwu_queue at kernel/sched/core.c:3985
+#7 try_to_wake_up at kernel/sched/core.c:4307
+#8 0xffffffff81172230 in wake_up_process at kernel/sched/core.c:4441
+#9 0xffffffff8114f170 in wake_up_worker at kernel/workqueue.c:863
+#10 insert_work at kernel/workqueue.c:1373
+#11 __queue_work at kernel/workqueue.c:1526
+#12 0xffffffff8114f373 in queue_work_on at kernel/workqueue.c:1554
+#13 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#14 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#15 __run_timers at kernel/time/timer.c:2022
+#16 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#17 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#18 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#19 __irq_exit_rcu at kernel/softirq.c:650
+#20 irq_exit_rcu at kernel/softirq.c:662
+#21 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff81174e44 in update_load_avg at kernel/sched/fair.c:4282
+#1 0xffffffff811768cb in enqueue_entity at kernel/sched/fair.c:4856
+#2 enqueue_task_fair at kernel/sched/fair.c:6318
+#3 0xffffffff811701c6 in enqueue_task at kernel/sched/core.c:2082
+#4 activate_task at kernel/sched/core.c:2112
+#5 0xffffffff81171b75 in ttwu_do_activate at kernel/sched/core.c:3735
+#6 0xffffffff81171eca in ttwu_queue at kernel/sched/core.c:3985
+#7 try_to_wake_up at kernel/sched/core.c:4307
+#8 0xffffffff81172230 in wake_up_process at kernel/sched/core.c:4441
+#9 0xffffffff8114f170 in wake_up_worker at kernel/workqueue.c:863
+#10 insert_work at kernel/workqueue.c:1373
+#11 __queue_work at kernel/workqueue.c:1526
+#12 0xffffffff8114f373 in queue_work_on at kernel/workqueue.c:1554
+#13 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#14 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#15 __run_timers at kernel/time/timer.c:2022
+#16 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#17 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#18 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#19 __irq_exit_rcu at kernel/softirq.c:650
+#20 irq_exit_rcu at kernel/softirq.c:662
+#21 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 __raw_spin_unlock_irqrestore at ./arch/x86/include/asm/preempt.h:95
+#1 _raw_spin_unlock_irqrestore at kernel/locking/spinlock.c:194
+#2 0xffffffff81171edd in try_to_wake_up at kernel/sched/core.c:4309
+#3 0xffffffff81172230 in wake_up_process at kernel/sched/core.c:4441
+#4 0xffffffff8114f170 in wake_up_worker at kernel/workqueue.c:863
+#5 insert_work at kernel/workqueue.c:1373
+#6 __queue_work at kernel/workqueue.c:1526
+#7 0xffffffff8114f373 in queue_work_on at kernel/workqueue.c:1554
+#8 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#9 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#10 __run_timers at kernel/time/timer.c:2022
+#11 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#12 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#13 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#14 __irq_exit_rcu at kernel/softirq.c:650
+#15 irq_exit_rcu at kernel/softirq.c:662
+#16 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:417
+#1 0xffffffff8114f0af in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 0xffffffff8114f373 in queue_work_on at kernel/workqueue.c:1554
+#3 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#4 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#5 __run_timers at kernel/time/timer.c:2022
+#6 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#7 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#8 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#9 __irq_exit_rcu at kernel/softirq.c:650
+#10 irq_exit_rcu at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:385
+#1 0xffffffff8114f0af in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 0xffffffff8114f373 in queue_work_on at kernel/workqueue.c:1554
+#3 0xffffffff811d6b0f in call_timer_fn at kernel/time/timer.c:1700
+#4 0xffffffff811d6e52 in expire_timers at kernel/time/timer.c:1751
+#5 __run_timers at kernel/time/timer.c:2022
+#6 0xffffffff811d6f18 in run_timer_softirq at kernel/time/timer.c:2035
+#7 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#8 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#9 __irq_exit_rcu at kernel/softirq.c:650
+#10 irq_exit_rcu at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:417
+#1 0xffffffff8117b983 in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 nohz_balancer_kick at kernel/sched/fair.c:11422
+#3 trigger_load_balance at kernel/sched/fair.c:11909
+#4 0xffffffff811725b0 in scheduler_tick at kernel/sched/core.c:5637
+#5 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#6 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#7 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#8 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#9 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#10 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#11 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#12 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#13 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:385
+#1 0xffffffff8117b983 in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 nohz_balancer_kick at kernel/sched/fair.c:11422
+#3 trigger_load_balance at kernel/sched/fair.c:11909
+#4 0xffffffff811725b0 in scheduler_tick at kernel/sched/core.c:5637
+#5 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#6 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#7 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#8 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#9 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#10 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#11 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#12 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#13 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811db257 in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#4 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#5 ktime_get at kernel/time/timekeeping.c:848
+#6 0xffffffff811ed618 in tick_nohz_start_idle at kernel/time/tick-sched.c:675
+#7 tick_nohz_irq_exit at kernel/time/tick-sched.c:1179
+#8 0xffffffff81135184 in tick_irq_exit at kernel/softirq.c:635
+#9 0xffffffff81f44f0e in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+#10 0xffffffff8200152a in asm_sysvec_call_function_single at ./arch/x86/include/asm/idtentry.h:653
+#11 0x0000000000000003 in fixed_percpu_data at ()
+#12 0xffff88813bdab480 in ?? at ()
+#13 0x000000000002b480 in ?? at ()
+
+1
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff81f45489 in kvm_sched_clock_read at arch/x86/kernel/kvmclock.c:91
+#3 0xffffffff8118959f in sched_clock_cpu at kernel/sched/clock.c:387
+#4 0xffffffff81189740 in sched_clock_idle_sleep_event at kernel/sched/clock.c:444
+#5 0xffffffff811ed629 in tick_nohz_start_idle at kernel/time/tick-sched.c:679
+#6 0xffffffff81135184 in tick_irq_exit at kernel/softirq.c:635
+#7 0xffffffff81f44f0e in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+#8 0xffffffff8200152a in asm_sysvec_call_function_single at ./arch/x86/include/asm/idtentry.h:653
+#9 0x0000000000000003 in fixed_percpu_data at ()
+#10 0xffff88813bdab480 in ?? at ()
+#11 0x000000000002b480 in ?? at ()
+
+1
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff81f45489 in kvm_sched_clock_read at arch/x86/kernel/kvmclock.c:91
+#3 0xffffffff81f4575d in local_clock at kernel/sched/clock.c:301
+#4 0xffffffff8119ee41 in vprintk_store at kernel/printk/printk.c:2180
+#5 0xffffffff8119f2ca in vprintk_emit at kernel/printk/printk.c:2288
+#6 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#7 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#8 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 __raw_spin_unlock_irqrestore at ./arch/x86/include/asm/preempt.h:95
+#1 _raw_spin_unlock_irqrestore at kernel/locking/spinlock.c:194
+#2 0xffffffff81f4cba4 in down_trylock at kernel/locking/semaphore.c:143
+#3 0xffffffff8119d4fa in __down_trylock_console_sem at kernel/printk/printk.c:329
+#4 console_trylock at kernel/printk/printk.c:2618
+#5 0xffffffff8119f2d8 in console_trylock_spinning at kernel/printk/printk.c:1927
+#6 vprintk_emit at kernel/printk/printk.c:2306
+#7 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#8 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#9 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#10 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#11 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#12 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811dccc4 in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#4 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#5 ktime_get_update_offsets_now at kernel/time/timekeeping.c:2320
+#6 0xffffffff811d9471 in hrtimer_update_base at kernel/time/hrtimer.c:631
+#7 hrtimer_interrupt at kernel/time/hrtimer.c:1793
+#8 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#9 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#10 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#11 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#12 0xffffc90000003df8 in ?? at ()
+
+1
+#0 __hrtimer_next_event_base at kernel/time/hrtimer.c:545
+#1 0xffffffff811d87b2 in __hrtimer_get_next_event at kernel/time/hrtimer.c:578
+#2 hrtimer_update_next_event at kernel/time/hrtimer.c:604
+#3 0xffffffff811d94eb in hrtimer_interrupt at kernel/time/hrtimer.c:1814
+#4 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#5 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#6 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#7 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#8 0xffffc90000003df8 in ?? at ()
+
+1
+#0 __hrtimer_next_event_base at kernel/time/hrtimer.c:545
+#1 0xffffffff811d87d4 in __hrtimer_get_next_event at kernel/time/hrtimer.c:587
+#2 hrtimer_update_next_event at kernel/time/hrtimer.c:612
+#3 0xffffffff811d94eb in hrtimer_interrupt at kernel/time/hrtimer.c:1814
+#4 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#5 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#6 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#7 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#8 0xffffc90000003df8 in ?? at ()
+
+1
+#0 __raw_spin_unlock_irqrestore at ./arch/x86/include/asm/preempt.h:95
+#1 _raw_spin_unlock_irqrestore at kernel/locking/spinlock.c:194
+#2 0xffffffff811d9502 in hrtimer_interrupt at kernel/time/hrtimer.c:1821
+#3 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#4 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#5 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#6 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#7 0xffffc90000003df8 in ?? at ()
+
+1
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811db257 in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#4 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#5 ktime_get at kernel/time/timekeeping.c:848
+#6 0xffffffff811ea6b3 in clockevents_program_event at kernel/time/clockevents.c:326
+#7 0xffffffff811ec861 in tick_program_event at kernel/time/tick-oneshot.c:44
+#8 0xffffffff811d950c in hrtimer_interrupt at kernel/time/hrtimer.c:1824
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#13 0xffffc90000003df8 in ?? at ()
+
+1
+#0 lapic_next_deadline at arch/x86/kernel/apic/apic.c:484
+#1 0xffffffff811ea6f1 in clockevents_program_event at kernel/time/clockevents.c:334
+#2 0xffffffff811ec861 in tick_program_event at kernel/time/tick-oneshot.c:44
+#3 0xffffffff811d950c in hrtimer_interrupt at kernel/time/hrtimer.c:1824
+#4 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#5 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#6 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#7 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#8 0xffffc90000003df8 in ?? at ()
+
+1
+#0 arch_static_branch at ./arch/x86/include/asm/jump_label.h:27
+#1 static_key_false at ./include/linux/jump_label.h:207
+#2 native_write_msr at ./arch/x86/include/asm/msr.h:147
+#3 wrmsrl at ./arch/x86/include/asm/msr.h:262
+#4 lapic_next_deadline at arch/x86/kernel/apic/apic.c:491
+#5 0xffffffff811ea6f1 in clockevents_program_event at kernel/time/clockevents.c:334
+#6 0xffffffff811ec861 in tick_program_event at kernel/time/tick-oneshot.c:44
+#7 0xffffffff811d950c in hrtimer_interrupt at kernel/time/hrtimer.c:1824
+#8 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#9 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#10 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#11 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#12 0xffffc90000003df8 in ?? at ()
+
+1
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811db257 in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#4 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#5 ktime_get at kernel/time/timekeeping.c:848
+#6 0xffffffff811ed618 in tick_nohz_start_idle at kernel/time/tick-sched.c:675
+#7 tick_nohz_irq_exit at kernel/time/tick-sched.c:1179
+#8 0xffffffff81135184 in tick_irq_exit at kernel/softirq.c:635
+#9 0xffffffff81f44fae in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#10 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#11 0xffffc90000003df8 in ?? at ()
+
+1
+#0 __raw_spin_unlock_irqrestore at ./arch/x86/include/asm/preempt.h:95
+#1 _raw_spin_unlock_irqrestore at kernel/locking/spinlock.c:194
+#2 0xffffffff8119d6d0 in console_emit_next_record at kernel/printk/printk.c:2877
+#3 console_flush_all at kernel/printk/printk.c:2933
+#4 0xffffffff8119da07 in console_unlock at kernel/printk/printk.c:3007
+#5 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#6 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#7 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#8 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff81f45489 in kvm_sched_clock_read at arch/x86/kernel/kvmclock.c:91
+#3 0xffffffff8118959f in sched_clock_cpu at kernel/sched/clock.c:387
+#4 0xffffffff81189740 in sched_clock_idle_sleep_event at kernel/sched/clock.c:444
+#5 0xffffffff811ed629 in tick_nohz_start_idle at kernel/time/tick-sched.c:679
+#6 0xffffffff81135184 in tick_irq_exit at kernel/softirq.c:635
+#7 0xffffffff81f44fae in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#8 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#9 0xffffc90000003df8 in ?? at ()
+
+1
+#0 __raw_spin_unlock_irqrestore at ./arch/x86/include/asm/preempt.h:95
+#1 _raw_spin_unlock_irqrestore at kernel/locking/spinlock.c:194
+#2 0xffffffff8119da2f in __up_console_sem at kernel/printk/printk.c:346
+#3 __console_unlock at kernel/printk/printk.c:2685
+#4 console_unlock at kernel/printk/printk.c:3009
+#5 0xffffffff8119f36f in vprintk_emit at kernel/printk/printk.c:2307
+#6 0xffffffff8119f428 in vprintk_default at kernel/printk/printk.c:2318
+#7 0xffffffff8119fdf6 in vprintk at kernel/printk/printk_safe.c:50
+#8 0xffffffff8119bebf in _printk at kernel/printk/printk.c:2328
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fdd in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+
+1
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811dccc4 in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#4 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#5 ktime_get_update_offsets_now at kernel/time/timekeeping.c:2320
+#6 0xffffffff811d9471 in hrtimer_update_base at kernel/time/hrtimer.c:631
+#7 hrtimer_interrupt at kernel/time/hrtimer.c:1793
+#8 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#9 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#10 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#11 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+1
+#0 select_task_rq_fair at kernel/sched/fair.c:7680
+#1 0xffffffff81171dd6 in select_task_rq at kernel/sched/core.c:3579
+#2 try_to_wake_up at kernel/sched/core.c:4292
+#3 0xffffffff8117230d in default_wake_function at kernel/sched/core.c:6993
+#4 0xffffffff8118747d in autoremove_wake_function at kernel/sched/wait.c:419
+#5 0xffffffff8118622b in __wake_up_common at kernel/sched/wait.c:107
+#6 0xffffffff8118637d in __wake_up_common_lock at kernel/sched/wait.c:138
+#7 0xffffffff81261c34 in irq_work_single at kernel/irq_work.c:221
+#8 0xffffffff81261ca6 in irq_work_run_list at kernel/irq_work.c:252
+#9 0xffffffff81261d4b in irq_work_tick at kernel/irq_work.c:277
+#10 0xffffffff811d7bf2 in update_process_times at kernel/time/timer.c:2074
+#11 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#12 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#13 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#14 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#15 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#16 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#17 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#18 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#19 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+1
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:417
+#1 0xffffffff811776fb in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 select_task_rq_fair at kernel/sched/fair.c:7712
+#3 0xffffffff81171dd6 in select_task_rq at kernel/sched/core.c:3579
+#4 try_to_wake_up at kernel/sched/core.c:4292
+#5 0xffffffff8117230d in default_wake_function at kernel/sched/core.c:6993
+#6 0xffffffff8118747d in autoremove_wake_function at kernel/sched/wait.c:419
+#7 0xffffffff8118622b in __wake_up_common at kernel/sched/wait.c:107
+#8 0xffffffff8118637d in __wake_up_common_lock at kernel/sched/wait.c:138
+#9 0xffffffff81261c34 in irq_work_single at kernel/irq_work.c:221
+#10 0xffffffff81261ca6 in irq_work_run_list at kernel/irq_work.c:252
+#11 0xffffffff81261d4b in irq_work_tick at kernel/irq_work.c:277
+#12 0xffffffff811d7bf2 in update_process_times at kernel/time/timer.c:2074
+#13 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#14 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#15 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#16 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#17 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#18 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#19 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#20 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#21 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+1
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:385
+#1 0xffffffff811776fb in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 select_task_rq_fair at kernel/sched/fair.c:7712
+#3 0xffffffff81171dd6 in select_task_rq at kernel/sched/core.c:3579
+#4 try_to_wake_up at kernel/sched/core.c:4292
+#5 0xffffffff8117230d in default_wake_function at kernel/sched/core.c:6993
+#6 0xffffffff8118747d in autoremove_wake_function at kernel/sched/wait.c:419
+#7 0xffffffff8118622b in __wake_up_common at kernel/sched/wait.c:107
+#8 0xffffffff8118637d in __wake_up_common_lock at kernel/sched/wait.c:138
+#9 0xffffffff81261c34 in irq_work_single at kernel/irq_work.c:221
+#10 0xffffffff81261ca6 in irq_work_run_list at kernel/irq_work.c:252
+#11 0xffffffff81261d4b in irq_work_tick at kernel/irq_work.c:277
+#12 0xffffffff811d7bf2 in update_process_times at kernel/time/timer.c:2074
+#13 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#14 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#15 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#16 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#17 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#18 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#19 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#20 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#21 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+1
+#0 __raw_spin_unlock_irqrestore at ./arch/x86/include/asm/preempt.h:95
+#1 _raw_spin_unlock_irqrestore at kernel/locking/spinlock.c:194
+#2 0xffffffff81172dd9 in remove_entity_load_avg at kernel/sched/fair.c:4319
+#3 0xffffffff8117317a in migrate_task_rq_fair at kernel/sched/fair.c:7739
+#4 0xffffffff8116c8f2 in set_task_cpu at kernel/sched/core.c:3217
+#5 0xffffffff81171e6e in try_to_wake_up at kernel/sched/core.c:4301
+#6 0xffffffff8117230d in default_wake_function at kernel/sched/core.c:6993
+#7 0xffffffff8118747d in autoremove_wake_function at kernel/sched/wait.c:419
+#8 0xffffffff8118622b in __wake_up_common at kernel/sched/wait.c:107
+#9 0xffffffff8118637d in __wake_up_common_lock at kernel/sched/wait.c:138
+#10 0xffffffff81261c34 in irq_work_single at kernel/irq_work.c:221
+#11 0xffffffff81261ca6 in irq_work_run_list at kernel/irq_work.c:252
+#12 0xffffffff81261d4b in irq_work_tick at kernel/irq_work.c:277
+#13 0xffffffff811d7bf2 in update_process_times at kernel/time/timer.c:2074
+#14 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#15 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#16 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#17 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#18 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#19 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#20 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#21 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#22 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+1
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff81f45489 in kvm_sched_clock_read at arch/x86/kernel/kvmclock.c:91
+#3 0xffffffff8118959f in sched_clock_cpu at kernel/sched/clock.c:387
+#4 0xffffffff8116970a in ttwu_queue_wakelist at kernel/sched/core.c:3958
+#5 ttwu_queue_wakelist at kernel/sched/core.c:3955
+#6 0xffffffff81171e8a in ttwu_queue at kernel/sched/core.c:3980
+#7 try_to_wake_up at kernel/sched/core.c:4307
+#8 0xffffffff8117230d in default_wake_function at kernel/sched/core.c:6993
+#9 0xffffffff8118747d in autoremove_wake_function at kernel/sched/wait.c:419
+#10 0xffffffff8118622b in __wake_up_common at kernel/sched/wait.c:107
+#11 0xffffffff8118637d in __wake_up_common_lock at kernel/sched/wait.c:138
+#12 0xffffffff81261c34 in irq_work_single at kernel/irq_work.c:221
+#13 0xffffffff81261ca6 in irq_work_run_list at kernel/irq_work.c:252
+#14 0xffffffff81261d4b in irq_work_tick at kernel/irq_work.c:277
+#15 0xffffffff811d7bf2 in update_process_times at kernel/time/timer.c:2074
+#16 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#17 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#18 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#19 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#20 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#21 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#22 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#23 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#24 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+1
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:417
+#1 0xffffffff8117a692 in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 rebalance_domains at kernel/sched/fair.c:11231
+#3 0xffffffff8117abe5 in _nohz_idle_balance at kernel/sched/fair.c:11633
+#4 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#5 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#6 __irq_exit_rcu at kernel/softirq.c:650
+#7 irq_exit_rcu at kernel/softirq.c:662
+#8 0xffffffff81f44f42 in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+
+1
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:385
+#1 0xffffffff8117a692 in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 rebalance_domains at kernel/sched/fair.c:11231
+#3 0xffffffff8117abe5 in _nohz_idle_balance at kernel/sched/fair.c:11633
+#4 0xffffffff81f51b9d in __do_softirq at kernel/softirq.c:571
+#5 0xffffffff8113517d in invoke_softirq at kernel/softirq.c:445
+#6 __irq_exit_rcu at kernel/softirq.c:650
+#7 irq_exit_rcu at kernel/softirq.c:662
+#8 0xffffffff81f44f42 in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+
+1
+#0 __send_ipi_mask at arch/x86/kernel/kvm.c:549
+#1 0xffffffff81169741 in __ttwu_queue_wakelist at kernel/sched/core.c:3884
+#2 ttwu_queue_wakelist at kernel/sched/core.c:3959
+#3 ttwu_queue_wakelist at kernel/sched/core.c:3955
+#4 0xffffffff81171e8a in ttwu_queue at kernel/sched/core.c:3980
+#5 try_to_wake_up at kernel/sched/core.c:4307
+#6 0xffffffff8117230d in default_wake_function at kernel/sched/core.c:6993
+#7 0xffffffff8118747d in autoremove_wake_function at kernel/sched/wait.c:419
+#8 0xffffffff8118622b in __wake_up_common at kernel/sched/wait.c:107
+#9 0xffffffff8118637d in __wake_up_common_lock at kernel/sched/wait.c:138
+#10 0xffffffff81261c34 in irq_work_single at kernel/irq_work.c:221
+#11 0xffffffff81261ca6 in irq_work_run_list at kernel/irq_work.c:252
+#12 0xffffffff81261d4b in irq_work_tick at kernel/irq_work.c:277
+#13 0xffffffff811d7bf2 in update_process_times at kernel/time/timer.c:2074
+#14 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#15 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#16 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#17 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#18 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#19 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#20 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#21 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#22 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+1
+#0 __raw_spin_unlock_irqrestore at ./arch/x86/include/asm/preempt.h:95
+#1 _raw_spin_unlock_irqrestore at kernel/locking/spinlock.c:194
+#2 0xffffffff81171d94 in try_to_wake_up at kernel/sched/core.c:4309
+#3 0xffffffff8117230d in default_wake_function at kernel/sched/core.c:6993
+#4 0xffffffff8118747d in autoremove_wake_function at kernel/sched/wait.c:419
+#5 0xffffffff8118622b in __wake_up_common at kernel/sched/wait.c:107
+#6 0xffffffff8118637d in __wake_up_common_lock at kernel/sched/wait.c:138
+#7 0xffffffff81261c34 in irq_work_single at kernel/irq_work.c:221
+#8 0xffffffff81261ca6 in irq_work_run_list at kernel/irq_work.c:252
+#9 0xffffffff81261d4b in irq_work_tick at kernel/irq_work.c:277
+#10 0xffffffff811d7bf2 in update_process_times at kernel/time/timer.c:2074
+#11 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#12 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#13 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#14 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#15 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#16 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#17 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#18 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#19 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+1
+#0 __raw_spin_unlock_irqrestore at ./arch/x86/include/asm/preempt.h:95
+#1 _raw_spin_unlock_irqrestore at kernel/locking/spinlock.c:194
+#2 0xffffffff8118638a in spin_unlock_irqrestore at ./include/linux/spinlock.h:405
+#3 __wake_up_common_lock at kernel/sched/wait.c:140
+#4 0xffffffff81261c34 in irq_work_single at kernel/irq_work.c:221
+#5 0xffffffff81261ca6 in irq_work_run_list at kernel/irq_work.c:252
+#6 0xffffffff81261d4b in irq_work_tick at kernel/irq_work.c:277
+#7 0xffffffff811d7bf2 in update_process_times at kernel/time/timer.c:2074
+#8 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#9 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#10 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#11 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#12 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#13 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#14 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#15 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#16 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+1
+#0 arch_atomic_try_cmpxchg at ./arch/x86/include/asm/atomic.h:202
+#1 atomic_try_cmpxchg_acquire at ./include/linux/atomic/atomic-instrumented.h:543
+#2 queued_spin_lock at ./include/asm-generic/qspinlock.h:111
+#3 do_raw_spin_lock at ./include/linux/spinlock.h:186
+#4 __raw_spin_lock at ./include/linux/spinlock_api_smp.h:134
+#5 _raw_spin_lock at kernel/locking/spinlock.c:154
+#6 0xffffffff8117235a in raw_spin_rq_lock_nested at kernel/sched/core.c:558
+#7 raw_spin_rq_lock at kernel/sched/sched.h:1366
+#8 _raw_spin_rq_lock_irqsave at kernel/sched/sched.h:1385
+#9 rq_lock_irqsave at kernel/sched/sched.h:1637
+#10 sched_ttwu_pending at kernel/sched/core.c:3828
+#11 0xffffffff811f428c in __flush_smp_call_function_queue at kernel/smp.c:526
+#12 0xffffffff811f438e in generic_smp_call_function_single_interrupt at kernel/smp.c:402
+#13 0xffffffff81100e38 in __sysvec_call_function_single at arch/x86/kernel/smp.c:248
+#14 0xffffffff81f44f3d in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+
+1
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff81f45489 in kvm_sched_clock_read at arch/x86/kernel/kvmclock.c:91
+#3 0xffffffff8118959f in sched_clock_cpu at kernel/sched/clock.c:387
+#4 0xffffffff81168bff in update_rq_clock at kernel/sched/core.c:765
+#5 0xffffffff81172408 in update_rq_clock at kernel/sched/core.c:3833
+#6 sched_ttwu_pending at kernel/sched/core.c:3829
+#7 0xffffffff811f428c in __flush_smp_call_function_queue at kernel/smp.c:526
+#8 0xffffffff811f438e in generic_smp_call_function_single_interrupt at kernel/smp.c:402
+#9 0xffffffff81100e38 in __sysvec_call_function_single at arch/x86/kernel/smp.c:248
+#10 0xffffffff81f44f3d in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+
+1
+#0 0xffffffff81168c12 in is_idle_task at ./include/linux/sched.h:1927
+#1 update_rq_clock_pelt at kernel/sched/pelt.h:97
+#2 update_rq_clock_task at kernel/sched/core.c:747
+#3 update_rq_clock at kernel/sched/core.c:769
+#4 0xffffffff81172408 in update_rq_clock at kernel/sched/core.c:3833
+#5 sched_ttwu_pending at kernel/sched/core.c:3829
+#6 0xffffffff811f428c in __flush_smp_call_function_queue at kernel/smp.c:526
+#7 0xffffffff811f438e in generic_smp_call_function_single_interrupt at kernel/smp.c:402
+#8 0xffffffff81100e38 in __sysvec_call_function_single at arch/x86/kernel/smp.c:248
+#9 0xffffffff81f44f3d in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+
+1
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:417
+#1 0xffffffff81170085 in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 __sched_mm_cid_migrate_from_fetch_cid at kernel/sched/core.c:11644
+#3 sched_mm_cid_migrate_to at kernel/sched/core.c:11751
+#4 0xffffffff811701e7 in activate_task at kernel/sched/core.c:2110
+#5 0xffffffff81171b75 in ttwu_do_activate at kernel/sched/core.c:3735
+#6 0xffffffff811723b3 in sched_ttwu_pending at kernel/sched/core.c:3838
+#7 0xffffffff811f428c in __flush_smp_call_function_queue at kernel/smp.c:526
+#8 0xffffffff811f438e in generic_smp_call_function_single_interrupt at kernel/smp.c:402
+#9 0xffffffff81100e38 in __sysvec_call_function_single at arch/x86/kernel/smp.c:248
+#10 0xffffffff81f44f3d in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+
+1
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:385
+#1 0xffffffff81170085 in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 __sched_mm_cid_migrate_from_fetch_cid at kernel/sched/core.c:11644
+#3 sched_mm_cid_migrate_to at kernel/sched/core.c:11751
+#4 0xffffffff811701e7 in activate_task at kernel/sched/core.c:2110
+#5 0xffffffff81171b75 in ttwu_do_activate at kernel/sched/core.c:3735
+#6 0xffffffff811723b3 in sched_ttwu_pending at kernel/sched/core.c:3838
+#7 0xffffffff811f428c in __flush_smp_call_function_queue at kernel/smp.c:526
+#8 0xffffffff811f438e in generic_smp_call_function_single_interrupt at kernel/smp.c:402
+#9 0xffffffff81100e38 in __sysvec_call_function_single at arch/x86/kernel/smp.c:248
+#10 0xffffffff81f44f3d in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+
+1
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:417
+#1 0xffffffff811700d3 in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 __sched_mm_cid_migrate_from_try_steal_cid at kernel/sched/core.c:11699
+#3 sched_mm_cid_migrate_to at kernel/sched/core.c:11754
+#4 0xffffffff811701e7 in activate_task at kernel/sched/core.c:2110
+#5 0xffffffff81171b75 in ttwu_do_activate at kernel/sched/core.c:3735
+#6 0xffffffff811723b3 in sched_ttwu_pending at kernel/sched/core.c:3838
+#7 0xffffffff811f428c in __flush_smp_call_function_queue at kernel/smp.c:526
+#8 0xffffffff811f438e in generic_smp_call_function_single_interrupt at kernel/smp.c:402
+#9 0xffffffff81100e38 in __sysvec_call_function_single at arch/x86/kernel/smp.c:248
+#10 0xffffffff81f44f3d in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+
+1
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:385
+#1 0xffffffff811700d3 in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 __sched_mm_cid_migrate_from_try_steal_cid at kernel/sched/core.c:11699
+#3 sched_mm_cid_migrate_to at kernel/sched/core.c:11754
+#4 0xffffffff811701e7 in activate_task at kernel/sched/core.c:2110
+#5 0xffffffff81171b75 in ttwu_do_activate at kernel/sched/core.c:3735
+#6 0xffffffff811723b3 in sched_ttwu_pending at kernel/sched/core.c:3838
+#7 0xffffffff811f428c in __flush_smp_call_function_queue at kernel/smp.c:526
+#8 0xffffffff811f438e in generic_smp_call_function_single_interrupt at kernel/smp.c:402
+#9 0xffffffff81100e38 in __sysvec_call_function_single at arch/x86/kernel/smp.c:248
+#10 0xffffffff81f44f3d in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+
+1
+#0 update_curr at kernel/sched/fair.c:899
+#1 0xffffffff81176ad4 in enqueue_entity at kernel/sched/fair.c:4836
+#2 enqueue_task_fair at kernel/sched/fair.c:6318
+#3 0xffffffff811701c6 in enqueue_task at kernel/sched/core.c:2082
+#4 activate_task at kernel/sched/core.c:2112
+#5 0xffffffff81171b75 in ttwu_do_activate at kernel/sched/core.c:3735
+#6 0xffffffff811723b3 in sched_ttwu_pending at kernel/sched/core.c:3838
+#7 0xffffffff811f428c in __flush_smp_call_function_queue at kernel/smp.c:526
+#8 0xffffffff811f438e in generic_smp_call_function_single_interrupt at kernel/smp.c:402
+#9 0xffffffff81100e38 in __sysvec_call_function_single at arch/x86/kernel/smp.c:248
+#10 0xffffffff81f44f3d in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+
+1
+#0 0xffffffff81174e44 in update_load_avg at kernel/sched/fair.c:4282
+#1 0xffffffff811768cb in enqueue_entity at kernel/sched/fair.c:4856
+#2 enqueue_task_fair at kernel/sched/fair.c:6318
+#3 0xffffffff811701c6 in enqueue_task at kernel/sched/core.c:2082
+#4 activate_task at kernel/sched/core.c:2112
+#5 0xffffffff81171b75 in ttwu_do_activate at kernel/sched/core.c:3735
+#6 0xffffffff811723b3 in sched_ttwu_pending at kernel/sched/core.c:3838
+#7 0xffffffff811f428c in __flush_smp_call_function_queue at kernel/smp.c:526
+#8 0xffffffff811f438e in generic_smp_call_function_single_interrupt at kernel/smp.c:402
+#9 0xffffffff81100e38 in __sysvec_call_function_single at arch/x86/kernel/smp.c:248
+#10 0xffffffff81f44f3d in sysvec_call_function_single at arch/x86/kernel/smp.c:243
+
+1
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811dccc4 in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#4 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#5 ktime_get_update_offsets_now at kernel/time/timekeeping.c:2320
+#6 0xffffffff811d9535 in hrtimer_update_base at kernel/time/hrtimer.c:631
+#7 hrtimer_interrupt at kernel/time/hrtimer.c:1843
+#8 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#9 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#10 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#11 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+1
+#0 __hrtimer_next_event_base at kernel/time/hrtimer.c:545
+#1 0xffffffff811d87b2 in __hrtimer_get_next_event at kernel/time/hrtimer.c:578
+#2 hrtimer_update_next_event at kernel/time/hrtimer.c:604
+#3 0xffffffff811d8869 in hrtimer_force_reprogram at kernel/time/hrtimer.c:694
+#4 __remove_hrtimer at kernel/time/hrtimer.c:1128
+#5 0xffffffff811d895c in remove_hrtimer at kernel/time/hrtimer.c:1165
+#6 hrtimer_try_to_cancel at kernel/time/hrtimer.c:1334
+#7 0xffffffff811d89d0 in hrtimer_cancel at kernel/time/hrtimer.c:1443
+#8 0xffffffff811ed0e6 in tick_nohz_restart at kernel/time/tick-sched.c:765
+#9 0xffffffff811ed8de in tick_nohz_restart_sched_tick at kernel/time/tick-sched.c:981
+#10 tick_nohz_idle_update_tick at kernel/time/tick-sched.c:1316
+#11 tick_nohz_idle_exit at kernel/time/tick-sched.c:1350
+#12 0xffffffff811802ae in do_idle at kernel/sched/idle.c:295
+#13 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#14 0xffffffff81101d8c in start_secondary at arch/x86/kernel/smpboot.c:269
+#15 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+1
+#0 __hrtimer_next_event_base at kernel/time/hrtimer.c:545
+#1 0xffffffff811d87d4 in __hrtimer_get_next_event at kernel/time/hrtimer.c:587
+#2 hrtimer_update_next_event at kernel/time/hrtimer.c:612
+#3 0xffffffff811d8869 in hrtimer_force_reprogram at kernel/time/hrtimer.c:694
+#4 __remove_hrtimer at kernel/time/hrtimer.c:1128
+#5 0xffffffff811d895c in remove_hrtimer at kernel/time/hrtimer.c:1165
+#6 hrtimer_try_to_cancel at kernel/time/hrtimer.c:1334
+#7 0xffffffff811d89d0 in hrtimer_cancel at kernel/time/hrtimer.c:1443
+#8 0xffffffff811ed0e6 in tick_nohz_restart at kernel/time/tick-sched.c:765
+#9 0xffffffff811ed8de in tick_nohz_restart_sched_tick at kernel/time/tick-sched.c:981
+#10 tick_nohz_idle_update_tick at kernel/time/tick-sched.c:1316
+#11 tick_nohz_idle_exit at kernel/time/tick-sched.c:1350
+#12 0xffffffff811802ae in do_idle at kernel/sched/idle.c:295
+#13 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#14 0xffffffff81101d8c in start_secondary at arch/x86/kernel/smpboot.c:269
+#15 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+1
+#0 __raw_spin_unlock_irqrestore at ./arch/x86/include/asm/preempt.h:95
+#1 _raw_spin_unlock_irqrestore at kernel/locking/spinlock.c:194
+#2 0xffffffff811d958a in hrtimer_interrupt at kernel/time/hrtimer.c:1855
+#3 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#4 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#5 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#6 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#7 0x0000000000000008 in fixed_percpu_data at ()
+#8 0xffff88813bcabd80 in ?? at ()
+#9 0xffff88813bcab480 in ?? at ()
+
+1
+#0 __raw_spin_unlock_irqrestore at ./arch/x86/include/asm/preempt.h:95
+#1 _raw_spin_unlock_irqrestore at kernel/locking/spinlock.c:194
+#2 0xffffffff811d8923 in unlock_hrtimer_base at kernel/time/hrtimer.c:1017
+#3 hrtimer_try_to_cancel at kernel/time/hrtimer.c:1336
+#4 0xffffffff811d89d0 in hrtimer_cancel at kernel/time/hrtimer.c:1443
+#5 0xffffffff811ed0e6 in tick_nohz_restart at kernel/time/tick-sched.c:765
+#6 0xffffffff811ed8de in tick_nohz_restart_sched_tick at kernel/time/tick-sched.c:981
+#7 tick_nohz_idle_update_tick at kernel/time/tick-sched.c:1316
+#8 tick_nohz_idle_exit at kernel/time/tick-sched.c:1350
+#9 0xffffffff811802ae in do_idle at kernel/sched/idle.c:295
+#10 0xffffffff81180588 in cpu_startup_entry at kernel/sched/idle.c:379
+#11 0xffffffff81101d8c in start_secondary at arch/x86/kernel/smpboot.c:269
+#12 0xffffffff810001db in secondary_startup_64 at arch/x86/kernel/head_64.S:370
+
+1
+#0 0xffffffff81f454d6 in pvclock_clocksource_read_nowd at arch/x86/kernel/pvclock.c:119
+#1 0xffffffff81f45454 in kvm_clock_read at ./arch/x86/include/asm/kvmclock.h:13
+#2 0xffffffff811db257 in tk_clock_read at kernel/time/timekeeping.c:195
+#3 timekeeping_get_delta at kernel/time/timekeeping.c:289
+#4 timekeeping_get_ns at kernel/time/timekeeping.c:388
+#5 ktime_get at kernel/time/timekeeping.c:848
+#6 0xffffffff811ea6b3 in clockevents_program_event at kernel/time/clockevents.c:326
+#7 0xffffffff811ec861 in tick_program_event at kernel/time/tick-oneshot.c:44
+#8 0xffffffff811d95b8 in hrtimer_interrupt at kernel/time/hrtimer.c:1868
+#9 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#10 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#11 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#12 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#13 0x0000000000000008 in fixed_percpu_data at ()
+#14 0xffff88813bcabd80 in ?? at ()
+#15 0xffff88813bcab480 in ?? at ()
+
+1
+#0 lapic_next_deadline at arch/x86/kernel/apic/apic.c:484
+#1 0xffffffff811ea6f1 in clockevents_program_event at kernel/time/clockevents.c:334
+#2 0xffffffff811ec861 in tick_program_event at kernel/time/tick-oneshot.c:44
+#3 0xffffffff811d95b8 in hrtimer_interrupt at kernel/time/hrtimer.c:1868
+#4 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#5 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#6 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#7 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#8 0x0000000000000008 in fixed_percpu_data at ()
+#9 0xffff88813bcabd80 in ?? at ()
+#10 0xffff88813bcab480 in ?? at ()
+
+1
+#0 arch_static_branch at ./arch/x86/include/asm/jump_label.h:27
+#1 static_key_false at ./include/linux/jump_label.h:207
+#2 native_write_msr at ./arch/x86/include/asm/msr.h:147
+#3 wrmsrl at ./arch/x86/include/asm/msr.h:262
+#4 lapic_next_deadline at arch/x86/kernel/apic/apic.c:491
+#5 0xffffffff811ea6f1 in clockevents_program_event at kernel/time/clockevents.c:334
+#6 0xffffffff811ec861 in tick_program_event at kernel/time/tick-oneshot.c:44
+#7 0xffffffff811d95b8 in hrtimer_interrupt at kernel/time/hrtimer.c:1868
+#8 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#9 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#10 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#11 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+#12 0x0000000000000008 in fixed_percpu_data at ()
+#13 0xffff88813bcabd80 in ?? at ()
+#14 0xffff88813bcab480 in ?? at ()
+
+1
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:417
+#1 0xffffffff8117b9ba in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 nohz_balancer_kick at kernel/sched/fair.c:11422
+#3 trigger_load_balance at kernel/sched/fair.c:11909
+#4 0xffffffff811725b0 in scheduler_tick at kernel/sched/core.c:5637
+#5 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#6 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#7 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#8 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#9 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#10 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#11 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#12 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#13 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#14 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+1
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:385
+#1 0xffffffff8117b9ba in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 nohz_balancer_kick at kernel/sched/fair.c:11422
+#3 trigger_load_balance at kernel/sched/fair.c:11909
+#4 0xffffffff811725b0 in scheduler_tick at kernel/sched/core.c:5637
+#5 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#6 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#7 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#8 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#9 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#10 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#11 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#12 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#13 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#14 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+1
+#0 __send_ipi_mask at arch/x86/kernel/kvm.c:549
+#1 0xffffffff811f4dd5 in generic_exec_single at kernel/smp.c:389
+#2 0xffffffff811f50bd in smp_call_function_single_async at kernel/smp.c:662
+#3 0xffffffff8117b856 in kick_ilb at kernel/sched/fair.c:11310
+#4 0xffffffff811725b0 in scheduler_tick at kernel/sched/core.c:5637
+#5 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#6 0xffffffff811ecc7e in tick_sched_handle at kernel/time/tick-sched.c:243
+#7 0xffffffff811ed00a in tick_sched_timer at kernel/time/tick-sched.c:1481
+#8 0xffffffff811d84da in __run_hrtimer at kernel/time/hrtimer.c:1685
+#9 __hrtimer_run_queues at kernel/time/hrtimer.c:1749
+#10 0xffffffff811d94e3 in hrtimer_interrupt at kernel/time/hrtimer.c:1811
+#11 0xffffffff81104449 in local_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1095
+#12 __sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1112
+#13 0xffffffff81f44fa9 in sysvec_apic_timer_interrupt at arch/x86/kernel/apic/apic.c:1106
+#14 0xffffffff8200148a in asm_sysvec_apic_timer_interrupt at ./arch/x86/include/asm/idtentry.h:645
+
+1
+#0 __rcu_read_unlock at kernel/rcu/tree_plugin.h:417
+#1 0xffffffff8117b9ba in rcu_read_unlock at ./include/linux/rcupdate.h:805
+#2 nohz_balancer_kick at kernel/sched/fair.c:11422
+#3 trigger_load_balance at kernel/sched/fair.c:11909
+#4 0xffffffff811725b0 in scheduler_tick at kernel/sched/core.c:5637
+#5 0xffffffff811d7bf7 in update_process_times at kernel/time/timer.c:2076
+#6 0xffffffff811ecc7e in tick_sched_handle at regs=regs@entry=0xffffc900000d0e98Quit
+

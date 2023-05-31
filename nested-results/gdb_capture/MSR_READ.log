@@ -1,0 +1,1684 @@
+warning: Currently logging to /usr/local/google/home/fuersta/test-vm/exp_scripts/test2_gdb/MSR_READ.log.  Turn the logging off and on to make the new setting effective.
+native_irq_disable () at ./arch/x86/include/asm/irqflags.h:37
+37		asm volatile("cli": : :"memory");
+[Switching to Thread 1.3]
+
+Thread 3 hit Breakpoint 1, __rdmsr (msr=59) at ./arch/x86/include/asm/msr.h:84
+84		asm volatile("1: rdmsr\n"
+#0  __rdmsr (msr=59) at ./arch/x86/include/asm/msr.h:84
+#1  native_read_msr (msr=59) at ./arch/x86/include/asm/msr.h:118
+#2  tsc_verify_tsc_adjust (resume=resume@entry=false) at arch/x86/kernel/tsc_sync.c:67
+#3  0xffffffff810e2c8b in arch_cpu_idle_enter () at arch/x86/kernel/process.c:733
+#4  0xffffffff811801ee in do_idle () at kernel/sched/idle.c:269
+#5  0xffffffff81180588 in cpu_startup_entry (state=state@entry=CPUHP_AP_ONLINE_IDLE) at kernel/sched/idle.c:379
+#6  0xffffffff81101d8c in start_secondary (unused=<optimized out>) at arch/x86/kernel/smpboot.c:269
+#7  0xffffffff810001db in secondary_startup_64 () at arch/x86/kernel/head_64.S:370
+#8  0x0000000000000000 in ?? ()
+[Switching to Thread 1.2]
+
+Thread 2 hit Breakpoint 1, __rdmsr (msr=59) at ./arch/x86/include/asm/msr.h:84
+84		asm volatile("1: rdmsr\n"
+#0  __rdmsr (msr=59) at ./arch/x86/include/asm/msr.h:84
+#1  native_read_msr (msr=59) at ./arch/x86/include/asm/msr.h:118
+#2  tsc_verify_tsc_adjust (resume=resume@entry=false) at arch/x86/kernel/tsc_sync.c:67
+#3  0xffffffff810e2c8b in arch_cpu_idle_enter () at arch/x86/kernel/process.c:733
+#4  0xffffffff811801ee in do_idle () at kernel/sched/idle.c:269
+#5  0xffffffff81180588 in cpu_startup_entry (state=state@entry=CPUHP_AP_ONLINE_IDLE) at kernel/sched/idle.c:379
+#6  0xffffffff81101d8c in start_secondary (unused=<optimized out>) at arch/x86/kernel/smpboot.c:269
+#7  0xffffffff810001db in secondary_startup_64 () at arch/x86/kernel/head_64.S:370
+#8  0x0000000000000000 in ?? ()
+
+Thread 2 received signal SIGINT, Interrupt.
+default_idle () at arch/x86/kernel/process.c:711
+711		raw_local_irq_disable();
+Detaching from program: /usr/local/google/home/fuersta/linux/vmlinux, process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
+warning: Currently logging to /usr/local/google/home/fuersta/test-vm/exp_scripts/test2_gdb/MSR_READ.log.  Turn the logging off and on to make the new setting effective.
+native_irq_disable () at ./arch/x86/include/asm/irqflags.h:37
+37		asm volatile("cli": : :"memory");
+[Switching to Thread 1.4]
+
+Thread 4 hit Breakpoint 2, __rdmsr (msr=377) at ./arch/x86/include/asm/msr.h:84
+84		asm volatile("1: rdmsr\n"
+#0  __rdmsr (msr=377) at ./arch/x86/include/asm/msr.h:84
+#1  mce_setup (m=m@entry=0xffffc90000128de8) at arch/x86/kernel/cpu/mce/core.c:128
+#2  0xffffffff81f43e6d in mce_gather_info (m=m@entry=0xffffc90000128de8, regs=regs@entry=0x0 <fixed_percpu_data>) at arch/x86/kernel/cpu/mce/core.c:411
+#3  0xffffffff810f5bac in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd9bf20) at arch/x86/kernel/cpu/mce/core.c:667
+#4  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#5  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#6  0xffffffff811d6e52 in expire_timers (head=0xffffc90000128f08, base=0xffff88813bd9cd00) at kernel/time/timer.c:1751
+#7  __run_timers (base=0xffff88813bd9cd00) at kernel/time/timer.c:2022
+#8  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#9  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#10 0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#11 __irq_exit_rcu () at kernel/softirq.c:650
+#12 irq_exit_rcu () at kernel/softirq.c:662
+#13 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000009be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000129008
+[Switching to Thread 1.2]
+
+Thread 2 hit Breakpoint 2, __rdmsr (msr=377) at ./arch/x86/include/asm/msr.h:84
+84		asm volatile("1: rdmsr\n"
+#0  __rdmsr (msr=377) at ./arch/x86/include/asm/msr.h:84
+#1  mce_setup (m=m@entry=0xffffc900000d0de8) at arch/x86/kernel/cpu/mce/core.c:128
+#2  0xffffffff81f43e6d in mce_gather_info (m=m@entry=0xffffc900000d0de8, regs=regs@entry=0x0 <fixed_percpu_data>) at arch/x86/kernel/cpu/mce/core.c:411
+#3  0xffffffff810f5bac in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc9bf20) at arch/x86/kernel/cpu/mce/core.c:667
+#4  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#5  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#6  0xffffffff811d6e52 in expire_timers (head=0xffffc900000d0f08, base=0xffff88813bc9cd00) at kernel/time/timer.c:1751
+#7  __run_timers (base=0xffff88813bc9cd00) at kernel/time/timer.c:2022
+#8  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#9  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#10 0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#11 __irq_exit_rcu () at kernel/softirq.c:650
+#12 irq_exit_rcu () at kernel/softirq.c:662
+#13 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000008be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000d1008
+[Switching to Thread 1.4]
+
+Thread 4 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=msr@entry=378) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=msr@entry=378) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff81f43e77 in mce_gather_info (m=m@entry=0xffffc90000128de8, regs=regs@entry=0x0 <fixed_percpu_data>) at arch/x86/kernel/cpu/mce/core.c:414
+#2  0xffffffff810f5bac in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd9bf20) at arch/x86/kernel/cpu/mce/core.c:667
+#3  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#4  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#5  0xffffffff811d6e52 in expire_timers (head=0xffffc90000128f08, base=0xffff88813bd9cd00) at kernel/time/timer.c:1751
+#6  __run_timers (base=0xffff88813bd9cd00) at kernel/time/timer.c:2022
+#7  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#8  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#9  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#10 __irq_exit_rcu () at kernel/softirq.c:650
+#11 irq_exit_rcu () at kernel/softirq.c:662
+#12 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000009be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000129008
+
+Thread 4 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1025) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1025) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000128f08, base=0xffff88813bd9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000009be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000129008
+[Switching to Thread 1.1]
+
+Thread 1 hit Breakpoint 2, __rdmsr (msr=377) at ./arch/x86/include/asm/msr.h:84
+84		asm volatile("1: rdmsr\n"
+#0  __rdmsr (msr=377) at ./arch/x86/include/asm/msr.h:84
+#1  mce_setup (m=m@entry=0xffffc90000003de8) at arch/x86/kernel/cpu/mce/core.c:128
+#2  0xffffffff81f43e6d in mce_gather_info (m=m@entry=0xffffc90000003de8, regs=regs@entry=0x0 <fixed_percpu_data>) at arch/x86/kernel/cpu/mce/core.c:411
+#3  0xffffffff810f5bac in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc1bf20) at arch/x86/kernel/cpu/mce/core.c:667
+#4  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#5  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#6  0xffffffff811d6e52 in expire_timers (head=0xffffc90000003f08, base=0xffff88813bc1cd00) at kernel/time/timer.c:1751
+#7  __run_timers (base=0xffff88813bc1cd00) at kernel/time/timer.c:2022
+#8  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#9  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#10 0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#11 __irq_exit_rcu () at kernel/softirq.c:650
+#12 irq_exit_rcu () at kernel/softirq.c:662
+#13 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffffff82a03dd8) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000004008
+[Switching to Thread 1.2]
+
+Thread 2 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=msr@entry=378) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=msr@entry=378) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff81f43e77 in mce_gather_info (m=m@entry=0xffffc900000d0de8, regs=regs@entry=0x0 <fixed_percpu_data>) at arch/x86/kernel/cpu/mce/core.c:414
+#2  0xffffffff810f5bac in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc9bf20) at arch/x86/kernel/cpu/mce/core.c:667
+#3  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#4  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#5  0xffffffff811d6e52 in expire_timers (head=0xffffc900000d0f08, base=0xffff88813bc9cd00) at kernel/time/timer.c:1751
+#6  __run_timers (base=0xffff88813bc9cd00) at kernel/time/timer.c:2022
+#7  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#8  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#9  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#10 __irq_exit_rcu () at kernel/softirq.c:650
+#11 irq_exit_rcu () at kernel/softirq.c:662
+#12 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000008be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000d1008
+
+Thread 2 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1025) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1025) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000d0f08, base=0xffff88813bc9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000008be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000d1008
+[Switching to Thread 1.3]
+
+Thread 3 hit Breakpoint 2, __rdmsr (msr=377) at ./arch/x86/include/asm/msr.h:84
+84		asm volatile("1: rdmsr\n"
+#0  __rdmsr (msr=377) at ./arch/x86/include/asm/msr.h:84
+#1  mce_setup (m=m@entry=0xffffc900000fcde8) at arch/x86/kernel/cpu/mce/core.c:128
+#2  0xffffffff81f43e6d in mce_gather_info (m=m@entry=0xffffc900000fcde8, regs=regs@entry=0x0 <fixed_percpu_data>) at arch/x86/kernel/cpu/mce/core.c:411
+#3  0xffffffff810f5bac in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd1bf20) at arch/x86/kernel/cpu/mce/core.c:667
+#4  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#5  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#6  0xffffffff811d6e52 in expire_timers (head=0xffffc900000fcf08, base=0xffff88813bd1cd00) at kernel/time/timer.c:1751
+#7  __run_timers (base=0xffff88813bd1cd00) at kernel/time/timer.c:2022
+#8  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#9  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#10 0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#11 __irq_exit_rcu () at kernel/softirq.c:650
+#12 irq_exit_rcu () at kernel/softirq.c:662
+#13 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc90000093e38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000fd008
+[Switching to Thread 1.2]
+
+Thread 2 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1029) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1029) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000d0f08, base=0xffff88813bc9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000008be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000d1008
+[Switching to Thread 1.4]
+
+Thread 4 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1029) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1029) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000128f08, base=0xffff88813bd9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000009be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000129008
+[Switching to Thread 1.3]
+
+Thread 3 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=msr@entry=378) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=msr@entry=378) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff81f43e77 in mce_gather_info (m=m@entry=0xffffc900000fcde8, regs=regs@entry=0x0 <fixed_percpu_data>) at arch/x86/kernel/cpu/mce/core.c:414
+#2  0xffffffff810f5bac in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd1bf20) at arch/x86/kernel/cpu/mce/core.c:667
+#3  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#4  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#5  0xffffffff811d6e52 in expire_timers (head=0xffffc900000fcf08, base=0xffff88813bd1cd00) at kernel/time/timer.c:1751
+#6  __run_timers (base=0xffff88813bd1cd00) at kernel/time/timer.c:2022
+#7  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#8  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#9  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#10 __irq_exit_rcu () at kernel/softirq.c:650
+#11 irq_exit_rcu () at kernel/softirq.c:662
+#12 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc90000093e38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000fd008
+[Switching to Thread 1.1]
+
+Thread 1 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=msr@entry=378) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=msr@entry=378) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff81f43e77 in mce_gather_info (m=m@entry=0xffffc90000003de8, regs=regs@entry=0x0 <fixed_percpu_data>) at arch/x86/kernel/cpu/mce/core.c:414
+#2  0xffffffff810f5bac in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc1bf20) at arch/x86/kernel/cpu/mce/core.c:667
+#3  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#4  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#5  0xffffffff811d6e52 in expire_timers (head=0xffffc90000003f08, base=0xffff88813bc1cd00) at kernel/time/timer.c:1751
+#6  __run_timers (base=0xffff88813bc1cd00) at kernel/time/timer.c:2022
+#7  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#8  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#9  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#10 __irq_exit_rcu () at kernel/softirq.c:650
+#11 irq_exit_rcu () at kernel/softirq.c:662
+#12 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffffff82a03dd8) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000004008
+[Switching to Thread 1.2]
+
+Thread 2 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1033) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1033) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000d0f08, base=0xffff88813bc9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000008be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000d1008
+[Switching to Thread 1.4]
+
+Thread 4 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1033) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1033) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000128f08, base=0xffff88813bd9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000009be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000129008
+[Switching to Thread 1.1]
+
+Thread 1 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1025) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1025) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000003f08, base=0xffff88813bc1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffffff82a03dd8) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000004008
+[Switching to Thread 1.3]
+
+Thread 3 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1025) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1025) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000fcf08, base=0xffff88813bd1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc90000093e38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000fd008
+[Switching to Thread 1.4]
+
+Thread 4 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1037) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1037) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000128f08, base=0xffff88813bd9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000009be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000129008
+[Switching to Thread 1.1]
+
+Thread 1 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1029) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1029) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000003f08, base=0xffff88813bc1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffffff82a03dd8) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000004008
+[Switching to Thread 1.2]
+
+Thread 2 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1037) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1037) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000d0f08, base=0xffff88813bc9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000008be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000d1008
+[Switching to Thread 1.4]
+
+Thread 4 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1041) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1041) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000128f08, base=0xffff88813bd9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000009be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000129008
+[Switching to Thread 1.2]
+
+Thread 2 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1041) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1041) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000d0f08, base=0xffff88813bc9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000008be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000d1008
+[Switching to Thread 1.1]
+
+Thread 1 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1033) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1033) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000003f08, base=0xffff88813bc1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffffff82a03dd8) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000004008
+[Switching to Thread 1.4]
+
+Thread 4 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1045) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1045) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000128f08, base=0xffff88813bd9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000009be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000129008
+
+Thread 4 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1049) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1049) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000128f08, base=0xffff88813bd9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000009be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000129008
+
+Thread 4 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1053) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1053) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000128f08, base=0xffff88813bd9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000009be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000129008
+[Switching to Thread 1.1]
+
+Thread 1 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1037) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1037) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000003f08, base=0xffff88813bc1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffffff82a03dd8) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000004008
+[Switching to Thread 1.4]
+
+Thread 4 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1057) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1057) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000128f08, base=0xffff88813bd9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000009be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000129008
+
+Thread 4 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1061) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1061) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000128f08, base=0xffff88813bd9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000009be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000129008
+[Switching to Thread 1.1]
+
+Thread 1 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1041) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1041) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000003f08, base=0xffff88813bc1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffffff82a03dd8) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000004008
+[Switching to Thread 1.3]
+
+Thread 3 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1029) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1029) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000fcf08, base=0xffff88813bd1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc90000093e38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000fd008
+[Switching to Thread 1.2]
+
+Thread 2 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1045) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1045) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000d0f08, base=0xffff88813bc9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000008be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000d1008
+[Switching to Thread 1.1]
+
+Thread 1 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1045) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1045) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000003f08, base=0xffff88813bc1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffffff82a03dd8) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000004008
+
+Thread 1 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1049) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1049) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000003f08, base=0xffff88813bc1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffffff82a03dd8) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000004008
+[Switching to Thread 1.2]
+
+Thread 2 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1049) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1049) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000d0f08, base=0xffff88813bc9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000008be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000d1008
+[Switching to Thread 1.1]
+
+Thread 1 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1053) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1053) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000003f08, base=0xffff88813bc1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffffff82a03dd8) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000004008
+[Switching to Thread 1.2]
+
+Thread 2 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1053) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1053) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000d0f08, base=0xffff88813bc9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000008be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000d1008
+[Switching to Thread 1.3]
+
+Thread 3 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1033) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1033) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000fcf08, base=0xffff88813bd1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc90000093e38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000fd008
+[Switching to Thread 1.2]
+
+Thread 2 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1057) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1057) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000d0f08, base=0xffff88813bc9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000008be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000d1008
+[Switching to Thread 1.1]
+
+Thread 1 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1057) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1057) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000003f08, base=0xffff88813bc1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffffff82a03dd8) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000004008
+[Switching to Thread 1.2]
+
+Thread 2 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1061) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1061) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000d0f08, base=0xffff88813bc9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000008be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000d1008
+[Switching to Thread 1.3]
+
+Thread 3 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1037) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1037) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000fcf08, base=0xffff88813bd1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc90000093e38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000fd008
+
+Thread 3 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1041) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1041) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000fcf08, base=0xffff88813bd1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc90000093e38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000fd008
+
+Thread 3 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1045) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1045) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000fcf08, base=0xffff88813bd1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc90000093e38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000fd008
+[Switching to Thread 1.1]
+
+Thread 1 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1061) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1061) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000003f08, base=0xffff88813bc1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffffff82a03dd8) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000004008
+[Switching to Thread 1.3]
+
+Thread 3 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1049) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1049) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000fcf08, base=0xffff88813bd1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc90000093e38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000fd008
+
+Thread 3 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1053) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1053) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000fcf08, base=0xffff88813bd1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc90000093e38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000fd008
+
+Thread 3 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1057) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1057) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000fcf08, base=0xffff88813bd1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc90000093e38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000fd008
+
+Thread 3 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1061) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1061) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295000064) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000fcf08, base=0xffff88813bd1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc90000093e38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000fd008
+[Switching to Thread 1.1]
+
+Thread 1 hit Breakpoint 2, __rdmsr (msr=377) at ./arch/x86/include/asm/msr.h:84
+84		asm volatile("1: rdmsr\n"
+#0  __rdmsr (msr=377) at ./arch/x86/include/asm/msr.h:84
+#1  mce_setup (m=m@entry=0xffffc90000003de8) at arch/x86/kernel/cpu/mce/core.c:128
+#2  0xffffffff81f43e6d in mce_gather_info (m=m@entry=0xffffc90000003de8, regs=regs@entry=0x0 <fixed_percpu_data>) at arch/x86/kernel/cpu/mce/core.c:411
+#3  0xffffffff810f5bac in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc1bf20) at arch/x86/kernel/cpu/mce/core.c:667
+#4  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#5  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#6  0xffffffff811d6e52 in expire_timers (head=0xffffc90000003f08, base=0xffff88813bc1cd00) at kernel/time/timer.c:1751
+#7  __run_timers (base=0xffff88813bc1cd00) at kernel/time/timer.c:2022
+#8  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#9  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#10 0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#11 __irq_exit_rcu () at kernel/softirq.c:650
+#12 irq_exit_rcu () at kernel/softirq.c:662
+#13 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffffff82a03dd8) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000004008
+[Switching to Thread 1.2]
+
+Thread 2 hit Breakpoint 2, __rdmsr (msr=377) at ./arch/x86/include/asm/msr.h:84
+84		asm volatile("1: rdmsr\n"
+#0  __rdmsr (msr=377) at ./arch/x86/include/asm/msr.h:84
+#1  mce_setup (m=m@entry=0xffffc900000d0de8) at arch/x86/kernel/cpu/mce/core.c:128
+#2  0xffffffff81f43e6d in mce_gather_info (m=m@entry=0xffffc900000d0de8, regs=regs@entry=0x0 <fixed_percpu_data>) at arch/x86/kernel/cpu/mce/core.c:411
+#3  0xffffffff810f5bac in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc9bf20) at arch/x86/kernel/cpu/mce/core.c:667
+#4  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#5  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#6  0xffffffff811d6e52 in expire_timers (head=0xffffc900000d0f08, base=0xffff88813bc9cd00) at kernel/time/timer.c:1751
+#7  __run_timers (base=0xffff88813bc9cd00) at kernel/time/timer.c:2022
+#8  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#9  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#10 0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#11 __irq_exit_rcu () at kernel/softirq.c:650
+#12 irq_exit_rcu () at kernel/softirq.c:662
+#13 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000008be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000d1008
+[Switching to Thread 1.1]
+
+Thread 1 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=msr@entry=378) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=msr@entry=378) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff81f43e77 in mce_gather_info (m=m@entry=0xffffc90000003de8, regs=regs@entry=0x0 <fixed_percpu_data>) at arch/x86/kernel/cpu/mce/core.c:414
+#2  0xffffffff810f5bac in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc1bf20) at arch/x86/kernel/cpu/mce/core.c:667
+#3  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#4  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#5  0xffffffff811d6e52 in expire_timers (head=0xffffc90000003f08, base=0xffff88813bc1cd00) at kernel/time/timer.c:1751
+#6  __run_timers (base=0xffff88813bc1cd00) at kernel/time/timer.c:2022
+#7  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#8  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#9  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#10 __irq_exit_rcu () at kernel/softirq.c:650
+#11 irq_exit_rcu () at kernel/softirq.c:662
+#12 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffffff82a03dd8) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000004008
+[Switching to Thread 1.3]
+
+Thread 3 hit Breakpoint 2, __rdmsr (msr=377) at ./arch/x86/include/asm/msr.h:84
+84		asm volatile("1: rdmsr\n"
+#0  __rdmsr (msr=377) at ./arch/x86/include/asm/msr.h:84
+#1  mce_setup (m=m@entry=0xffffc900000fcde8) at arch/x86/kernel/cpu/mce/core.c:128
+#2  0xffffffff81f43e6d in mce_gather_info (m=m@entry=0xffffc900000fcde8, regs=regs@entry=0x0 <fixed_percpu_data>) at arch/x86/kernel/cpu/mce/core.c:411
+#3  0xffffffff810f5bac in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd1bf20) at arch/x86/kernel/cpu/mce/core.c:667
+#4  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#5  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#6  0xffffffff811d6e52 in expire_timers (head=0xffffc900000fcf08, base=0xffff88813bd1cd00) at kernel/time/timer.c:1751
+#7  __run_timers (base=0xffff88813bd1cd00) at kernel/time/timer.c:2022
+#8  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#9  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#10 0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#11 __irq_exit_rcu () at kernel/softirq.c:650
+#12 irq_exit_rcu () at kernel/softirq.c:662
+#13 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc90000093e38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000fd008
+[Switching to Thread 1.2]
+
+Thread 2 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=msr@entry=378) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=msr@entry=378) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff81f43e77 in mce_gather_info (m=m@entry=0xffffc900000d0de8, regs=regs@entry=0x0 <fixed_percpu_data>) at arch/x86/kernel/cpu/mce/core.c:414
+#2  0xffffffff810f5bac in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc9bf20) at arch/x86/kernel/cpu/mce/core.c:667
+#3  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#4  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#5  0xffffffff811d6e52 in expire_timers (head=0xffffc900000d0f08, base=0xffff88813bc9cd00) at kernel/time/timer.c:1751
+#6  __run_timers (base=0xffff88813bc9cd00) at kernel/time/timer.c:2022
+#7  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#8  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#9  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#10 __irq_exit_rcu () at kernel/softirq.c:650
+#11 irq_exit_rcu () at kernel/softirq.c:662
+#12 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000008be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000d1008
+[Switching to Thread 1.1]
+
+Thread 1 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1025) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1025) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000003f08, base=0xffff88813bc1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffffff82a03dd8) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000004008
+[Switching to Thread 1.4]
+
+Thread 4 hit Breakpoint 2, __rdmsr (msr=377) at ./arch/x86/include/asm/msr.h:84
+84		asm volatile("1: rdmsr\n"
+#0  __rdmsr (msr=377) at ./arch/x86/include/asm/msr.h:84
+#1  mce_setup (m=m@entry=0xffffc90000128de8) at arch/x86/kernel/cpu/mce/core.c:128
+#2  0xffffffff81f43e6d in mce_gather_info (m=m@entry=0xffffc90000128de8, regs=regs@entry=0x0 <fixed_percpu_data>) at arch/x86/kernel/cpu/mce/core.c:411
+#3  0xffffffff810f5bac in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd9bf20) at arch/x86/kernel/cpu/mce/core.c:667
+#4  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#5  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#6  0xffffffff811d6e52 in expire_timers (head=0xffffc90000128f08, base=0xffff88813bd9cd00) at kernel/time/timer.c:1751
+#7  __run_timers (base=0xffff88813bd9cd00) at kernel/time/timer.c:2022
+#8  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#9  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#10 0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#11 __irq_exit_rcu () at kernel/softirq.c:650
+#12 irq_exit_rcu () at kernel/softirq.c:662
+#13 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000009be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000129008
+[Switching to Thread 1.1]
+
+Thread 1 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1029) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1029) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000003f08, base=0xffff88813bc1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffffff82a03dd8) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000004008
+[Switching to Thread 1.2]
+
+Thread 2 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1025) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1025) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000d0f08, base=0xffff88813bc9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000008be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000d1008
+[Switching to Thread 1.1]
+
+Thread 1 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1033) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1033) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000003f08, base=0xffff88813bc1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffffff82a03dd8) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000004008
+[Switching to Thread 1.2]
+
+Thread 2 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1029) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1029) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000d0f08, base=0xffff88813bc9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000008be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000d1008
+[Switching to Thread 1.1]
+
+Thread 1 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1037) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1037) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000003f08, base=0xffff88813bc1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffffff82a03dd8) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000004008
+[Switching to Thread 1.4]
+
+Thread 4 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=msr@entry=378) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=msr@entry=378) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff81f43e77 in mce_gather_info (m=m@entry=0xffffc90000128de8, regs=regs@entry=0x0 <fixed_percpu_data>) at arch/x86/kernel/cpu/mce/core.c:414
+#2  0xffffffff810f5bac in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd9bf20) at arch/x86/kernel/cpu/mce/core.c:667
+#3  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#4  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#5  0xffffffff811d6e52 in expire_timers (head=0xffffc90000128f08, base=0xffff88813bd9cd00) at kernel/time/timer.c:1751
+#6  __run_timers (base=0xffff88813bd9cd00) at kernel/time/timer.c:2022
+#7  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#8  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#9  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#10 __irq_exit_rcu () at kernel/softirq.c:650
+#11 irq_exit_rcu () at kernel/softirq.c:662
+#12 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000009be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000129008
+[Switching to Thread 1.2]
+
+Thread 2 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1033) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1033) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000d0f08, base=0xffff88813bc9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000008be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000d1008
+[Switching to Thread 1.3]
+
+Thread 3 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=msr@entry=378) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=msr@entry=378) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff81f43e77 in mce_gather_info (m=m@entry=0xffffc900000fcde8, regs=regs@entry=0x0 <fixed_percpu_data>) at arch/x86/kernel/cpu/mce/core.c:414
+#2  0xffffffff810f5bac in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd1bf20) at arch/x86/kernel/cpu/mce/core.c:667
+#3  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#4  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#5  0xffffffff811d6e52 in expire_timers (head=0xffffc900000fcf08, base=0xffff88813bd1cd00) at kernel/time/timer.c:1751
+#6  __run_timers (base=0xffff88813bd1cd00) at kernel/time/timer.c:2022
+#7  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#8  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#9  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#10 __irq_exit_rcu () at kernel/softirq.c:650
+#11 irq_exit_rcu () at kernel/softirq.c:662
+#12 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc90000093e38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000fd008
+[Switching to Thread 1.2]
+
+Thread 2 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1037) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1037) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000d0f08, base=0xffff88813bc9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000008be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000d1008
+[Switching to Thread 1.1]
+
+Thread 1 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1041) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1041) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000003f08, base=0xffff88813bc1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffffff82a03dd8) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000004008
+[Switching to Thread 1.2]
+
+Thread 2 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1041) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1041) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000d0f08, base=0xffff88813bc9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000008be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000d1008
+[Switching to Thread 1.4]
+
+Thread 4 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1025) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1025) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000128f08, base=0xffff88813bd9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000009be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000129008
+[Switching to Thread 1.1]
+
+Thread 1 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1045) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1045) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000003f08, base=0xffff88813bc1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffffff82a03dd8) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000004008
+[Switching to Thread 1.2]
+
+Thread 2 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1045) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1045) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000d0f08, base=0xffff88813bc9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000008be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000d1008
+[Switching to Thread 1.3]
+
+Thread 3 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1025) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1025) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000fcf08, base=0xffff88813bd1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc90000093e38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000fd008
+[Switching to Thread 1.2]
+
+Thread 2 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1049) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1049) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000d0f08, base=0xffff88813bc9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000008be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000d1008
+[Switching to Thread 1.4]
+
+Thread 4 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1029) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1029) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000128f08, base=0xffff88813bd9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000009be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000129008
+[Switching to Thread 1.1]
+
+Thread 1 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1049) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1049) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000003f08, base=0xffff88813bc1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffffff82a03dd8) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000004008
+[Switching to Thread 1.4]
+
+Thread 4 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1033) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1033) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000128f08, base=0xffff88813bd9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000009be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000129008
+[Switching to Thread 1.2]
+
+Thread 2 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1053) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1053) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000d0f08, base=0xffff88813bc9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000008be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000d1008
+[Switching to Thread 1.4]
+
+Thread 4 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1037) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1037) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000128f08, base=0xffff88813bd9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000009be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000129008
+[Switching to Thread 1.2]
+
+Thread 2 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1057) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1057) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000d0f08, base=0xffff88813bc9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000008be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000d1008
+
+Thread 2 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1061) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1061) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000d0f08, base=0xffff88813bc9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000008be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000d1008
+[Switching to Thread 1.1]
+
+Thread 1 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1053) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1053) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000003f08, base=0xffff88813bc1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffffff82a03dd8) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000004008
+[Switching to Thread 1.3]
+
+Thread 3 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1029) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1029) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000fcf08, base=0xffff88813bd1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc90000093e38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000fd008
+[Switching to Thread 1.1]
+
+Thread 1 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1057) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1057) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000003f08, base=0xffff88813bc1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffffff82a03dd8) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000004008
+[Switching to Thread 1.3]
+
+Thread 3 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1033) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1033) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000fcf08, base=0xffff88813bd1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc90000093e38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000fd008
+[Switching to Thread 1.1]
+
+Thread 1 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1061) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1061) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bc1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bc1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bc1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000003f08, base=0xffff88813bc1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bc1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffffff82a03dd8) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000004008
+[Switching to Thread 1.3]
+
+Thread 3 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1037) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1037) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000fcf08, base=0xffff88813bd1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc90000093e38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000fd008
+[Switching to Thread 1.4]
+
+Thread 4 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1041) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1041) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000128f08, base=0xffff88813bd9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000009be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000129008
+[Switching to Thread 1.3]
+
+Thread 3 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1041) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1041) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000fcf08, base=0xffff88813bd1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc90000093e38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000fd008
+[Switching to Thread 1.4]
+
+Thread 4 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1045) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1045) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000128f08, base=0xffff88813bd9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000009be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000129008
+[Switching to Thread 1.3]
+
+Thread 3 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1045) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1045) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000fcf08, base=0xffff88813bd1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc90000093e38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000fd008
+
+Thread 3 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1049) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1049) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000fcf08, base=0xffff88813bd1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc90000093e38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000fd008
+[Switching to Thread 1.4]
+
+Thread 4 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1049) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1049) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000128f08, base=0xffff88813bd9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000009be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000129008
+
+Thread 4 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1053) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1053) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000128f08, base=0xffff88813bd9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000009be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000129008
+
+Thread 4 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1057) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1057) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000128f08, base=0xffff88813bd9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000009be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000129008
+
+Thread 4 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1061) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1061) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd9bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd9bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd9bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc90000128f08, base=0xffff88813bd9cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd9cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc9000009be38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc90000129008
+[Switching to Thread 1.3]
+
+Thread 3 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1053) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1053) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000fcf08, base=0xffff88813bd1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc90000093e38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000fd008
+
+Thread 3 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1057) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1057) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000fcf08, base=0xffff88813bd1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc90000093e38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000fd008
+
+Thread 3 hit Breakpoint 3, 0xffffffff81f43be1 in mce_rdmsrl (msr=1061) at arch/x86/kernel/cpu/mce/core.c:362
+362		asm volatile("1: rdmsr\n"
+#0  0xffffffff81f43be1 in mce_rdmsrl (msr=1061) at arch/x86/kernel/cpu/mce/core.c:362
+#1  0xffffffff810f5c2e in machine_check_poll (flags=flags@entry=0, b=0xffff88813bd1bf20) at arch/x86/kernel/cpu/mce/core.c:681
+#2  0xffffffff810f5f95 in mce_timer_fn (t=0xffff88813bd1bde0) at arch/x86/kernel/cpu/mce/core.c:1621
+#3  0xffffffff811d6b0f in call_timer_fn (timer=timer@entry=0xffff88813bd1bde0, fn=fn@entry=0xffffffff810f5f00 <mce_timer_fn>, baseclk=baseclk@entry=4295327744) at kernel/time/timer.c:1700
+#4  0xffffffff811d6e52 in expire_timers (head=0xffffc900000fcf08, base=0xffff88813bd1cd00) at kernel/time/timer.c:1751
+#5  __run_timers (base=0xffff88813bd1cd00) at kernel/time/timer.c:2022
+#6  0xffffffff811d6f18 in run_timer_softirq (h=<optimized out>) at kernel/time/timer.c:2035
+#7  0xffffffff81f51b9d in __do_softirq () at kernel/softirq.c:571
+#8  0xffffffff8113517d in invoke_softirq () at kernel/softirq.c:445
+#9  __irq_exit_rcu () at kernel/softirq.c:650
+#10 irq_exit_rcu () at kernel/softirq.c:662
+#11 0xffffffff81f44fe2 in sysvec_apic_timer_interrupt (regs=0xffffc90000093e38) at arch/x86/kernel/apic/apic.c:1106
+Backtrace stopped: Cannot access memory at address 0xffffc900000fd008
+
+Thread 3 received signal SIGINT, Interrupt.
+default_idle () at arch/x86/kernel/process.c:711
+711		raw_local_irq_disable();
+Detaching from program: /usr/local/google/home/fuersta/linux/vmlinux, process 1
+Ending remote debugging.
+[Inferior 1 (process 1) detached]
