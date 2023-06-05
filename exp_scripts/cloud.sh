@@ -20,9 +20,9 @@ fi
 $cloud_hype \
 	--api-socket $sock \
 	--kernel $kernel_img \
-	--cmdline "console=hvc0 ignore_loglevel earlyprintk=serial,hvc0,115200 clocksource=tsc" \
+	--cmdline "console=hvc0 ignore_loglevel earlyprintk=serial,hvc0,115200" \
 	--cpus boot=4 \
 	--memory size=4G,prefault=true 
 	# --net "tap=,mac=,ip=,mask="
 
-# accessible on  sudo curl --unix-socket /tmp/cloud-hypervisor.sock -i -X PUT "http://localhost/api/v1/vmm.shutdown"
+# accessible via  'ch-remote --api-socket /tmp/cloud-hypervisor.sock shutdown-vmm'

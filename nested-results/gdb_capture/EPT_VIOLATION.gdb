@@ -2,7 +2,7 @@
 lx-symbols
 set pagination off
 set logging overwrite on 
-set logging file /usr/local/google/home/fuersta/test-vm/exp_scripts/test2_gdb/EPT_VIOLATION.log
+set logging file /usr/local/google/home/fuersta/test-vm/nested-results/gdb_capture/EPT_VIOLATION.log
 set logging on
 set logging redirect on
 

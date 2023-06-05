@@ -5,6 +5,7 @@ mpl.rcParams.update({'font.size': 14})
 mpl.use('Agg')
 import matplotlib.pyplot as plt
 import os
+from ftrace import *
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-t', "--trace", required=True, help="ftrace output file")
@@ -19,14 +20,13 @@ def get_part(parts, key):
 pd_data = []
 with open(args.trace, "r") as f:
     for line in f.readlines():
-        if line.startswith(" qemu-system-x86"):
-            parts = line.split(" ")
-            event = parts[5][:-1]
+        if is_line(line):
+            parts = parse_line(line)
+            event = get_event(parts)
             if not event.startswith("kvm_"):
                 print(line)
                 continue
-            timestamp = float(parts[4][:-1])
-            second = float.__floor__(timestamp)
+            timestamp, second = get_timestamp(parts)
             pd_data.append((timestamp, second, event))
 
 df = pd.DataFrame.from_records(pd_data, columns=["timestamp_raw", "second", "event"])

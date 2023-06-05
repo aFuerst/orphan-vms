@@ -89,7 +89,7 @@ def plot_io():
     plot("IO_INSTRUCTION", "info1", "io-info1.png", "info1 count")
 
 print("Avg VM exits per second:", df.groupby("second").count().mean()["timestamp"])
-print(df.groupby("reason").count()["timestamp"])
+print(df.groupby("reason").count()["timestamp"].sort_values(ascending=False))
 plot_frequency()
 plot_all()
 plot_ept()

@@ -2,6 +2,6 @@
 
 user="root"
 host="ikbe1"
-home="/user/fuersta"
+home="/root"
 
-scp -r $user@$host:$home/exp_scripts/devrez-results ../devrez-results
+scp -r $user@$host:$home/devrez-results/* ../devrez-results
