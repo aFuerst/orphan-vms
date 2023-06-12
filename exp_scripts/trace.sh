@@ -23,7 +23,6 @@ done
 
 SYS_TRACE_DIR="/sys/kernel/tracing"
 if [ ! -f "$SYS_TRACE_DIR/tracing_on" ]; then
-  echo "bacjup"
   SYS_TRACE_DIR="/sys/kernel/debug/tracing"
 fi
 
