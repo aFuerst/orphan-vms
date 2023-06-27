@@ -8,8 +8,8 @@ set -em
 vmm_dir="/usr/local/google/home/fuersta/cloud-hypervisor"
 pushd $vmm_dir > /dev/null
 #  --release --target=x86_64-unknown-linux-musl
-cargo build --all --features guest_debug
-sudo setcap cap_net_admin+ep ./target/debug/cloud-hypervisor
+cargo build --all --features guest_debug --target=x86_64-unknown-linux-musl --release
+# sudo setcap cap_net_admin+ep ./target/debug/cloud-hypervisor
 popd > /dev/null
 
 
@@ -18,6 +18,6 @@ ch_remote="../../cloud-hypervisor/target/x86_64-unknown-linux-musl/release/ch-re
 
 bin="/root/google/bin"
 user="root"
-host="ikbe1"
-scp $cloud_hyp $user@$host:$bin
+host="lpbb9"
 scp $ch_remote $user@$host:$bin
+scp $cloud_hyp $user@$host:$bin

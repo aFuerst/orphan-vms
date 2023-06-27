@@ -66,24 +66,14 @@ if [[ $ADD_DISK == true ]]; then
 fi
 
 cmd="$cloud_hype"
-vmm_gdb_sock="/tmp/vmm-gdb.sock"
 console="hvc0"
 dis_cons=""
 if [[ $DEBUG_VMM == true ]]; then
-	cmd="gdbserver host:2345 $cloud_hype"
-	if [[ -e "$vmm_gdb_sock" ]]; then
-	rm -f $vmm_gdb_sock
-	fi
-	#   --serial          off|null|pty|tty|file=/path/to/a/file
-	#   --console         off|null|pty|tty|file=/path/to/a/file, iommu=on|off
-	# disable virtio console as it breaks after hitting a breakpoint when run inside gdb
-	console="ttyS0"
-	dis_cons="--serial tty --console off"
-
+	cmd="gdbserver /tmp/vmm-gdb.sock $cloud_hype"
 	# break spawn_virtio_thread
 	# set pagination off
 	# set non-stop on
-	# target remote :2345
+	# target remote /tmp/vmm-gdb.sock
 fi
 
 $cmd \
@@ -91,12 +81,13 @@ $cmd \
 	--log-file "$LOG_FILE" $VERBOSITY \
 	--kernel $kernel_img \
 	--cmdline "console=$console ignore_loglevel earlyprintk=serial,$console,115200 strict-devmem=0" \
-	--cpus boot=4 \
+	--cpus boot=8 \
 	--memory size=4G,prefault=true \
-	--balloon size=2G,deflate_on_oom=on,free_page_reporting=on \
 	$dis_cons \
 	$disk \
 	$gdb
+	# --cpus boot=4,affinity=[0@[2]] \
+	# --balloon size=2G,deflate_on_oom=on,free_page_reporting=on \
 	# --net "tap=,mac=,ip=,mask="
 
 # accessible via  'ch-remote --api-socket /tmp/cloud-hypervisor.sock shutdown-vmm'

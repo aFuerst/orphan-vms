@@ -1,2 +1,6 @@
 __pycache__/
 *.log
+syscall-tester/syscalltest
+rootfs-overlay/home/syscalltest
+snapshot/
+systest

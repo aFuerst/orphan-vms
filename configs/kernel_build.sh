@@ -16,7 +16,7 @@ make -j `nproc` -s
 popd > /dev/null
 
 user="root"
-host="ikbe1"
+host="lpbb9"
 home="/root"
 
 scp "../../linux/arch/x86_64/boot/bzImage" $user@$host:$home/google

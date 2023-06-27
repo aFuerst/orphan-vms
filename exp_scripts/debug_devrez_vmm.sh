@@ -15,24 +15,22 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-gdb_sock=/tmp/ch-gdb.sock
+gdb_sock=/tmp/vmm-gdb.sock
 if [[ -e "$gdb_sock" ]]; then
 	rm -f $gdb_sock
 fi
 
-# forward local sock to devrez
-ssh -L $gdb_sock:$gdb_sock root@lpbb9 "sleep 10h" < /dev/null > /dev/null 2> /dev/null &
+# forward local sock to devrez gdbserver
+ssh -L $gdb_sock:localhost:2345 root@lpbb9 "sleep 10h" < /dev/null > /dev/null 2> /dev/null &
 pid=$!
 cleanup() {
   kill $pid
   echo "closing ssh"
-  popd > /dev/null
   exit 0
 }
 trap cleanup SIGINT
 
-linux_dir="/usr/local/google/home/fuersta/linux"
-pushd $linux_dir > /dev/null
-gdb vmlinux 
-#-x $GDB_FILE
+sleep 5
+rust-gdb -x vmm-devrez.gdb
+# /usr/local/google/home/fuersta/cloud-hypervisor/target/release/cloud-hypervisor
 cleanup
