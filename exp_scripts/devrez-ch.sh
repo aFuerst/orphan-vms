@@ -7,10 +7,17 @@ DEBUG_KERNEL=false
 LOG_FILE="./ch.log"
 VERBOSITY="-v"
 disk=""
-
+kernel_img="./google/vmlinux.bin"
+cloud_hype="./google/bin/cloud-hypervisor"
+cmd="$cloud_hype"
 VFIO_NET=false
+VRAM=true
 while [[ $# -gt 0 ]]; do
   case $1 in
+    --strace)
+	  cmd="strace $cloud_hype"
+      shift
+      ;;
     --kernel)
       DEBUG_KERNEL=true
       shift
@@ -37,7 +44,11 @@ while [[ $# -gt 0 ]]; do
 	--vfio-net)
 	  VFIO_NET=true
 	  shift
-	  ;;\
+	  ;;
+	--vram)
+  	  VRAM=true
+  	  shift
+  	  ;;
     *)
       shift
       ;;
@@ -48,9 +59,6 @@ sock="/tmp/cloud-hypervisor.sock"
 if [[ -e "$sock" ]]; then
 	rm -f $sock
 fi
-
-kernel_img="./google/vmlinux.bin"
-cloud_hype="./google/bin/cloud-hypervisor"
 
 gdb=""
 if [[ $DEBUG_KERNEL == true ]]; then
@@ -83,62 +91,78 @@ if [[ $VFIO_NET == true ]]; then
 	vfio_net="--device path=/sys/bus/pci/devices/$device/"
 fi
 
-cmd="$cloud_hype"
 vmm_gdb_sock="/tmp/vmm-gdb.sock"
-console="hvc0"
-dis_cons=""
 if [[ $DEBUG_VMM == true ]]; then
 	cmd="gdbserver localhost:2345 $cloud_hype"
 	if [[ -e "$vmm_gdb_sock" ]]; then
-	rm -f $vmm_gdb_sock
+		rm -f $vmm_gdb_sock
 	fi
-	# console="ttyS0"
-	# dis_cons="--serial tty --console off"
-
 	# break spawn_virtio_thread
 	# set pagination off
 	# set non-stop on
 	# target remote :2345
 fi
 
-# prepare cpuset
-cpusets=/dev/cpuset
-if [[ ! -f "$cpusets" ]]; then
-	mkdir -p $cpusets
-	mount -t cgroup -o cpuset cpuset "$cpusets"
-fi
-ch_set="$cpusets/cloudhyp"
-if [[ -f "$ch_set" ]]; then
-	rm -f "$ch_set"
-fi
-mkdir -p "$ch_set"
-# assign one CPU per vCPU, plus an extra for other VMM activity
-echo "2-3" > "$ch_set/cpuset.cpus"
-# set exclusive access to those cores
-echo 1 > "$ch_set/cpuset.cpu_exclusive"
-# don't care about memory, just allow to all nodes
-cat "$cpusets/cpuset.mems" > "$ch_set/cpuset.mems"
-# this shell and and subtasks will be inside cpuset
-echo $$ > "$ch_set/tasks"
+# # prepare cpuset
+# cpusets=/dev/cpuset
+# if ! mountpoint -q  $cpusets; then
+# 	mkdir -p $cpusets
+# 	mount -t cgroup -o cpuset cpuset "$cpusets"
+# fi
+# ch_set="$cpusets/cloudhyp"
+# if [[ -f "$ch_set" ]]; then
+# 	rm -f "$ch_set"
+# fi
+# mkdir -p "$ch_set"
+# # assign one CPU per vCPU, plus an extra for other VMM activity
+# echo "23-24" > "$ch_set/cpuset.cpus"
+# # set exclusive access to those cores
+# echo "1" > "$ch_set/cpuset.cpu_exclusive"
+# # don't care about memory, just allow to all nodes
+# cat "$cpusets/cpuset.mems" > "$ch_set/cpuset.mems"
+# # this shell and and subtasks will be inside cpuset
+# echo $$ > "$ch_set/tasks"
 
 balloon="--balloon size=2G,deflate_on_oom=on,free_page_reporting=on"
 balloon=""
 
-memmap="/pmems/mnt/vmmem"
-rm -f $memmap
+mem_mnt=""
 mem_size="4G"
-fallocate --length $mem_size $memmap
+if [[ $VRAM == true ]]; then
+	mem_mnt="/tmp/vmram"
+	if ! mountpoint -q $mem_mnt; then
+		mkdir -p $mem_mnt
+		mount -t tmpfs -o size=16G vmram $mem_mnt
+	fi
+else
+	mem_mnt="/pmems/mnt"
+	pmem="/mnt/devtmpfs/pmem0"
+	if [[ -f $pmem ]]; then
+		echo "pmem device not found"
+		exit 1
+	fi
+	if ! mountpoint -q $mem_mnt; then
+		mkfs.ext4 -F -m 0 -O ^has_journal /mnt/devtmpfs/pmem0
+		mkdir -p $mem_mnt
+		mount -o dax=always /mnt/devtmpfs/pmem0 $mem_mnt
+	fi
+
+fi
+
+memmap="$mem_mnt/vmmem"
+if [[ ! -f $memmap ]]; then
+	fallocate --length $mem_size $memmap
+fi
 
 $cmd \
 	--api-socket $sock \
 	--log-file "$LOG_FILE" $VERBOSITY \
 	--kernel $kernel_img \
-	--cmdline "\"console=$console ignore_loglevel earlyprintk=serial,$console,115200 strict-devmem=0\"" \
-	--cpus boot=1,affinity=[0@[3]] \
+	--cmdline "\"console=hvc0 ignore_loglevel earlyprintk=serial,hvc0,115200 strict-devmem=0\"" \
+	--cpus boot=1,affinity=[0@[24]] \
 	--memory size=0 \
-	--memory-zone id=mem0,size=$mem_size,file=$memmap,prefault=on \
+	--memory-zone id=mem0,size=$mem_size,file=$memmap,shared=on \
 	$balloon \
-	$dis_cons \
 	$disk \
 	$vfio_net \
 	$gdb

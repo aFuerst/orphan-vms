@@ -1,5 +1,5 @@
 #!/bin/bash
-# Run with sudo
+set -em
 
 DEBUG_VMM=false
 DEBUG_KERNEL=false
@@ -41,12 +41,12 @@ if [[ -e "$gdb_sock" ]]; then
 	rm -f $gdb_sock
 fi
 
-kernel_img="../../linux/arch/x86/boot/compressed/vmlinux.bin"
+kernel_img="../../linux/cust_artifacts/vmlinux.bin"
 if [[ ! -f "$kernel_img" ]]; then
 kernel_img="./google/vmlinux.bin"
 fi
 
-cloud_hype="../../cloud-hypervisor/target/debug/cloud-hypervisor" # /x86_64-unknown-linux-musl/release
+cloud_hype="../../cloud-hypervisor/target/x86_64-unknown-linux-musl/release/cloud-hypervisor"
 if [[ ! -f "$cloud_hype" ]]; then
 cloud_hype="./google/bin/cloud-hypervisor"
 fi
@@ -67,23 +67,33 @@ fi
 
 cmd="$cloud_hype"
 console="hvc0"
-dis_cons=""
 if [[ $DEBUG_VMM == true ]]; then
-	cmd="gdbserver /tmp/vmm-gdb.sock $cloud_hype"
+	cmd="gdbserver :2345 $cloud_hype"
 	# break spawn_virtio_thread
 	# set pagination off
 	# set non-stop on
 	# target remote /tmp/vmm-gdb.sock
 fi
 
+mem_mnt="/tmp/rammnt"
+if ! mountpoint -q $mem_mnt; then
+	mkdir -p $mem_mnt
+	sudo mount -t tmpfs -o size=10G vmramdisk $mem_mnt
+fi
+memmap="$mem_mnt/vmmem"
+mem_size="4G"
+if [[ ! -f $memmap ]]; then
+	fallocate --length $mem_size $memmap
+fi
+
 $cmd \
 	--api-socket $sock \
 	--log-file "$LOG_FILE" $VERBOSITY \
 	--kernel $kernel_img \
-	--cmdline "console=$console ignore_loglevel earlyprintk=serial,$console,115200 strict-devmem=0" \
-	--cpus boot=8 \
-	--memory size=4G,prefault=true \
-	$dis_cons \
+	--cmdline "console=$console ignore_loglevel earlyprintk=serial,$console,115200 strict-devmem=0 isolcpus=nohz,managed_irq,domain,4-7" \
+	--cpus boot=8,affinity=[0@[2],1@[3],2@[4],3@[5],4@[6],5@[7],6@[8],7@[9]] \
+	--memory size=0 \
+	--memory-zone id=mem0,size=$mem_size,file=$memmap,shared=on \
 	$disk \
 	$gdb
 	# --cpus boot=4,affinity=[0@[2]] \

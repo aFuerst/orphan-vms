@@ -25,11 +25,14 @@ handle SIGTERM stop pass
 # break virtio_devices::balloon::BalloonEpollHandler::run
 # break virtio_devices::balloon::BalloonEpollHandler::signal::{{closure}}
 
+break vmm::cpu::{impl#11}::resume
+break Vmm::vm_resume::ha1eb18731a4f9ee1
+
 # break devices::ioapic::{impl#3}::service_irq
 # commands 1-1
 # where
 # continue
 # end
 
-target remote /tmp/vmm-gdb.sock
+target remote :2345
 continue

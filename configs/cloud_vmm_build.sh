@@ -18,6 +18,7 @@ ch_remote="../../cloud-hypervisor/target/x86_64-unknown-linux-musl/release/ch-re
 
 bin="/root/google/bin"
 user="root"
-host="lpbb9"
-scp $ch_remote $user@$host:$bin
-scp $cloud_hyp $user@$host:$bin
+for host in oqv143 oqv144 oqv205; do
+    scp $ch_remote $user@$host:$bin
+    scp $cloud_hyp $user@$host:$bin
+done

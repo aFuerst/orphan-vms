@@ -1,12 +1,25 @@
+set pagination off
+set logging overwrite on 
+set logging file ./offlining.log
+set logging on
+set logging redirect on
+
+
 lx-symbols
 
-break takedown_cpu
-break device_offline
-break cpu_report_death
-break native_play_dead
-break mwait_play_dead
-break hlt_play_dead
-break jmp_vmm_vcpu
+# break takedown_cpu
+# break take_cpu_down
+# break cpuhp_invoke_callback
+# break cpuhp_invoke_ap_callback
+# break cpu_subsys_offline
+# break device_offline
+# break _cpu_down
+# break cpu_report_death
+# break native_play_dead
+# break mwait_play_dead
+# break hlt_play_dead
+# break jmp_vmm_vcpu
+break kernel/cpu.c:192
 
 #1       breakpoint     keep y   0xffffffff8112f1b0 in takedown_cpu at kernel/cpu.c:1059
 #2       breakpoint     keep y   <MULTIPLE>
@@ -19,5 +32,11 @@ break jmp_vmm_vcpu
 #7       breakpoint     keep y   0xffffffff812140e0 in multi_cpu_stop at kernel/stop_machine.c:204
 #8       breakpoint     keep y   0xffffffff81104040 in native_play_dead at arch/x86/kernel/smpboot.c:1840
 
+commands 1-1
+print cb
+continue
+end
+
+# echo 0 > /sys/devices/system/cpu/cpu3/online
 target remote :1234
 continue

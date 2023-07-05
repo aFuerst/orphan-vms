@@ -21,7 +21,7 @@ if [[ -e "$gdb_sock" ]]; then
 fi
 
 # forward local sock to devrez
-ssh -L $gdb_sock:$gdb_sock root@lpbb9 "sleep 10h" < /dev/null > /dev/null 2> /dev/null &
+ssh -L $gdb_sock:$gdb_sock root@oqv142 "sleep 10h" < /dev/null > /dev/null 2> /dev/null &
 pid=$!
 cleanup() {
   kill $pid

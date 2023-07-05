@@ -4,3 +4,4 @@ syscall-tester/syscalltest
 rootfs-overlay/home/syscalltest
 snapshot/
 systest
+pintest
