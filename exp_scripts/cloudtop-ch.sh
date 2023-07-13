@@ -42,14 +42,7 @@ if [[ -e "$gdb_sock" ]]; then
 fi
 
 kernel_img="../../linux/cust_artifacts/vmlinux.bin"
-if [[ ! -f "$kernel_img" ]]; then
-kernel_img="./google/vmlinux.bin"
-fi
-
 cloud_hype="../../cloud-hypervisor/target/x86_64-unknown-linux-musl/release/cloud-hypervisor"
-if [[ ! -f "$cloud_hype" ]]; then
-cloud_hype="./google/bin/cloud-hypervisor"
-fi
 
 gdb=""
 if [[ $DEBUG_KERNEL == true ]]; then

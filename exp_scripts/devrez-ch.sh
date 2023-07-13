@@ -3,7 +3,8 @@
 set -em 
 
 DEBUG_VMM=false
-DEBUG_KERNEL=false
+gdb=""
+vmm_gdb_sock="/tmp/vmm-gdb.sock"
 LOG_FILE="./ch.log"
 VERBOSITY="-v"
 disk=""
@@ -19,11 +20,22 @@ while [[ $# -gt 0 ]]; do
       shift
       ;;
     --kernel)
-      DEBUG_KERNEL=true
+		gdb_sock="/tmp/ch-gdb.sock"
+		if [[ -e "$gdb_sock" ]]; then
+			rm -f $gdb_sock
+		fi
+		gdb="--gdb path=$gdb_sock"
       shift
       ;;
     --vmm)
-      DEBUG_VMM=true
+		cmd="gdbserver localhost:2345 $cloud_hype"
+		if [[ -e "$vmm_gdb_sock" ]]; then
+			rm -f $vmm_gdb_sock
+		fi
+		# break spawn_virtio_thread
+		# set pagination off
+		# set non-stop on
+		# target remote :2345
       shift
       ;;
     --log-file)
@@ -60,15 +72,6 @@ if [[ -e "$sock" ]]; then
 	rm -f $sock
 fi
 
-gdb=""
-if [[ $DEBUG_KERNEL == true ]]; then
-	gdb_sock="/tmp/ch-gdb.sock"
-	if [[ -e "$gdb_sock" ]]; then
-		rm -f $gdb_sock
-	fi
-	gdb="--gdb path=$gdb_sock"
-fi
-
 vfio_net=""
 if [[ $VFIO_NET == true ]]; then
 	# lspci | grep Ethernet
@@ -89,18 +92,6 @@ if [[ $VFIO_NET == true ]]; then
 	fi
 	echo $vendor_id $product_id > /sys/bus/pci/drivers/vfio-pci/new_id
 	vfio_net="--device path=/sys/bus/pci/devices/$device/"
-fi
-
-vmm_gdb_sock="/tmp/vmm-gdb.sock"
-if [[ $DEBUG_VMM == true ]]; then
-	cmd="gdbserver localhost:2345 $cloud_hype"
-	if [[ -e "$vmm_gdb_sock" ]]; then
-		rm -f $vmm_gdb_sock
-	fi
-	# break spawn_virtio_thread
-	# set pagination off
-	# set non-stop on
-	# target remote :2345
 fi
 
 # # prepare cpuset
@@ -158,7 +149,7 @@ $cmd \
 	--api-socket $sock \
 	--log-file "$LOG_FILE" $VERBOSITY \
 	--kernel $kernel_img \
-	--cmdline "\"console=hvc0 ignore_loglevel earlyprintk=serial,hvc0,115200 strict-devmem=0\"" \
+	--cmdline "\"console=hvc0 ignore_loglevel earlyprintk=serial,hvc0,115200 strict-devmem=0 nokaslr\"" \
 	--cpus boot=1,affinity=[0@[24]] \
 	--memory size=0 \
 	--memory-zone id=mem0,size=$mem_size,file=$memmap,shared=on \

@@ -6,7 +6,8 @@ import os
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-t', "--trace", required=True, help="ftrace output file")
-parser.add_argument('-f', "--out-folder", required=True, help="gdb breakpoints output folder to create")
+parser.add_argument('-o', "--out-folder", required=True, help="gdb breakpoints output folder to create")
+parser.add_argument('-d', "--devrez", required=False, help="Setup for devrez machine. Create hardware breaks and only gen top 4", action="store_true")
 args = parser.parse_args()
 
 os.makedirs(args.out_folder, exist_ok=True)
@@ -30,15 +31,26 @@ def parse_file():
 
 parse_file()
 
+target = "target remote :1234"
+if args.devrez:
+    target="target remote /tmp/ch-gdb.sock"
+
 df = pd.DataFrame.from_records(pd_data, columns=["timestamp_raw", "second", "reason", "rip"])
 df["timestamp"] = pd.to_datetime(df["timestamp_raw"], unit='s')
 df["minute"] = df["second"] // 60
 
 for name, group in df.groupby("reason"):
     to_write = []
-    for address in group["rip"].unique():
+    sorted_rips = sorted(group.groupby("rip"), key=lambda x: len(x[1]), reverse=True)
+    if args.devrez:
+        while len(sorted_rips) > 4:
+            sorted_rips.pop()
+    for address, _rgroup in sorted_rips:
         if address.startswith("0xff"):
-            to_write.append(f"break *{address}\n")
+            if args.devrez:
+                to_write.append(f"hb *{address}\n")
+            else:
+                to_write.append(f"break *{address}\n")
 
     if len(to_write) > 0:
         logfile = os.path.join(args.out_folder, f"{name}.log")
@@ -48,7 +60,7 @@ for name, group in df.groupby("reason"):
             f.write(f"\n\
 lx-symbols\n\
 set pagination off\n\
-set logging overwrite on \n\
+set logging overwrite on\n\
 set logging file {logfile}\n\
 set logging on\n\
 set logging redirect on\n\
@@ -65,5 +77,5 @@ where\n\
 continue\n\
 end\n\
 \n\
-target remote :1234\n\
+{target}\n\
 continue")
