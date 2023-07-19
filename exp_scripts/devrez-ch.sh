@@ -1,5 +1,4 @@
 #!/bin/bash
-# Run with sudo
 set -em 
 
 DEBUG_VMM=false
@@ -12,9 +11,31 @@ kernel_img="./google/vmlinux.bin"
 cloud_hype="./google/bin/cloud-hypervisor"
 cmd="$cloud_hype"
 VFIO_NET=false
-VRAM=true
+VRAM=false
+CORE=24
+DISABLE_EXITS="--disable-exits"
+APIC=""
+CPU_CNT="1"
 while [[ $# -gt 0 ]]; do
   case $1 in
+	--cpus)
+		CPU_CNT="$2"
+	    shift
+		shift
+	  ;;
+    --no-apic)
+	    APIC="noapic nolapic acpi=off nolapic_timer"
+		shift
+	  ;;
+	--exits)
+		DISABLE_EXITS=""
+		shift
+	  ;;
+  	--core)
+		CORE="$2"
+		shift
+		shift
+	  ;;
     --strace)
 	  cmd="strace $cloud_hype"
       shift
@@ -61,8 +82,9 @@ while [[ $# -gt 0 ]]; do
   	  VRAM=true
   	  shift
   	  ;;
-    *)
-      shift
+	*)
+        echo "Unknown argument $1"
+        exit 1
       ;;
   esac
 done
@@ -92,6 +114,16 @@ if [[ $VFIO_NET == true ]]; then
 	fi
 	echo $vendor_id $product_id > /sys/bus/pci/drivers/vfio-pci/new_id
 	vfio_net="--device path=/sys/bus/pci/devices/$device/"
+fi
+
+CPUS=""
+if [ "$CPU_CNT" == "1" ]; then
+	CPUS="--cpus boot=1,affinity=[0@[$CORE]]"
+elif [ "$CPU_CNT" == "2" ]; then
+	CPUS="--cpus boot=2,affinity=[0@[$CORE],1@[$(($CORE+1))]]"
+else 
+	echo "Can only support 1 or 2 cores"
+	exit 1
 fi
 
 # # prepare cpuset
@@ -141,21 +173,23 @@ else
 fi
 
 memmap="$mem_mnt/vmmem"
-if [[ ! -f $memmap ]]; then
-	fallocate --length $mem_size $memmap
+if [[ -f $memmap ]]; then
+	rm $memmap
 fi
+fallocate --length $mem_size $memmap
 
 $cmd \
 	--api-socket $sock \
 	--log-file "$LOG_FILE" $VERBOSITY \
 	--kernel $kernel_img \
-	--cmdline "\"console=hvc0 ignore_loglevel earlyprintk=serial,hvc0,115200 strict-devmem=0 nokaslr\"" \
-	--cpus boot=1,affinity=[0@[24]] \
+	--cmdline "\"console=hvc0 ignore_loglevel earlyprintk=serial,hvc0,115200 strict-devmem=0 nokaslr $APIC\"" \
+	$CPUS \
 	--memory size=0 \
 	--memory-zone id=mem0,size=$mem_size,file=$memmap,shared=on \
 	$balloon \
 	$disk \
 	$vfio_net \
+	$DISABLE_EXITS \
 	$gdb
 	# --net "tap=,mac=,ip=,mask="
 

@@ -16,7 +16,8 @@ while [[ $# -gt 0 ]]; do
       shift
       ;;
     *)
-      shift
+        echo "Unknown argument $1"
+        exit 1
       ;;
   esac
 done
@@ -52,8 +53,8 @@ echo 1 > "$SYS_TRACE_DIR/events/sched/sched_wakeup/enable"
 echo "target_cpu == 24" > "$SYS_TRACE_DIR/events/sched/sched_wakeup/filter"
 echo 1 > "$SYS_TRACE_DIR/events/sched/sched_waking/enable"
 echo "target_cpu == 24" > "$SYS_TRACE_DIR/events/sched/sched_waking/filter"
-echo "cpu == 24" > /sys/kernel/debug/tracing/events/ipi/ipi_send_cpu/filter
-echo 1 > /sys/kernel/debug/tracing/events/ipi/ipi_send_cpu/enable
+echo "cpu == 24" > $SYS_TRACE_DIR/events/ipi/ipi_send_cpu/filter
+echo 1 > $SYS_TRACE_DIR/events/ipi/ipi_send_cpu/enable
 
 # empty current trace buffer
 > "$SYS_TRACE_DIR/trace"

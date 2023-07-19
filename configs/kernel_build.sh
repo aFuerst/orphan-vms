@@ -24,6 +24,6 @@ cp "$linux_dir/arch/x86_64/boot/bzImage" $artifacts_dir
 cp "$linux_dir/arch/x86/boot/compressed/vmlinux.bin" $artifacts_dir
 cp "$linux_dir/arch/x86/boot/compressed/vmlinux" $artifacts_dir
 
-for host in oqv143 oqv144 oqv205; do
+for host in oqv143 oqv142 oqv205; do
     scp $artifacts_dir/* $user@$host:$home/google
 done

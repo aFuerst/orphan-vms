@@ -2,7 +2,7 @@
 # Automatically generated file; DO NOT EDIT.
 # Linux/x86 6.4.0-rc4 Kernel Configuration
 #
-CONFIG_CUST_DBG_LOGS=y
+# CONFIG_CUST_DBG_LOGS is not set
 CONFIG_CC_VERSION_TEXT="gcc (Debian 12.2.0-14) 12.2.0"
 CONFIG_CC_IS_GCC=y
 CONFIG_GCC_VERSION=120200
