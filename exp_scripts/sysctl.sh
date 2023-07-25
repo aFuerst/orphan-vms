@@ -2,11 +2,16 @@
 
 TIME=1m
 OUTFILE="perf.data.$FREQ"
+USE_TRACING=false
 while [[ $# -gt 0 ]]; do
   case $1 in
     -s|--sleep-time)
       TIME="$2"
       shift
+      shift
+      ;;
+    -t|--tracing)
+      USE_TRACING=true
       shift
       ;;
     -o|--out-file)
@@ -25,51 +30,33 @@ sysctls=(call_function_single call_functions handled_interrupts local_apic resch
       handled_function_vector handled_reschedule handled_function_single_vector handled_local_timer handled_other_interrupt \
       slow_exit_break slow_exit_irq_injection slow_exit_loop slow_exit_timer slow_exit_xfer_guest_mode slow_exits \
       exit_msr_interrupt_window exit_msr_write exit_msr_read exit_apic_write exit_interrupt exit_nmi exit_other \
-      vmx_exit_handlers)
+      vmx_exit_handlers irq_work_callbacks ttwu_callbacks sync_callbacks non_sync_callbacks unknown_callbacks \
+      scheduler_ticks)
 
+sysctl -q -w alex.called_funcs="0 0 0 0 0 0 0 0 0 0"
+sysctl -q -w alex.from_cpuid="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"
 for ctl in "${sysctls[@]}"; do
   sysctl -q -w "alex.$ctl=0"
 done
 
-# sysctl -q -w alex.call_function_single=0
-# sysctl -q -w alex.call_functions=0
-# sysctl -q -w alex.handled_interrupts=0
-# sysctl -q -w alex.local_apic=0
-# sysctl -q -w alex.reschedule_ipis=0 
-# sysctl -q -w alex.handled_function_vector=0
-# sysctl -q -w alex.handled_reschedule=0
-# sysctl -q -w alex.handled_function_single_vector=0
-# sysctl -q -w alex.handled_local_timer=0
-# sysctl -q -w alex.handled_other_interrupt=0
-
-# sysctl -q -w alex.slow_exit_break=0
-# sysctl -q -w alex.slow_exit_irq_injection=0
-# sysctl -q -w alex.slow_exit_loop=0
-# sysctl -q -w alex.slow_exit_timer=0
-# sysctl -q -w alex.slow_exit_xfer_guest_mode=0
-# sysctl -q -w alex.slow_exits=0
+if [[ $USE_TRACING == true ]]; then
+echo "0000,1000000" > /sys/kernel/debug/tracing/tracing_cpumask
+echo 1 > /sys/kernel/debug/tracing/events/sched/sched_switch/enable
+echo 1 > /sys/kernel/debug/tracing/tracing_on
+cat /sys/kernel/debug/tracing/trace_pipe > smp_call_fq &
+pid=$!
+fi
 
 sleep $TIME
 
 for ctl in "${sysctls[@]}"; do
   sysctl "alex.$ctl"
 done
+sysctl alex.called_funcs
+sysctl alex.from_cpuid
 
-
-# sysctl alex.call_function_single
-# sysctl alex.call_functions
-# sysctl alex.handled_interrupts
-# sysctl alex.local_apic
-# sysctl alex.reschedule_ipis
-# sysctl alex.handled_function_vector
-# sysctl alex.handled_reschedule
-# sysctl alex.handled_function_single_vector
-# sysctl alex.handled_local_timer
-# sysctl alex.handled_other_interrupt
-
-# sysctl alex.slow_exit_break
-# sysctl alex.slow_exit_irq_injection
-# sysctl alex.slow_exit_loop
-# sysctl alex.slow_exit_timer
-# sysctl alex.slow_exit_xfer_guest_mode
-# sysctl alex.slow_exits
+if [[ $USE_TRACING == true ]]; then
+  echo 0 > /sys/kernel/debug/tracing/tracing_on
+  echo 0 > /sys/kernel/debug/tracing/events/sched/sched_switch/enable
+  kill $pid
+fi

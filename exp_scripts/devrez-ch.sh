@@ -37,7 +37,7 @@ while [[ $# -gt 0 ]]; do
 		shift
 	  ;;
     --strace)
-	  cmd="strace $cloud_hype"
+	  cmd="strace -o strace.out $cloud_hype"
       shift
       ;;
     --kernel)

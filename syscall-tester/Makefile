@@ -1,9 +1,9 @@
 EXE=systest
 
 systest: systest.c pintest.c
-	gcc -o $(EXE) systest.c
+	gcc -o $(EXE) -static systest.c
 	cp $(EXE) ../rootfs-overlay/home
-	gcc -o pintest pintest.c
+	gcc -o pintest -static pintest.c
 	cp pintest ../rootfs-overlay/home
 
 clean:
