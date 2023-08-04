@@ -14,8 +14,13 @@ args = parser.parse_args()
 def get_msr_data(f):
     while True:
         line = f.readline()
+        if not is_line(line) and line != "":
+            continue
         parts = parse_line(line)
+        # try:
         event = get_event(parts)
+        # except:
+        #     continue
         if event == "kvm_msr":
             # print(parts)
             return parts[6], parts[8][:-1]

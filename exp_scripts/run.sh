@@ -1,7 +1,7 @@
 #!/bin/bash
 # Run with sudo
 
-kernel_img="../../linux/arch/x86_64/boot/bzImage"
+kernel_img="../../linux/cust_artifacts/bzImage"
 if [[ ! -f "$kernel_img" ]]; then
 	kernel_img="./bzImage"
 fi
@@ -16,5 +16,6 @@ fi
 	-append "console=ttyS0 ignore_loglevel earlyprintk=serial,ttyS0,115200 clocksource=kvm-clock" \
 	-object memory-backend-memfd,id=md1,size=4G,prealloc=on,prealloc-threads=4 \
 	-machine memory-backend=md1 \
-	-nic none \
+	-net none \
+	-virtfs local,path=/tmp/vmfs,mount_tag=host0,security_model=passthrough,id=host0 \
 	-gdb tcp::1234

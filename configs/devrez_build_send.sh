@@ -1,22 +1,40 @@
 #!/bin/bash
 set -em
 
+MACHINE=""
+while [[ $# -gt 0 ]]; do
+  case $1 in
+    -m|--machine)
+      MACHINE="$2"
+      shift
+      shift
+      ;;
+
+    *)
+        echo "Unknown argument $1"
+        exit 1
+      ;;
+  esac
+done
+
 linux_dir="/usr/local/google/home/fuersta/linux"
 cp Gconfig.* $linux_dir
 pushd $linux_dir > /dev/null 
-gbuild TARGET_STATIC_DEFAULT=y CONFIG=smp EXTRA_PREDICATES='nonmodular' -s
+gbuild TARGET_STATIC_DEFAULT=y CONFIG=smp EXTRA_PREDICATES='nonmodular' KCFLAGS='-Wno-error=unused-function -Wno-error=unused-variable' -s
 popd > /dev/null
 
 deploy_test() {
     host=$1
     append_cmd=$2
 
+    echo "Deploying to $host"
     log="/tmp/deploy_$host"
     #  -client=ssh -ssh_direct
     konjurer_cli -client=ssh -ssh_direct --ssh_direct=true -append_cmdline="$append_cmd" $linux_dir/pkgs/LATEST.tar.xz $host > "$log.stdout" 2> "$log.stderr"
     if [[ $? != 0 ]]; then
         echo "konjurer deploy failed, logs at $log; rebooting" # 
-        # ssh root@$host "echo 'test' > /dev/null; shutdown -r now &"
+        # megapede power --power_backend_type POWER_BACKEND_TYPE_NEMORA cycle "$host.prod.google.com"
+        ssh root@$host "echo 'test' > /dev/null; shutdown -r now &"
         return;
     fi
     ver=$(ssh root@$host -C "uname -r")
@@ -44,10 +62,21 @@ nohz="nohz=on nohz_full=$isolated_cpus"
 append_cmd="$memmap $isolcpus $rcu $disables $a1 $states $nohz"
 
 set +e
-# deploy_test "oqv205" "$append_cmd" &
-sleep $(shuf -i 1-20 -n 1)
-# deploy_test "oqv143" "$append_cmd" &
-sleep $(shuf -i 1-20 -n 1)
-deploy_test "oqv142" "$append_cmd" &
+if [[ -n "$MACHINE" ]]; then
+    deploy_test "$MACHINE" "$append_cmd" &
+else
+    # oqv22 oqv20 oqv206 oqv205
+    for host in lpbb26 lpbb23 lpbb21; do
+        deploy_test $host "$append_cmd" &
+        sleep $(shuf -i 1-20 -n 1)
+    done
+    # deploy_test "oqv205" "$append_cmd" &
+    # sleep $(shuf -i 1-20 -n 1)
+    # deploy_test "oqv22" "$append_cmd" &
+    # sleep $(shuf -i 1-20 -n 1)
+    # deploy_test "oqv206" "$append_cmd" &
+    # sleep $(shuf -i 1-20 -n 1)
+    # deploy_test "oqv20" "$append_cmd" &
+fi
 
 wait $(jobs -p)

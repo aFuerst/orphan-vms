@@ -1,0 +1,5 @@
+#!/bin/bash
+
+BASEDIR=$(dirname "$(readlink -f "$0")")
+"$BASEDIR"/virtiofsd_lib/ld-linux-x86-64.so.2 --library-path "$BASEDIR"/virtiofsd_lib "$BASEDIR"/virtiofsd_lib/virtiofsd $@
+

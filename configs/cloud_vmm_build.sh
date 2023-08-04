@@ -1,7 +1,6 @@
 #!/bin/bash
 set -em
 
-
 # https://github.com/cloud-hypervisor/cloud-hypervisor/blob/main/docs/building.md
 # https://github.com/cloud-hypervisor/cloud-hypervisor/blob/main/docs/gdb.md
 
@@ -13,12 +12,26 @@ cargo build --all --features guest_debug --target=x86_64-unknown-linux-musl --re
 popd > /dev/null
 
 
-cloud_hyp="../../cloud-hypervisor/target/x86_64-unknown-linux-musl/release/cloud-hypervisor"
-ch_remote="../../cloud-hypervisor/target/x86_64-unknown-linux-musl/release/ch-remote"
+virtiofs_dir="/usr/local/google/home/fuersta/virtiofsd"
+virtiofsd="$virtiofs_dir/target/release/virtiofsd"
+pushd $virtiofs_dir > /dev/null
+cargo build --release
+# sudo setcap cap_sys_admin+epi $virtiofsd
+popd > /dev/null
+./copy_shared_lib $virtiofsd virtiofsd_lib/
+cp $virtiofsd virtiofsd_lib/
+
+cloud_hyp="$vmm_dir/target/x86_64-unknown-linux-musl/release/cloud-hypervisor"
+ch_remote="$vmm_dir/target/x86_64-unknown-linux-musl/release/ch-remote"
 
 bin="/root/google/bin"
 user="root"
-for host in oqv143 oqv142 oqv205; do
+# oqv22 oqv20 oqv206 oqv205
+for host in lpbb26 lpbb23 lpbb21; do
     scp $ch_remote $user@$host:$bin
     scp $cloud_hyp $user@$host:$bin
+    scp -r virtiofsd_lib/ $user@$host:$bin
+    scp virtiofsd $user@$host:$bin
 done
+
+rm -r virtiofsd_lib/

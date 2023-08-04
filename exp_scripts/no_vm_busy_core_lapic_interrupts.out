@@ -1,0 +1,1278 @@
+         pintest-31662   [024] d.h..  2536.708931: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2536.708942: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235388
+         pintest-31662   [024] dNH..  2536.708943: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2536.708944: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233738
+         pintest-31662   [024] d....  2536.708946: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2536.708951: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2536.709179: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2536.709181: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996913
+         pintest-31662   [024] d....  2536.709182: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745839
+         pintest-31662   [024] d.h..  2537.212930: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2537.212941: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236827
+         pintest-31662   [024] dNH..  2537.212942: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2537.212942: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235039
+         pintest-31662   [024] d....  2537.212945: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2537.212949: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2537.213178: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2537.213180: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 997006
+         pintest-31662   [024] d....  2537.213181: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745994
+         pintest-31662   [024] d.h..  2537.716931: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2537.716941: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236279
+         pintest-31662   [024] dNH..  2537.716943: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2537.716944: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233236
+         pintest-31662   [024] d....  2537.716946: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2537.716950: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2537.717178: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2537.717180: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996778
+         pintest-31662   [024] d....  2537.717181: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745819
+         pintest-31662   [024] d.h..  2538.220931: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2538.220941: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236533
+         pintest-31662   [024] dNH..  2538.220941: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2538.220942: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234945
+         pintest-31662   [024] d....  2538.220946: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2538.220951: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=kworker/24:1 next_pid=358 next_prio=120
+    kworker/24:1-358     [024] d....  2538.220963: sched_switch: prev_comm=kworker/24:1 prev_pid=358 prev_prio=120 prev_state=I ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2538.221178: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2538.221181: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 995975
+         pintest-31662   [024] d....  2538.221182: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503744843
+         pintest-31662   [024] d.h..  2538.724931: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2538.724942: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235031
+         pintest-31662   [024] dNH..  2538.724944: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2538.724945: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 232129
+         pintest-31662   [024] d....  2538.724947: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2538.724950: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2538.725178: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2538.725181: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996162
+         pintest-31662   [024] d....  2538.725181: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745309
+         pintest-31662   [024] d.h..  2539.228931: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2539.228940: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236847
+         pintest-31662   [024] dNH..  2539.228941: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2539.228941: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235429
+         pintest-31662   [024] d....  2539.228943: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2539.228948: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2539.229178: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2539.229180: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996679
+         pintest-31662   [024] d....  2539.229181: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745725
+         pintest-31662   [024] d.h..  2539.732930: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2539.732941: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235671
+         pintest-31662   [024] dNH..  2539.732942: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2539.732943: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233645
+         pintest-31662   [024] d....  2539.732946: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2539.732950: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2539.733178: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2539.733180: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996450
+         pintest-31662   [024] d....  2539.733181: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745380
+         pintest-31662   [024] d.h..  2540.236930: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2540.236941: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235325
+         pintest-31662   [024] dNH..  2540.236942: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2540.236943: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233114
+         pintest-31662   [024] d....  2540.236947: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2540.236951: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=kworker/24:1 next_pid=358 next_prio=120
+    kworker/24:1-358     [024] d....  2540.236970: sched_switch: prev_comm=kworker/24:1 prev_pid=358 prev_prio=120 prev_state=I ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2540.237187: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2540.237190: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 986525
+         pintest-31662   [024] d....  2540.237191: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503735358
+         pintest-31662   [024] d.h..  2540.740930: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2540.740941: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234898
+         pintest-31662   [024] dNH..  2540.740944: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2540.740945: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 231188
+         pintest-31662   [024] d....  2540.740947: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2540.740951: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2540.741178: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2540.741180: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996512
+         pintest-31662   [024] d....  2540.741181: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745411
+         pintest-31662   [024] d.h..  2541.244930: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2541.244940: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236177
+         pintest-31662   [024] dNH..  2541.244942: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2541.244943: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233289
+         pintest-31662   [024] d....  2541.244945: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2541.244949: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2541.245178: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2541.245180: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996313
+         pintest-31662   [024] d....  2541.245181: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745235
+         pintest-31662   [024] d.h..  2541.748929: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2541.748940: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235836
+         pintest-31662   [024] dNH..  2541.748941: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2541.748942: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233744
+         pintest-31662   [024] d....  2541.748945: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2541.748949: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2541.749177: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2541.749179: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996915
+         pintest-31662   [024] d....  2541.749180: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503746016
+         pintest-31662   [024] d.h..  2542.252929: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2542.252940: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236227
+         pintest-31662   [024] dNH..  2542.252942: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2542.252942: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233229
+         pintest-31662   [024] d....  2542.252946: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2542.252950: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=kworker/24:1 next_pid=358 next_prio=120
+    kworker/24:1-358     [024] d....  2542.253012: sched_switch: prev_comm=kworker/24:1 prev_pid=358 prev_prio=120 prev_state=I ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d....  2542.253016: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503910227
+         pintest-31662   [024] d.h..  2542.756929: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2542.756942: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233812
+         pintest-31662   [024] dNH..  2542.756944: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2542.756945: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 230099
+         pintest-31662   [024] d....  2542.756947: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2542.756951: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2542.757176: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2542.757179: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996940
+         pintest-31662   [024] d....  2542.757179: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745903
+         pintest-31662   [024] dnh..  2543.092947: __flush_smp_call_function_queue: executing irq work callback from: '0' to: '24' nohz_full_kick_func+0x0/0x10
+         pintest-31662   [024] dn...  2543.092950: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 225490
+         pintest-31662   [024] d....  2543.092956: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kworker/24:1 next_pid=358 next_prio=120
+    kworker/24:1-358     [024] d....  2543.092961: sched_switch: prev_comm=kworker/24:1 prev_pid=358 prev_prio=120 prev_state=I ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d....  2543.092966: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 167960027
+         pintest-31662   [024] d.h..  2543.260928: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2543.260941: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234152
+         pintest-31662   [024] dNH..  2543.260942: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2543.260943: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 232677
+         pintest-31662   [024] d....  2543.260945: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2543.260949: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2543.261176: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2543.261179: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996411
+         pintest-31662   [024] d....  2543.261180: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745077
+         pintest-31662   [024] d.h..  2543.764932: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2543.764943: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 232644
+         pintest-31662   [024] dNH..  2543.764943: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2543.764944: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 231045
+         pintest-31662   [024] d....  2543.764947: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2543.764952: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2543.765176: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2543.765178: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996692
+         pintest-31662   [024] d....  2543.765180: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745173
+         pintest-31662   [024] d.h..  2544.268928: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2544.268940: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235103
+         pintest-31662   [024] dNH..  2544.268941: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2544.268942: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233255
+         pintest-31662   [024] d....  2544.268946: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2544.268949: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=kworker/24:1 next_pid=358 next_prio=120
+    kworker/24:1-358     [024] d....  2544.268953: sched_switch: prev_comm=kworker/24:1 prev_pid=358 prev_prio=120 prev_state=I ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2544.269176: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2544.269178: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996473
+         pintest-31662   [024] d....  2544.269180: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745323
+         pintest-31662   [024] d.h..  2544.772928: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2544.772939: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235850
+         pintest-31662   [024] dNH..  2544.772940: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2544.772941: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234050
+         pintest-31662   [024] d....  2544.772944: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2544.772948: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2544.773176: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2544.773178: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996741
+         pintest-31662   [024] d....  2544.773179: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745668
+         pintest-31662   [024] d.h..  2545.276928: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2545.276939: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236020
+         pintest-31662   [024] dNH..  2545.276940: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2545.276940: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234373
+         pintest-31662   [024] d....  2545.276943: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2545.276947: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=kworker/24:1 next_pid=358 next_prio=120
+    kworker/24:1-358     [024] d....  2545.276950: sched_switch: prev_comm=kworker/24:1 prev_pid=358 prev_prio=120 prev_state=I ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2545.277175: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2545.277178: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996764
+         pintest-31662   [024] d....  2545.277179: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745743
+         pintest-31662   [024] d.h..  2545.780928: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2545.780938: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236847
+         pintest-31662   [024] dNH..  2545.780938: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2545.780939: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235140
+         pintest-31662   [024] d....  2545.780942: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2545.780946: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2545.781175: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2545.781178: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996794
+         pintest-31662   [024] d....  2545.781178: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745923
+         pintest-31662   [024] d.h..  2546.284927: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2546.284938: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236046
+         pintest-31662   [024] dNH..  2546.284939: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2546.284940: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234285
+         pintest-31662   [024] d....  2546.284943: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2546.284946: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2546.285175: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2546.285177: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996991
+         pintest-31662   [024] d....  2546.285178: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503746158
+         pintest-31662   [024] d.h..  2546.788931: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2546.788942: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 232417
+         pintest-31662   [024] dNH..  2546.788943: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2546.788943: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 230673
+         pintest-31662   [024] d....  2546.788946: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2546.788950: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2546.789175: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2546.789177: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 997045
+         pintest-31662   [024] d....  2546.789178: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745971
+         pintest-31662   [024] d.h..  2547.292926: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2547.292941: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233433
+         pintest-31662   [024] dNH..  2547.292942: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2547.292942: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 231500
+         pintest-31662   [024] d....  2547.292945: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2547.292949: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2547.293175: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2547.293177: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996761
+         pintest-31662   [024] d....  2547.293178: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745788
+         pintest-31662   [024] d.h..  2547.796927: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2547.796937: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236729
+         pintest-31662   [024] dNH..  2547.796938: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2547.796939: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235009
+         pintest-31662   [024] d....  2547.796942: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2547.796945: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2547.797175: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2547.797177: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996529
+         pintest-31662   [024] d....  2547.797178: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745620
+         pintest-31662   [024] d.h..  2548.300926: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2548.300937: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236383
+         pintest-31662   [024] dNH..  2548.300940: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2548.300940: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233328
+         pintest-31662   [024] d....  2548.300943: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2548.300947: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=kworker/24:1 next_pid=358 next_prio=120
+    kworker/24:1-358     [024] d....  2548.300959: sched_switch: prev_comm=kworker/24:1 prev_pid=358 prev_prio=120 prev_state=I ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2548.301175: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2548.301178: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 995217
+         pintest-31662   [024] d....  2548.301179: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503743989
+         pintest-31662   [024] d.h..  2548.804926: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2548.804937: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236232
+         pintest-31662   [024] dNH..  2548.804940: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2548.804941: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 232713
+         pintest-31662   [024] d....  2548.804943: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2548.804946: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2548.805174: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2548.805176: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996927
+         pintest-31662   [024] d....  2548.805177: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745859
+         pintest-31662   [024] d.h..  2549.308926: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2549.308936: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236868
+         pintest-31662   [024] dNH..  2549.308939: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2549.308940: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 232805
+         pintest-31662   [024] d....  2549.308942: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2549.308946: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2549.309175: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2549.309177: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996641
+         pintest-31662   [024] d....  2549.309177: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745704
+         pintest-31662   [024] d.h..  2549.812927: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2549.812938: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235420
+         pintest-31662   [024] dNH..  2549.812940: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2549.812941: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 231785
+         pintest-31662   [024] d....  2549.812944: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2549.812948: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2549.813175: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2549.813177: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996357
+         pintest-31662   [024] d....  2549.813178: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745354
+         pintest-31662   [024] d.h..  2550.316926: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2550.316936: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236489
+         pintest-31662   [024] dNH..  2550.316937: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2550.316938: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234605
+         pintest-31662   [024] d....  2550.316941: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2550.316944: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2550.317174: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2550.317176: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996832
+         pintest-31662   [024] d....  2550.317177: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745960
+         pintest-31662   [024] d.h..  2550.820926: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2550.820938: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235076
+         pintest-31662   [024] dNH..  2550.820939: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2550.820939: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233300
+         pintest-31662   [024] d....  2550.820942: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2550.820947: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2550.821174: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2550.821176: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996703
+         pintest-31662   [024] d....  2550.821177: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745845
+         pintest-31662   [024] d.h..  2551.324925: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2551.324934: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 238135
+         pintest-31662   [024] dNH..  2551.324935: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2551.324936: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236789
+         pintest-31662   [024] d....  2551.324939: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2551.324943: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=kworker/24:1 next_pid=358 next_prio=120
+    kworker/24:1-358     [024] d....  2551.324955: sched_switch: prev_comm=kworker/24:1 prev_pid=358 prev_prio=120 prev_state=I ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2551.325173: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2551.325176: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996197
+         pintest-31662   [024] d....  2551.325177: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745183
+         pintest-31662   [024] d.h..  2551.828926: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2551.828937: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235718
+         pintest-31662   [024] dNH..  2551.828938: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2551.828938: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234068
+         pintest-31662   [024] d....  2551.828941: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2551.828945: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2551.829173: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2551.829175: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996826
+         pintest-31662   [024] d....  2551.829176: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745970
+         pintest-31662   [024] d.h..  2552.332925: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2552.332935: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 237341
+         pintest-31662   [024] dNH..  2552.332936: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2552.332936: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235875
+         pintest-31662   [024] d....  2552.332938: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2552.332942: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2552.333173: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2552.333175: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996982
+         pintest-31662   [024] d....  2552.333176: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745884
+         pintest-31662   [024] d.h..  2552.836925: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2552.836935: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236770
+         pintest-31662   [024] dNH..  2552.836936: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2552.836937: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235401
+         pintest-31662   [024] d....  2552.836938: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2552.836943: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2552.837173: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2552.837175: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996769
+         pintest-31662   [024] d....  2552.837176: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745775
+         pintest-31662   [024] d.h..  2553.340924: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2553.340937: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235412
+         pintest-31662   [024] dNH..  2553.340939: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2553.340939: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 232315
+         pintest-31662   [024] d....  2553.340942: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2553.340946: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2553.341173: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2553.341175: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996739
+         pintest-31662   [024] d....  2553.341176: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745709
+         pintest-31662   [024] d.h..  2553.844929: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2553.844939: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 232387
+         pintest-31662   [024] dNH..  2553.844940: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2553.844941: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 230996
+         pintest-31662   [024] d....  2553.844942: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2553.844948: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2553.845172: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2553.845174: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 997121
+         pintest-31662   [024] d....  2553.845175: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503746160
+         pintest-31662   [024] d.h..  2554.348924: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2554.348934: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 237849
+         pintest-31662   [024] dNH..  2554.348935: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2554.348935: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235932
+         pintest-31662   [024] d....  2554.348939: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2554.348944: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=kworker/24:1 next_pid=358 next_prio=120
+    kworker/24:1-358     [024] d....  2554.348954: sched_switch: prev_comm=kworker/24:1 prev_pid=358 prev_prio=120 prev_state=I ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2554.349173: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2554.349175: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996299
+         pintest-31662   [024] d....  2554.349176: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745304
+         pintest-31662   [024] d.h..  2554.852925: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2554.852934: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 237593
+         pintest-31662   [024] dNH..  2554.852935: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2554.852935: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235960
+         pintest-31662   [024] d....  2554.852938: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2554.852941: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2554.853172: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2554.853174: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996987
+         pintest-31662   [024] d....  2554.853175: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503746058
+         pintest-31662   [024] d.h..  2555.356925: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2555.356936: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235042
+         pintest-31662   [024] dNH..  2555.356939: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2555.356939: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 232062
+         pintest-31662   [024] d....  2555.356941: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2555.356945: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2555.357172: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2555.357174: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996771
+         pintest-31662   [024] d....  2555.357175: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745777
+         pintest-31662   [024] d.h..  2555.860925: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2555.860935: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236176
+         pintest-31662   [024] dNH..  2555.860936: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2555.860936: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234494
+         pintest-31662   [024] d....  2555.860939: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2555.860943: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2555.861172: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2555.861174: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996855
+         pintest-31662   [024] d....  2555.861175: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745961
+         pintest-31662   [024] d.h..  2556.364924: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2556.364934: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236850
+         pintest-31662   [024] dNH..  2556.364935: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2556.364936: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235158
+         pintest-31662   [024] d....  2556.364938: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2556.364942: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2556.365172: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2556.365174: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996936
+         pintest-31662   [024] d....  2556.365175: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745893
+         pintest-31662   [024] d.h..  2556.868928: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2556.868938: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 232274
+         pintest-31662   [024] dNH..  2556.868940: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2556.868940: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 230317
+         pintest-31662   [024] d....  2556.868943: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2556.868947: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2556.869171: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2556.869174: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 997105
+         pintest-31662   [024] d....  2556.869174: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503746094
+         pintest-31662   [024] d.h..  2557.372924: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2557.372934: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236880
+         pintest-31662   [024] dNH..  2557.372936: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2557.372937: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233966
+         pintest-31662   [024] d....  2557.372940: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2557.372944: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=kworker/24:1 next_pid=358 next_prio=120
+    kworker/24:1-358     [024] d....  2557.372947: sched_switch: prev_comm=kworker/24:1 prev_pid=358 prev_prio=120 prev_state=I ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2557.373172: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2557.373175: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 995507
+         pintest-31662   [024] d....  2557.373176: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503744422
+         pintest-31662   [024] d.h..  2557.876924: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2557.876934: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236249
+         pintest-31662   [024] dNH..  2557.876935: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2557.876935: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234767
+         pintest-31662   [024] d....  2557.876940: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2557.876945: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2557.877171: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2557.877174: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996737
+         pintest-31662   [024] d....  2557.877174: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745767
+         pintest-31662   [024] d.h..  2558.380923: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2558.380933: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236842
+         pintest-31662   [024] dNH..  2558.380935: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2558.380935: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234824
+         pintest-31662   [024] d....  2558.380938: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2558.380942: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2558.381171: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2558.381173: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996957
+         pintest-31662   [024] d....  2558.381174: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745926
+         pintest-31662   [024] d.h..  2558.884923: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2558.884933: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 237220
+         pintest-31662   [024] dNH..  2558.884934: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2558.884934: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235736
+         pintest-31662   [024] d....  2558.884936: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2558.884940: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2558.885171: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2558.885173: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996969
+         pintest-31662   [024] d....  2558.885174: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503746046
+         pintest-31662   [024] d.h..  2559.388923: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2559.388935: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235063
+         pintest-31662   [024] dNH..  2559.388938: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2559.388939: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 231362
+         pintest-31662   [024] d....  2559.388941: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2559.388945: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2559.389172: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2559.389174: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 995472
+         pintest-31662   [024] d....  2559.389175: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503744422
+         pintest-31662   [024] d.h..  2559.395278: __flush_smp_call_function_queue: executing non-sync callback from: '3' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2559.395292: __flush_smp_call_function_queue: executing non-sync callback from: '3' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2559.395304: __flush_smp_call_function_queue: executing non-sync callback from: '3' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2559.395316: __flush_smp_call_function_queue: executing non-sync callback from: '3' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2559.395339: __flush_smp_call_function_queue: executing non-sync callback from: '3' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2559.395353: __flush_smp_call_function_queue: executing non-sync callback from: '3' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2559.395367: __flush_smp_call_function_queue: executing non-sync callback from: '3' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2559.395380: __flush_smp_call_function_queue: executing non-sync callback from: '3' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2559.395392: __flush_smp_call_function_queue: executing non-sync callback from: '3' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2559.395405: __flush_smp_call_function_queue: executing non-sync callback from: '3' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2559.395418: __flush_smp_call_function_queue: executing non-sync callback from: '3' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2559.395430: __flush_smp_call_function_queue: executing non-sync callback from: '3' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2559.395441: __flush_smp_call_function_queue: executing non-sync callback from: '3' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2559.395454: __flush_smp_call_function_queue: executing non-sync callback from: '3' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2559.395466: __flush_smp_call_function_queue: executing non-sync callback from: '3' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2559.395478: __flush_smp_call_function_queue: executing non-sync callback from: '3' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2559.395490: __flush_smp_call_function_queue: executing non-sync callback from: '3' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2559.395502: __flush_smp_call_function_queue: executing non-sync callback from: '3' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2559.395514: __flush_smp_call_function_queue: executing non-sync callback from: '3' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2559.395525: __flush_smp_call_function_queue: executing non-sync callback from: '3' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2559.395539: __flush_smp_call_function_queue: executing non-sync callback from: '3' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2559.395551: __flush_smp_call_function_queue: executing non-sync callback from: '3' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2559.395563: __flush_smp_call_function_queue: executing non-sync callback from: '3' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2559.411811: __flush_smp_call_function_queue: executing irq work callback from: '9' to: '24' nohz_full_kick_func+0x0/0x10
+         pintest-31662   [024] d....  2559.411813: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 356480
+         pintest-31662   [024] d.h..  2559.412171: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNh..  2559.412174: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 995586
+         pintest-31662   [024] d....  2559.412178: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=tsc_read_cpu_24 next_pid=32492 next_prio=110
+ tsc_read_cpu_24-32492   [024] d....  2559.412191: sched_switch: prev_comm=tsc_read_cpu_24 prev_pid=32492 prev_prio=98 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] dn...  2559.412196: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 480724190
+         pintest-31662   [024] d....  2559.412210: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=tsc_read_cpu_24 next_pid=32492 next_prio=98
+ tsc_read_cpu_24-32492   [024] dN...  2559.412222: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 948597
+ tsc_read_cpu_24-32492   [024] d....  2559.412225: sched_switch: prev_comm=tsc_read_cpu_24 prev_pid=32492 prev_prio=110 prev_state=R ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2559.413173: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2559.413176: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 993854
+         pintest-31662   [024] d.h..  2559.414171: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2559.414173: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996705
+         pintest-31662   [024] d.h..  2559.415171: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2559.415173: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 997092
+         pintest-31662   [024] d.h..  2559.416171: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNh..  2559.416173: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 997163
+         pintest-31662   [024] d....  2559.416175: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=tsc_read_cpu_24 next_pid=32492 next_prio=110
+ tsc_read_cpu_24-32492   [024] d....  2559.416196: sched_switch: prev_comm=tsc_read_cpu_24 prev_pid=32492 prev_prio=110 prev_state=X ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d....  2559.416200: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 476720067
+         pintest-31662   [024] d.h..  2559.416272: __flush_smp_call_function_queue: executing ttwu callback from: '44' to: '24' 0x3
+         pintest-31662   [024] d....  2559.416278: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 891828
+         pintest-31662   [024] d.h..  2559.417171: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2559.417173: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996365
+         pintest-31662   [024] d.h..  2559.418171: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2559.418173: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996922
+         pintest-31662   [024] d.h..  2559.419171: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2559.419173: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996899
+         pintest-31662   [024] d.h..  2559.420171: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNh..  2559.420174: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996074
+         pintest-31662   [024] d....  2559.420177: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=tsc_read_cpu_24 next_pid=32494 next_prio=110
+ tsc_read_cpu_24-32494   [024] d....  2559.420190: sched_switch: prev_comm=tsc_read_cpu_24 prev_pid=32494 prev_prio=98 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] dn...  2559.420194: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 472726323
+         pintest-31662   [024] d....  2559.420197: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=tsc_read_cpu_24 next_pid=32494 next_prio=98
+ tsc_read_cpu_24-32494   [024] dN...  2559.420206: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 963888
+ tsc_read_cpu_24-32494   [024] d....  2559.420210: sched_switch: prev_comm=tsc_read_cpu_24 prev_pid=32494 prev_prio=110 prev_state=R ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2559.421173: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2559.421176: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 993764
+         pintest-31662   [024] d.h..  2559.422171: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2559.422173: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996343
+         pintest-31662   [024] d.h..  2559.423171: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2559.423173: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 997146
+         pintest-31662   [024] d.h..  2559.424171: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNh..  2559.424173: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996677
+         pintest-31662   [024] d....  2559.424176: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=tsc_read_cpu_24 next_pid=32494 next_prio=110
+ tsc_read_cpu_24-32494   [024] d....  2559.424197: sched_switch: prev_comm=tsc_read_cpu_24 prev_pid=32494 prev_prio=110 prev_state=X ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d....  2559.424200: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 468719768
+         pintest-31662   [024] d.h..  2559.424271: __flush_smp_call_function_queue: executing ttwu callback from: '20' to: '24' 0x3
+         pintest-31662   [024] d....  2559.424277: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 893086
+         pintest-31662   [024] d.h..  2559.425171: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2559.425174: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 995785
+         pintest-31662   [024] d.h..  2559.426171: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2559.426174: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 995946
+         pintest-31662   [024] d.h..  2559.427171: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2559.427173: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 997045
+         pintest-31662   [024] d.h..  2559.428171: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNh..  2559.428173: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 997011
+         pintest-31662   [024] d....  2559.428176: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=tsc_read_cpu_24 next_pid=32496 next_prio=110
+ tsc_read_cpu_24-32496   [024] d....  2559.428191: sched_switch: prev_comm=tsc_read_cpu_24 prev_pid=32496 prev_prio=98 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] dn...  2559.428196: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 464724788
+         pintest-31662   [024] d....  2559.428199: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=tsc_read_cpu_24 next_pid=32496 next_prio=98
+ tsc_read_cpu_24-32496   [024] dN...  2559.428219: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 951615
+ tsc_read_cpu_24-32496   [024] d....  2559.428221: sched_switch: prev_comm=tsc_read_cpu_24 prev_pid=32496 prev_prio=110 prev_state=R ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2559.429172: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2559.429175: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 995048
+         pintest-31662   [024] d.h..  2559.430171: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2559.430173: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996940
+         pintest-31662   [024] d.h..  2559.431170: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2559.431172: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 997436
+         pintest-31662   [024] d.h..  2559.432171: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNh..  2559.432173: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996979
+         pintest-31662   [024] d....  2559.432176: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=tsc_read_cpu_24 next_pid=32496 next_prio=110
+ tsc_read_cpu_24-32496   [024] d....  2559.432196: sched_switch: prev_comm=tsc_read_cpu_24 prev_pid=32496 prev_prio=110 prev_state=X ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d....  2559.432200: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 460720206
+         pintest-31662   [024] d.h..  2559.892924: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2559.892936: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233704
+         pintest-31662   [024] dNH..  2559.892937: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2559.892938: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 231431
+         pintest-31662   [024] d....  2559.892941: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2559.892945: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2559.893171: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2559.893174: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 995436
+         pintest-31662   [024] d....  2559.893175: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503744338
+         pintest-31662   [024] dnh..  2560.116953: __flush_smp_call_function_queue: executing irq work callback from: '0' to: '24' nohz_full_kick_func+0x0/0x10
+         pintest-31662   [024] dn...  2560.116957: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 213392
+         pintest-31662   [024] d....  2560.116962: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kworker/24:1 next_pid=358 next_prio=120
+    kworker/24:1-358     [024] d....  2560.116967: sched_switch: prev_comm=kworker/24:1 prev_pid=358 prev_prio=120 prev_state=I ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d....  2560.116971: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 279948500
+         pintest-31662   [024] d.h..  2560.396923: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2560.396933: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236756
+         pintest-31662   [024] dNH..  2560.396934: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2560.396934: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235125
+         pintest-31662   [024] d....  2560.396942: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2560.396946: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=kworker/24:1 next_pid=358 next_prio=120
+    kworker/24:1-358     [024] d....  2560.396958: sched_switch: prev_comm=kworker/24:1 prev_pid=358 prev_prio=120 prev_state=I ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2560.397175: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2560.397178: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 991881
+         pintest-31662   [024] d....  2560.397179: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503740235
+         pintest-31662   [024] d.h..  2560.900923: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2560.900933: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236007
+         pintest-31662   [024] dNH..  2560.900936: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2560.900936: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 232957
+         pintest-31662   [024] d....  2560.900939: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2560.900943: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2560.901171: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2560.901173: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996279
+         pintest-31662   [024] d....  2560.901175: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503744559
+         pintest-31662   [024] d.h..  2561.404922: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2561.404933: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236386
+         pintest-31662   [024] dNH..  2561.404934: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2561.404935: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234378
+         pintest-31662   [024] d....  2561.404939: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2561.404943: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=kworker/24:1 next_pid=358 next_prio=120
+    kworker/24:1-358     [024] d....  2561.404946: sched_switch: prev_comm=kworker/24:1 prev_pid=358 prev_prio=120 prev_state=I ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2561.405170: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2561.405173: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996639
+         pintest-31662   [024] d....  2561.405174: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503744959
+         pintest-31662   [024] d.h..  2561.908922: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2561.908932: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236791
+         pintest-31662   [024] dNH..  2561.908933: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2561.908934: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235055
+         pintest-31662   [024] d....  2561.908937: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2561.908940: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2561.909170: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2561.909172: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996920
+         pintest-31662   [024] d....  2561.909173: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503746010
+         pintest-31662   [024] d.h..  2562.412922: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2562.412932: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236564
+         pintest-31662   [024] dNH..  2562.412933: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2562.412934: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234792
+         pintest-31662   [024] d....  2562.412937: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2562.412941: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2562.413179: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2562.413182: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 987106
+         pintest-31662   [024] d....  2562.413183: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503736033
+         pintest-31662   [024] d.h..  2562.916922: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2562.916932: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236691
+         pintest-31662   [024] dNH..  2562.916934: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2562.916935: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233891
+         pintest-31662   [024] d....  2562.916936: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2562.916940: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2562.917170: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2562.917172: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996843
+         pintest-31662   [024] d....  2562.917173: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745909
+         pintest-31662   [024] d.h..  2563.420923: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2563.420935: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233726
+         pintest-31662   [024] dNH..  2563.420936: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2563.420936: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 231928
+         pintest-31662   [024] d....  2563.420940: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2563.420944: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=kworker/24:1 next_pid=358 next_prio=120
+    kworker/24:1-358     [024] d....  2563.420955: sched_switch: prev_comm=kworker/24:1 prev_pid=358 prev_prio=120 prev_state=I ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2563.421169: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2563.421173: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 995894
+         pintest-31662   [024] d....  2563.421174: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503744649
+         pintest-31662   [024] d.h..  2563.924922: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2563.924932: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236288
+         pintest-31662   [024] dNH..  2563.924935: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2563.924935: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233159
+         pintest-31662   [024] d....  2563.924937: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2563.924941: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2563.925169: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2563.925171: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996993
+         pintest-31662   [024] d....  2563.925172: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745939
+         pintest-31662   [024] d.h..  2564.428921: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2564.428931: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 237008
+         pintest-31662   [024] dNH..  2564.428932: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2564.428933: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235248
+         pintest-31662   [024] d....  2564.428936: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2564.428939: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2564.429169: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2564.429171: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 997258
+         pintest-31662   [024] d....  2564.429172: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503746236
+         pintest-31662   [024] d.h..  2564.932921: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2564.932931: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 237131
+         pintest-31662   [024] dNH..  2564.932932: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2564.932933: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235294
+         pintest-31662   [024] d....  2564.932936: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2564.932939: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2564.933169: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2564.933171: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 997187
+         pintest-31662   [024] d....  2564.933172: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503746244
+         pintest-31662   [024] d.h..  2565.436925: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2565.436935: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233264
+         pintest-31662   [024] dNH..  2565.436936: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2565.436936: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 231675
+         pintest-31662   [024] d....  2565.436939: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2565.436942: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2565.437169: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2565.437171: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996717
+         pintest-31662   [024] d....  2565.437172: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745489
+         pintest-31662   [024] d.h..  2565.940921: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2565.940932: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235736
+         pintest-31662   [024] dNH..  2565.940933: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2565.940934: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233977
+         pintest-31662   [024] d....  2565.940936: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2565.940942: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2565.941169: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2565.941171: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 997005
+         pintest-31662   [024] d....  2565.941172: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745933
+         pintest-31662   [024] d.h..  2566.079462: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' cpuid_smp_cpuid+0x0/0x30
+         pintest-31662   [024] d.h..  2566.079472: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' cpuid_smp_cpuid+0x0/0x30
+         pintest-31662   [024] d.h..  2566.080384: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' cpuid_smp_cpuid+0x0/0x30
+         pintest-31662   [024] d.h..  2566.080397: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' cpuid_smp_cpuid+0x0/0x30
+         pintest-31662   [024] d.h..  2566.081264: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' cpuid_smp_cpuid+0x0/0x30
+         pintest-31662   [024] d.h..  2566.081274: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' cpuid_smp_cpuid+0x0/0x30
+         pintest-31662   [024] d.h..  2566.081926: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2566.102217: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2566.102766: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2566.102772: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2566.102777: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2566.123478: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2566.123483: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2566.123488: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2566.125412: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' cpuid_smp_cpuid+0x0/0x30
+         pintest-31662   [024] d.h..  2566.125421: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2566.125430: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2566.125436: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2566.125442: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2566.125447: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2566.125453: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2566.125459: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2566.125464: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2566.125471: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2566.125477: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2566.125482: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2566.128173: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2566.128183: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2566.128192: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2566.128201: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' cpuid_smp_cpuid+0x0/0x30
+         pintest-31662   [024] d.h..  2566.128210: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2566.128219: __flush_smp_call_function_queue: executing non-sync callback from: '21' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2566.444921: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2566.444932: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235964
+         pintest-31662   [024] dNH..  2566.444934: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2566.444935: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 232682
+         pintest-31662   [024] d....  2566.444938: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2566.444942: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=kworker/24:1 next_pid=358 next_prio=120
+    kworker/24:1-358     [024] d....  2566.444958: sched_switch: prev_comm=kworker/24:1 prev_pid=358 prev_prio=120 prev_state=I ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2566.445168: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2566.445171: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996255
+         pintest-31662   [024] d....  2566.445172: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745086
+         pintest-31662   [024] d.h..  2566.948921: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2566.948931: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236197
+         pintest-31662   [024] dNH..  2566.948932: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2566.948933: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234256
+         pintest-31662   [024] d....  2566.948936: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2566.948940: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2566.949168: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2566.949170: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996814
+         pintest-31662   [024] d....  2566.949171: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745774
+         pintest-31662   [024] d.h..  2567.452921: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2567.452933: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233911
+         pintest-31662   [024] dNH..  2567.452934: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2567.452935: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 232052
+         pintest-31662   [024] d....  2567.452938: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2567.452941: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2567.453168: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2567.453170: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 997047
+         pintest-31662   [024] d....  2567.453171: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745900
+         pintest-31662   [024] d.h..  2567.956920: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2567.956933: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233624
+         pintest-31662   [024] dNH..  2567.956934: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2567.956935: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 231962
+         pintest-31662   [024] d....  2567.956938: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2567.956941: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2567.957168: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2567.957170: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996949
+         pintest-31662   [024] d....  2567.957171: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745992
+         pintest-31662   [024] d.h..  2568.460920: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2568.460929: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 237639
+         pintest-31662   [024] dNH..  2568.460931: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2568.460932: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234792
+         pintest-31662   [024] d....  2568.460933: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2568.460937: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2568.461168: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2568.461170: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 997059
+         pintest-31662   [024] d....  2568.461171: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503746061
+         pintest-31662   [024] d.h..  2568.964920: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2568.964930: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236856
+         pintest-31662   [024] dNH..  2568.964931: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2568.964932: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234617
+         pintest-31662   [024] d....  2568.964935: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2568.964938: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2568.965168: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2568.965170: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996889
+         pintest-31662   [024] d....  2568.965171: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745882
+         pintest-31662   [024] d.h..  2569.468920: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2569.468930: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236666
+         pintest-31662   [024] dNH..  2569.468931: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2569.468931: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234976
+         pintest-31662   [024] d....  2569.468935: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2569.468939: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=kworker/24:1 next_pid=358 next_prio=120
+    kworker/24:1-358     [024] d....  2569.468949: sched_switch: prev_comm=kworker/24:1 prev_pid=358 prev_prio=120 prev_state=I ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2569.469167: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2569.469170: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996099
+         pintest-31662   [024] d....  2569.469171: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503744899
+         pintest-31662   [024] d.h..  2569.972922: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2569.972933: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233327
+         pintest-31662   [024] dNH..  2569.972935: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2569.972936: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 230305
+         pintest-31662   [024] d....  2569.972939: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2569.972943: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2569.973168: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2569.973170: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996151
+         pintest-31662   [024] d....  2569.973171: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745001
+         pintest-31662   [024] d.h..  2570.476919: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2570.476930: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236444
+         pintest-31662   [024] dNH..  2570.476932: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2570.476933: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 232797
+         pintest-31662   [024] d....  2570.476936: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2570.476941: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2570.477168: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2570.477170: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996459
+         pintest-31662   [024] d....  2570.477171: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745161
+         pintest-31662   [024] d.h..  2570.980923: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2570.980934: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 232034
+         pintest-31662   [024] dNH..  2570.980936: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2570.980937: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 229154
+         pintest-31662   [024] d....  2570.980940: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2570.980943: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2570.981168: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2570.981170: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 995885
+         pintest-31662   [024] d....  2570.981171: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503744845
+         pintest-31662   [024] d.h..  2571.484920: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2571.484929: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236379
+         pintest-31662   [024] dNH..  2571.484932: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2571.484932: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233361
+         pintest-31662   [024] d....  2571.484934: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2571.484937: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2571.485166: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2571.485168: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 997159
+         pintest-31662   [024] d....  2571.485169: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503746158
+         pintest-31662   [024] d.h..  2571.988919: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2571.988930: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235996
+         pintest-31662   [024] dNH..  2571.988931: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2571.988931: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234160
+         pintest-31662   [024] d....  2571.988934: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2571.988938: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2571.989166: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2571.989169: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996901
+         pintest-31662   [024] d....  2571.989170: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745707
+         pintest-31662   [024] d.h..  2572.492919: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2572.492929: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236682
+         pintest-31662   [024] dNH..  2572.492930: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2572.492930: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234905
+         pintest-31662   [024] d....  2572.492935: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2572.492938: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=kworker/24:1 next_pid=358 next_prio=120
+    kworker/24:1-358     [024] d....  2572.492950: sched_switch: prev_comm=kworker/24:1 prev_pid=358 prev_prio=120 prev_state=I ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2572.493167: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2572.493169: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996072
+         pintest-31662   [024] d....  2572.493170: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503744887
+         pintest-31662   [024] d.h..  2572.996919: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2572.996932: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 232917
+         pintest-31662   [024] dNH..  2572.996935: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2572.996935: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 229949
+         pintest-31662   [024] d....  2572.996937: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2572.996942: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2572.997166: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2572.997169: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996618
+         pintest-31662   [024] d....  2572.997170: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745637
+         pintest-31662   [024] d.h..  2573.500919: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2573.500930: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235563
+         pintest-31662   [024] dNH..  2573.500931: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2573.500931: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233692
+         pintest-31662   [024] d....  2573.500934: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2573.500938: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2573.501166: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2573.501168: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996717
+         pintest-31662   [024] d....  2573.501169: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745672
+         pintest-31662   [024] d.h..  2574.004918: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2574.004930: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235411
+         pintest-31662   [024] dNH..  2574.004930: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2574.004931: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233538
+         pintest-31662   [024] d....  2574.004934: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2574.004938: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2574.005166: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2574.005168: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 997078
+         pintest-31662   [024] d....  2574.005169: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745996
+         pintest-31662   [024] d.h..  2574.508918: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2574.508929: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235566
+         pintest-31662   [024] dNH..  2574.508932: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2574.508932: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 232401
+         pintest-31662   [024] d....  2574.508934: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2574.508938: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2574.509165: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2574.509168: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 997064
+         pintest-31662   [024] d....  2574.509169: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745988
+         pintest-31662   [024] d.h..  2574.922811: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' cpuid_smp_cpuid+0x0/0x30
+         pintest-31662   [024] d.h..  2574.922819: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' cpuid_smp_cpuid+0x0/0x30
+         pintest-31662   [024] d.h..  2574.923840: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' cpuid_smp_cpuid+0x0/0x30
+         pintest-31662   [024] d.h..  2574.923848: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' cpuid_smp_cpuid+0x0/0x30
+         pintest-31662   [024] d.h..  2574.924777: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' cpuid_smp_cpuid+0x0/0x30
+         pintest-31662   [024] d.h..  2574.924785: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' cpuid_smp_cpuid+0x0/0x30
+         pintest-31662   [024] d.h..  2574.925488: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2574.945810: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2574.946428: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2574.946444: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2574.946448: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2574.967291: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2574.967296: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2574.967301: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2574.969637: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' cpuid_smp_cpuid+0x0/0x30
+         pintest-31662   [024] d.h..  2574.969645: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2574.969653: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2574.969657: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2574.969662: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2574.969666: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2574.969670: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2574.969675: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2574.969680: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2574.969684: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2574.969689: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2574.969693: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2574.972727: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2574.972735: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2574.972744: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2574.972752: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' cpuid_smp_cpuid+0x0/0x30
+         pintest-31662   [024] d.h..  2574.972760: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2574.972768: __flush_smp_call_function_queue: executing non-sync callback from: '7' to: '24' __rdmsr_safe_on_cpu+0x0/0x70
+         pintest-31662   [024] d.h..  2575.012917: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2575.012927: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 237165
+         pintest-31662   [024] dNH..  2575.012930: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2575.012931: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 232991
+         pintest-31662   [024] d....  2575.012934: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2575.012939: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2575.013166: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2575.013169: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 995857
+         pintest-31662   [024] d....  2575.013170: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503744556
+         pintest-31662   [024] d.h..  2575.516918: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2575.516930: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234307
+         pintest-31662   [024] dNH..  2575.516932: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2575.516934: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 230734
+         pintest-31662   [024] d....  2575.516937: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2575.516941: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=kworker/24:1 next_pid=358 next_prio=120
+    kworker/24:1-358     [024] d....  2575.516944: sched_switch: prev_comm=kworker/24:1 prev_pid=358 prev_prio=120 prev_state=I ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2575.517165: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2575.517168: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996391
+         pintest-31662   [024] d....  2575.517169: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745240
+         pintest-31662   [024] d.h..  2576.020917: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2576.020928: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236763
+         pintest-31662   [024] dNH..  2576.020930: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2576.020931: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233790
+         pintest-31662   [024] d....  2576.020933: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2576.020938: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2576.021166: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2576.021168: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996033
+         pintest-31662   [024] d....  2576.021169: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503744997
+         pintest-31662   [024] d.h..  2576.524918: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2576.524927: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236651
+         pintest-31662   [024] dNH..  2576.524928: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2576.524929: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235123
+         pintest-31662   [024] d....  2576.524932: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2576.524935: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2576.525165: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2576.525167: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996578
+         pintest-31662   [024] d....  2576.525168: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745633
+         pintest-31662   [024] d.h..  2577.028917: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2577.028927: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 237167
+         pintest-31662   [024] dNH..  2577.028928: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2577.028928: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235417
+         pintest-31662   [024] d....  2577.028931: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2577.028934: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2577.029165: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2577.029167: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996760
+         pintest-31662   [024] d....  2577.029168: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745942
+         pintest-31662   [024] d.h..  2577.532917: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2577.532928: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235577
+         pintest-31662   [024] dNH..  2577.532931: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2577.532932: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 231650
+         pintest-31662   [024] d....  2577.532934: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2577.532938: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2577.533165: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2577.533167: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996323
+         pintest-31662   [024] d....  2577.533168: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745362
+         pintest-31662   [024] d.h..  2578.036917: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2578.036926: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 237096
+         pintest-31662   [024] dNH..  2578.036929: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2578.036929: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234419
+         pintest-31662   [024] d....  2578.036932: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2578.036936: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=kworker/24:1 next_pid=358 next_prio=120
+    kworker/24:1-358     [024] d....  2578.036938: sched_switch: prev_comm=kworker/24:1 prev_pid=358 prev_prio=120 prev_state=I ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2578.037164: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2578.037167: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996918
+         pintest-31662   [024] d....  2578.037167: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745981
+         pintest-31662   [024] d.h..  2578.540917: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2578.540928: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235824
+         pintest-31662   [024] dNH..  2578.540929: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2578.540929: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234050
+         pintest-31662   [024] d....  2578.540932: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2578.540935: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2578.541164: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2578.541166: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996932
+         pintest-31662   [024] d....  2578.541167: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503746003
+         pintest-31662   [024] d.h..  2579.044916: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2579.044926: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236961
+         pintest-31662   [024] dNH..  2579.044929: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2579.044929: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233995
+         pintest-31662   [024] d....  2579.044931: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2579.044935: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2579.045164: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2579.045166: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996828
+         pintest-31662   [024] d....  2579.045167: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745847
+         pintest-31662   [024] d.h..  2579.548916: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2579.548926: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236718
+         pintest-31662   [024] dNH..  2579.548929: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2579.548929: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233738
+         pintest-31662   [024] d....  2579.548931: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2579.548935: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2579.549164: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2579.549166: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996865
+         pintest-31662   [024] d....  2579.549167: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745875
+         pintest-31662   [024] d.h..  2580.052915: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2580.052925: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 238143
+         pintest-31662   [024] dNH..  2580.052927: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2580.052927: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235398
+         pintest-31662   [024] d....  2580.052939: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2580.052941: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=kworker/24:1 next_pid=358 next_prio=120
+    kworker/24:1-358     [024] d....  2580.052953: sched_switch: prev_comm=kworker/24:1 prev_pid=358 prev_prio=120 prev_state=I ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2580.053164: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2580.053166: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996462
+         pintest-31662   [024] d....  2580.053167: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745337
+         pintest-31662   [024] d.h..  2580.556916: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2580.556927: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235968
+         pintest-31662   [024] dNH..  2580.556930: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2580.556931: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 232403
+         pintest-31662   [024] d....  2580.556933: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2580.556937: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2580.557165: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2580.557167: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 995731
+         pintest-31662   [024] d....  2580.557168: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503744586
+         pintest-31662   [024] d.h..  2581.060915: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2581.060926: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236620
+         pintest-31662   [024] dNH..  2581.060928: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2581.060929: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233834
+         pintest-31662   [024] d....  2581.060930: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2581.060934: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2581.061163: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2581.061166: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996940
+         pintest-31662   [024] d....  2581.061166: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745931
+         pintest-31662   [024] d.h..  2581.564916: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2581.564926: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236644
+         pintest-31662   [024] dNH..  2581.564928: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2581.564929: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233127
+         pintest-31662   [024] d....  2581.564931: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2581.564935: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2581.565163: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2581.565165: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 997039
+         pintest-31662   [024] d....  2581.565166: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 311746131
+         pintest-31662   [024] d.h..  2581.876914: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.H..  2581.876924: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.s..  2581.876926: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 191986313
+         pintest-31662   [024] d.h..  2582.068915: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2582.068926: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236750
+         pintest-31662   [024] dNH..  2582.068928: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2582.068929: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233098
+         pintest-31662   [024] d....  2582.068932: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2582.068936: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=kworker/24:1 next_pid=358 next_prio=120
+    kworker/24:1-358     [024] d....  2582.068947: sched_switch: prev_comm=kworker/24:1 prev_pid=358 prev_prio=120 prev_state=I ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2582.069163: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2582.069166: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996319
+         pintest-31662   [024] d....  2582.069167: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745104
+         pintest-31662   [024] d.h..  2582.572915: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2582.572925: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236962
+         pintest-31662   [024] dNH..  2582.572926: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2582.572927: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235354
+         pintest-31662   [024] d....  2582.572930: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2582.572933: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2582.573163: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2582.573165: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 997111
+         pintest-31662   [024] d....  2582.573166: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503746127
+         pintest-31662   [024] d.h..  2583.076915: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2583.076925: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236616
+         pintest-31662   [024] dNH..  2583.076928: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2583.076929: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 232674
+         pintest-31662   [024] d....  2583.076931: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2583.076935: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2583.077163: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2583.077165: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996716
+         pintest-31662   [024] d....  2583.077166: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745598
+         pintest-31662   [024] d.h..  2583.580915: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2583.580926: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236273
+         pintest-31662   [024] dNH..  2583.580926: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2583.580927: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234419
+         pintest-31662   [024] d....  2583.580930: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2583.580933: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2583.581163: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2583.581165: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996653
+         pintest-31662   [024] d....  2583.581166: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745751
+         pintest-31662   [024] d.h..  2584.084915: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2584.084925: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236483
+         pintest-31662   [024] dNH..  2584.084928: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2584.084928: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233389
+         pintest-31662   [024] d....  2584.084931: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2584.084935: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=kworker/24:1 next_pid=358 next_prio=120
+    kworker/24:1-358     [024] d....  2584.084944: sched_switch: prev_comm=kworker/24:1 prev_pid=358 prev_prio=120 prev_state=I ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2584.085163: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2584.085165: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996445
+         pintest-31662   [024] d....  2584.085166: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745389
+         pintest-31662   [024] d.h..  2584.588915: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2584.588925: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236087
+         pintest-31662   [024] dNH..  2584.588926: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2584.588927: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234296
+         pintest-31662   [024] d....  2584.588930: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2584.588935: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2584.589162: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2584.589164: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996984
+         pintest-31662   [024] d....  2584.589166: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745853
+         pintest-31662   [024] d.h..  2585.092914: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2585.092925: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236704
+         pintest-31662   [024] dNH..  2585.092927: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2585.092927: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233907
+         pintest-31662   [024] d....  2585.092929: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2585.092933: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2585.093162: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2585.093164: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996829
+         pintest-31662   [024] d....  2585.093165: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745715
+         pintest-31662   [024] d.h..  2585.596915: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2585.596926: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235592
+         pintest-31662   [024] dNH..  2585.596928: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2585.596929: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 232158
+         pintest-31662   [024] d....  2585.596931: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2585.596935: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2585.597163: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2585.597165: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996319
+         pintest-31662   [024] d....  2585.597166: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745252
+         pintest-31662   [024] d.h..  2586.100914: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2586.100927: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234615
+         pintest-31662   [024] dNH..  2586.100929: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2586.100930: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 230843
+         pintest-31662   [024] d....  2586.100934: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2586.100939: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=kworker/24:1 next_pid=358 next_prio=120
+    kworker/24:1-358     [024] d....  2586.100959: sched_switch: prev_comm=kworker/24:1 prev_pid=358 prev_prio=120 prev_state=I ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2586.101162: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2586.101165: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 995979
+         pintest-31662   [024] d....  2586.101166: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503744853
+         pintest-31662   [024] d.h..  2586.604914: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2586.604925: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236286
+         pintest-31662   [024] dNH..  2586.604926: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2586.604926: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234256
+         pintest-31662   [024] d....  2586.604929: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2586.604933: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2586.605162: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2586.605164: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996786
+         pintest-31662   [024] d....  2586.605165: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745733
+         pintest-31662   [024] d.h..  2587.108914: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2587.108924: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236287
+         pintest-31662   [024] dNH..  2587.108925: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2587.108926: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234581
+         pintest-31662   [024] d....  2587.108929: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2587.108933: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2587.109161: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2587.109164: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996871
+         pintest-31662   [024] d....  2587.109165: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745880
+         pintest-31662   [024] d.h..  2587.612914: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2587.612927: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233834
+         pintest-31662   [024] dNH..  2587.612929: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2587.612931: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 230118
+         pintest-31662   [024] d....  2587.612933: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2587.612937: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2587.613162: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2587.613165: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 995673
+         pintest-31662   [024] d....  2587.613166: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503744622
+         pintest-31662   [024] d.h..  2588.116917: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2588.116927: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233689
+         pintest-31662   [024] dNH..  2588.116929: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2588.116930: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 229934
+         pintest-31662   [024] d....  2588.116933: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2588.116937: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=kworker/24:1 next_pid=358 next_prio=120
+    kworker/24:1-358     [024] d....  2588.116947: sched_switch: prev_comm=kworker/24:1 prev_pid=358 prev_prio=120 prev_state=I ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2588.117162: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2588.117164: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996066
+         pintest-31662   [024] d....  2588.117165: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503744842
+         pintest-31662   [024] d.h..  2588.620914: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2588.620924: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236093
+         pintest-31662   [024] dNH..  2588.620925: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2588.620926: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234345
+         pintest-31662   [024] d....  2588.620927: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2588.620931: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2588.621161: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2588.621163: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996811
+         pintest-31662   [024] d....  2588.621164: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745710
+         pintest-31662   [024] d.h..  2588.880245: __flush_smp_call_function_queue: executing sync callback from: '17' to: '24' do_flush_tlb_all+0x0/0x20
+         pintest-31662   [024] d.h..  2589.124912: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2589.124924: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 237065
+         pintest-31662   [024] dNH..  2589.124925: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2589.124925: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234428
+         pintest-31662   [024] d....  2589.124928: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2589.124932: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2589.125161: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2589.125163: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996894
+         pintest-31662   [024] d....  2589.125164: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745837
+         pintest-31662   [024] d.h..  2589.628921: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2589.628931: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 229024
+         pintest-31662   [024] dNH..  2589.628932: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2589.628932: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 227208
+         pintest-31662   [024] d....  2589.628935: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2589.628938: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2589.629160: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2589.629163: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996945
+         pintest-31662   [024] d....  2589.629164: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503746032
+         pintest-31662   [024] d.h..  2590.132916: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2590.132929: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 230872
+         pintest-31662   [024] dNH..  2590.132932: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2590.132933: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 226343
+         pintest-31662   [024] d....  2590.132937: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2590.132941: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=kworker/24:1 next_pid=358 next_prio=120
+    kworker/24:1-358     [024] d....  2590.132958: sched_switch: prev_comm=kworker/24:1 prev_pid=358 prev_prio=120 prev_state=I ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2590.133161: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2590.133164: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 995672
+         pintest-31662   [024] d....  2590.133165: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503744499
+         pintest-31662   [024] d.h..  2590.636913: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2590.636923: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236564
+         pintest-31662   [024] dNH..  2590.636924: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2590.636925: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234775
+         pintest-31662   [024] d....  2590.636928: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2590.636931: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2590.637160: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2590.637163: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996753
+         pintest-31662   [024] d....  2590.637164: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745704
+         pintest-31662   [024] d.h..  2591.140912: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2591.140922: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 237067
+         pintest-31662   [024] dNH..  2591.140923: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2591.140924: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235300
+         pintest-31662   [024] d....  2591.140927: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2591.140931: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2591.141160: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2591.141162: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996786
+         pintest-31662   [024] d....  2591.141163: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745797
+         pintest-31662   [024] d.h..  2591.644912: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2591.644922: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 237448
+         pintest-31662   [024] dNH..  2591.644923: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2591.644923: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235714
+         pintest-31662   [024] d....  2591.644926: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2591.644930: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2591.645160: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2591.645162: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996908
+         pintest-31662   [024] d....  2591.645163: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745905
+         pintest-31662   [024] d.h..  2592.148912: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2592.148922: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236717
+         pintest-31662   [024] dNH..  2592.148923: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2592.148924: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235026
+         pintest-31662   [024] d....  2592.148928: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2592.148931: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=kworker/24:1 next_pid=358 next_prio=120
+    kworker/24:1-358     [024] d....  2592.148939: sched_switch: prev_comm=kworker/24:1 prev_pid=358 prev_prio=120 prev_state=I ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2592.149160: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2592.149163: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996135
+         pintest-31662   [024] d....  2592.149164: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503744917
+         pintest-31662   [024] d.h..  2592.652912: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2592.652925: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234318
+         pintest-31662   [024] dNH..  2592.652926: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2592.652926: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 232254
+         pintest-31662   [024] d....  2592.652930: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2592.652933: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2592.653160: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2592.653162: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996959
+         pintest-31662   [024] d....  2592.653163: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745949
+         pintest-31662   [024] d.h..  2593.156912: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2593.156922: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236359
+         pintest-31662   [024] dNH..  2593.156925: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2593.156925: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233413
+         pintest-31662   [024] d....  2593.156928: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2593.156931: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2593.157160: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2593.157163: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996107
+         pintest-31662   [024] d....  2593.157164: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503744554
+         pintest-31662   [024] d.h..  2593.660913: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2593.660923: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235909
+         pintest-31662   [024] dNH..  2593.660923: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2593.660924: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234552
+         pintest-31662   [024] d....  2593.660925: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2593.660930: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2593.661159: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2593.661161: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 997054
+         pintest-31662   [024] d....  2593.661162: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503746180
+         pintest-31662   [024] d.h..  2594.164911: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2594.164928: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 230837
+         pintest-31662   [024] dNH..  2594.164930: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2594.164931: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 226678
+         pintest-31662   [024] d....  2594.164935: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2594.164939: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=kworker/24:1 next_pid=358 next_prio=120
+    kworker/24:1-358     [024] d....  2594.164958: sched_switch: prev_comm=kworker/24:1 prev_pid=358 prev_prio=120 prev_state=I ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2594.165160: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2594.165163: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 995415
+         pintest-31662   [024] d....  2594.165164: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503744208
+         pintest-31662   [024] d.h..  2594.668912: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2594.668921: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 237345
+         pintest-31662   [024] dNH..  2594.668922: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2594.668922: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 235922
+         pintest-31662   [024] d....  2594.668925: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2594.668929: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2594.669160: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2594.669162: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 995931
+         pintest-31662   [024] d....  2594.669163: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503744903
+         pintest-31662   [024] d.h..  2595.172911: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2595.172921: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236523
+         pintest-31662   [024] dNH..  2595.172924: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2595.172925: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 233024
+         pintest-31662   [024] d....  2595.172926: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2595.172930: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2595.173159: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2595.173161: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 997126
+         pintest-31662   [024] d....  2595.173162: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503746185
+         pintest-31662   [024] d.h..  2595.676912: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2595.676921: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 236761
+         pintest-31662   [024] dNH..  2595.676922: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2595.676923: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234994
+         pintest-31662   [024] d....  2595.676926: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2595.676929: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2595.677158: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2595.677161: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 997138
+         pintest-31662   [024] d....  2595.677161: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503746172
+         pintest-31662   [024] d.h..  2596.180911: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNs..  2596.180923: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 234874
+         pintest-31662   [024] dNH..  2596.180925: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] dNH..  2596.180926: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 231618
+         pintest-31662   [024] d....  2596.180929: sched_switch: prev_comm=pintest prev_pid=31662 prev_prio=120 prev_state=R ==> next_comm=kcompactd0 next_pid=318 next_prio=120
+      kcompactd0-318     [024] d....  2596.180932: sched_switch: prev_comm=kcompactd0 prev_pid=318 prev_prio=120 prev_state=S ==> next_comm=kworker/24:1 next_pid=358 next_prio=120
+    kworker/24:1-358     [024] d....  2596.180941: sched_switch: prev_comm=kworker/24:1 prev_pid=358 prev_prio=120 prev_state=I ==> next_comm=pintest next_pid=31662 next_prio=120
+         pintest-31662   [024] d.h..  2596.181159: local_apic_timer_interrupt: ffffffff9403e860 hrtimer_interrupt+0x0/0x380
+         pintest-31662   [024] d.h..  2596.181161: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 996338
+         pintest-31662   [024] d....  2596.181162: clockevents_program_event: seting clock event using lapic_next_deadline+0x0/0x50 with delta 503745218
+         pintest-31662   [024] d.h..  2596.285249: __flush_smp_call_function_queue: executing non-sync callback from: '29' to: '24' cpuid_smp_cpuid+0x0/0x30
+         pintest-31662   [024] d.h..  2596.285258: __flush_smp_call_function_queue: executing non-sync callback from: '29' to: '24' cpuid_smp_cpuid+0x0/0x30
+         pintest-31662   [024] d.h..  2596.286152: __flush_smp_call_function_queue: executing non-sync callback from: '29' to: '24' cpuid_smp_cpuid+0x0/0x30
+         pintest-31662   [024] d.h..  2596.286160: __flush_smp_call_function_queue: executing non-sync callback from: '29' to: '24' cpuid_smp_cpuid+0x0/0x30
+         pintest-31662   [024] d.h..  2596.287039: __flush_smp_call_function_queue: executing non-sync callback from: '29' to: '24' cpuid_smp_cpuid+0x0/0x30
+         pintest-31662   [024] d.h..  2596.287047: __flush_smp_call_function_queue: executing non-sync callback from: '29' to: '24' cpuid_smp_cpuid+0x0/0x30
+         pintest-31662   [024] d.h..  2596.287704: __flush_smp_call_function_queue: executing non-sync callback from: '29' to: '24' __rdmsr_safe_on_cpu+0x0/0x70

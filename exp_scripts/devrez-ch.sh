@@ -16,8 +16,25 @@ CORE=24
 DISABLE_EXITS="--disable-exits"
 APIC=""
 CPU_CNT="1"
+VIRTIO_FS_SOCK="/tmp/virtiofs.sock"
+virtoio_fs=""
+virtiofsd_pid=""
 while [[ $# -gt 0 ]]; do
   case $1 in
+	--mount)
+		FS_SHARE="/tmp/shared_dir"
+		mkdir -p $FS_SHARE
+			virtiofsd \
+			--log-level info \
+			--socket-path=$VIRTIO_FS_SOCK \
+			--shared-dir=$FS_SHARE \
+			--cache=never \
+			--thread-pool-size=4 &
+		virtiofsd_pid=$!
+
+		virtoio_fs="--fs tag=myfs,socket=$VIRTIO_FS_SOCK,num_queues=1,queue_size=512"
+		shift
+	;;
 	--cpus)
 		CPU_CNT="$2"
 	    shift
@@ -190,7 +207,12 @@ $cmd \
 	$disk \
 	$vfio_net \
 	$DISABLE_EXITS \
+	$virtoio_fs \
 	$gdb
 	# --net "tap=,mac=,ip=,mask="
 
 # accessible via  'ch-remote --api-socket /tmp/cloud-hypervisor.sock shutdown-vmm'
+
+if [[ -n "$virtiofsd_pid" ]];then
+	kill $virtiofsd_pid
+fi

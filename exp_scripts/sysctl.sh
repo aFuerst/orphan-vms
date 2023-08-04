@@ -1,7 +1,7 @@
 #!/bin/bash
 
 TIME=1m
-OUTFILE="perf.data.$FREQ"
+OUTFILE="smp_call_fq"
 USE_TRACING=false
 while [[ $# -gt 0 ]]; do
   case $1 in
@@ -43,7 +43,7 @@ if [[ $USE_TRACING == true ]]; then
 echo "0000,1000000" > /sys/kernel/debug/tracing/tracing_cpumask
 echo 1 > /sys/kernel/debug/tracing/events/sched/sched_switch/enable
 echo 1 > /sys/kernel/debug/tracing/tracing_on
-cat /sys/kernel/debug/tracing/trace_pipe > smp_call_fq &
+cat /sys/kernel/debug/tracing/trace_pipe > $OUTFILE &
 pid=$!
 fi
 

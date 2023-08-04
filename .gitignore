@@ -5,3 +5,5 @@ rootfs-overlay/home/syscalltest
 snapshot/
 systest
 pintest
+cpuid
+exiter

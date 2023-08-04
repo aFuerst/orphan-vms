@@ -18,8 +18,8 @@ void cpu_burn(void) {
 }
 
 int print_help(void) {
-    printf("--core [num]");
-    printf("--iters [num], default %u", iters);
+    printf("--core [num]\n");
+    printf("--iters [num], default %u\n", iters);
     return 0;
 }
 
@@ -34,14 +34,19 @@ int main(int argc, char* argv[]) {
     for(count=0; count < argc; count++) {
         if (strcmp(argv[count], "--core") == 0) {
             core = atoi(argv[count+1]);
+            ++count;
         } else if (strcmp(argv[count], "--iters") == 0) {
             iters = atoi(argv[count+1]);
+            ++count;
         } else if (strcmp(argv[count], "--help") == 0) {
             return print_help();
+        }
+        /*} else if (strcmp(argv[count], "pintest") == 0) {
+            continue;
         } else {
             printf("Unknown arg %s", argv[count]);
             return print_help();
-        }
+        }*/
     }
     if (core < 0) {
         perror("Must provide a core to pin to\n");
