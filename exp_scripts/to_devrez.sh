@@ -3,8 +3,8 @@
 user="root"
 home="/root"
 
-# oqv205 oqv22 oqv20 oqv206  
-for host in lpbb26 lpbb23 lpbb21; do
+# oqv205 oqv22 oqv20 oqv206 lpbb23  
+for host in  lpbb27 lpbb25; do
     scp *.sh $user@$host:$home
     scp ../syscall-tester/pintest $user@$host:$home/google/bin
     scp ../syscall-tester/cpuid $user@$host:$home/google/bin

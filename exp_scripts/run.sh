@@ -12,10 +12,11 @@ fi
 	--enable-kvm -nographic \
 	-kernel $kernel_img \
 	-cpu host \
-	-smp 4 \
+	-smp 1 \
 	-append "console=ttyS0 ignore_loglevel earlyprintk=serial,ttyS0,115200 clocksource=kvm-clock" \
 	-object memory-backend-memfd,id=md1,size=4G,prealloc=on,prealloc-threads=4 \
 	-machine memory-backend=md1 \
 	-net none \
-	-virtfs local,path=/tmp/vmfs,mount_tag=host0,security_model=passthrough,id=host0 \
 	-gdb tcp::1234
+	# -virtfs local,path=/tmp/vmfs,mount_tag=host0,security_model=passthrough,id=host0 \
+	# -gdb tcp::1234

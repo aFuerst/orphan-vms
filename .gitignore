@@ -7,3 +7,4 @@ systest
 pintest
 cpuid
 exiter
+timer_exiter
