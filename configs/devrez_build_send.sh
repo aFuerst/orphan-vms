@@ -2,6 +2,10 @@
 set -em
 
 MACHINE=""
+NO_MODULE=""
+linux_dir="../linux"
+cp Gconfig.* $linux_dir
+
 while [[ $# -gt 0 ]]; do
   case $1 in
     -m|--machine)
@@ -9,7 +13,13 @@ while [[ $# -gt 0 ]]; do
       shift
       shift
       ;;
-
+    --no-module)
+        # build orphan vm module directly into kernel
+        echo "here"
+        NO_MODULE="CONFIG_ORPHAN_VM=y"
+        sed -i -e 's/CONFIG_ORPHAN_VM=m/CONFIG_ORPHAN_VM=y/g' "$linux_dir/Gconfig.rando"
+        shift
+        ;;
     *)
         echo "Unknown argument $1"
         exit 1
@@ -17,10 +27,8 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-linux_dir="/usr/local/google/home/fuersta/linux"
-cp Gconfig.* $linux_dir
 pushd $linux_dir > /dev/null 
-gbuild TARGET_STATIC_DEFAULT=y CONFIG=smp EXTRA_PREDICATES='nonmodular' KCFLAGS='-Wno-error=unused-function -Wno-error=unused-variable' -s
+gbuild TARGET_STATIC_DEFAULT=y CONFIG=smp $CONFIG_ORPHAN_VM EXTRA_PREDICATES='nonmodular' KCFLAGS='-Wno-error=unused-function -Wno-error=unused-variable' -s
 popd > /dev/null
 
 deploy_test() {
@@ -65,10 +73,10 @@ set +e
 if [[ -n "$MACHINE" ]]; then
     deploy_test "$MACHINE" "$append_cmd" &
 else
-    # oqv22 oqv20 oqv206 oqv205
-    for host in lpbb26 lpbb23 lpbb21; do
+    #  lpbb23 lpbb27 lpbb25 oqv22 oqv20 oqv206 oqv205
+    for host in lpbb27 lpbb25; do
         deploy_test $host "$append_cmd" &
-        sleep $(shuf -i 1-20 -n 1)
+        # sleep $(shuf -i 1-20 -n 1)
     done
     # deploy_test "oqv205" "$append_cmd" &
     # sleep $(shuf -i 1-20 -n 1)

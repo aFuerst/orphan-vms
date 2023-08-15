@@ -4,7 +4,7 @@ set -em
 # https://github.com/cloud-hypervisor/cloud-hypervisor/blob/main/docs/building.md
 # https://github.com/cloud-hypervisor/cloud-hypervisor/blob/main/docs/gdb.md
 
-vmm_dir="/usr/local/google/home/fuersta/cloud-hypervisor"
+vmm_dir="../cloud-hypervisor-orphan"
 pushd $vmm_dir > /dev/null
 #  --release --target=x86_64-unknown-linux-musl
 cargo build --all --features guest_debug --target=x86_64-unknown-linux-musl --release
@@ -12,7 +12,7 @@ cargo build --all --features guest_debug --target=x86_64-unknown-linux-musl --re
 popd > /dev/null
 
 
-virtiofs_dir="/usr/local/google/home/fuersta/virtiofsd"
+virtiofs_dir="../virtiofsd"
 virtiofsd="$virtiofs_dir/target/release/virtiofsd"
 pushd $virtiofs_dir > /dev/null
 cargo build --release
@@ -26,8 +26,8 @@ ch_remote="$vmm_dir/target/x86_64-unknown-linux-musl/release/ch-remote"
 
 bin="/root/google/bin"
 user="root"
-# oqv22 oqv20 oqv206 oqv205
-for host in lpbb26 lpbb23 lpbb21; do
+# oqv22 oqv20 oqv206 lpbb23 oqv205
+for host in lpbb25  lpbb27; do
     scp $ch_remote $user@$host:$bin
     scp $cloud_hyp $user@$host:$bin
     scp -r virtiofsd_lib/ $user@$host:$bin

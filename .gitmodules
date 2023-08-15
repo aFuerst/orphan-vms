@@ -1,0 +1,14 @@
+[submodule "virtiofsd"]
+	path = virtiofsd
+	url = https://gitlab.com/virtio-fs/virtiofsd
+[submodule "cloud-hypervisor-orphan"]
+	path = cloud-hypervisor-orphan
+	url = https://github.com/aFuerst/cloud-hypervisor-orphan.git
+[submodule "buildroot"]
+	path = buildroot
+	url = git://git.buildroot.net/buildroot
+	branch = 603df32a0cd416caa2d2688008cb87f14ad68ef3
+[submodule "linux"]
+	path = linux
+	url = https://github.com/aFuerst/linux
+	branch = orphan-vm
